@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension type="module" version="3.3" client="site" method="upgrade">
+    <name>AllEvents - Module Calendar</name>
+    <creationDate>%%build.date%%</creationDate>
+    <copyright>%%ae3.copyright%%</copyright>
+    <license>%%ae3.license%%</license>
+    <author>Emmanuel Lecoester</author>
+    <authorEmail>%%ae3.authoremail%%</authorEmail>
+    <authorUrl>%%ae3.authorurl%%</authorUrl>
+    <version>%%ae3.version%%</version>
+    <description>MOD_AECALENDAR_DESC</description>
+    <files>
+        <filename>mod_aecalendar.xml</filename>
+        <filename module="mod_aecalendar">mod_aecalendar.php</filename>
+        <filename>index.html</filename>
+        <filename>helper.php</filename>
+        <folder>tmpl</folder>
+        <folder>language</folder>
+    </files>
+    <languages folder="site">
+        <language tag="fr-FR">language/fr-FR/fr-FR.mod_aecalendar.ini</language>
+        <language tag="en-GB">language/en-GB/en-GB.mod_aecalendar.ini</language>
+        <language tag="es-ES">language/es-ES/es-ES.mod_aecalendar.ini</language>
+    </languages>
+    <config>
+        <fields id="params" name="params" type="fields" label="params" addfieldpath="">
+            <fieldset name="basic" addfieldpath="/administrator/components/com_allevents/models/fields">
+                <field name="layoutChoice" type="list" default="default" label="JFIELD_ALT_LAYOUT_LABEL"
+                       description="JFIELD_ALT_MODULE_LAYOUT_DESC">
+                    <option value="default">MOD_AECALENDAR_LAYOUT_CHOICE_CAL1</option>
+                    <!-- ççç -->
+                    <option value="bic_calendar">MOD_AECALENDAR_LAYOUT_CHOICE_CAL2</option>
+                    <option value="calendario">MOD_AECALENDAR_LAYOUT_CHOICE_CAL3</option>
+                    <option value="zabuto">MOD_AECALENDAR_LAYOUT_CHOICE_CAL4</option>
+                    <option value="calendario_blue">MOD_AECALENDAR_LAYOUT_CHOICE_CAL5</option>
+                    <option value="calendario_transparent">MOD_AECALENDAR_LAYOUT_CHOICE_CAL6</option>
+                    <option value="eventcalendar">MOD_AECALENDAR_LAYOUT_CHOICE_CAL7</option>
+                    <option value="monthly">MOD_AECALENDAR_LAYOUT_CHOICE_CAL8</option>
+                    <option value="calendario_agile">MOD_AECALENDAR_LAYOUT_CHOICE_CAL9</option>
+                    <option value="fullcalendar">MOD_AECALENDAR_LAYOUT_CHOICE_CAL10</option>
+                    <!-- ççç -->
+                </field>
+                <!-- FILTERS -->
+                <field type="AETitleImg" label="COM_ALLEVENTS_FILTERS_COMPONENT_DESC"
+                       class="stylebox lead input-xxlarge" aeicon="filter"/>
+                <field name="pt" type="aetoggleactivity" multiple="true" label="ACTIVITY" description="ACTIVITY_DESC"/>
+                <field name="at" type="aetoggleagenda" multiple="true" label="AGENDA" description="AGENDA_DESC"/>
+                <field name="ct" type="aetogglecategory" multiple="true" label="CATEGORY" description="CATEGORY_DESC"/>
+                <field name="lt" type="aetoggleplace" multiple="true" label="PLACE" description="PLACE_DESC"/>
+                <field name="dt" type="aetogglepublic" multiple="true" label="PUBLIC" description="PUBLIC_DESC"/>
+                <field name="st" type="aetogglesection" multiple="true" label="SECTION" description="SECTION_DESC"/>
+                <field name="et" type="aetoggleressource" multiple="true" label="RESSOURCE"
+                       description="RESSOURCE_DESC"/>
+                <field name="h" type="radio" label="MOD_AECALENDAR_FEATURED_LABEL"
+                       description="MOD_AECALENDAR_FEATURED_DESC" class="btn-group btn-group-yesno" default="0">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field name="r" type="radio" label="MOD_AECALENDAR_REGISTRATION_ONLY"
+                       description="MOD_AECALENDAR_REGISTRATION_ONLY_DESC" class="btn-group btn-group-yesno"
+                       default="0">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <!-- <field showon="r:1" name="rp" type="radio" label="FILTER_REGISTRATION_POSSIBLE" class="btn-group btn-group-yesno" default="0">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field> -->
+                <!-- DESKTOP -->
+                <field type="AETitleImg" label="COM_ALLEVENTS_PARAM_DISPLAY_LABEL" class="stylebox lead input-xxlarge"
+                       aeicon="desktop"/>
+                <field name="display_colors" type="list" default="" label="MOD_AECALENDAR_DISPLAY_COLORS"
+                       description="MOD_AECALENDAR_DISPLAY_COLORS_INFO">
+                    <option value="">JGLOBAL_USE_GLOBAL</option>
+                    <option value="0">AGENDA</option>
+                    <option value="1">ACTIVITY</option>
+                    <option value="2">CATEGORY</option>
+                </field>
+                <field name="display_colors_back" type="list" default="" label="MOD_AECALENDAR_DISPLAY_COLORS_BACK"
+                       description="MOD_AECALENDAR_DISPLAY_COLORS_BACK_INFO">
+                    <option value="">JGLOBAL_USE_GLOBAL</option>
+                    <option value="0">COM_ALLEVENTS_BACKCOLOR</option>
+                    <option value="1">COM_ALLEVENTS_FORECOLOR</option>
+                </field>
+                <field name="display_colors_fore" type="list" default="" label="MOD_AECALENDAR_DISPLAY_COLORS_FORE"
+                       description="MOD_AECALENDAR_DISPLAY_COLORS_FORE_INFO">
+                    <option value="">JGLOBAL_USE_GLOBAL</option>
+                    <option value="0">COM_ALLEVENTS_BACKCOLOR</option>
+                    <option value="1">COM_ALLEVENTS_FORECOLOR</option>
+                </field>
+                <field name="startWeekDay" type="radio" label="MOD_AECALENDAR_LBL_STARTWEEKDAY"
+                       description="MOD_AECALENDAR_DESC_STARTWEEKDAY" class="btn-group btn-group-yesno" default="">
+                    <option value="">JGLOBAL_USE_GLOBAL</option>
+                    <option value="1">MONDAY</option>
+                    <option value="0">SUNDAY</option>
+                </field>
+                <field name="ampm" type="radio" default="" label="MOD_AECALENDAR_TIME_FORMAT_LABEL"
+                       description="MOD_AECALENDAR_TIME_FORMAT_DESC" class="btn-group">
+                    <option value="">JGLOBAL_USE_GLOBAL</option>
+                    <option value="H:i">COM_ALLEVENTS_24</option>
+                    <option value="g:i A">COM_ALLEVENTS_12</option>
+                </field>
+                <field name="target_itemid" type="menuitem" default="" label="MOD_AECALENDAR_LBL_ITEMID"
+                       description="MOD_AECALENDAR_DESC_ITEMID"/>
+            </fieldset>
+            <fieldset name="advanced">
+                <field name="height" showon="layoutChoice:default" type="text" default="240"
+                       label="MOD_AECALENDAR_LBL_HEIGHT" description="MOD_AECALENDAR_LBL_HEIGHT_DESC"/>
+                <field name="moduleclass_sfx" type="textarea" rows="3"
+                       label="MOD_AECALENDAR_FIELD_MODULECLASS_SFX_LABEL"
+                       description="MOD_AECALENDAR_FIELD_MODULECLASS_SFX_DESC"/>
+                <field name="cache" type="list" default="1" label="MOD_AECALENDAR_FIELD_CACHING_LABEL"
+                       description="MOD_AECALENDAR_FIELD_CACHING_DESC">
+                    <option value="1">JGLOBAL_USE_GLOBAL</option>
+                    <option value="0">MOD_AECALENDAR_FIELD_VALUE_NOCACHING</option>
+                </field>
+                <field name="cache_time" type="text" default="900" label="MOD_AECALENDAR_FIELD_CACHE_TIME_LABEL"
+                       description="MOD_AECALENDAR_FIELD_CACHE_TIME_DESC"/>
+                <field
+                        name="cachemode"
+                        type="hidden"
+                        default="static"
+                >
+                    <option value="static"/>
+                </field>
+            </fieldset>
+        </fields>
+    </config>
+    <aepremiumonly>false</aepremiumonly>
+    <aedisplayevents>true</aedisplayevents>
+</extension>

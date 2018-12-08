@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ - name : full extension name
+ - id : extension alias/id, used in html and links (default: lowercase name with only a-z and '-')
+ - element : extension element name, used in database and folders (default: id)
+-->
+
+<extensions>
+    <group name="AllEvents">
+        <extension name="AllEvents - Starter" type="com" folder="administrator" element="allevents" ispaid="0"
+                   downloadid="" joomlaversion="3"/>
+        <extension name="AllEvents - Premium" type="com" folder="administrator" element="allevents" ispaid="1"
+                   downloadid="" joomlaversion="3"/>
+    </group>
+    <group name="AllEvents Modules">
+        <extension name="AllEvents - Module Calendar" type="mod" element="mod_aecalendar" ispaid="0" downloadid="131"
+                   joomlaversion="3"/>
+        <extension name="AllEvents - Module List" type="mod" element="mod_aelist" ispaid="0" downloadid="131"
+                   joomlaversion="3"/>
+        <extension name="AllEvents - Module Slider" type="mod" element="mod_aeslide" ispaid="0" downloadid="131"
+                   joomlaversion="3"/>
+        <extension name="AllEvents - Module Drag For AEFC" type="mod" element="mod_aedrag" ispaid="1" downloadid="131"
+                   joomlaversion="3"/>
+        <extension name="AllEvents - Module Filters" type="mod" element="mod_aefilters" ispaid="1" downloadid="131"
+                   joomlaversion="3"/>
+        <extension name="AllEvents - Module Mini fullcalendar" type="mod" element="mod_aefullcalendar" ispaid="1"
+                   downloadid="131" joomlaversion="3"/>
+        <extension name="AllEvents - Module Slider Featured" type="mod" element="mod_aeslider" ispaid="1"
+                   downloadid="131" joomlaversion="3"/>
+        <extension name="AllEvents - Module Deck Featured" type="mod" element="mod_aedeck" ispaid="1" downloadid="131"
+                   joomlaversion="3"/>
+    </group>
+    <group name="AllEvents Plugins">
+        <extension name="AllEvents - Rich Snippets" type="plg" folder="allevents" element="richsnippets" ispaid="0"
+                   downloadid="" joomlaversion="3"/>
+        <extension name="Quick - AllEvents" type="plg" folder="quickicon" element="allevents" ispaid="0" downloadid=""
+                   joomlaversion="3"/>
+        <extension name="Search - AllEvents" type="plg" folder="search" element="allevents" ispaid="0" downloadid=""
+                   joomlaversion="3"/>
+        <extension name="AllEvents - Acymailing" type="plg" folder="acymailing" element="allevents" ispaid="1"
+                   downloadid="" joomlaversion="3"/>
+        <extension name="AllEvents - AlphaUserPoints" type="plg" folder="allevents" element="alphauserpoints" ispaid="1"
+                   downloadid="" joomlaversion="3"/>
+        <extension name="AllEvents - CBUsers" type="plg" folder="allevents" element="cbusers" ispaid="1" downloadid=""
+                   joomlaversion="3"/>
+        <extension name="AllEvents - Social (FB, G+, Twitter, Pinterest, Linkedin)" type="plg" folder="allevents"
+                   element="aesocial" ispaid="1" downloadid="" joomlaversion="3"/>
+        <extension name="AllEvents - Jcomments" type="plg" folder="allevents" element="jcomments" ispaid="1"
+                   downloadid="" joomlaversion="3"/>
+        <extension name="Content - AllEvents" type="plg" folder="content" element="allevents" ispaid="1" downloadid=""
+                   joomlaversion="3"/>
+        <extension name="Finder - AllEvents" type="plg" folder="finder" element="allevents" ispaid="1" downloadid=""
+                   joomlaversion="3"/>
+        <extension name="AllEvents - Open Graph" type="plg" folder="allevents" element="opengraph" ispaid="1"
+                   downloadid="" joomlaversion="3"/>
+        <extension name="AllEvents - Twitter Card" type="plg" folder="allevents" element="twittercard" ispaid="1"
+                   downloadid="" joomlaversion="3"/>
+    </group>
+</extensions>

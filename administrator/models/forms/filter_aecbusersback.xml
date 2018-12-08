@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fields name="filter">
+        <field name="search" type="text" label="COM_ALLEVENTS_SEARCH" description="COM_ALLEVENTS_SEARCH_CBUSERS"
+               hint="JSEARCH_FILTER" class="js-stools-search-string"/>
+        <field name="group_id" type="usergrouplist" label="COM_USERS_FILTER_GROUP"
+               description="COM_USERS_FILTER_GROUP_DESC" onchange="this.form.submit();">
+            <option value="">COM_ALLEVENTS_USERGROUP</option>
+        </field>
+    </fields>
+</form>

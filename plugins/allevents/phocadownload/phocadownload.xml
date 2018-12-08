@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension group="allevents" method="upgrade" type="plugin" version="3">
+    <name>AllEvents - Phoca Download Plugin</name>
+    <creationDate>%%build.date%%</creationDate>
+    <author>Emmanuel Lecoester</author>
+    <authorEmail>%%ae3.authoremail%%</authorEmail>
+    <authorUrl>%%ae3.authorurl%%</authorUrl>
+    <copyright>%%ae3.copyright%%</copyright>
+    <license>%%ae3.license%%</license>
+    <version>%%ae3.version%%</version>
+    <description>PLG_ALLEVENTS_PHOCADOWNLOAD_DESCRIPTION</description>
+
+    <files>
+        <filename plugin="phocadownload">phocadownload.php</filename>
+        <filename>index.html</filename>
+    </files>
+
+    <media destination="plg_allevents_phocadownload" folder="media">
+        <filename>index.html</filename>
+        <folder>css</folder>
+        <folder>images</folder>
+    </media>
+
+    <languages>
+        <language tag="en-GB">language/en-GB/en-GB.plg_allevents_phocadownload.ini</language>
+        <language tag="en-GB">language/en-GB/en-GB.plg_allevents_phocadownload.sys.ini</language>
+    </languages>
+
+    <administration>
+        <languages>
+            <language tag="en-GB">language/en-GB/en-GB.plg_allevents_phocadownload.ini</language>
+            <language tag="en-GB">language/en-GB/en-GB.plg_allevents_phocadownload.sys.ini</language>
+        </languages>
+    </administration>
+
+    <config>
+        <fields name="params" addpath="/administrator/components/com_phocamaps/models/fields">
+            <fieldset name="basic">
+                <field name="icon_size" type="list" default="32" label="PLG_ALLEVENTS_PHOCADOWNLOAD_ICON_SIZE_LABEL"
+                       description="PLG_ALLEVENTS_PHOCADOWNLOAD_ICON_SIZE_DESC">
+                    <option value="64">64</option>
+                    <option value="48">48</option>
+                    <option value="32">32</option>
+                    <option value="16">16</option>
+                </field>
+
+                <field name="file_icon_mime" type="list" default="0"
+                       label="PLG_ALLEVENTS_PHOCADOWNLOAD_FILE_ICON_MIME_LABEL"
+                       description="PLG_ALLEVENTS_PHOCADOWNLOAD_FILE_ICON_MIME_DESC">
+                    <option value="0">PLG_ALLEVENTS_PHOCADOWNLOAD_NO</option>
+                    <option value="1">PLG_ALLEVENTS_PHOCADOWNLOAD_YES</option>
+                </field>
+            </fieldset>
+        </fields>
+    </config>
+    <updateservers>
+        <server type="extension" priority="1" name="AllEvents Magnet - Eventbrite">
+            <![CDATA[https://www.allevents3.com/en/?option=com_rdsubs&view=updater&format=xml&cat=9&element=phocadownload]]>
+        </server>
+    </updateservers>
+</extension>

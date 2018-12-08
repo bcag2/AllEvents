@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fieldset name="ical" addfieldpath="/administrator/components/com_allevents/models/fields">
+        <field name="import_type" type="list" label="AE_IMPORT_TYPE">
+            <option value="f">AE_IMPORT_FILE</option>
+            <option value="u">AE_IMPORT_URL</option>
+        </field>
+        <field name="agenda_id" type="AEAgenda" label="AGENDA">
+            <option value="0" class="se_agenda_0_bullet se_agenda_0_color">COM_ALLEVENTS_NO_AGENDA</option>
+        </field>
+        <field name="activity_id" type="AEActivity" label="ACTIVITY">
+            <option value="0" class="se_activity_0_bullet se_activity_0_color">COM_ALLEVENTS_NO_ACTIVITY</option>
+        </field>
+        <field name="public_id" type="AEPublic" label="PUBLIC">
+            <option value="0" class="se_public_0_bullet se_public_0_color">COM_ALLEVENTS_NO_PUBLIC</option>
+        </field>
+        <field name="ressource_id" type="AERessource" label="RESOURCE">
+            <option value="0" class="se_ressource_0_bullet se_ressource_0_color">COM_ALLEVENTS_NO_RESSOURCE</option>
+        </field>
+        <field name="import_mode_cat" type="list" label="AE_IMPORT_MODE_CAT" default="2">
+            <option value="1">AE_IMPORT_EVENTS_INTO_AN_EXISTING_CATEGORY</option>
+            <option value="2">AE_IMPORT_EVENTS_INTO_SEPARATE_CATEGORIES</option>
+            <option value="3">AE_IMPORT_EVENTS_INTO_A_NEW_CATEGORY</option>
+        </field>
+        <field name="section_id" type="AESection" label="SECTION">
+            <option value="0" class="se_section_0_bullet se_section_0_color">COM_ALLEVENTS_NO_SECTION</option>
+        </field>
+        <field name="category_id" type="AECategory" label="CATEGORY">
+            <option value="0" class="se_category_0_bullet se_category_0_color">COM_ALLEVENTS_NO_CATEGORY</option>
+        </field>
+        <field name="newcat" type="text" label="AE_ENTER_A_NEW_CATEGORY_NAME"/>
+        <field name="import_mode_place" type="list" label="AE_IMPORT_MODE_PLACE" default="2">
+            <option value="1">AE_IMPORT_EVENTS_INTO_AN_EXISTING_PLACE</option>
+            <option value="2">AE_IMPORT_EVENTS_INTO_SEPARATE_PLACES</option>
+            <option value="3">AE_IMPORT_EVENTS_INTO_A_NEW_PLACE</option>
+        </field>
+        <field name="place_id" type="AEPlace" label="PLACE">
+            <option value="0" class="se_place_0_bullet se_place_0_color">COM_ALLEVENTS_NO_PLACE</option>
+        </field>
+        <field name="newplace" type="text" label="AE_ENTER_A_NEW_PLACE_NAME"/>
+        <field name="userfile" type="file" label="AE_IMPORT_SPECIFY_ICAL_FILE_TO_IMPORT"
+               onchange="if(this.value)jQuery('#jform_import_type').val('f').trigger('liszt:updated');"/>
+        <field name="url" type="url" label="AE_IMPORT_OR_SPECIFY_SERVER_FILE_OR_ICAL_URL_TO_IMPORT"
+               onchange="if(this.value)jQuery('#jform_import_type').val('u').trigger('liszt:updated');"/>
+    </fieldset>
+    <fieldset name="csv" addfieldpath="/administrator/components/com_allevents/models/fields">
+        <field name="csvfile" type="file" label="COM_ALLEVENTS_IMPORT_EVENT_FILE_LABEL"
+               description="COM_ALLEVENTS_IMPORT_EVENT_FILE_DESC" required="true"/>
+        <field name="delimiter" type="text" size="1" default=";" class="input-small"
+               label="COM_ALLEVENTS_IMPORT_EVENT_DELIMITER_LABEL"
+               description="COM_ALLEVENTS_IMPORT_EVENT_DELIMITER_DESC" required="true"/>
+        <field name="record_number" type="text" size="2" default="1" class="input-small"
+               label="COM_ALLEVENTS_IMPORT_EVENT_START_FROM_RECORD_LABEL"
+               description="COM_ALLEVENTS_IMPORT_EVENT_START_FROM_RECORD_DESC" required="true" validate="numeric"/>
+        <field name="agenda_id" type="AEAgenda" label="AGENDA"/>
+        <field name="start_dt" type="text" class="input-small" size="40" default="1"
+               label="COM_ALLEVENTS_IMPORT_EVENT_START_DATE_LABEL"/>
+        <field name="start_time" type="text" class="input-small" size="40" default="2"
+               label="COM_ALLEVENTS_IMPORT_EVENT_START_TIME_LABEL"/>
+        <field name="end_dt" type="text" class="input-small" size="40" default="3"
+               label="COM_ALLEVENTS_IMPORT_EVENT_END_DATE_LABEL"/>
+        <field name="end_time" type="text" class="input-small" size="40" default="4"
+               label="COM_ALLEVENTS_IMPORT_EVENT_END_TIME_LABEL"/>
+        <field name="titre" type="text" class="input-small" size="40" default="5"
+               label="COM_ALLEVENTS_IMPORT_EVENT_TITRE_LABEL"/>
+        <field name="agenda" type="text" class="input-small" size="40" default="6"
+               label="COM_ALLEVENTS_IMPORT_EVENT_AGENDA_LABEL" description="COM_ALLEVENTS_IMPORT_EVENT_AGENDA_DESC"/>
+    </fieldset>
+    <fieldset name="accesscontrol">
+        <field name="asset_id" type="hidden" filter="unset"/>
+        <field name="rules" type="rules" label="JFIELD_RULES_LABEL" translate_label="false" filter="rules"
+               validate="rules" class="inputbox" component="com_allevents" section="event"/>
+    </fieldset>
+</form>

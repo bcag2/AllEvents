@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+    <layout title="COM_ALLEVENTS_TITLE_LIST_VIEW_CATEGORIES" option="View">
+        <message><![CDATA[COM_ALLEVENTS_TITLE_LIST_VIEW_CATEGORIES_DESC]]></message>
+    </layout>
+    <name>COM_ALLEVENTS_TITLE</name>
+    <description><![CDATA[VIEW_LIST_VIEW_INFO_LONG]]></description>
+    <fields name="params">
+        <fieldset name="ALLEVENTS" label="COM_ALLEVENTS_MENU_OPTIONS"
+                  addfieldpath="/administrator/components/com_allevents/models/fields">
+            <field type="AETitleImg" class="input-xxlarge" aeimage="../css/images/allevents.png"/>
+            <field name="task" type="hidden" default="display"/>
+            <field name="layout" type="list" default="default" label="LAYOUT" description="EVENTS_LAYOUT_DESC">
+                <option value="default">COM_ALLEVENTS_DEFAULT</option>
+                <option value="list">COM_ALLEVENTS_LIST</option>
+                <option value="table">LAYOUT_TABLE</option>
+            </field>
+        </fieldset>
+    </fields>
+</metadata>

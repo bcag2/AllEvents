@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="plugin" group="allevents" version="3.1" method="upgrade">
+    <name>AllEvents - AEGoogle</name>
+    <creationDate>%%build.date%%</creationDate>
+    <author>Emmanuel Lecoester</author>
+    <authorEmail>%%ae3.authoremail%%</authorEmail>
+    <authorUrl>%%ae3.authorurl%%</authorUrl>
+    <copyright>%%ae3.copyright%%</copyright>
+    <license>%%ae3.license%%</license>
+    <version>%%ae3.version%%</version>
+    <description>PLG_ALLEVENTS_AEGOOGLE_XML_DESCRIPTION</description>
+    <languages folder="language">
+        <language tag="fr-FR">fr-FR/fr-FR.plg_allevents_aegoogle.ini</language>
+        <language tag="fr-FR">fr-FR/fr-FR.plg_allevents_aegoogle.sys.ini</language>
+        <language tag="en-GB">en-GB/en-GB.plg_allevents_aegoogle.ini</language>
+        <language tag="en-GB">en-GB/en-GB.plg_allevents_aegoogle.sys.ini</language>
+    </languages>
+    <files>
+        <filename plugin="aegoogle">aegoogle.php</filename>
+        <filename>index.html</filename>
+        <folder>forms</folder>
+        <folder>language</folder>
+        <folder>libraries</folder>
+    </files>
+    <config>
+        <fields name="params"
+                addfieldpath="/administrator/components/com_allevents/models/fields">
+            <fieldset name="basic">
+                <field name="ext" type="extcalendar" plugin="google" import="true"
+                       label="" description="">
+                </field>
+            </fieldset>
+            <fieldset name="advanced">
+                <field name="cache" type="list" default="1"
+                       label="PLG_ALLEVENTS_AERATING_FIELD_CACHING_LABEL"
+                       description="PLG_ALLEVENTS_AERATING_FIELD_CACHING_DESC">
+                    <option value="1">PLG_ALLEVENTS_AERATING_FIELD_CACHING_JOOMLA</option>
+                    <option value="2">PLG_ALLEVENTS_AERATING_FIELD_CACHING_DB</option>
+                    <option value="0">PLG_ALLEVENTS_AERATING_FIELD_CACHING_NEVER</option>
+                </field>
+                <field name="cache_time" type="text" default="900" showon="cache:1"
+                       label="PLG_ALLEVENTS_AERATING_FIELD_CACHING_TIME_LABEL"
+                       description="PLG_ALLEVENTS_AERATING_FIELD_CACHING_TIME_DESC"/>
+                <field name="sync_start" type="text" default="-3 year" showon="cache:2"
+                       label="PLG_ALLEVENTS_AERATING_FIELD_CACHING_SYNC_START_LABEL"
+                       description="PLG_ALLEVENTS_AERATING_FIELD_CACHING_SYNC_START_DESC"/>
+                <field name="sync_end" type="text" default="+3 year" showon="cache:2"
+                       label="PLG_ALLEVENTS_AERATING_FIELD_CACHING_SYNC_END_LABEL"
+                       description="PLG_ALLEVENTS_AERATING_FIELD_CACHING_SYNC_END_DESC"/>
+                <field name="sync_steps" type="text" default="1 year" showon="cache:2"
+                       label="PLG_ALLEVENTS_AERATING_FIELD_CACHING_SYNC_STEPS_LABEL"
+                       description="PLG_ALLEVENTS_AERATING_FIELD_CACHING_SYNC_STEPS_DESC"/>
+            </fieldset>
+        </fields>
+    </config>
+    <aepremiumonly>true</aepremiumonly>
+    <aedisplayevents>false</aedisplayevents>
+</extension>

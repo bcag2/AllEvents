@@ -1,0 +1,131 @@
+.owl-controls {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.owl-controls .owl-buttons {
+    margin: 10px 0 0;
+}
+
+.owl-controls .owl-buttons div {
+    color: #FFF;
+    display: inline-block;
+    margin: 5px;
+    padding: 3px 10px;
+    border-radius: 3px;
+    background: #000000;
+    text-transform: capitalize;
+}
+
+.owl-controls.clickable .owl-buttons div:hover {
+    background: #000000;
+    text-decoration: none;
+}
+
+.owl-pagination {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    height: 8px;
+    line-height: 8px;
+    z-index: 1;
+}
+
+.owl-controls .owl-page {
+    display: inline-block;
+}
+
+.owl-controls .owl-page span {
+    display: block;
+    width: 8px;
+    height: 8px;
+    margin: 0 3px;
+    opacity: .5;
+    border-radius: 20px;
+    background: #fff;
+}
+
+.owl-controls .owl-page.active span, .owl-controls.clickable .owl-page:hover span {
+    opacity: 1;
+}
+
+.owl-item.loading {
+    min-height: 150px;
+    background: url(./images/AjaxLoader.gif) no-repeat center center;
+}
+
+.ae-slider, .ae-slider .item-inner {
+    position: relative;
+}
+
+.ae-slider .item-inner:after {
+    content: " ";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    /*    background: -moz-linear-gradient(top, #000000 0%, #000000 100%);
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #000000), color-stop(100%, #000000));
+        background: -webkit-linear-gradient(top, #000000 0%, #000000 100%);
+        background: -o-linear-gradient(top, #000000 0%, #000000 100%);
+        background: -ms-linear-gradient(top, #000000 0%, #000000 100%);
+        background: linear-gradient(to bottom, #000000 0%, #000000 100%);*/
+}
+
+.ae-slider .item-inner img {
+    width: 100%;
+}
+
+.ae-slider .item-content {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 20px;
+    color: #fff;
+    z-index: 1;
+}
+
+.ae-slider .item-title {
+    font-size: 24px;
+    line-height: 24px;
+    margin: 0 0 10px;
+    padding: 0;
+}
+
+.ae-slider a.readmore {
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+}
+
+.ae-slider .news-title {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: inline-block;
+    padding: 8px 10px;
+    font-size: 12px;
+    line-height: 12px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #fff;
+    z-index: 1;
+}
+
+.ae-slider .item-meta {
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 700;
+    margin: 0 0 8px;
+}
+
+.ae-slider .item-meta span.item-category {
+    margin-right: 5px;
+}
+
+.ae-slider .item-meta span.item-date {
+    margin-left: 5px;
+}

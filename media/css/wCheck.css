@@ -1,0 +1,85 @@
+.wCheck-el {
+    cursor: pointer;
+    height: 100%;
+    left: 0;
+    margin: 0;
+    opacity: 0;
+    padding: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.wCheck {
+    background: no-repeat center 0;
+    cursor: pointer;
+    display: inline;
+    font-size: 0;
+    height: 16px;
+    line-height: 0;
+    margin-bottom: 7px;
+    position: relative;
+    vertical-align: middle;
+    width: 16px;
+    zoom: 1;
+}
+
+.wCheck-label {
+    color: #666;
+    cursor: pointer;
+    display: inline;
+    font-size: 10px;
+    line-height: 16px;
+    margin: 0 15px 7px 4px;
+    vertical-align: middle;
+    zoom: 1;
+}
+
+.wCheck-selector, .wCheck-focus {
+    background: no-repeat center center;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.wCheck-off .wCheck-selector {
+    display: none;
+}
+
+.wCheck-on .wCheck-selector {
+    display: block;
+}
+
+.wCheck-hover {
+    background-position: center -16px;
+}
+
+.wCheck-label-theme-square-classic-yellow.wCheck-label-hover, .wCheck-label-theme-square-inset-yellow.wCheck-label-hover, .wCheck-label-theme-square-radial-yellow.wCheck-label-hover, .wCheck-label-theme-circle-classic-yellow.wCheck-label-hover, .wCheck-label-theme-circle-inset-yellow.wCheck-label-hover, .wCheck-label-theme-circle-radial-yellow.wCheck-label-hover {
+    color: #DDBD67;
+}
+
+.wLabel-top, .wLabel-left, .wLabel-left-top {
+    color: #999;
+    display: block;
+    font-size: 10px;
+    line-height: 16px;
+    margin: 5px 0 3px 3px;
+    vertical-align: middle;
+}
+
+.wLabel-left-top {
+    vertical-align: top;
+}
+
+@media screen and (min-width: 600px) {
+    .wLabel-left, .wLabel-left-top {
+        display: inline-block;
+        *display: inline;
+        zoom: 1;
+        width: 70px;
+        text-align: right;
+        margin: 0 0 7px;
+    }
+}

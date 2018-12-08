@@ -1,0 +1,134 @@
+﻿.se_img32_activity, .se_img32_affichageannee, .se_img32_affichagejour, .se_img32_affichagelieux, .se_img32_affichageliste,
+.se_img32_affichagemois, .se_img32_affichageressources, .se_img32_affichagesemaine, .se_img32_affichagesemaineactive, .se_img32_affichagetimeline,
+.se_img32_agenda, .se_img32_category, .se_img32_control-panel, .se_img32_customfield, .se_img32_enrolments,
+.se_img32_evenements, .se_img32_event-add, .se_img32_event-approve, .se_img32_events, .se_img32_gcalendar,
+.se_img32_import, .se_img32_info, .se_img32_map, .se_img32_payment, .se_img32_plugin,
+.se_img32_public, .se_img32_ressource, .se_img32_ribbon, .se_img32_section, .se_img32_settings {
+    display: inline-block;
+    background: url(images/img32.png) no-repeat;
+    width: 32px;
+    height: 32px;
+    overflow: hidden;
+    text-indent: -9999px;
+    text-align: left;
+}
+
+.se_img32_activity {
+    background-position: -0px -0px;
+}
+
+.se_img32_affichageannee {
+    background-position: -32px -0px;
+}
+
+.se_img32_affichagejour {
+    background-position: -64px -0px;
+}
+
+.se_img32_affichagelieux {
+    background-position: -96px -0px;
+}
+
+.se_img32_affichageliste {
+    background-position: -128px -0px;
+}
+
+.se_img32_affichagemois {
+    background-position: -0px -32px;
+}
+
+.se_img32_affichageressources {
+    background-position: -32px -32px;
+}
+
+.se_img32_affichagesemaine {
+    background-position: -64px -32px;
+}
+
+.se_img32_affichagesemaineactive {
+    background-position: -96px -32px;
+}
+
+.se_img32_affichagetimeline {
+    background-position: -128px -32px;
+}
+
+.se_img32_agenda {
+    background-position: -0px -64px;
+}
+
+.se_img32_category {
+    background-position: -32px -64px;
+}
+
+.se_img32_control-panel {
+    background-position: -64px -64px;
+}
+
+.se_img32_customfield {
+    background-position: -96px -64px;
+}
+
+.se_img32_enrolments {
+    background-position: -128px -64px;
+}
+
+.se_img32_evenements {
+    background-position: -0px -96px;
+}
+
+.se_img32_event-add {
+    background-position: -32px -96px;
+}
+
+.se_img32_event-approve {
+    background-position: -64px -96px;
+}
+
+.se_img32_events {
+    background-position: -96px -96px;
+}
+
+.se_img32_gcalendar {
+    background-position: -128px -96px;
+}
+
+.se_img32_import {
+    background-position: -0px -128px;
+}
+
+.se_img32_info {
+    background-position: -32px -128px;
+}
+
+.se_img32_map {
+    background-position: -64px -128px;
+}
+
+.se_img32_payment {
+    background-position: -96px -128px;
+}
+
+.se_img32_plugin {
+    background-position: -128px -128px;
+}
+
+.se_img32_public {
+    background-position: -0px -160px;
+}
+
+.se_img32_ressource {
+    background-position: -32px -160px;
+}
+
+.se_img32_ribbon {
+    background-position: -64px -160px;
+}
+
+.se_img32_section {
+    background-position: -96px -160px;
+}
+
+.se_img32_settings {
+    background-position: -128px -160px;
+}

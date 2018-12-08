@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension type="package" version="1.6" method="upgrade">
+    <name>AllEvents</name>
+    <author>Emmanuel Lecoester</author>
+    <creationDate>%%build.date%%</creationDate>
+    <packagename>packplgthird</packagename>
+    <version>%%ae3.version%%</version>
+    <url>https://www.allevents3.com</url>
+    <packager>Emmanuel Lecoester</packager>
+    <packagerurl>https://www.allevents3.com</packagerurl>
+    <description>Pack Plugin third party (Acymailing, CB Users, Jcomments)</description>
+    <files folder="">
+        <file type="plugin" id="acymailing" group="allevents">plg_acymailing.zip</file>
+        <file type="plugin" id="jcomments" group="allevents">plg_jcomments.zip</file>
+        <file type="plugin" id="cbusers" group="allevents">plg_cbusers.zip</file>
+    </files>
+</extension>

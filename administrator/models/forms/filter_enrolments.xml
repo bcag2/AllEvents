@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<form>
+    <fields name="filter">
+        <field name="search" type="text" label="JSEARCH_FILTER" description="COM_ALLEVENTS_FILTER_SEARCH_DESC"
+               hint="JSEARCH_FILTER"/>
+        <field name="state" type="status" label="JOPTION_SELECT_PUBLISHED" statuses="*,0,1,2,-2"
+               description="JOPTION_SELECT_PUBLISHED_DESC" onchange="this.form.submit();">
+            <option value="">JOPTION_SELECT_PUBLISHED</option>
+        </field>
+        <field name="period" type="list" label="COM_ALLEVENTS_FILTER_PERIOD"
+               description="COM_ALLEVENTS_FILTER_PERIOD_DESC" onchange="this.form.submit();">
+            <option value="">COM_ALLEVENTS_FILTER_PERIOD</option>
+            <option value="1">EVENTS_NEXT</option>
+            <option value="2">EVENTS_PAST</option>
+        </field>
+        <field name="event_id" type="events" label="COM_ALLEVENTS_FILTER_SELECT_EVENT"
+               description="COM_ALLEVENTS_FILTER_SELECT_EVENT_DESC" onchange="this.form.submit();"/>
+        <field name="enroltype" type="list" label="COM_ALLEVENTS_FILTER_ENROLTYPE"
+               description="COM_ALLEVENTS_FILTER_ENROLTYPE_DESC" onchange="this.form.submit();">
+            <option value="">COM_ALLEVENTS_FILTER_ENROLTYPE</option>
+            <option value="0">COM_ALLEVENTS_EVENT_ENROL_YES</option>
+            <option value="1">COM_ALLEVENTS_EVENT_ENROL_NO</option>
+            <option value="2">COM_ALLEVENTS_EVENT_ENROL_PERHAPS</option>
+            <option value="3">COM_ALLEVENTS_EVENT_ENROL_PENDING</option>
+        </field>
+    </fields>
+    <fields name="list">
+        <field name="fullordering" type="list" label="JGLOBAL_SORT_BY" description="JGLOBAL_SORT_BY"
+               onchange="this.form.submit();" default="e.titre ASC">
+            <option value="">JGLOBAL_SORT_BY</option>
+            <option value="e.published ASC">JSTATUS_ASC</option>
+            <option value="e.published DESC">JSTATUS_DESC</option>
+            <option value="e.titre ASC">COM_ALLEVENTS_HEADING_TITRE_ASC</option>
+            <option value="e.titre DESC">COM_ALLEVENTS_HEADING_TITRE_DESC</option>
+            <option value="user_id.name ASC">COM_ALLEVENTS_HEADING_NAME_ASC</option>
+            <option value="user_id.name DESC">COM_ALLEVENTS_HEADING_NAME_DESC</option>
+            <option value="en.enroldate ASC">COM_ALLEVENTS_HEADING_ENROL_DATE_ASC</option>
+            <option value="en.enroldate DESC">COM_ALLEVENTS_HEADING_ENROL_DATE_DESC</option>
+            <option value="en.id ASC">JGRID_HEADING_ID_ASC</option>
+            <option value="en.id DESC">JGRID_HEADING_ID_DESC</option>
+        </field>
+        <field name="limit" type="limitbox" class="input-mini" default="25" label="COM_ALLEVENTS_LIST_LIMIT"
+               description="COM_ALLEVENTS_LIST_LIMIT_DESC" onchange="this.form.submit();"/>
+    </fields>
+</form>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+    <layout title="COM_ALLEVENTS_TITLE_ITEM_VIEW_ACTIVITY" option="View">
+        <message>
+            <![CDATA[COM_ALLEVENTS_TITLE_ITEM_VIEW_ACTIVITY_DESC]]>
+        </message>
+    </layout>
+    <fields name="params">
+        <fieldset name="ALLEVENTS" label="COM_ALLEVENTS_MENU_OPTIONS"
+                  addfieldpath="/administrator/components/com_allevents/models/fields"
+                  addrulepath="/administrator/components/com_allevents/models/rules">
+            <field type="AETitleImg" class="input-xxlarge" aeimage="../css/images/allevents.png"/>
+            <field name="use_agendas" type="AEEval"
+                   expr="return $params['controlpanel_showagendas'] &amp;&amp; $params['controlpanel_showactivities'];"/>
+            <field name="use_activities" type="AEEval" expr="return $params['controlpanel_showactivities'];"/>
+            <field name="no_activities" showon="use_activities:0" type="AEMessage" text="ALLEVENTS_ACTIVITIES_NOT_USED"
+                   level="error"/>
+            <field name="menuiteminit" type="AEMenuItemActivityInit" validate="AEMenuItemActivity"/>
+            <field name="agenda_id" showon="use_agendas:1" type="AEAgenda" label="AGENDA"
+                   description="COM_ALLEVENTS_FORM_DESC_EVENT_AGENDA_ID">
+                <option value="0" class="se_agenda_0_bullet se_agenda_0_color">COM_ALLEVENTS_NO_AGENDA</option>
+            </field>
+            <field name="item_id" showon="use_activities:1" type="AEActivity" label="COM_ALLEVENTS_ITEM_ID_SELECT_LABEL"
+                   require="true"
+                   description="JGLOBAL_SHOW_TITLE_DESC"/>
+        </fieldset>
+    </fields>
+</metadata>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<extension type="plugin" group="allevents" version="3.1" method="upgrade">
+    <name>AllEvents - Twitter Cards</name>
+    <creationDate>%%build.date%%</creationDate>
+    <author>Emmanuel Lecoester</author>
+    <authorEmail>%%ae3.authoremail%%</authorEmail>
+    <authorUrl>%%ae3.authorurl%%</authorUrl>
+    <copyright>%%ae3.copyright%%</copyright>
+    <license>%%ae3.license%%</license>
+    <version>%%ae3.version%%</version>
+    <description>PLG_ALLEVENTS_TWITTERCARD_XML_DESC</description>
+    <files>
+        <filename plugin="twittercard">twittercard.php</filename>
+        <filename>index.html</filename>
+    </files>
+    <languages folder="language">
+        <language tag="fr-FR">fr-FR/fr-FR.plg_allevents_twittercard.ini</language>
+        <language tag="fr-FR">fr-FR/fr-FR.plg_allevents_twittercard.sys.ini</language>
+        <language tag="en-GB">en-GB/en-GB.plg_allevents_twittercard.ini</language>
+        <language tag="en-GB">en-GB/en-GB.plg_allevents_twittercard.sys.ini</language>
+    </languages>
+    <config>
+        <fields name="params">
+            <fieldset name="event" label="PLG_ALLEVENTS_TWITTERCARD_EVENT_OPTIONS">
+                <field name="title_e" type="text" default="" label="PLG_ALLEVENTS_TWITTERCARD_TITLE_LABEL"
+                       description="PLG_ALLEVENTS_TWITTERCARD_TITLE_DESC"/>
+                <field name="image_e" type="media" default="" label="PLG_ALLEVENTS_TWITTERCARD_IMAGE_LABEL"
+                       description="PLG_ALLEVENTS_TWITTERCARD_IMAGE_DESC"/>
+                <field name="description_e" type="textarea" default=""
+                       label="PLG_ALLEVENTS_TWITTERCARD_DESCRIPTION_LABEL"
+                       description="PLG_ALLEVENTS_TWITTERCARD_DESCRIPTION_DESC"/>
+                <field name="display_e" type="list" default="1" label="PLG_ALLEVENTS_TWITTERCARD_DISPLAY_EVENT_LABEL"
+                       description="PLG_ALLEVENTS_TWITTERCARD_DISPLAY_EVENT_DESC">
+                    <option value="1">PLG_ALLEVENTS_TWITTERCARD_YES</option>
+                    <option value="0">PLG_ALLEVENTS_TWITTERCARD_NO</option>
+                </field>
+            </fieldset>
+            <fieldset name="common" label="PLG_ALLEVENTS_TWITTERCARD_COMMON_OPTIONS">
+                <field name="app_id" type="text" default="@yourtwitterID" label="PLG_ALLEVENTS_TWITTERCARD_APP_ID_LABEL"
+                       description="PLG_ALLEVENTS_TWITTERCARD_APP_ID_DESC"/>
+                <field name="render_type" type="list" default="1" label="PLG_ALLEVENTS_TWITTERCARD_RENDER_TYPE_LABEL"
+                       description="PLG_ALLEVENTS_TWITTERCARD_RENDER_TYPE_DESC">
+                    <option value="1">PLG_ALLEVENTS_TWITTERCARD_NAME</option>
+                    <option value="2">PLG_ALLEVENTS_TWITTERCARD_PROPERTY</option>
+                </field>
+            </fieldset>
+        </fields>
+    </config>
+    <aepremiumonly>true</aepremiumonly>
+    <aedisplayevents>false</aedisplayevents>
+</extension>

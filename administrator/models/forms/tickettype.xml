@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<form>
+    <fieldset addfieldpath="/administrator/components/com_allevents/models/fields">
+        <field name="id" type="text" default="0" label="JGLOBAL_FIELD_ID_LABEL" readonly="true" class="readonly"/>
+        <field name="titre" type="text" label="JGLOBAL_TITLE" description="AE_TITLE_DESC"
+               class="input-xxlarge input-large-text" required="true"
+               menu_published="0" filter="raw"/>
+        <field name="event_id" type="aeevent" class="inputbox" label="EVENT" required="true"/>
+        <field name="published" type="list" label="JSTATUS" class="chzn-single chzn-color-state" size="1" default="1">
+            <option value="1">JPUBLISHED</option>
+            <option value="0">JUNPUBLISHED</option>
+            <option value="2">JARCHIVED</option>
+            <option value="-2">JTRASHED</option>
+        </field>
+        <field name="description" type="textarea" label="JGLOBAL_DESC" description="AE_DESC_DESC" class="inputbox"
+               rows="3" cols="30"/>
+        <field name="unlimited_seats" type="radio" label="COM_ALLEVENTS_FORM_LBL_UNLIMITED_SEATS"
+               class="btn-group btn-group-yesno" default="0">
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+        <field name="available" type="text" size="40" class="inputbox" label="AE_AVAILABLE" filter="safehtml"/>
+        <field name="access" type="accesslevel" label="JFIELD_ACCESS_LABEL" description="AE_ACCESS_DESC"
+               class="span12 small"/>
+        <field name="max_limit_ticket" type="text" size="40" class="inputbox" label="AE_MAX_LIMIT_TICKET"
+               filter="safehtml"/>
+        <field name="count" type="text" size="40" class="inputbox" label="AE_COUNT" filter="safehtml"/>
+        <field name="price" type="text" size="40" class="inputbox" label="AE_PRICE" filter="safehtml"/>
+        <field name="deposit_fee" type="text" size="40" class="inputbox" label="AE_DEPOSIT_FEE" filter="safehtml"/>
+    </fieldset>
+    <fieldset name="accesscontrol">
+        <field name="asset_id" type="hidden" filter="unset"/>
+        <field name="rules" type="rules" label="JFIELD_RULES_LABEL" translate_label="false" filter="rules"
+               validate="rules" class="inputbox" component="com_allevents" section="enrolment"/>
+    </fieldset>
+</form>

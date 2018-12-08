@@ -1,0 +1,64 @@
+#mod_aecalendar3 .custom-header {
+    background: none repeat scroll 0 0 #3c92d2;
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    border-top: 1px solid #ddd;
+    border-bottom: none;
+}
+
+#mod_aecalendar3 .custom-header nav span:last-child {
+    right: 0;
+}
+
+#mod_aecalendar3 .custom-header nav span:first-child {
+    left: 0;
+}
+
+#mod_aecalendar3 .custom-header nav span:before {
+    color: #fff;
+}
+
+#mod_aecalendar3 .custom-header h2 {
+    color: #fff;
+}
+
+#mod_aecalendar3 .custom-header h3 {
+    color: #fff;
+}
+
+#mod_aecalendar3 .custom-header nav span {
+    top: -3px;
+}
+
+#mod_aecalendar3 .fc-calendar .fc-head {
+    background: none repeat scroll 0 0 #3c92d2;
+    color: #fff;
+    height: 20px;
+    line-height: 20px;
+}
+
+#mod_aecalendar3 .fc-calendar .fc-body {
+    height: calc(100% - 20px);
+}
+
+#mod_aecalendar3 .fc-calendar .fc-row > div > span.fc-date {
+    font-size: 13px;
+}
+
+#mod_aecalendar3 .fc-calendar-container *, .fc-calendar-container :after, .fc-calendar-container :before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+#mod_aecalendar3 .fc-calendar .fc-row > div > span.fc-date {
+    font-weight: 600;
+}
+
+#mod_aecalendar3 .fc-calendar .fc-row > div.fc-today {
+    background: url(images/calendariotoday.png) no-repeat scroll 50% 50% #fff;
+}
+
+#mod_aecalendar3 .fc-calendar .fc-row > div.fc-today > span.fc-date {
+    color: #686a6e;
+}

@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+    <layout title="COM_ALLEVENTS_FULLCALENDAR_VIEW_DEFAULT_TITLE">
+        <message><![CDATA[COM_ALLEVENTS_FULLCALENDAR_VIEW_DEFAULT_DESC]]></message>
+    </layout>
+    <name>COM_ALLEVENTS_TITLE</name>
+    <description><![CDATA[VIEW_FULLCALENDAR_INFO_LONG]]></description>
+    <fields name="params">
+        <fieldset name="ALLEVENTS" label="COM_ALLEVENTS_MENU_OPTIONS"
+                  addfieldpath="/administrator/components/com_allevents/models/fields">
+            <field type="AETitleImg" class="input-xxlarge" aeimage="../css/images/allevents.png"/>
+            <field name="task" type="hidden" default="display"/>
+            <field name="layout" type="hidden" default="default"/>
+            <!-- DESKTOP -->
+            <field type="AETitleImg" label="COM_ALLEVENTS_PARAM_DISPLAY_LABEL" class="stylebox lead input-xxlarge"
+                   aeicon="desktop"/>
+            <field name="display_defaultview" type="list" default="0" label="COM_ALLEVENTS_DISPLAY_DEFAULTVIEW"
+                   description="COM_ALLEVENTS_FULLCALENDAR_DISPLAY_DEFAULTVIEW_INFO">
+                <option value="0">MONTH</option>
+                <option value="1">WEEK</option>
+                <option value="2">DAY</option>
+                <option value="3">AGENDA</option>
+            </field>
+            <field name="display_colors" type="list" default="" label="COM_ALLEVENTS_DISPLAY_COLORS"
+                   description="COM_ALLEVENTS_DISPLAY_COLORS_INFO">
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="0">AGENDA</option>
+                <option value="1">ACTIVITY</option>
+                <option value="2">CATEGORY</option>
+            </field>
+            <field name="display_colors_fore" type="list" default="" label="COM_ALLEVENTS_DISPLAY_COLORS_FORE"
+                   description="COM_ALLEVENTS_DISPLAY_COLORS_FORE_INFO">
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="0">COM_ALLEVENTS_BACKCOLOR</option>
+                <option value="1">COM_ALLEVENTS_FORECOLOR</option>
+            </field>
+            <field name="display_colors_back" type="list" default="" label="COM_ALLEVENTS_DISPLAY_COLORS_BACK"
+                   description="COM_ALLEVENTS_DISPLAY_COLORS_BACK_INFO">
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="0">COM_ALLEVENTS_BACKCOLOR</option>
+                <option value="1">COM_ALLEVENTS_FORECOLOR</option>
+            </field>
+            <field name="display_openlinkself" type="radio" class="btn-group btn-group-yesno" default="_blank"
+                   label="COM_ALLEVENTS_FULLCALENDAR_DISPLAY_OPENLINKSELF"
+                   description="COM_ALLEVENTS_FULLCALENDAR_DISPLAY_OPENLINKSELF_INFO">
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="_blank">JNO</option>
+                <option value="_self">JYES</option>
+            </field>
+            <field type="AETitleImg" label="COM_ALLEVENTS_PARAM_DISPLAY_LABEL" class="stylebox lead input-xxlarge"
+                   aeicon="desktop"/>
+            <field name="display_allowviewmonth" type="radio" class="btn-group btn-group-yesno" default="1"
+                   label="COM_ALLEVENTS_ALLOWVIEWMONTH" description="COM_ALLEVENTS_ALLOWVIEWAGENDA_DESC">
+                <option value="0">JHIDE</option>
+                <option value="1">JSHOW</option>
+            </field>
+            <field name="display_allowviewweek" type="radio" class="btn-group btn-group-yesno" default="1"
+                   label="COM_ALLEVENTS_FULLCALENDAR_DISPLAY_ALLOWVIEWWEEK"
+                   description="COM_ALLEVENTS_FULLCALENDAR_DISPLAY_ALLOWVIEWWEEK_INFO">
+                <option value="0">JHIDE</option>
+                <option value="1">JSHOW</option>
+            </field>
+            <field name="display_allowviewday" type="radio" class="btn-group btn-group-yesno" default="1"
+                   label="COM_ALLEVENTS_ALLOWVIEWDAY" description="COM_ALLEVENTS_ALLOWVIEWDAY_DESC">
+                <option value="0">JHIDE</option>
+                <option value="1">JSHOW</option>
+            </field>
+            <field name="display_starthour" type="integer" default="8"
+                   label="COM_ALLEVENTS_FULLCALENDAR_DISPLAY_STARTHOUR"
+                   description="COM_ALLEVENTS_FULLCALENDAR_DISPLAY_STARTHOUR_INFO" first="0" last="23" step="1"/>
+            <field name="display_endhour" type="integer" default="22" label="COM_ALLEVENTS_DEFAULTVIEW_INFO"
+                   description="COM_ALLEVENTS_FULLCALENDAR_DISPLAY_ENDHOUR_INFO" first="1" last="24" step="1"/>
+            <field name="display_showtooltip" type="radio" class="btn-group btn-group-yesno" default="1"
+                   label="COM_ALLEVENTS_FULLCALENDAR_QTIP_SHOWTOOLTIP"
+                   description="COM_ALLEVENTS_FULLCALENDAR_QTIP_SHOWTOOLTIP_INFO">
+                <option value="0">JHIDE</option>
+                <option value="1">JSHOW</option>
+            </field>
+            <field name="display_notification" type="radio" class="btn-group btn-group-yesno" default="1"
+                   label="COM_ALLEVENTS_FULLCALENDAR_DISPLAY_NOTIFICATION"
+                   description="COM_ALLEVENTS_FULLCALENDAR_DISPLAY_NOTIFICATION_INFO">
+                <option value="0">JHIDE</option>
+                <option value="1">JSHOW</option>
+            </field>
+            <field name="display_template" type="list" default="cupertino" label="COM_ALLEVENTS_TEMPLATE"
+                   description="COM_ALLEVENTS_TEMPLATE_INFO">
+                <option value="base">base</option>
+                <option value="black-tie">black-tie</option>
+                <option value="blitzer">blitzer</option>
+                <option value="cupertino">cupertino</option>
+                <option value="dark-hive">dark-hive</option>
+                <option value="dot-luv">dot-luv</option>
+                <option value="eggplant">eggplant</option>
+                <option value="excite-bike">excite-bike</option>
+                <option value="flick">flick</option>
+                <option value="hot-sneaks">hot-sneaks</option>
+                <option value="humanity">humanity</option>
+                <option value="le-frog">le-frog</option>
+                <option value="mint-choc">mint-choc</option>
+                <option value="overcast">overcast</option>
+                <option value="pepper-grinder">pepper-grinder</option>
+                <option value="redmond">redmond</option>
+                <option value="smoothness">smoothness</option>
+                <option value="south-street">south-street</option>
+                <option value="start">start</option>
+                <option value="sunny">sunny</option>
+                <option value="swanky-purse">swanky-purse</option>
+                <option value="trontastic">trontastic</option>
+                <option value="ui-darkness">ui-darkness</option>
+                <option value="ui-lightness">ui-lightness</option>
+                <option value="vader">vader</option>
+            </field>
+            <!-- COGS -->
+            <field type="AETitleImg" label="COM_ALLEVENTS_PARAM_DISPLAY_LABEL" class="stylebox lead input-xxlarge"
+                   aeicon="cogs"/>
+            <field name="display_showfilters" type="radio" class="btn-group btn-group-yesno" default="1"
+                   label="COM_ALLEVENTS_FULLCALENDAR_DISPLAY_SHOWFILTERS"
+                   description="COM_ALLEVENTS_FULLCALENDAR_DISPLAY_SHOWFILTERS_INFO">
+                <option value="0">JHIDE</option>
+                <option value="1">JSHOW</option>
+            </field>
+            <field name="display_new" type="radio" class="btn-group btn-group-yesno" default="1"
+                   label="COM_ALLEVENTS_DISPLAY_NEWEVENT" description="COM_ALLEVENTS_DISPLAY_NEWEVENT_INFO">
+                <option value="0">JHIDE</option>
+                <option value="1">JSHOW</option>
+            </field>
+            <field name="display_place" type="radio" class="btn-group btn-group-yesno" default="1"
+                   label="COM_ALLEVENTS_DISPLAY_ADDPLACE" description="COM_ALLEVENTS_DISPLAY_ADDPLACE_INFO">
+                <option value="0">JHIDE</option>
+                <option value="1">JSHOW</option>
+            </field>
+            <field name="navigation_previousyear" type="radio" class="btn-group btn-group-yesno" default="0"
+                   label="COM_ALLEVENTS_NAVIGATION_PREVIOUSYEAR"
+                   description="COM_ALLEVENTS_NAVIGATION_PREVIOUSYEAR_INFO">
+                <option value="0">JHIDE</option>
+                <option value="1">JSHOW</option>
+            </field>
+            <field name="navigation_previousmonth" type="radio" class="btn-group btn-group-yesno" default="1"
+                   label="COM_ALLEVENTS_FULLCALENDAR_NAVIGATION_PREVIOUSMONTH"
+                   description="COM_ALLEVENTS_NAVIGATION_PREVIOUSMONTH_INFO">
+                <option value="0">JHIDE</option>
+                <option value="1">JSHOW</option>
+            </field>
+            <field name="navigation_nextmonth" type="radio" class="btn-group btn-group-yesno" default="1"
+                   label="COM_ALLEVENTS_NAVIGATION_NEXTMONTH" description="COM_ALLEVENTS_NAVIGATION_NEXTMONTH_INFO">
+                <option value="0">JHIDE</option>
+                <option value="1">JSHOW</option>
+            </field>
+            <field name="navigation_nextyear" type="radio" class="btn-group btn-group-yesno" default="0"
+                   label="COM_ALLEVENTS_NAVIGATION_NEXTYEAR" description="COM_ALLEVENTS_NAVIGATION_NEXTYEAR_INFO">
+                <option value="0">JHIDE</option>
+                <option value="1">JSHOW</option>
+            </field>
+        </fieldset>
+        <fieldset name="advanced">
+            <field name="text_intro" type="editor" width="200" buttons="false" cols="50" default=""
+                   label="VIEW_CAPTION_BEFORE" description="VIEW_CAPTION_BEFORE_DESC"
+                   filter="JComponentHelper::filterText"/>
+            <field name="text_conclusion" type="editor" width="200" buttons="false" cols="50" default=""
+                   label="VIEW_CAPTION_AFTER" description="VIEW_CAPTION_AFTER_DESC"
+                   filter="JComponentHelper::filterText"/>
+        </fieldset>
+    </fields>
+</metadata>

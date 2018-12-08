@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<extension type="plugin" group="allevents" version="3.1" method="upgrade">
+    <name>AllEvents - JComments</name>
+    <creationDate>%%build.date%%</creationDate>
+    <author>Emmanuel Lecoester</author>
+    <authorEmail>%%ae3.authoremail%%</authorEmail>
+    <authorUrl>%%ae3.authorurl%%</authorUrl>
+    <copyright>%%ae3.copyright%%</copyright>
+    <license>%%ae3.license%%</license>
+    <version>%%ae3.version%%</version>
+    <description>PLG_ALLEVENTS_JCOMMENTS_XML_DESC</description>
+    <files>
+        <filename plugin="jcomments">jcomments.php</filename>
+    </files>
+    <languages folder="language">
+        <language tag="fr-FR">fr-FR/fr-FR.plg_allevents_jcomments.ini</language>
+        <language tag="fr-FR">fr-FR/fr-FR.plg_allevents_jcomments.sys.ini</language>
+        <language tag="en-GB">en-GB/en-GB.plg_allevents_jcomments.ini</language>
+        <language tag="en-GB">en-GB/en-GB.plg_allevents_jcomments.sys.ini</language>
+        <language tag="es-ES">es-ES/es-ES.plg_allevents_jcomments.ini</language>
+        <language tag="es-ES">es-ES/es-ES.plg_allevents_jcomments.sys.ini</language>
+    </languages>
+    <config>
+        <fields name="params">
+            <fieldset name="basic">
+                <field
+                        name="autosubscribe"
+                        type="radio"
+                        default="0"
+                        label="PLG_ALLEVENTS_JCOMMENTS_FIELD_AUTOSUBSCRIBE_LABEL"
+                        description="PLG_ALLEVENTS_JCOMMENTS_FIELD_AUTOSUBSCRIBE_DESC">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+
+                <field
+                        name="anchor_css"
+                        type="text"
+                        default=""
+                        label="PLG_ALLEVENTS_JCOMMENTS_FIELD_ANCHOR_CSS_LABEL"
+                        description="PLG_ALLEVENTS_JCOMMENTS_FIELD_ANCHOR_CSS_DESC"/>
+            </fieldset>
+        </fields>
+    </config>
+    <aepremiumonly>true</aepremiumonly>
+    <aedisplayevents>false</aedisplayevents>
+</extension>

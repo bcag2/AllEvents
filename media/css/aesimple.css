@@ -1,0 +1,1743 @@
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Roboto'), local('Roboto-Regular'), url(https://fonts.gstatic.com/s/roboto/v15/CWB0XYA8bzo0kSThX0UTuA.woff2) format('woff2'), url(https://fonts.gstatic.com/s/roboto/v15/2UX7WLTfW3W8TclTUvlFyQ.woff) format('woff');
+}
+
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    src: local('Roboto Medium'), local('Roboto-Medium'), url(https://fonts.gstatic.com/s/roboto/v15/RxZJdnzeo3R5zSexge8UUVtXRa8TVwTICgirnJhmVJw.woff2) format('woff2');
+}
+
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    src: local('Roboto Bold'), local('Roboto-Bold'), url(https://fonts.gstatic.com/s/roboto/v15/d-6IYplOFocCacKzxwXSOFtXRa8TVwTICgirnJhmVJw.woff2) format('woff2'), url(https://fonts.gstatic.com/s/roboto/v15/d-6IYplOFocCacKzxwXSOD8E0i7KZn-EPnyo3HZu7kw.woff) format('woff');
+}
+
+#aesimple-view {
+    font-family: 'Roboto', sans-serif;
+}
+
+#aesimple-view form {
+    margin: 0;
+    padding: 0;
+}
+
+#aesimple-view form div.actions .btn + .btn {
+    margin-left: 5px;
+}
+
+#aesimple-view p {
+    margin: 0;
+}
+
+#aesimple-view p + p {
+    margin-top: 10px;
+}
+
+#aesimple-view span.loader {
+    display: inline-block;
+    width: 16px;
+    height: 11px;
+    background-image: url("/media/com_aesimple/images/loader.gif");
+    vertical-align: middle;
+}
+
+#aesimple-view a, #aesimple-view a:focus, #aesimple-view a:active {
+    outline: none;
+}
+
+#aesimple-view span.label-event-status {
+    font-weight: normal;
+    padding: 4px 8px;
+    font-size: 13px;
+}
+
+#aesimple-view span.label-staff-role {
+    font-weight: normal;
+    padding: 1px 3px;
+    line-height: normal;
+    font-size: 10px;
+}
+
+#aesimple-view img.avatar {
+    border-radius: 50%;
+    background-color: #eeeeee;
+}
+
+#aesimple-view h1 + h2 {
+    color: #999999;
+    margin-top: -5px;
+}
+
+#aesimple-view span.no-photo {
+    display: block;
+    font-size: 40px;
+    text-align: center;
+    width: 100%;
+    color: #999999;
+    padding: 30px 0;
+    background-color: #f6f6f6;
+}
+
+#aesimple-view span.star {
+    color: #ff0000;
+}
+
+#aesimple-view .required-fields {
+    margin-bottom: 10px;
+}
+
+/*
+div.aesimple-tokeninput{
+    width:400px;
+    background-color:#ffffff;
+    overflow:hidden;
+    border-left:1px solid #dddddd;
+    border-right:1px solid #dddddd;
+    border-bottom:1px solid #dddddd;
+    cursor:default;
+    box-sizing:border-box;
+    box-shadow:5px 5px 12px -10px #999999
+}
+div.aesimple-tokeninput ul{
+    list-style-type:none;
+    margin:0;
+    padding:5px 0
+}
+div.aesimple-tokeninput ul li{
+    overflow:hidden;
+    padding:5px 10px;
+    line-height:normal
+}
+div.aesimple-tokeninput ul li.token-selected{
+    background-color:#d9edf7
+}
+div.aesimple-tokeninput p{
+    margin:5px 10px
+}
+#aesimple-view ul.token-input-list{
+    line-height:normal;
+    margin:0;
+    padding:3px 0 0 3px;
+    box-sizing:border-box;
+    border:1px solid #ccc;
+    border-radius:3px;
+    width:400px;
+    box-shadow:0 1px 1px rgba(0,0,0,0.075) inset;
+    cursor:text
+}
+#aesimple-view ul.token-input-list li{
+    display:inline-block;
+    margin:0 3px 3px 0;
+    padding:2px 4px;
+    vertical-align:middle;
+    line-height:normal
+}
+#aesimple-view ul.token-input-list li input,#aesimple-view ul.token-input-list li input:focus,#aesimple-view ul.token-input-list li input:active{
+    border:0;
+    box-shadow:none;
+    margin:0;
+    padding:0
+}
+#aesimple-view ul.token-input-list li span.token-input-delete-token{
+    font-weight:bold;
+    margin-left:5px;
+    cursor:pointer
+}
+#aesimple-view ul.token-input-list li.token-input-token{
+    background-color:#d9edf7;
+    border-radius:4px;
+    border:1px solid #bce8f1;
+    cursor:default
+}
+#aesimple-view ul.token-input-list li.token-input-selected-token{
+    background-color:#f2dede;
+    border-radius:4px;
+    border:1px solid #eed3d7;
+    color:#b94a48
+}
+div.aesimple-profile-delete div.actions{
+    margin-top:10px
+}
+div.aesimple-profile-show div.profile-avatar{
+    text-align:center;
+    position:relative;
+    border-radius:50%;
+    width:120px;
+    height:120px;
+    margin:0 auto
+}
+div.aesimple-profile-show div.profile-avatar img{
+    border-radius:50%;
+    background-color:#eeeeee;
+    height:100%;
+    width:100%
+}
+div.aesimple-profile-show div.profile-avatar:not(.loading):hover div.change-avatar-wrapper{
+    display:block
+}
+div.aesimple-profile-show div.profile-avatar div.change-avatar-wrapper{
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    text-align:center;
+    display:none;
+    border-radius:50%;
+    overflow:hidden
+}
+div.aesimple-profile-show div.profile-avatar div.change-avatar-wrapper input#change-avatar{
+    left:0;
+    position:absolute;
+    top:-100px
+}
+div.aesimple-profile-show div.profile-avatar div.change-avatar-wrapper a{
+    display:inline-block;
+    border-radius:50%;
+    width:100%;
+    height:100%;
+    background-color:rgba(100,100,100,0.7)
+}
+div.aesimple-profile-show div.profile-avatar div.change-avatar-wrapper a span.fa{
+    font-size:40px;
+    line-height:120px;
+    color:#ffffff
+}
+div.aesimple-profile-show div.profile-avatar div.change-avatar-loader{
+    position:absolute;
+    display:none;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    text-align:center;
+    border-radius:50%;
+    background-color:rgba(100,100,100,0.7)
+}
+div.aesimple-profile-show div.profile-avatar div.change-avatar-loader div.progress{
+    margin:0;
+    height:8px;
+    border-radius:0;
+    top:56px;
+    left:10px;
+    right:10px;
+    position:absolute
+}
+div.aesimple-profile-show div.alert{
+    display:none
+}
+div.aesimple-profile-show div.alert p{
+    margin:0
+}
+div.aesimple-profile-show div#profile div.control-group{
+    margin-bottom:15px
+}
+div.aesimple-profile-show div#profile div.control-group label{
+    font-weight:bold;
+    margin:0
+}
+div.aesimple-profile-show div#profile div.control-group span.empty{
+    color:#999999
+}
+div.aesimple-profile-show div#profile div.profile-avatar-notification{
+    margin-top:10px;
+    text-align:center;
+    font-size:11px;
+    color:#999999;
+    line-height:normal
+}
+div.aesimple-profile-show div#profile div.profile-actions{
+    margin-top:20px
+}
+div.aesimple-profile-show div#delete div.actions{
+    margin-top:20px
+}
+div.aesimple-profile-edit div.actions{
+    margin-top:20px
+}
+div.aesimple-profile-edit div.actions .btn+.btn{
+    margin-left:5px
+}
+div.aesimple-profile-edit form{
+    margin:0
+}
+div.aesimple-profile-navigation ul.nav-tabs span.badge{
+    margin-left:5px;
+    padding:1px 9px
+}
+div.aesimple-profile-navigation ul.nav-tabs li a:hover{
+    cursor:pointer
+}
+*/
+div.aesimple-event-index div.events-filters {
+    text-align: right;
+    border-bottom: 1px solid #eeeeee;
+    margin-bottom: 20px;
+    padding-bottom: 5px;
+}
+
+div.aesimple-event-index div.events-filters > span + span {
+    margin-left: 8px;
+}
+
+div.aesimple-event-index div.events-filters a {
+    color: inherit;
+    font-weight: bold;
+}
+
+/*
+div.aesimple-event-calendar table.calendar{
+    width:100%;
+    background-color:transparent;
+    border-collapse:collapse;
+    border-spacing:0;
+    max-width:100%;
+    table-layout:fixed
+}
+div.aesimple-event-calendar table.calendar th{
+    font-weight:bold;
+    text-transform:uppercase;
+    padding:10px 0;
+    background-color:#2196f3;
+    color:#ffffff
+}
+div.aesimple-event-calendar table.calendar td{
+    border-bottom:1px solid #f5f5f5;
+    border-right:1px solid #f5f5f5;
+    position:relative;
+    height:90px;
+    vertical-align:top;
+    padding:6px
+}
+div.aesimple-event-calendar table.calendar td div.date{
+    text-align:left;
+    color:#9e9e9e;
+    font-size:16px;
+    margin-bottom:3px
+}
+div.aesimple-event-calendar table.calendar td.today div.date{
+    color:#f44336;
+    font-weight:bold
+}
+div.aesimple-event-calendar table.calendar td a{
+    line-height:12px;
+    width:100%;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    display:inline-block
+}
+div.aesimple-event-calendar table.calendar tr td:first-of-type{
+    border-left:1px solid #f5f5f5
+}
+div.aesimple-event-calendar table.calendar tr th:first-of-type{
+    border-left:1px solid #2196f3
+}
+div.aesimple-event-minicalendar table.minicalendar{
+    width:100%;
+    background-color:transparent;
+    border-collapse:collapse;
+    border-spacing:0;
+    max-width:100%;
+    table-layout:fixed
+}
+div.aesimple-event-minicalendar table.minicalendar td{
+    text-align:center
+}
+div.aesimple-event-map div#map{
+    height:400px;
+    width:100%
+}
+div.aesimple-event-map div.list-wrapper{
+    height:400px;
+    overflow:auto
+}
+div.aesimple-event-map div.list-wrapper>div{
+    background-color:#eceff1;
+    padding:10px
+}
+div.aesimple-event-map div.list-wrapper ol#list{
+    list-style-type:upper-latin;
+    margin:0 0 0 25px;
+    padding:0
+}
+div.aesimple-event-map div.actions{
+    margin-bottom:10px;
+    overflow:hidden
+}
+div.aesimple-event-details .avatar{
+    border-radius:50%;
+    background-color:#eeeeee
+}
+div.aesimple-event-details div.event-poster{
+    text-align:center;
+    background-color:#f0f0f0;
+    padding:10px
+}
+div.aesimple-event-details div.event-quick-actions{
+    margin-top:20px
+}
+div.aesimple-event-details div.tab-content div.block+div.block{
+    margin-top:20px
+}
+div.aesimple-event-details div.tab-content div.block h4{
+    margin:5px 0 10px 0
+}
+div.aesimple-event-details div.event-status{
+    margin-bottom:10px
+}
+div.aesimple-event-details ul#event li.pull-right a{
+    margin-right:0;
+    font-weight:bold
+}
+div.aesimple-event-details ul#event li.active a{
+    cursor:pointer
+}
+*/
+div.aesimple-event-list div.event-wrapper {
+    border-bottom: 1px solid #eeeeee;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+div.aesimple-event-list div.event-wrapper h2 {
+    margin: 0;
+}
+
+div.aesimple-event-list div.event-wrapper h2 span.label {
+    vertical-align: middle;
+    margin-left: 5px;
+}
+
+div.aesimple-event-list div.event-wrapper div.event-poster {
+    position: relative;
+}
+
+div.aesimple-event-list div.event-wrapper div.event-poster a {
+    display: block;
+    text-decoration: none;
+}
+
+div.aesimple-event-list div.event-wrapper div.event-poster div.event-cancelled {
+    position: absolute;
+    font-weight: bold;
+    background-color: #ff0000;
+    color: #ffffff;
+    padding: 10px;
+    top: 45px;
+    text-transform: uppercase;
+    transform: rotate(-30deg);
+    font-size: 22px;
+}
+
+div.aesimple-event-list div.event-wrapper div.event-details span.free-event {
+    background-color: #5cb85c;
+    color: #ffffff;
+    padding: 2px 6px;
+}
+
+div.aesimple-event-list div.event-wrapper div.event-details div.event-description {
+    color: #999999;
+    margin-top: 10px;
+    line-height: normal;
+}
+
+div.aesimple-event-list div.event-wrapper div.event-details div.event-actions {
+    margin-top: 20px;
+}
+
+div.aesimple-event-list div.event-wrapper div.event-details div.event-actions > a, div.aesimple-event-list div.event-wrapper div.event-details div.event-actions > span {
+    display: inline-block;
+    margin-right: 15px;
+    vertical-align: middle;
+    font-size: 13px;
+}
+
+div.aesimple-event-list div.event-wrapper div.event-details div.event-actions span.muted {
+    color: inherit;
+}
+
+div.aesimple-event-list div.event-wrapper div.event-details div.event-actions span.label {
+    font-weight: normal;
+    padding: 4px 8px;
+}
+
+div.aesimple-event-list div.event-wrapper div.event-details div.event-info {
+    margin-top: 5px;
+}
+
+div.aesimple-event-list div.event-wrapper div.event-details div.event-info span.fa {
+    line-height: normal;
+    margin-right: 4px;
+}
+
+div.aesimple-event-list div.event-wrapper div.event-details div.event-info > div {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+div.aesimple-event-list div.event-wrapper div.event-details div.event-info span.event-distance {
+    margin-left: 5px;
+    color: #999999;
+    font-size: 11px;
+}
+
+div.aesimple-event-list div.event-wrapper a.like span.fa {
+    margin-right: 3px;
+}
+
+/*
+div.aesimple-event-edit span.star{
+    color:#ff0000
+}
+div.aesimple-event-edit form input#event_edit_title{
+    font-size:18px;
+    height:auto;
+    line-height:22px;
+    width:100%;
+    box-sizing:border-box;
+    font-weight:bold
+}
+div.aesimple-event-edit form textarea#event_edit_description{
+    width:100%;
+    box-sizing:border-box;
+    resize:vertical
+}
+div.aesimple-event-managed div.filters{
+    text-align:right;
+    margin:10px 0
+}
+div.aesimple-event-managed div.filters div.chzn-container{
+    text-align:left
+}
+div.aesimple-event-managed div.aesimple-event-list div.staff_role{
+    margin-bottom:10px
+}
+div.aesimple-event-managed div.aesimple-event-list div.staff_role span.label{
+    background-color:#b94a48;
+    font-weight:normal;
+    padding:2px 6px;
+    display:inline-block;
+    font-size:13px;
+    margin-right:15px;
+    vertical-align:middle
+}
+div.aesimple-event-managed div.aesimple-event-list div.event-details span.label{
+    background-color:#999999
+}
+div.aesimple-event-managed div.aesimple-event-list div.invitation{
+    margin:0
+}
+div.aesimple-event-managed div.aesimple-event-list div.invitation div.description{
+    margin-bottom:5px
+}
+div.aesimple-event-managed div.aesimple-event-list div.invitation div.actions a+a{
+    margin-left:10px
+}
+div.aesimple-event-managed div.aesimple-event-list div.invitation+div.contact{
+    margin-top:10px
+}
+div.aesimple-event-managed div.aesimple-event-list div.contact{
+    margin-bottom:10px
+}
+div.aesimple-event-managed div.aesimple-event-list a.btn span.fa{
+    margin-right:3px
+}
+div.aesimple-event-dashboard div.well-nav{
+    padding:8px 0
+}
+div.aesimple-event-dashboard div.well-nav ul.nav-list li{
+    line-height:20px
+}
+div.aesimple-event-dashboard div.well-nav ul.nav-list li a{
+    font-size:14px
+}
+div.aesimple-event-dashboard div.event-actions{
+    margin-top:10px
+}
+div.aesimple-filter-events form{
+    margin:0;
+    padding:0
+}
+div.aesimple-filter-events.vertical div.section[class*="span"]{
+    width:100%;
+    padding:0;
+    margin:0
+}
+div.aesimple-filter-events.vertical div.section+div.section{
+    margin-top:15px
+}
+div.aesimple-filter-events div.section div.title{
+    font-weight:bold;
+    margin-bottom:3px;
+    padding-bottom:3px;
+    border-bottom:1px solid #eeeeee
+}
+div.aesimple-filter-events div.section>ul{
+    list-style-type:none;
+    padding:0;
+    margin:0
+}
+div.aesimple-filter-events div.section>ul li+li{
+    margin-top:5px
+}
+div.aesimple-filter-events div.section>ul li:first-of-type label{
+    font-weight:bold
+}
+div.aesimple-filter-events div.section>ul li label{
+    line-height:normal;
+    margin:0
+}
+div.aesimple-filter-events div.section>ul li label input[type="checkbox"]{
+    margin:0 5px 0 0
+}
+div.aesimple-filter-events div.section select{
+    width:100%
+}
+div.aesimple-filter-events a.more{
+    display:block;
+    color:#999999;
+    margin-top:5px;
+    font-size:11px
+}
+div.aesimple-activities img.avatar{
+    border-radius:50%;
+    background-color:#eeeeee
+}
+div.aesimple-activities div.post-activity{
+    overflow:hidden;
+    padding:0 0 20px 0;
+    margin:20px 0 20px 0;
+    border-bottom:1px solid #eeeeee
+}
+div.aesimple-activities div.post-activity div.alert{
+    display:none
+}
+div.aesimple-activities div.post-activity div.avatar{
+    float:left
+}
+div.aesimple-activities div.post-activity div.avatar img{
+    width:48px
+}
+div.aesimple-activities div.post-activity div.content{
+    margin-left:58px
+}
+div.aesimple-activities div.post-activity div.content textarea{
+    box-sizing:border-box;
+    border-radius:0;
+    border-color:#dddddd;
+    box-shadow:none;
+    resize:none;
+    height:48px;
+    min-height:48px;
+    max-height:200px;
+    width:100%;
+    margin:0
+}
+div.aesimple-activities div.post-activity div.content div.actions{
+    margin-top:7px;
+    display:none
+}
+div.aesimple-activities div.post-activity div.content div.actions .btn+.btn{
+    margin-left:5px
+}
+div.aesimple-activities div.post-activity div.media{
+    border:1px solid #dddddd;
+    border-top:0;
+    background-color:#f6f6f6
+}
+div.aesimple-activities div.post-activity div.media a{
+    display:inline-block;
+    font-size:14px;
+    padding:4px 8px;
+    border-right:1px solid #dddddd;
+    background-color:#eeeeee
+}
+div.aesimple-activities div.post-activity div.media a:hover{
+    background-color:#dddddd
+}
+div.aesimple-activities div.post-activity ul.media-selected{
+    list-style-type:none;
+    margin:10px 0 0;
+    padding:0
+}
+div.aesimple-activities div.post-activity ul.media-selected li{
+    display:inline-block;
+    width:60px;
+    height:60px;
+    background-color:#eeeeee;
+    text-align:center;
+    position:relative;
+    margin-right:7px;
+    margin-bottom:7px;
+    vertical-align:middle
+}
+div.aesimple-activities div.post-activity ul.media-selected li:before{
+    content:' ';
+    display:inline-block;
+    vertical-align:middle;
+    height:100%
+}
+div.aesimple-activities div.post-activity ul.media-selected li.done img{
+    opacity:1
+}
+div.aesimple-activities div.post-activity ul.media-selected li img{
+    max-width:100%;
+    max-height:100%;
+    opacity:.5;
+    vertical-align:middle
+}
+div.aesimple-activities div.post-activity ul.media-selected li div.progress{
+    margin:0;
+    border-radius:0;
+    height:6px;
+    box-shadow:none;
+    position:absolute;
+    top:27px;
+    left:5px;
+    right:5px
+}
+div.aesimple-activities ul.activities{
+    list-style-type:none;
+    margin:0;
+    padding:0
+}
+div.aesimple-activities ul.activities li.activity:first-of-type{
+    margin-top:20px
+}
+div.aesimple-activities ul.activities li.activity:after{
+    content:'';
+    clear:both;
+    display:block
+}
+div.aesimple-activities ul.activities li.activity+li.activity{
+    margin-top:20px;
+    padding-top:20px;
+    border-top:1px solid #eeeeee
+}
+div.aesimple-activities ul.activities li.activity div.avatar{
+    float:left
+}
+div.aesimple-activities ul.activities li.activity div.avatar img.avatar{
+    width:48px
+}
+div.aesimple-activities ul.activities li.activity div.content{
+    margin-left:58px
+}
+div.aesimple-activities ul.activities li.activity div.content a.username{
+    font-weight:bold
+}
+div.aesimple-activities ul.activities li.activity div.content span.date{
+    font-size:11px;
+    color:#999999
+}
+div.aesimple-activities ul.activities li.activity div.content div.message{
+    line-height:normal
+}
+div.aesimple-activities ul.activities li.activity div.content div.user{
+    margin-bottom:3px
+}
+div.aesimple-activities ul.activities li.activity div.content div.user span.label{
+    font-weight:normal;
+    padding:1px 3px
+}
+div.aesimple-activities ul.activities li.activity div.activity-actions{
+    float:right
+}
+div.aesimple-activities ul.activities li.activity div.activity-actions a.dropdown-toggle{
+    border:0;
+    background:transparent;
+    box-shadow:none;
+    color:#cccccc;
+    border-radius:0
+}
+div.aesimple-activities ul.activities li.activity div.activity-actions a.dropdown-toggle:hover{
+    color:#999999;
+    background-color:#eeeeee
+}
+div.aesimple-activities ul.activities li.activity div.activity-actions ul.dropdown-menu{
+    right:0;
+    left:inherit;
+    border-radius:0;
+    margin:0
+}
+div.aesimple-activities ul.activities li.activity div.activity-actions div.open a.dropdown-toggle{
+    color:#999999;
+    background-color:#dddddd
+}
+div.aesimple-activities ul.activities li.activity div.activity-media{
+    margin-top:20px
+}
+div.aesimple-activities ul.activities li.activity div.activity-media a{
+    display:inline-block;
+    margin-right:5px;
+    margin-bottom:5px
+}
+div.aesimple-activities ul.activities li.activity div.activity-media a img{
+    max-height:60px
+}
+div.aesimple-activities ul.replies{
+    list-style-type:none;
+    margin:20px 0 0;
+    padding:0
+}
+div.aesimple-activities ul.replies li.reply:after{
+    content:'';
+    clear:both;
+    display:block
+}
+div.aesimple-activities ul.replies li.reply+li.reply{
+    margin-top:10px
+}
+div.aesimple-activities ul.replies li.reply div.avatar img.avatar{
+    width:28px
+}
+div.aesimple-activities ul.replies li.reply div.content{
+    margin-left:38px
+}
+div.aesimple-activities ul.replies li.reply div.content a.username{
+    font-weight:normal
+}
+div.aesimple-activities div.load-more-replies{
+    margin-top:10px
+}
+div.aesimple-activities div.load-more-replies a{
+    color:#999999
+}
+div.aesimple-activities div.load-more-updates{
+    margin-top:20px
+}
+div.aesimple-activities div.aesimple-replies div.post-activity{
+    padding:0;
+    margin:20px 0 0;
+    border:0
+}
+div.aesimple-activities div.aesimple-replies div.post-activity div.avatar img.avatar{
+    width:28px
+}
+div.aesimple-activities div.aesimple-replies div.post-activity div.content{
+    margin-left:38px
+}
+div.aesimple-activities div.aesimple-replies div.post-activity div.content textarea{
+    box-sizing:border-box;
+    border-radius:0;
+    border-color:#dddddd;
+    box-shadow:none;
+    resize:none;
+    margin:0;
+    height:28px;
+    min-height:28px;
+    max-height:150px;
+    width:100%
+}
+div.aesimple-activities div.aesimple-replies div.post-activity+ul.replies{
+    margin:20px 0 0
+}
+div.aesimple-activities span.removed{
+    color:#999999
+}
+#aesimple-view.modal.report{
+    width:400px;
+    margin:0 auto;
+    left:0;
+    right:0;
+    top:100px
+}
+#aesimple-view.modal.report form{
+    margin:0;
+    padding:0
+}
+#aesimple-view.modal.report div.modal-body div.modal-body-wrapper{
+    padding:10px
+}
+#aesimple-view.modal.report div.modal-body div.alert{
+    display:none
+}
+#aesimple-view.modal.report div.modal-body div.control-group{
+    margin-bottom:10px
+}
+#aesimple-view.modal.report div.modal-body textarea{
+    margin:0;
+    border:1px solid #dddddd;
+    border-radius:0;
+    resize:none;
+    box-shadow:none;
+    width:100%;
+    box-sizing:border-box;
+    min-height:60px
+}
+#aesimple-view.modal.report div.modal-footer{
+    padding:10px 15px
+}
+div.aesimple-staff-index ul.staff-list{
+    list-style-type:none;
+    margin:20px 0 0 0;
+    padding:0
+}
+div.aesimple-staff-index ul.staff-list li{
+    overflow:hidden
+}
+div.aesimple-staff-index ul.staff-list li+li{
+    margin-top:20px;
+    padding-top:20px;
+    border-top:1px solid #eeeeee
+}
+div.aesimple-staff-index ul.staff-list li div.avatar{
+    float:left;
+    width:60px
+}
+div.aesimple-staff-index ul.staff-list li div.content{
+    margin-left:70px
+}
+div.aesimple-staff-index ul.staff-list li div.content a.username{
+    font-weight:bold;
+    font-size:15px;
+    margin-right:7px
+}
+div.aesimple-staff-index ul.staff-list li div.content span.fa{
+    margin-right:3px
+}
+div.aesimple-staff-index ul.staff-list li div.content span.date{
+    font-size:11px;
+    color:#999999
+}
+div.aesimple-staff-index ul.staff-list li div.content span.pending{
+    text-transform:uppercase;
+    margin-right:10px;
+    background-color:#cc0000;
+    padding:0 3px;
+    color:#ffffff;
+    border-radius:3px
+}
+div.aesimple-staff-index ul.staff-list li div.content div.actions{
+    margin-top:5px
+}
+div.aesimple-staff-index ul.staff-list li div.content div.actions a+a{
+    margin-left:20px
+}
+div.aesimple-staff-add input#staff_user_id{
+    box-sizing:border-box;
+    min-height:31px
+}
+div.aesimple-tokeninput.aesimple-profiles ul li img.avatar{
+    width:32px;
+    float:left
+}
+div.aesimple-tokeninput.aesimple-profiles ul li div.item{
+    margin-left:42px
+}
+div.aesimple-tokeninput.aesimple-profiles ul li div.details{
+    color:#999999;
+    font-size:11px
+}
+div.aesimple-tokeninput.aesimple-events ul li div.title{
+    font-weight:bold
+}
+div.aesimple-tokeninput.aesimple-events ul li div.details{
+    color:#999999
+}
+div.aesimple-tokeninput.aesimple-events ul li div.details span.fa{
+    font-size:11px
+}
+div.aesimple-discussion-index ul.discussions-list{
+    padding:0;
+    margin:0;
+    list-style-type:none
+}
+div.aesimple-discussion-index ul.discussions-list li.discussion{
+    overflow:hidden;
+    padding:15px 10px
+}
+div.aesimple-discussion-index ul.discussions-list li.discussion+li.discussion{
+    border-top:1px solid #eeeeee
+}
+div.aesimple-discussion-index ul.discussions-list li.discussion div.avatar{
+    float:left;
+    width:60px
+}
+div.aesimple-discussion-index ul.discussions-list li.discussion div.content{
+    margin-left:70px
+}
+div.aesimple-discussion-index ul.discussions-list li.discussion div.content a.title{
+    font-size:15px;
+    font-weight:bold
+}
+div.aesimple-discussion-index ul.discussions-list li.discussion div.replies{
+    float:right;
+    text-align:center;
+    margin-left:40px;
+    line-height:normal;
+    color:#999999
+}
+div.aesimple-discussion-index ul.discussions-list li.discussion div.replies a{
+    width:50px;
+    display:block;
+    color:#999999;
+    text-decoration:none
+}
+div.aesimple-discussion-index ul.discussions-list li.discussion div.replies a span.counter{
+    display:block;
+    font-weight:bold;
+    font-size:20px;
+    color:#000000
+}
+div.aesimple-discussion-index ul.discussions-list li.discussion div.replies a.no-replies{
+    color:#bbbbbb
+}
+div.aesimple-discussion-index ul.discussions-list li.discussion div.replies a.no-replies span.counter{
+    color:inherit
+}
+div.aesimple-discussion-index ul.discussions-list li.discussion span.discussion-label{
+    font-weight:normal
+}
+div.aesimple-discussion-index div.no-discussions{
+    margin-top:10px
+}
+div.aesimple-discussion-index div.actions{
+    margin-bottom:10px
+}
+div.aesimple-discussion-index div.discussion-labels span.label+span.label{
+    margin-left:5px
+}
+div.aesimple-discussion-show ul.replies-list{
+    padding:0;
+    margin:0;
+    list-style-type:none
+}
+div.aesimple-discussion-show ul.replies-list li.reply:after{
+    content:'';
+    clear:both;
+    display:block
+}
+div.aesimple-discussion-show ul.replies-list li.reply+li.reply{
+    margin-top:20px;
+    padding-top:20px;
+    border-top:1px solid #eeeeee
+}
+div.aesimple-discussion-show ul.replies-list li.reply+li.reply.temporary{
+    border-top:3px dashed #eeeeee
+}
+div.aesimple-discussion-show ul.replies-list li.reply.temporary+li.reply{
+    border-top:3px dashed #eeeeee
+}
+div.aesimple-discussion-show ul.replies-list li.reply div.avatar{
+    float:left;
+    width:60px
+}
+div.aesimple-discussion-show ul.replies-list li.reply div.content{
+    margin-left:70px
+}
+div.aesimple-discussion-show ul.replies-list li.reply div.content a.username{
+    font-weight:bold
+}
+div.aesimple-discussion-show ul.replies-list li.reply div.content span.date{
+    color:#999999;
+    font-size:11px
+}
+div.aesimple-discussion-show ul.replies-list li.reply.post-reply{
+    overflow:hidden
+}
+div.aesimple-discussion-show ul.replies-list li.reply.post-reply div.alert{
+    display:none
+}
+div.aesimple-discussion-show ul.replies-list li.reply.post-reply div.content textarea{
+    box-sizing:border-box;
+    border-radius:0;
+    border-color:#dddddd;
+    box-shadow:none;
+    resize:none;
+    height:60px;
+    min-height:60px;
+    max-height:200px;
+    width:100%;
+    margin:0
+}
+div.aesimple-discussion-show ul.replies-list li.reply.post-reply div.content div.actions{
+    margin-top:7px;
+    display:none
+}
+div.aesimple-discussion-show ul.replies-list li.reply.post-reply div.content div.actions .btn+.btn{
+    margin-left:5px
+}
+div.aesimple-discussion-show ul.replies-list li.reply div.edit textarea#discussion_edit_content{
+    box-sizing:border-box;
+    border-radius:0;
+    border-color:#dddddd;
+    box-shadow:none;
+    resize:none;
+    height:60px;
+    min-height:60px;
+    max-height:200px;
+    width:100%;
+    margin:0
+}
+div.aesimple-discussion-show div.discussion-labels{
+    margin-bottom:20px
+}
+div.aesimple-discussion-show div.discussion-labels span.label{
+    font-weight:normal
+}
+div.aesimple-discussion-show div.discussion-labels span.label+span.label{
+    margin-left:5px
+}
+div.aesimple-discussion-show div.discussion-actions{
+    float:right
+}
+div.aesimple-discussion-show div.discussion-actions a.dropdown-toggle{
+    border:0;
+    background:transparent;
+    box-shadow:none;
+    color:#cccccc;
+    border-radius:0
+}
+div.aesimple-discussion-show div.discussion-actions a.dropdown-toggle:hover{
+    color:#999999;
+    background-color:#eeeeee
+}
+div.aesimple-discussion-show div.discussion-actions ul.dropdown-menu{
+    right:0;
+    left:inherit;
+    border-radius:0;
+    margin:0
+}
+div.aesimple-discussion-show div.discussion-actions div.open a.dropdown-toggle{
+    color:#999999;
+    background-color:#dddddd
+}
+div.aesimple-discussion-start form input#discussion_start_title,div.aesimple-discussion-start form textarea#discussion_start_content{
+    width:80%
+}
+div.aesimple-discussion-start form textarea#discussion_start_content{
+    resize:none
+}
+div.aesimple-discussion-start form div.actions{
+    margin-top:20px
+}
+div.aesimple-message-index div.actions{
+    margin-bottom:10px
+}
+div.aesimple-message-index ul.messages-list{
+    padding:0;
+    margin:0;
+    list-style-type:none
+}
+div.aesimple-message-index ul.messages-list li.message{
+    line-height:normal
+}
+div.aesimple-message-index ul.messages-list li.message+li.message{
+    margin-top:10px;
+    padding-top:10px;
+    border-top:1px solid #eeeeee
+}
+div.aesimple-message-index ul.messages-list li.message:after{
+    content:'';
+    clear:both;
+    display:block
+}
+div.aesimple-message-index ul.messages-list li.message.read div.content a.subject{
+    font-weight:normal
+}
+div.aesimple-message-index ul.messages-list li.message div.avatar{
+    float:left;
+    width:52px
+}
+div.aesimple-message-index ul.messages-list li.message div.content{
+    margin-left:67px
+}
+div.aesimple-message-index ul.messages-list li.message div.content a.subject{
+    font-weight:bold;
+    font-size:14px
+}
+div.aesimple-message-index ul.messages-list li.message div.content span.date{
+    color:#aaaaaa;
+    float:right;
+    font-size:11px
+}
+div.aesimple-message-index ul.messages-list li.message div.content span.date .fa{
+    display:none
+}
+div.aesimple-message-index ul.messages-list li.message div.content a.username,div.aesimple-message-index ul.messages-list li.message div.content a.event{
+    color:#aaaaaa;
+    margin-right:10px;
+    font-size:12px
+}
+div.aesimple-message-index ul.messages-list li.message div.content a.username .fa,div.aesimple-message-index ul.messages-list li.message div.content a.event .fa{
+    margin-right:3px
+}
+div.aesimple-message-show ul.replies-list{
+    padding:0;
+    margin:0;
+    list-style-type:none
+}
+div.aesimple-message-show ul.replies-list li.reply{
+    line-height:normal
+}
+div.aesimple-message-show ul.replies-list li.reply+li.reply{
+    margin-top:20px
+}
+div.aesimple-message-show ul.replies-list li.reply:after{
+    content:'';
+    clear:both;
+    display:block
+}
+div.aesimple-message-show ul.replies-list li.reply div.avatar{
+    float:left;
+    width:62px;
+    text-align:center
+}
+div.aesimple-message-show ul.replies-list li.reply div.avatar img.avatar{
+    margin-bottom:5px
+}
+div.aesimple-message-show ul.replies-list li.reply div.content{
+    margin-left:82px;
+    margin-right:82px;
+    border:1px solid #dddddd;
+    border-radius:7px;
+    padding:10px 15px;
+    position:relative
+}
+div.aesimple-message-show ul.replies-list li.reply div.content:before,div.aesimple-message-show ul.replies-list li.reply div.content:after{
+    right:100%;
+    top:25px;
+    border:solid transparent;
+    content:" ";
+    height:0;
+    width:0;
+    position:absolute;
+    pointer-events:none
+}
+div.aesimple-message-show ul.replies-list li.reply div.content:after{
+    border-color:transparent;
+    border-right-color:#ffffff;
+    border-width:10px;
+    margin-top:-10px
+}
+div.aesimple-message-show ul.replies-list li.reply div.content:before{
+    border-color:transparent;
+    border-right-color:#dddddd;
+    border-width:11px;
+    margin-top:-11px
+}
+div.aesimple-message-show ul.replies-list li.reply div.content div.details{
+    margin-top:5px
+}
+div.aesimple-message-show ul.replies-list li.reply div.content span.date{
+    color:#999999;
+    font-size:11px
+}
+div.aesimple-message-show ul.replies-list li.reply.owner div.avatar{
+    float:right
+}
+div.aesimple-message-show ul.replies-list li.reply.owner div.content{
+    background-color:#f6f6f6
+}
+div.aesimple-message-show ul.replies-list li.reply.owner div.content:before,div.aesimple-message-show ul.replies-list li.reply.owner div.content:after{
+    left:100%;
+    right:unset
+}
+div.aesimple-message-show ul.replies-list li.reply.owner div.content:after{
+    border-color:transparent;
+    border-left-color:#f6f6f6;
+    border-width:10px;
+    margin-top:-10px
+}
+div.aesimple-message-show ul.replies-list li.reply.owner div.content:before{
+    border-color:transparent;
+    border-left-color:#dddddd;
+    border-width:11px;
+    margin-top:-11px
+}
+div.aesimple-conversation-index div.actions{
+    margin-bottom:10px
+}
+div.aesimple-conversation-index div.filters{
+    padding-bottom:10px
+}
+div.aesimple-conversation-index div.filters select{
+    width:170px
+}
+div.aesimple-conversation-index div.filters .chzn-container{
+    text-align:left
+}
+div.aesimple-conversation-index ul.conversations-list{
+    padding:0;
+    margin:0;
+    list-style-type:none
+}
+div.aesimple-conversation-index ul.conversations-list li.conversation{
+    line-height:normal;
+    margin-top:20px
+}
+div.aesimple-conversation-index ul.conversations-list li.conversation:after{
+    content:"";
+    clear:both;
+    display:block
+}
+div.aesimple-conversation-index ul.conversations-list li.conversation.unread div.content a.subject,div.aesimple-conversation-index ul.conversations-list li.conversation.unread div.content div.excerpt{
+    font-weight:bold
+}
+div.aesimple-conversation-index ul.conversations-list li.conversation div.avatar{
+    float:left;
+    width:60px
+}
+div.aesimple-conversation-index ul.conversations-list li.conversation div.content{
+    margin-left:75px
+}
+div.aesimple-conversation-index ul.conversations-list li.conversation div.content a.subject{
+    font-size:15px;
+    line-height:normal
+}
+div.aesimple-conversation-index ul.conversations-list li.conversation div.content div.excerpt{
+    color:#999999;
+    margin:0 0 5px;
+    font-size:12px
+}
+div.aesimple-conversation-index ul.conversations-list li.conversation div.content div.details{
+    line-height:normal
+}
+div.aesimple-conversation-index ul.conversations-list li.conversation div.content div.details>span{
+    vertical-align:middle;
+    display:inline-block
+}
+div.aesimple-conversation-index ul.conversations-list li.conversation div.content div.details>span+span{
+    margin-left:15px
+}
+div.aesimple-conversation-index ul.conversations-list li.conversation div.content div.details>span span.fa{
+    margin-right:3px
+}
+div.aesimple-conversation-index ul.conversations-list li.conversation div.content div.details span.participants img.avatar{
+    width:24px
+}
+div.aesimple-conversation-index ul.conversations-list li.conversation div.content div.details span.participants img.avatar+img.avatar{
+    margin-left:5px
+}
+div.aesimple-conversation-show h1{
+    margin-bottom:0
+}
+div.aesimple-conversation-show h2{
+    color:#999999;
+    font-size:18px;
+    margin:0 0 20px
+}
+div.aesimple-conversation-show div.details{
+    margin-bottom:20px
+}
+div.aesimple-conversation-show div.details>div{
+    display:inline-block
+}
+div.aesimple-conversation-show div.details>div+div{
+    margin-left:20px
+}
+div.aesimple-conversation-show div.details span.text-label{
+    color:#999999;
+    margin-right:5px
+}
+div.aesimple-conversation-show ul.messages-list{
+    padding:0;
+    margin:0;
+    list-style-type:none
+}
+div.aesimple-conversation-show ul.messages-list li.message{
+    line-height:normal
+}
+div.aesimple-conversation-show ul.messages-list li.message+li.message{
+    margin-top:20px
+}
+div.aesimple-conversation-show ul.messages-list li.message:after{
+    content:'';
+    clear:both;
+    display:block
+}
+div.aesimple-conversation-show ul.messages-list li.message div.avatar{
+    float:left;
+    width:62px;
+    text-align:center
+}
+div.aesimple-conversation-show ul.messages-list li.message div.avatar img.avatar+span.label-staff-role{
+    margin-top:5px
+}
+div.aesimple-conversation-show ul.messages-list li.message div.content{
+    margin-left:82px;
+    margin-right:82px;
+    border:1px solid #dddddd;
+    border-radius:7px;
+    padding:10px 15px;
+    position:relative
+}
+div.aesimple-conversation-show ul.messages-list li.message div.content:before,div.aesimple-conversation-show ul.messages-list li.message div.content:after{
+    right:100%;
+    top:25px;
+    border:solid transparent;
+    content:" ";
+    height:0;
+    width:0;
+    position:absolute;
+    pointer-events:none
+}
+div.aesimple-conversation-show ul.messages-list li.message div.content:after{
+    border-color:transparent;
+    border-right-color:#ffffff;
+    border-width:10px;
+    margin-top:-10px
+}
+div.aesimple-conversation-show ul.messages-list li.message div.content:before{
+    border-color:transparent;
+    border-right-color:#dddddd;
+    border-width:11px;
+    margin-top:-11px
+}
+div.aesimple-conversation-show ul.messages-list li.message div.content div.date{
+    color:#999999;
+    font-size:11px;
+    margin-top:5px
+}
+div.aesimple-conversation-show ul.messages-list li.message div.content a.username{
+    font-weight:bold
+}
+div.aesimple-conversation-show ul.messages-list li.message.owner div.avatar{
+    float:right
+}
+div.aesimple-conversation-show ul.messages-list li.message.owner div.content{
+    background-color:#fafafa
+}
+div.aesimple-conversation-show ul.messages-list li.message.owner div.content:before,div.aesimple-conversation-show ul.messages-list li.message.owner div.content:after{
+    left:100%;
+    right:unset
+}
+div.aesimple-conversation-show ul.messages-list li.message.owner div.content:after{
+    border-color:transparent;
+    border-left-color:#f6f6f6;
+    border-width:10px;
+    margin-top:-10px
+}
+div.aesimple-conversation-show ul.messages-list li.message.owner div.content:before{
+    border-color:transparent;
+    border-left-color:#dddddd;
+    border-width:11px;
+    margin-top:-11px
+}
+div.aesimple-conversation-show ul.messages-list li.message.message-post{
+    border-top:1px solid #eeeeee;
+    padding-top:20px
+}
+div.aesimple-conversation-show ul.participants-list{
+    overflow:hidden;
+    list-style-type:none;
+    margin:0 0;
+    padding:0;
+    display:inline-block;
+    vertical-align:middle
+}
+div.aesimple-conversation-show ul.participants-list li.participant{
+    float:left
+}
+div.aesimple-conversation-show ul.participants-list li.participant+li.participant{
+    margin-left:5px
+}
+div.aesimple-conversation-show ul.participants-list li.participant img.avatar{
+    width:32px
+}
+div.aesimple-conversation-show div.post-message div.alert{
+    display:none
+}
+div.aesimple-conversation-show div.post-message textarea{
+    background-color:transparent;
+    width:100%;
+    box-sizing:border-box;
+    height:40px;
+    min-height:40px;
+    max-height:150px;
+    margin:0;
+    padding:0;
+    border:0;
+    box-shadow:none;
+    resize:none
+}
+div.aesimple-conversation-show div.post-message div.actions{
+    margin-left:82px;
+    margin-top:10px;
+    display:none
+}
+div.aesimple-conversation-start input#conversation_start_subject,div.aesimple-conversation-start textarea#conversation_start_content{
+    width:100%;
+    box-sizing:border-box;
+    min-height:31px
+}
+div.aesimple-conversation-start textarea#conversation_start_content{
+    resize:none;
+    min-height:100px;
+    max-height:250px
+}
+div.aesimple-tokeninput.aesimple-profiles ul li img.avatar{
+    width:32px;
+    float:left
+}
+div.aesimple-tokeninput.aesimple-profiles ul li div.item{
+    margin-left:42px
+}
+div.aesimple-tokeninput.aesimple-profiles ul li div.details{
+    color:#999999;
+    font-size:11px
+}
+div.aesimple-tokeninput.aesimple-events ul li div.title{
+    font-weight:bold
+}
+div.aesimple-tokeninput.aesimple-events ul li div.details{
+    color:#999999
+}
+div.aesimple-tokeninput.aesimple-events ul li div.details span.fa{
+    font-size:11px
+}
+div.aesimple-registration-edit ul{
+    list-style-type:none;
+    padding:0;
+    margin:0
+}
+div.aesimple-registration-edit ul li{
+    background-color:#ffffff;
+    padding:20px 10px;
+    margin:10px 0;
+    border-bottom:1px solid #eeeeee
+}
+div.aesimple-registration-edit ul li.ui-sortable-helper{
+    border:0;
+    background-color:#eeeeee
+}
+div.aesimple-registration-edit ul li:last-child{
+    border:0
+}
+div.aesimple-registration-edit ul li h3{
+    margin:0;
+    line-height:normal
+}
+div.aesimple-registration-edit ul label{
+    font-weight:bold;
+    color:#888888
+}
+div.aesimple-registration-edit ul div.title{
+    margin-bottom:10px
+}
+div.aesimple-registration-edit ul div.title input[type="text"]{
+    background-color:transparent;
+    line-height:normal;
+    color:#000000;
+    font-size:18px;
+    font-weight:bold;
+    border:0;
+    box-shadow:none;
+    padding:0 0 3px 0;
+    margin:0;
+    border-bottom:1px dotted #000000;
+    border-radius:0
+}
+div.aesimple-registration-edit ul div.title input[type="text"].required{
+    color:#ff0000;
+    border-color:#ff0000
+}
+div.aesimple-registration-edit ul span.field-type{
+    text-transform:capitalize
+}
+div.aesimple-registration-show label input[type="radio"],div.aesimple-registration-show label input[type="checkbox"]{
+    margin:0
+}
+div.aesimple-registration-pending div.actions{
+    margin-top:10px
+}
+div.aesimple-permission-edit ul{
+    list-style-type:none;
+    padding:0;
+    margin:0
+}
+div.aesimple-permission-edit ul li{
+    margin-bottom:10px
+}
+div.aesimple-permission-edit ul li:last-child{
+    margin:0
+}
+div.aesimple-permission-edit ul li select{
+    width:150px
+}
+div.aesimple-permission-edit ul li span.group-label{
+    margin-left:10px
+}
+div.aesimple-permission-edit ul label{
+    display:inline-block
+}
+div.aesimple-permission-edit div.actions{
+    margin-top:20px
+}
+div.aesimple-gateway-manage table colgroup col.order{
+    width:20px
+}
+div.aesimple-gateway-manage table colgroup col.status{
+    width:130px
+}
+div.aesimple-gateway-manage table tr.ui-sortable-helper{
+    background-color:#666666;
+    color:#ffffff
+}
+div.aesimple-gateway-manage table tr.ui-sortable-helper a{
+    color:inherit
+}
+div.aesimple-gateway-manage table tr.ui-sortable-helper td{
+    border:0
+}
+div.aesimple-gateway-manage table tr.disabled td{
+    background-color:#cccccc;
+    color:#eeeeee
+}
+div.aesimple-gateway-manage table tr.disabled td a{
+    color:inherit
+}
+div.aesimple-gateway-manage span.fa-ellipsis-v{
+    font-size:14px;
+    cursor:ns-resize
+}
+div.aesimple-gateway-edit div.actions{
+    margin-top:20px
+}
+div.aesimple-gateway-purchase div.gateway-purchase{
+    margin:20px 0
+}
+div.aesimple-order-manage table colgroup col.id{
+    width:50px
+}
+div.aesimple-order-manage table colgroup col.status{
+    width:100px
+}
+div.aesimple-order-manage table colgroup col.paid{
+    width:70px
+}
+div.aesimple-order-manage table colgroup col.order{
+    width:100px
+}
+div.aesimple-order-manage table colgroup col.date{
+    width:100px
+}
+div.aesimple-order-manage table a.order{
+    font-weight:bold
+}
+div.aesimple-order-manage table .right{
+    text-align:right
+}
+div.aesimple-order-manage table thead a{
+    color:inherit
+}
+div.aesimple-order-manage table tbody td.amount{
+    font-weight:bold
+}
+div.aesimple-order-manage div.filters{
+    text-align:right;
+    margin-bottom:5px
+}
+div.aesimple-order-manage div.filters div.chzn-container{
+    text-align:left
+}
+div.aesimple-order-manage div.filters select[data-filter]{
+    width:160px
+}
+div.aesimple-order-show div.control-label label{
+    font-weight:bold
+}
+div.aesimple-order-show div.buttons,div.aesimple-order-show div.actions{
+    margin:10px 0
+}
+div.aesimple-payment-manage table colgroup col.id{
+    width:50px
+}
+div.aesimple-payment-manage table colgroup col.status{
+    width:100px
+}
+div.aesimple-payment-manage table colgroup col.order{
+    width:180px
+}
+div.aesimple-payment-manage table colgroup col.amount{
+    width:90px
+}
+div.aesimple-payment-manage table colgroup col.date{
+    width:100px
+}
+div.aesimple-payment-manage table thead a{
+    color:inherit
+}
+div.aesimple-payment-manage table a.payment{
+    font-weight:bold
+}
+div.aesimple-payment-manage table .right{
+    text-align:right
+}
+div.aesimple-payment-manage table tbody td.amount{
+    font-weight:bold
+}
+div.aesimple-payment-manage div.filters{
+    text-align:right;
+    margin-bottom:5px
+}
+div.aesimple-payment-manage div.filters div.chzn-container{
+    text-align:left
+}
+div.aesimple-payment-manage div.filters select[data-filter]{
+    width:160px
+}
+div.aesimple-payment-show div.control-label label{
+    font-weight:bold
+}
+div.aesimple-payment-show div.buttons{
+    margin:10px 0
+}
+div.aesimple-rating-index span.rating-star{
+    color:#cc0000
+}
+div.aesimple-rating-index span.rating-star.fa-star-o{
+    color:#cccccc
+}
+div.aesimple-rating-index span.rating-star+span.rating-star{
+    margin-left:-4px
+}
+div.aesimple-rating-index div.rating{
+    overflow:hidden
+}
+div.aesimple-rating-index div.rating+div.rating{
+    margin-top:20px;
+    padding-top:20px;
+    border-top:1px solid #eeeeee
+}
+div.aesimple-rating-index div.rating div.profile-avatar{
+    float:left
+}
+div.aesimple-rating-index div.rating div.profile-avatar img{
+    width:64px;
+    background-color:#eeeeee;
+    border-radius:50%
+}
+div.aesimple-rating-index div.rating div.profile-avatar+div{
+    margin-left:80px
+}
+div.aesimple-rating-index div.rating div.profile-avatar+div div.content{
+    margin-top:10px;
+    line-height:normal
+}
+div.aesimple-rating-index div.rating div.profile-avatar+div div.reply{
+    margin-top:20px;
+    padding:10px 15px;
+    background-color:#f0f0f0
+}
+div.aesimple-rating-index div.rating div.profile-avatar+div div.reply div.organizer-reply{
+    font-weight:bold;
+    margin-bottom:10px
+}
+div.aesimple-invitation-show textarea{
+    resize:none;
+    border-radius:0;
+    box-shadow:none;
+    box-sizing:border-box;
+    min-width:400px
+}
+*/

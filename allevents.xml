@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<extension type="component" version="3.4" method="upgrade">
+    <name>AllEvents</name>
+    <creationDate>%%build.date%%</creationDate>
+    <copyright>%%ae3.copyright%%</copyright>
+    <license>%%ae3.license%%</license>
+    <author>Emmanuel Lecoester</author>
+    <authorEmail>%%ae3.authoremail%%</authorEmail>
+    <authorUrl>%%ae3.authorurl%%</authorUrl>
+    <version>%%ae3.version%%</version>
+    <description>
+        <a href="%%ae3.authorurl%%" target="_blank">Emmanuel Lecoester</a>
+    </description>
+    <install>
+        <sql>
+            <file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+        </sql>
+    </install>
+    <uninstall>
+        <sql>
+            <file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
+        </sql>
+    </uninstall>
+    <files folder="site">
+        <filename>index.html</filename>
+        <filename>allevents.php</filename>
+        <filename>controller.php</filename>
+        <filename>router.php</filename>
+        <folder>views</folder>
+        <folder>models</folder>
+        <folder>controllers</folder>
+        <folder>helpers</folder>
+    </files>
+    <media destination="com_allevents" folder="media">
+        <filename>index.html</filename>
+        <folder>css</folder>
+        <folder>ics</folder>
+        <folder>images</folder>
+        <folder>js</folder>
+        <folder>kml</folder>
+        <!-- €#£ -->
+        <folder>pdf</folder>
+        <!-- £#€ -->
+        <folder>files</folder>
+        <folder>ressources</folder>
+    </media>
+    <administration>
+        <menu link="option=com_allevents&amp;view=main">COM_ALLEVENTS</menu>
+        <submenu>
+            <menu link="option=com_allevents&amp;view=main" view="main">COM_ALLEVENTS_MENU_MAIN</menu>
+            <menu link="option=com_allevents&amp;view=events" view="events">COM_ALLEVENTS_MENU_EVENTS</menu>
+            <menu link="option=com_allevents&amp;view=enrolments" view="enrolments">COM_ALLEVENTS_MENU_ENROLMENTS</menu>
+            <!-- ### -->
+            <!-- <menu link="option=com_allevents&amp;view=orders" view="enrolments">COM_ALLEVENTS_MENU_PAYMENTS</menu>-->
+            <!-- ### -->
+        </submenu>
+        <files folder="administrator">
+            <filename>access.xml</filename>
+            <filename>config.xml</filename>
+            <filename>extensions.xml</filename>
+            <filename>controller.php</filename>
+            <filename>index.html</filename>
+            <filename>allevents.php</filename>
+            <folder>controllers</folder>
+            <folder>help</folder>
+            <folder>helpers</folder>
+            <folder>language</folder>
+            <folder>models</folder>
+            <folder>sql</folder>
+            <folder>tables</folder>
+            <folder>views</folder>
+            <folder>layouts</folder>
+        </files>
+        <languages folder="administrator">
+            <language tag="en-GB">language/en-GB/en-GB.com_allevents.ini</language>
+            <language tag="en-GB">language/en-GB/en-GB.com_allevents.sys.ini</language>
+            <language tag="fr-FR">language/fr-FR/fr-FR.com_allevents.ini</language>
+            <language tag="fr-FR">language/fr-FR/fr-FR.com_allevents.sys.ini</language>
+            <language tag="es-ES">language/es-ES/es-ES.com_allevents.ini</language>
+            <language tag="es-ES">language/es-ES/es-ES.com_allevents.sys.ini</language>
+        </languages>
+    </administration>
+    <updateservers>
+        <server type="extension" priority="1" name="AllEvents - Component">
+            <![CDATA[https://www.allevents3.com/en/?option=com_rdsubs&view=updater&format=xml&element=com_allevents]]>
+        </server>
+    </updateservers>
+    <modules>
+        <module aetype="Starter" folder="modules" module="mod_aecalendar" name="AllEvents - Module Calendar"/>
+        <module aetype="Starter" folder="modules" module="mod_aelist" name="AllEvents - Module List"/>
+        <!-- ##€ -->
+        <module aetype="Premium" folder="modules" module="mod_aebanner" name="AllEvents - Module Banner"/>
+        <module aetype="Premium" folder="modules" module="mod_aecustom" name="AllEvents - Module Custom"/>
+        <module aetype="Premium" folder="modules" module="mod_aedeck" name="AllEvents - Module Deck"/>
+        <module aetype="Premium" folder="modules" module="mod_aedrag" name="AllEvents - Module Drag Fullcalendar"/>
+        <module aetype="Premium" folder="modules" module="mod_aefilters" name="AllEvents - Module Filters Fullcalendar"/>
+        <module aetype="Premium" folder="modules" module="mod_aeslider" name="AllEvents – Module Slider Featured"/>
+        <module aetype="Premium" folder="modules" module="mod_aeuikit" name="AllEvents - Module based on uikit"/>
+        <!-- €## -->
+    </modules>
+    <plugins>
+        <plugin aetype="Starter" folder="plugins/quickicon" plugin="allevents" name="QuickIcon – AllEvents" group="quickicon"/>
+        <plugin aetype="Starter" folder="plugins/search" plugin="allevents" name="Search – AllEvents" group="search"/>
+        <!-- €€€ -->
+        <plugin aetype="Premium" folder="plugins/acymailing" plugin="allevents" name="AcyMailing Tag and Filters : insert events from AllEvents" group="acymailing"/>
+        <plugin aetype="Premium" folder="plugins/ajax" plugin="alleventsvote" name="Ajax – AllEvents Vote" group="ajax"/>
+        <plugin aetype="Premium" folder="plugins/allevents" plugin="alleventsvote" name="AllEvents – AllEvents Vote" group="allevents"/>
+        <!-- <plugin aetype="Premium" folder="plugins/allevents" plugin="alphauserpoints" name="AllEvents - AlphaUserPoints"
+                group="allevents"/>-->
+        <plugin aetype="Premium" folder="plugins/allevents" plugin="cbusers" name="AllEvents – CBUsers"                group="allevents"/>
+        <plugin aetype="Premium" folder="plugins/allevents" plugin="jcomments" name="AllEvents – JComments"                group="allevents"/>
+        <plugin aetype="Premium" folder="plugins/allevents" plugin="opengraph" name="AllEvents – Open Graph"                group="allevents"/>
+        <plugin aetype="Premium" folder="plugins/allevents" plugin="richsnippets" name="AllEvents – Rich Snippets"                group="allevents"/>
+        <plugin aetype="Premium" folder="plugins/allevents" plugin="aesocial"                name="AllEvents – Social (FB, G+, Twitter, Pinterest, Linkedin)" group="allevents"/>
+        <plugin aetype="Premium" folder="plugins/allevents" plugin="twittercard" name="AllEvents – Twitter Cards"                group="allevents"/>
+        <plugin aetype="Premium" folder="plugins/content" plugin="allevents" name="Content – AllEvents"                group="content"/>
+        <plugin aetype="Premium" folder="plugins/editors-xtd" plugin="allevents" name="Editors-xtd – AllEvents"                group="content"/>
+        <plugin aetype="Premium" folder="plugins/finder" plugin="allevents" name="Smart Search – AllEvents"                group="finder"/>
+        <!-- <plugin aetype="Premium" folder="plugins/payment" plugin="2checkout" name="Payment - 2checkout" group="payment"/> -->
+        <!-- <plugin aetype="Premium" folder="plugins/payment" plugin="alphauserpoints" name="Payment - alphauserpoints" group="payment"/> -->
+        <!-- <plugin aetype="Premium" folder="plugins/payment" plugin="amazon" name="Payment - amazon" group="payment"/> -->
+        <!-- <plugin aetype="Premium" folder="plugins/payment" plugin="authorizenet" name="Payment - authorizenet" group="payment"/> -->
+        <plugin aetype="Premium" folder="plugins/payment" plugin="bycheck" name="Payment - Pay By Cheque"                group="payment"/>
+        <plugin aetype="Premium" folder="plugins/payment" plugin="byorder" name="Payment - Pay By Purchase Order"                group="payment"/>
+        <!-- <plugin aetype="Premium" folder="plugins/payment" plugin="ccavenue" name="Payment - ccavenue" group="payment"/> -->
+        <!-- <plugin aetype="Premium" folder="plugins/payment" plugin="easysocialpoints" name="Payment - easysocialpoints" group="payment"/> -->
+        <!-- <plugin aetype="Premium" folder="plugins/payment" plugin="jomsocialpoints" name="Payment - jomsocialpoints" group="payment"/> -->
+        <!-- <plugin aetype="Premium" folder="plugins/payment" plugin="linkpoint" name="Payment - linkpoint" group="payment"/> -->
+        <!-- <plugin aetype="Premium" folder="plugins/payment" plugin="ogone" name="Payment - ogone" group="payment"/> -->
+        <plugin aetype="Premium" folder="plugins/payment" plugin="paypal" name="Payment - Paypal" group="payment"/>
+        <!--<plugin aetype="Premium" folder="plugins/payment" plugin="adaptive_paypal" name="Payment - adaptive_paypal"
+                group="payment"/>-->
+        <!--<plugin aetype="Premium" folder="plugins/payment" plugin="paypalpro" name="Payment - paypalpro"
+                group="payment"/>-->
+        <!--<plugin aetype="Premium" folder="plugins/payment" plugin="payu" name="Payment - payu" group="payment"/>-->
+        <!-- €€€ -->
+    </plugins>
+    <scriptfile>script.php</scriptfile>
+</extension>

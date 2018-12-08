@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fieldset name="csv" addfieldpath="/administrator/components/com_allevents/models/fields">
+        <field name="from_date" type="calendar" label="COM_ALLEVENTS_EXPORT_FROM_DATE" format="%Y-%m-%d">
+        </field>
+        <field name="to_date" type="calendar" label="COM_ALLEVENTS_EXPORT_TO_DATE" format="%Y-%m-%d">
+        </field>
+        <field name="pt" type="aetoggleactivity" multiple="true" size="5" extension="com_allevents"
+               label="ACTIVITY" required="false"/>
+        <field name="at" type="aetoggleagenda" multiple="true" size="5" extension="com_allevents"
+               label="AGENDA" required="false"/>
+        <field name="ct" type="aetogglecategory" multiple="true" size="5" extension="com_allevents"
+               label="CATEGORY" required="false"/>
+        <field name="lt" type="aetoggleplace" multiple="true" size="5" extension="com_allevents" label="PLACE"
+               required="false"/>
+        <field name="dt" type="aetogglepublic" multiple="true" size="5" extension="com_allevents"
+               label="PUBLIC" required="false"/>
+        <field name="st" type="aetogglesection" multiple="true" size="5" extension="com_allevents"
+               label="SECTION" required="false"/>
+        <field name="et" type="aetoggleressource" multiple="true" size="5" extension="com_allevents"
+               label="RESSOURCE" required="false"/>
+        <field name="h" type="radio" label="FILTER_HOT_ONLY" class="btn-group btn-group-yesno" default="0">
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+    </fieldset>
+</form>

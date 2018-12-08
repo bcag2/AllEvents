@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+    <layout title="COM_ALLEVENTS_TITLE_ITEM_VIEW_CATEGORY" option="View">
+        <message>
+            <![CDATA[COM_ALLEVENTS_TITLE_ITEM_VIEW_CATEGORY_DESC]]>
+        </message>
+    </layout>
+    <fields name="params">
+        <fieldset name="ALLEVENTS" label="COM_ALLEVENTS_MENU_OPTIONS"
+                  addfieldpath="/administrator/components/com_allevents/models/fields"
+                  addrulepath="/administrator/components/com_allevents/models/rules">
+            <field type="AETitleImg" class="input-xxlarge" aeimage="../css/images/allevents.png"/>
+            <field name="use_sections" type="AEEval"
+                   expr="return $params['controlpanel_showsections'] &amp;&amp; $params['controlpanel_showcategories'];"/>
+            <field name="use_categories" type="AEEval" expr="return $params['controlpanel_showcategories'];"
+                   validate="AEMenuItemCategory"/>
+            <field name="no_categories" showon="use_categories:0" type="AEMessage" text="ALLEVENTS_CATEGORIES_NOT_USED"
+                   level="error"/>
+            <field name="menuiteminit" type="AEMenuItemCategoryInit"/>
+            <field name="section_id" showon="use_sections:1" type="AESection" label="SECTION"
+                   description="COM_ALLEVENTS_FORM_DESC_EVENT_SECTION_ID">
+                <option value="0" class="se_section_0_bullet se_section_0_color">COM_ALLEVENTS_NO_SECTION</option>
+            </field>
+            <field name="item_id" showon="use_categories:1" type="AECategory" label="COM_ALLEVENTS_ITEM_ID_SELECT_LABEL"
+                   require="true"
+                   description="JGLOBAL_SHOW_TITLE_DESC"/>
+        </fieldset>
+    </fields>
+</metadata>

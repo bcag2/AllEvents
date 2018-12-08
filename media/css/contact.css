@@ -1,0 +1,151 @@
+.se_contact_color {
+    background-color: #fff;
+    color: #000;
+}
+
+.se_contact_forecolor {
+    background-color: #fff;
+    color: #000;
+}
+
+.se_contact_color a {
+    color: #fff !important;
+}
+
+.se_contact_summary {
+    background-color: #fff;
+    background: -moz-linear-gradient(top, #fff 0%, #bdbdbd 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #FFF), color-stop(100%, #bdbdbd));
+    background: -webkit-linear-gradient(top, #FFF 0%, #bdbdbd 100%);
+    background: -o-linear-gradient(top, #FFF 0%, #bdbdbd 100%);
+    background: -ms-linear-gradient(top, #FFF 0%, #bdbdbd 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#FFF", endColorstr="#bdbdbd", GradientType=0);
+    background: linear-gradient(top, #FFF 0%, #bdbdbd 100%);
+    -webkit-box-shadow: 0 0 5px #000000;
+    -moz-box-shadow: 0 0 5px #000000;
+    box-shadow: 0 0 5px #000000;
+    color: #fcf7f7;
+    min-height: 114px;
+}
+
+.se_contact_summary a {
+    color: #fcf7f7 !important;
+}
+
+.se_contact_bullet {
+    min-width: 16px;
+    padding-left: 20px !important;
+    background-repeat: no-repeat !important;
+    background-position: 0 0 !important;
+    background-image: url(../../../images/com_allevents/bullets/contact.png);
+}
+
+.se_contact_vignette {
+    height: 104px;
+    min-height: 104px;
+    width: 160px;
+    float: left;
+    padding: 5px;
+    display: inline-block;
+}
+
+.chzn-color-contact[rel="value_1"] {
+    padding-left: 20px !important;
+    background-repeat: no-repeat !important;
+    background-position: 3px 3px !important;
+    background-color: #bdbdbd;
+    color: #fcf7f7;
+    border-color: #fcf7f7;
+    background-image: url(../../../images/com_allevents/bullets/contact.png);
+}
+
+.mod_aelist .aebutton.se_contact_mod_aelist:before {
+    background-color: #bdbdbd;
+    box-shadow: 0 4px;
+}
+
+.mod_aelist .aebutton.se_contact_mod_aelist:hover:before {
+    background-color: #fff;
+    box-shadow: 0 4px #fff;
+}
+
+.mod_aelist .aebutton.se_contact_mod_aelist:active:before {
+    box-shadow: 0 2px #fff;
+}
+
+.se_contact_bs_color {
+    background-color: #fff;
+}
+
+.se_contact_bs_bullet {
+    background-color: #fff !important;
+    border: 0 solid #fff !important;
+    border-radius: 0 !important;
+    box-shadow: 0 0 0 0 #000000 inset !important;
+    height: 16px !important;
+    width: 16px !important;;
+    background-repeat: no-repeat !important;
+    background-position: 0 0 !important;
+    background-image: url(../../../images/com_allevents/bullets/contact.png);
+}
+
+.dh-se_contact_bs_color, .dh-se_contact_1_bs_bullet, .dh-se_contact_1_bs_color:hover, .dh-se_contact_1_bs_bullet:hover {
+    background-color: #bdbdbd;
+    color: #fff;
+}
+
+.se_contact_0_color {
+    background-color: #bef781;
+    color: #000;
+}
+
+.se_contact_0_color a {
+    color: #000 !important;
+}
+
+.se_contact_0_summary {
+    background-color: #fff;
+    background: -moz-linear-gradient(top, #FFF 0%, #bef781 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #FFF), color-stop(100%, #bef781));
+    background: -webkit-linear-gradient(top, #FFF 0%, #bef781 100%);
+    background: -o-linear-gradient(top, #FFF 0%, #bef781 100%);
+    background: -ms-linear-gradient(top, #fff 0%, #bef781 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#FFF", endColorstr="#bef781", GradientType=0);
+    background: linear-gradient(top, #FFF 0%, #bef781 100%);
+    -webkit-box-shadow: 0 0 5px #000000;
+    -moz-box-shadow: 0 0 5px #000000;
+    box-shadow: 0 0 5px #000000;
+    color: #000;
+    min-height: 114px;
+}
+
+.se_contact_0_summary a {
+    color: #000 !important;
+}
+
+.se_contact_0_bullet {
+    min-width: 16px;
+    padding-left: 20px !important;
+    background-repeat: no-repeat !important;
+    background-position: 0 0 !important;
+    background-image: url(../../../images/com_allevents/bullets/contact.png);
+}
+
+.se_contact_0_vignette {
+    height: 104px;
+    min-height: 104px;
+    width: 160px;
+    float: left;
+    padding: 5px;
+    background-image: url(../../../images/com_allevents/bullets/default.png) no-repeat 0 0;
+    display: inline-block;
+}
+
+.chzn-color-contact[rel="value_0"] {
+    padding-left: 20px !important;
+    background-repeat: no-repeat !important;
+    background-position: 3px 3px !important;
+    background-color: #fff;
+    color: #000;
+    background-image: url(../../../images/com_allevents/bullets/contact.png);
+}

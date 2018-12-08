@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="plugin" group="allevents" version="3.1" method="upgrade">
+    <name>AllEvents - CBUsers</name>
+    <creationDate>%%build.date%%</creationDate>
+    <author>Emmanuel Lecoester</author>
+    <authorEmail>%%ae3.authoremail%%</authorEmail>
+    <authorUrl>%%ae3.authorurl%%</authorUrl>
+    <copyright>%%ae3.copyright%%</copyright>
+    <license>%%ae3.license%%</license>
+    <version>%%ae3.version%%</version>
+    <description>PLG_ALLEVENTS_CBUSERS_XML_DESC</description>
+    <files>
+        <filename plugin="cbusers">cbusers.php</filename>
+        <filename>index.html</filename>
+    </files>
+    <languages folder="language">
+        <language tag="fr-FR">fr-FR/fr-FR.plg_allevents_cbusers.ini</language>
+        <language tag="fr-FR">fr-FR/fr-FR.plg_allevents_cbusers.sys.ini</language>
+        <language tag="en-GB">en-GB/en-GB.plg_allevents_cbusers.ini</language>
+        <language tag="en-GB">en-GB/en-GB.plg_allevents_cbusers.sys.ini</language>
+        <language tag="es-ES">es-ES/es-ES.plg_allevents_cbusers.ini</language>
+        <language tag="es-ES">es-ES/es-ES.plg_allevents_cbusers.sys.ini</language>
+    </languages>
+    <config>
+        <fields name="params">
+            <fieldset name="basic" addfieldpath="/administrator/components/com_allevents/models/fields">
+                <field name="cbusers_showparticipantordering" type="radio" class="btn-group btn-group-yesno" default="1"
+                       label="PLG_ALLEVENTS_CBUSERS_SHOWPARTICIPANTORDERING"
+                       description="PLG_ALLEVENTS_CBUSERS_SHOWPARTICIPANTORDERING_TIP">
+                    <option value="0">JHIDE</option>
+                    <option value="1">JSHOW</option>
+                </field>
+                <field name="cbusers_showparticipantavatar" type="radio" class="btn-group btn-group-yesno" default="1"
+                       label="PLG_ALLEVENTS_CBUSERS_SHOWPARTICIPANTAVATAR"
+                       description="PLG_ALLEVENTS_CBUSERS_SHOWPARTICIPANTAVATAR_TIP">
+                    <option value="0">JHIDE</option>
+                    <option value="1">JSHOW</option>
+                </field>
+                <field name="cbusers_showparticipantalias" type="radio" class="btn-group btn-group-yesno" default="1"
+                       label="PLG_ALLEVENTS_CBUSERS_SHOWPARTICIPANTALIAS"
+                       description="PLG_ALLEVENTS_CBUSERS_SHOWPARTICIPANTALIAS_TIP">
+                    <option value="0">JHIDE</option>
+                    <option value="1">JSHOW</option>
+                </field>
+                <field name="cbusers_showparticipantformatname" type="radio" class="btn-group btn-group-yesno"
+                       default="1" label="PLG_ALLEVENTS_CBUSERS_SHOWPARTICIPANTNAME"
+                       description="PLG_ALLEVENTS_CBUSERS_SHOWPARTICIPANTNAME_TIP">
+                    <option value="0">JHIDE</option>
+                    <option value="1">JSHOW</option>
+                </field>
+                <field name="cbusers_showparticipantenroldate" type="radio" class="btn-group btn-group-yesno"
+                       default="1" label="PLG_ALLEVENTS_CBUSERS_SHOWPARTICIPANTENROLDATE"
+                       description="PLG_ALLEVENTS_CBUSERS_SHOWPARTICIPANTENROLDATE_TIP">
+                    <option value="0">JHIDE</option>
+                    <option value="1">JSHOW</option>
+                </field>
+                <field name="cbusers_showparticipantpending" type="radio" class="btn-group btn-group-yesno" default="1"
+                       label="PLG_ALLEVENTS_CBUSERS_SHOWPARTICIPANTPENDING"
+                       description="PLG_ALLEVENTS_CBUSERS_SHOWPARTICIPANTPENDING_TIP">
+                    <option value="0">JHIDE</option>
+                    <option value="1">JSHOW</option>
+                </field>
+                <field name="cbusers_showparticipantcommentaire" type="radio" class="btn-group btn-group-yesno"
+                       default="1" label="PLG_ALLEVENTS_CBUSERS_SHOWPARTICIPANTCOMMENTAIRE"
+                       description="PLG_ALLEVENTS_CBUSERS_SHOWPARTICIPANTCOMMENTAIRE_TIP">
+                    <option value="0">JHIDE</option>
+                    <option value="1">JSHOW</option>
+                </field>
+                <field name="cbusers_showparticipantparticipant" type="radio" class="btn-group btn-group-yesno"
+                       default="1" label="PLG_ALLEVENTS_CBUSERS_SHOWPARTICIPANTPARTICIPANT"
+                       description="PLG_ALLEVENTS_CBUSERS_SHOWPARTICIPANTPARTICIPANT_TIP">
+                    <option value="0">JHIDE</option>
+                    <option value="1">JSHOW</option>
+                </field>
+                <field name="cbusers_profilwithhtml" type="radio" class="btn-group btn-group-yesno"
+                       default="1" label="PLG_ALLEVENTS_CBUSERS_PROFILWITHHTML"
+                       description="PLG_ALLEVENTS_CBUSERS_PROFILWITHHTML_TIP">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+                <field name="cbusers_extra_fields_name" type="text" size="50" maxsize="100"
+                       label="PLG_ALLEVENTS_CBUSERS_EXTRA_FIELDS_NAME"
+                       description="PLG_ALLEVENTS_CBUSERS_EXTRA_FIELDS_NAME_INFO"/>
+            </fieldset>
+        </fields>
+    </config>
+    <aepremiumonly>true</aepremiumonly>
+    <aedisplayevents>true</aedisplayevents>
+</extension>

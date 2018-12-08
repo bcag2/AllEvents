@@ -1,0 +1,289 @@
+.alleventsvote {
+    margin: 0 0 10px;
+}
+
+.alleventsvote-small {
+}
+
+.alleventsvote-stars,
+.alleventsvote-info {
+    margin: 0 !important;
+    padding: 0 !important;
+    position: relative;
+    vertical-align: middle;
+}
+
+.alleventsvote-info.ihide {
+    display: none;
+}
+
+.voted .alleventsvote-info.ihide, .alleventsvote-stars {
+    display: inline-block;
+}
+
+.alleventsvote-stars,
+.alleventsvote-star a,
+.alleventsvote-info,
+.alleventsvote-stars .current-rating {
+    height: 25px;
+    line-height: 25px;
+}
+
+.size-2 .alleventsvote-stars,
+.size-2 .alleventsvote-star a,
+.size-2 .alleventsvote-info,
+.size-2 .alleventsvote-stars .current-rating,
+.alleventsvote-small .alleventsvote-stars,
+.alleventsvote-small .alleventsvote-star a,
+.alleventsvote-small .alleventsvote-info,
+.alleventsvote-small .alleventsvote-stars .current-rating {
+    height: 22px;
+    line-height: 22px;
+}
+
+.size-3 .alleventsvote-stars,
+.size-3 .alleventsvote-star a,
+.size-3 .alleventsvote-info,
+.size-3 .alleventsvote-stars .current-rating,
+.size-2.alleventsvote-small .alleventsvote-stars,
+.size-2.alleventsvote-small .alleventsvote-star a,
+.size-2.alleventsvote-small .alleventsvote-info,
+.size-2.alleventsvote-small .alleventsvote-stars .current-rating {
+    height: 19px;
+    line-height: 19px;
+}
+
+.size-3.alleventsvote-small .alleventsvote-stars,
+.size-3.alleventsvote-small .alleventsvote-star a,
+.size-3.alleventsvote-small .alleventsvote-info,
+.size-3.alleventsvote-small .alleventsvote-stars .current-rating {
+    height: 16px;
+    line-height: 16px;
+}
+
+.alleventsvote-stars {
+    font-size: 1em;
+    overflow: hidden;
+    width: 125px;
+}
+
+.size-2 .alleventsvote-stars,
+.alleventsvote-small .alleventsvote-stars {
+    width: 110px;
+}
+
+.size-3 .alleventsvote-stars,
+.size-2.alleventsvote-small .alleventsvote-stars {
+    width: 95px;
+}
+
+.size-3.alleventsvote-small .alleventsvote-stars {
+    width: 80px;
+}
+
+.alleventsvote-info {
+    font-size: .78em;
+}
+
+.alleventsvote-star {
+    background-position: 0 !important;
+    background-image: none;
+    display: inline;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.alleventsvote-stars,
+.alleventsvote-star a:hover,
+.alleventsvote-stars .current-rating {
+    background-image: url(images/star.png) !important;
+    background-color: transparent !important;
+    background-repeat: repeat-x !important;
+}
+
+.size-2 .alleventsvote-stars,
+.size-2 .alleventsvote-star a:hover,
+.size-2 .alleventsvote-stars .current-rating,
+.alleventsvote-small .alleventsvote-stars,
+.alleventsvote-small .alleventsvote-star a:hover,
+.alleventsvote-small .alleventsvote-stars .current-rating {
+    background-image: url(images/star-2.png) !important;
+}
+
+.size-3 .alleventsvote-stars,
+.size-3 .alleventsvote-star a:hover,
+.size-3 .alleventsvote-stars .current-rating,
+.size-2.alleventsvote-small .alleventsvote-stars,
+.size-2.alleventsvote-small .alleventsvote-star a:hover,
+.size-2.alleventsvote-small .alleventsvote-stars .current-rating {
+    background-image: url(images/star-3.png) !important;
+}
+
+.size-3.alleventsvote-small .alleventsvote-stars,
+.size-3.alleventsvote-small .alleventsvote-star a:hover,
+.size-3.alleventsvote-small .alleventsvote-stars .current-rating {
+    background-image: url(images/star-4.png) !important;
+}
+
+.alleventsvote-star a:hover,
+.alleventsvote-stars .current-rating {
+    background-position: left -1000px;
+}
+
+.alleventsvote-star a,
+.alleventsvote-stars .current-rating {
+    border: medium none;
+    cursor: pointer;
+    left: 0;
+    outline: none;
+    overflow: hidden;
+    position: absolute;
+    text-indent: -1000em !important;
+    top: 0;
+}
+
+.alleventsvote-star a:hover {
+    background-position: left bottom !important;
+}
+
+.alleventsvote-star a:focus,
+.alleventsvote-star a:active {
+    background: none !important;
+}
+
+.alleventsvote-stars .current-rating {
+    background-position: left center;
+    z-index: 1;
+}
+
+.alleventsvote-star a.ev-5-stars,
+.alleventsvote-star a.ev-10-stars,
+.alleventsvote-star a.ev-15-stars,
+.alleventsvote-star a.ev-20-stars,
+.alleventsvote-star a.ev-25-stars,
+.alleventsvote-star a.ev-30-stars,
+.alleventsvote-star a.ev-35-stars,
+.alleventsvote-star a.ev-40-stars,
+.alleventsvote-star a.ev-45-stars,
+.alleventsvote-star a.ev-50-stars {
+    margin: 0;
+    padding: 0;
+}
+
+.alleventsvote-star a.ev-5-stars {
+    width: 10%;
+    z-index: 12;
+}
+
+.alleventsvote-star a.ev-10-stars {
+    width: 20%;
+    z-index: 11;
+}
+
+.alleventsvote-star a.ev-15-stars {
+    width: 30%;
+    z-index: 10;
+}
+
+.alleventsvote-star a.ev-20-stars {
+    width: 40%;
+    z-index: 9;
+}
+
+.alleventsvote-star a.ev-25-stars {
+    width: 50%;
+    z-index: 8;
+}
+
+.alleventsvote-star a.ev-30-stars {
+    width: 60%;
+    z-index: 7;
+}
+
+.alleventsvote-star a.ev-35-stars {
+    width: 70%;
+    z-index: 6;
+}
+
+.alleventsvote-star a.ev-40-stars {
+    width: 80%;
+    z-index: 5;
+}
+
+.alleventsvote-star a.ev-45-stars {
+    width: 90%;
+    z-index: 4;
+}
+
+.alleventsvote-star a.ev-50-stars {
+    width: 100%;
+    z-index: 3;
+}
+
+.ratingmanager_form label {
+    background: #fafafa;
+    color: #444;
+    display: inline-block;
+    padding: 2px 4px;
+    font-size: 11px;
+    font-weight: bold;
+    line-height: 14px;
+    vertical-align: baseline;
+    white-space: nowrap;
+}
+
+.ratingmanager_form #ratingmanager_feature,
+.form-horizontal .ratingmanager_form .input-prepend {
+    display: block
+}
+
+#ratingform_add {
+    margin-left: -2px
+}
+
+#ratingmanager_errors {
+    width: 300px;
+    min-width: 250px;
+    text-align: center;
+    display: block;
+}
+
+.ratingmanager_form ul {
+    list-style: none;
+    margin: 15px 0 0;
+}
+
+.ratingmanager_form ul li {
+    max-width: 250px;
+    padding: 5px 10px;
+    background: #F6F7F9;
+    font-size: 11px;
+}
+
+.rate-label {
+    font-style: italic
+}
+
+.rate-value {
+    font-weight: bold
+}
+
+.rate-remove {
+    float: right;
+    font-weight: normal;
+    color: #025A8D;
+    text-decoration: none;
+    outline: none;
+}
+
+.icon-menu {
+    cursor: pointer
+}
+
+.rate-remove:hover {
+    text-decoration: none
+}
+
+#jform_attribs_rates {
+    display: none
+}

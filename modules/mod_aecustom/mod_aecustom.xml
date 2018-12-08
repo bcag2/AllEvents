@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.0" type="module" client="site" method="upgrade">
+    <name>AllEvents - Module Custom</name>
+    <creationDate>%%build.date%%</creationDate>
+    <copyright>%%ae3.copyright%%</copyright>
+    <license>%%ae3.license%%</license>
+    <author>Emmanuel Lecoester</author>
+    <authorEmail>%%ae3.authoremail%%</authorEmail>
+    <authorUrl>%%ae3.authorurl%%</authorUrl>
+    <version>%%ae3.version%%</version>
+    <description>MOD_AECUSTOM_DESC</description>
+    <premiumonly>false</premiumonly>
+    <files>
+        <filename>mod_aecustom.xml</filename>
+        <filename module="mod_aecustom">mod_aecustom.php</filename>
+        <filename>index.html</filename>
+        <filename>helper.php</filename>
+        <folder>tmpl</folder>
+        <folder>language</folder>
+    </files>
+    <languages>
+        <language tag="en-GB">language/en-GB/en-GB.mod_aecustom.ini</language>
+        <language tag="fr-FR">language/fr-FR/fr-FR.mod_aecustom.ini</language>
+    </languages>
+    <config>
+        <fields name="params">
+            <fieldset name="basic" addfieldpath="/administrator/components/com_allevents/models/fields">
+                <field name="count" type="list" default="2" label="Number Of Events To List"
+                       description="Number of events shown in the module">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                    <option value="13">13</option>
+                    <option value="14">14</option>
+                    <option value="15">15</option>
+                    <option value="16">16</option>
+                    <option value="17">17</option>
+                    <option value="18">18</option>
+                    <option value="19">19</option>
+                    <option value="20">20</option>
+                </field>
+                <!-- FILTERS -->
+                <field type="AETitleImg" label="COM_ALLEVENTS_FILTERS_COMPONENT_DESC"
+                       class="stylebox lead input-xxlarge" aeicon="filter"/>
+                <field name="pt" type="aetoggleactivity" multiple="true" size="10" extension="com_allevents"
+                       label="ACTIVITY" description="ACTIVITY_DESC" required="false"/>
+                <field name="at" type="aetoggleagenda" multiple="true" size="10" extension="com_allevents"
+                       label="AGENDA" description="AGENDA_DESC" required="false"/>
+                <field name="ct" type="aetogglecategory" multiple="true" size="10" extension="com_allevents"
+                       label="CATEGORY" description="CATEGORY_DESC" required="false"/>
+                <field name="lt" type="aetoggleplace" multiple="true" size="10" extension="com_allevents" label="PLACE"
+                       description="PLACE_DESC" required="false"/>
+                <field name="dt" type="aetogglepublic" multiple="true" size="10" extension="com_allevents"
+                       label="PUBLIC" description="PUBLIC_DESC" required="false"/>
+                <field name="st" type="aetogglesection" multiple="true" size="10" extension="com_allevents"
+                       label="SECTION" description="SECTION_DESC" required="false"/>
+                <field name="et" type="aetoggleressource" multiple="true" size="10" extension="com_allevents"
+                       label="RESSOURCE" description="RESSOURCE_DESC" required="false"/>
+                <field name="h" type="radio" label="MOD_AECUSTOM_FEATURED_LABEL"
+                       description="MOD_AECUSTOM_FEATURED_DESC" class="btn-group btn-group-yesno" default="0">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field name="r" type="radio" label="MOD_AECUSTOM_REGISTRATION_ONLY" class="btn-group btn-group-yesno"
+                       description="MOD_AECUSTOM_REGISTRATION_ONLY_DESC" default="0">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <!-- <field showon="r:1" name="rp" type="radio" label="FILTER_REGISTRATION_POSSIBLE" class="btn-group btn-group-yesno" default="0">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field> -->
+                <!-- DESKTOP -->
+                <field type="AETitleImg" label="COM_ALLEVENTS_PARAM_DISPLAY_LABEL" class="stylebox lead input-xxlarge"
+                       aeicon="desktop"/>
+                <field name="format" type="textarea" filter="safehtml"
+                       default="%link_start% %start_date% - %end_date% %link_end% %line_break% %title%, %location%"
+                       label="Output format.This can be formatted as you like."
+                       description=" You can add all the fields that an event has like: %link_start%, %link_end%, %line_break%, %id%, %title%, %location%, %category%, %start_date%, %start_time%, %end_date%, %end_time%, %description%"
+                       cols="40" rows="4"/>
+                <field name="type" type="list" default="0" label="Upcoming or Past Events"
+                       description="Select if you want to display upcoming or Past Events.">
+                    <option value="0">Upcoming Events</option>
+                    <option value="1">Past Events</option>
+                </field>
+                <field name="align" type="list" default="left" label="Text Alignment"
+                       description="This will apply the 'left', 'center' or 'right' style to the text element.">
+                    <option value="left">Left</option>
+                    <option value="center">Center</option>
+                    <option value="right">Right</option>
+                </field>
+                <field name="formatdate" type="text" default="d m Y" label="Format date"
+                       description="To format the date use for example this code: d m Y."/>
+                <field name="formattime" type="text" default="H:i" label="Format time"
+                       description="To format the time use for example this code: H:i (only available at 2 rows view)."/>
+            </fieldset>
+            <fieldset name="advanced">
+                <field name="layout" type="modulelayout" label="JFIELD_ALT_LAYOUT_LABEL"
+                       description="JFIELD_ALT_MODULE_LAYOUT_DESC"/>
+                <field name="moduleclass_sfx" type="textarea" rows="3" label="MOD_AECUSTOM_FIELD_MODULECLASS_SFX_LABEL"
+                       description="MOD_AECUSTOM_FIELD_MODULECLASS_SFX_DESC"/>
+                <field name="cache" type="list" default="1" label="MOD_AECUSTOM_FIELD_CACHING_LABEL"
+                       description="MOD_AECUSTOM_FIELD_CACHING_DESC">
+                    <option value="1">JGLOBAL_USE_GLOBAL</option>
+                    <option value="0">MOD_AECUSTOM_FIELD_VALUE_NOCACHING</option>
+                </field>
+                <field name="cache_time" type="text" default="900" label="MOD_AECUSTOM_FIELD_CACHE_TIME_LABEL"
+                       description="MOD_AECUSTOM_FIELD_CACHE_TIME_DESC"/>
+                <field name="cachemode" type="hidden" default="itemid">
+                    <option value="itemid"/>
+                </field>
+            </fieldset>
+        </fields>
+    </config>
+    <aepremiumonly>false</aepremiumonly>
+    <aedisplayevents>true</aedisplayevents>
+</extension>

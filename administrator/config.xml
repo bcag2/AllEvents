@@ -1,0 +1,743 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+    <fieldset name="component" label="COM_ALLEVENTS_PARAM_COMPONENT_LABEL"
+              description="COM_ALLEVENTS_PARAM_COMPONENT_DESC"
+              addfieldpath="/administrator/components/com_allevents/models/fields">
+        <field type="AETitleImg" label="COM_ALLEVENTS_PARAM_COMPONENT_DESC" class="stylebox lead input-xxlarge"
+               aeicon="cogs"/>
+        <!-- €#€ -->
+        <field name="gshow_poweredby" type="radio" class="btn-group btn-group-yesno" default="1"
+               label="COM_ALLEVENTS_SHOW_POWEREDBY_LABEL" description="COM_ALLEVENTS_SHOW_POWEREDBY_DESC" premium="1">
+            <option value="0">JHIDE</option>
+            <option value="1">JSHOW</option>
+        </field>
+        <field name="downloadid" type="text" default="" size="30" label="COM_ALLEVENTS_DOWNLOAD_ID"
+               description="COM_ALLEVENTS_DOWNLOAD_ID_DESC" premium="1"/>
+        <field name="gtemplateeventform" type="AELayoutEventForm" default="default"
+               label="COM_ALLEVENTS_TEMPLATE_EVENTFORM"
+               description="COM_ALLEVENTS_TEMPLATE_EVENTFORM_DESC" premium="1"/>
+        <field name="gtemplateevent" type="AELayoutEvent" default="default" label="COM_ALLEVENTS_TEMPLATE_EVENT"
+               description="COM_ALLEVENTS_TEMPLATE_EVENT_DESC" premium="1"/>
+        <field name="gtemplatemain" type="list" default="default" label="COM_ALLEVENTS_TEMPLATE_MAIN"
+               description="COM_ALLEVENTS_TEMPLATE_MAIN_DESC" premium="1">
+            <option value="default">COM_ALLEVENTS_DEFAULT</option>
+            <option value="epure">COM_ALLEVENTS_DASHBOARD</option>
+            <option value="panel">COM_ALLEVENTS_PANEL</option>
+        </field>
+        <field name="gtemplateadminevents" type="list" default="default" label="COM_ALLEVENTS_TEMPLATE_ADMIN_EVENTS"
+               description="COM_ALLEVENTS_TEMPLATE_ADMIN_EVENTS_DESC" premium="1">
+            <option value="default">COM_ALLEVENTS_DEFAULT</option>
+            <option value="calendar">COM_ALLEVENTS_EVENTS_CALENDAR</option>
+        </field>
+        <field showon="gtemplateadminevents:calendar" name="gadmineventslite" type="radio"
+               class="btn-group btn-group-yesno" default="0"
+               label="COM_ALLEVENTS_ADMINEVENTSLITE" description="COM_ALLEVENTS_ADMINEVENTSLITE_DESC" premium="1">
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+        <!-- €#€ -->
+        <field name="gshow_samples" type="radio" class="btn-group btn-group-yesno" default="0"
+               label="COM_ALLEVENTS_CONTROL_CPSHOW_SAMPLES" description="COM_ALLEVENTS_CONTROL_CPSHOW_SAMPLES_DESC">
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+        <field name="gnewbie" type="radio" class="btn-group btn-group-yesno" default="0"
+               label="COM_ALLEVENTS_NEWBIEMODE" description="COM_ALLEVENTS_NEWBIEMODE_DESC">
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+        <field name="defaultuser" type="user" label="COM_ALLEVENTS_DEFAULT_USER_LABEL"
+               description="COM_ALLEVENTS_DEFAULT_USER_DESC"/>
+        <field name="gmenuitem" type="menuitem" label="COM_ALLEVENTS_DEFAULT_MENU_LABEL"
+               description="COM_ALLEVENTS_DEFAULT_MENU_DESC"/>
+        <!-- ççç -->
+        <field name="gforcenomenuitem" type="radio" class="btn-group btn-group-yesno" default="0"
+               label="COM_ALLEVENTS_FORCE_MENU" description="COM_ALLEVENTS_FORCE_MENU_DESC" premium="1">
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+        <!-- ççç -->
+        <field type="AETitleImg" label="COM_ALLEVENTS_PARAM_ENROLMENTS" class="stylebox lead input-xxlarge"
+               aeicon="cogs"/>
+        <field name="genrol_on" type="radio" class="btn-group btn-group-yesno" default="0"
+               label="COM_ALLEVENTS_CONTROL_ENROL_ON" description="COM_ALLEVENTS_CONTROL_ENROL_ON_DESC">
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+        <field name="gmultipleenrolmentsallow" type="radio" class="btn-group btn-group-yesno" default="0"
+               label="COM_ALLEVENTS_MULTIPLE_ENROLMENTS_ALLOW"
+               description="COM_ALLEVENTS_MULTIPLE_ENROLMENTS_ALLOW_DESC">
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+        <field showon="gmultipleenrolmentsallow:1" name="gmultipleenrolmentsmax" type="text" default="10"
+               class="btn-group btn-group-yesno" label="COM_ALLEVENTS_MULTIPLE_ENROLMENTS_MAX"
+               description="COM_ALLEVENTS_MULTIPLE_ENROLMENTS_MAX_DESC">
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+        <field name="gcontrol_eventwithenrolments" type="radio" class="btn-group btn-group-yesno" default="1"
+               label="COM_ALLEVENTS_CONTROL_EVENTWITHENROLMENTS_LABEL"
+               description="COM_ALLEVENTS_CONTROL_EVENTWITHENROLMENTS_DESC">
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+        <field type="AETitleImg" label="COM_ALLEVENTS_PARAM_ADVANCED" class="stylebox lead input-xxlarge"
+               aeicon="cogs"/>
+        <field name="gdisplay_openlinkself" type="radio" class="btn-group btn-group-yesno" default="_blank"
+               label="COM_ALLEVENTS_FULLCALENDAR_DISPLAY_OPENLINKSELF"
+               description="COM_ALLEVENTS_FULLCALENDAR_DISPLAY_OPENLINKSELF_INFO">
+            <option value="_blank">COM_ALLEVENTS_FULLCALENDAR_DISPLAY_OPENLINKBLANK</option>
+            <option value="_self">COM_ALLEVENTS_FULLCALENDAR_DISPLAY_OPENLINKSELF</option>
+        </field>
+        <field name="gjquery" label="COM_ALLEVENTS_CONFIG_JQUERY_LABEL" description="COM_ALLEVENTS_CONFIG_JQUERY_DESC"
+               type="list" default="1">
+            <option value="1">AE_ALWAYS</option>
+            <option value="0">AE_NEVER</option>
+            <option value="site">COM_ALLEVENTS_OPTION_SITE</option>
+            <option value="administrator">COM_ALLEVENTS_OPTION_ADMINISTRATOR</option>
+        </field>
+        <field name="gbootstrap" label="COM_ALLEVENTS_CONFIG_BOOTSTRAP_LABEL"
+               description="COM_ALLEVENTS_CONFIG_BOOTSTRAP_DESC" type="list" default="1">
+            <option value="1">AE_ALWAYS</option>
+            <option value="0">AE_NEVER</option>
+            <option value="site">COM_ALLEVENTS_OPTION_SITE</option>
+            <option value="administrator">COM_ALLEVENTS_OPTION_ADMINISTRATOR</option>
+        </field>
+        <field name="guikit" label="COM_ALLEVENTS_CONFIG_UIKIT_LABEL"
+               description="COM_ALLEVENTS_CONFIG_UIKIT_DESC" type="list" default="1">
+            <option value="1">AE_ALWAYS</option>
+            <option value="0">AE_NEVER</option>
+            <option value="site">COM_ALLEVENTS_OPTION_SITE</option>
+            <option value="administrator">COM_ALLEVENTS_OPTION_ADMINISTRATOR</option>
+        </field>
+        <field name="gmapkey" type="text" default="" size="30" label="COM_ALLEVENTS_MAPKEY"
+               description="COM_ALLEVENTS_MAPKEY_DESC"/>
+        <field name="gcustom_css" type="textarea" rows="5" label="AE_CUSTOM_CSS" description="AE_CUSTOM_CSS_DESC"
+               filter="raw"/>
+        <!-- ### -->
+        <field name="controlpanel_showimport" type="radio" class="btn-group btn-group-yesno" default="1"
+               label="COM_ALLEVENTS_CPSHOW_IMPORT_LABEL" description="COM_ALLEVENTS_CPSHOW_IMPORT_DESC" premium="1">
+            <option value="0">JHIDE</option>
+            <option value="1">JSHOW</option>
+        </field>
+        <!-- ### -->
+    </fieldset>
+    <fieldset name="controlpanel" label="COM_ALLEVENTS_PARAM_CONTROLPANEL_LABEL"
+              addfieldpath="/administrator/components/com_allevents/models/fields">
+        <field type="AETitleImg" label="COM_ALLEVENTS_PARAM_CONTROLPANEL_DESC" class="stylebox lead input-xxlarge"
+               aeicon="desktop"/>
+        <field name="controlpanel_showagendas" type="radio" class="btn-group btn-group-yesno" default="1"
+               label="COM_ALLEVENTS_CPSHOW_AGENDAS_LABEL" description="COM_ALLEVENTS_CPSHOW_AGENDAS_DESC">
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+        <field name="controlpanel_showactivities" type="radio" class="btn-group btn-group-yesno" default="1"
+               label="COM_ALLEVENTS_CPSHOW_ACTIVITIES_LABEL" description="COM_ALLEVENTS_CPSHOW_ACTIVITIES_DESC">
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+        <field name="controlpanel_showcategories" type="radio" class="btn-group btn-group-yesno" default="1"
+               label="COM_ALLEVENTS_CPSHOW_CATEGORIES_LABEL" description="COM_ALLEVENTS_CPSHOW_CATEGORIES_DESC">
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+        <field name="controlpanel_showplaces" type="radio" class="btn-group btn-group-yesno" default="1"
+               label="COM_ALLEVENTS_CPSHOW_PLACES_LABEL" description="COM_ALLEVENTS_CPSHOW_PLACES_DESC">
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+        <field name="controlpanel_showpublics" type="radio" class="btn-group btn-group-yesno" default="1"
+               label="COM_ALLEVENTS_CPSHOW_PUBLICS_LABEL" description="COM_ALLEVENTS_CPSHOW_PUBLICS_DESC">
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+        <field name="controlpanel_showressources" type="radio" class="btn-group btn-group-yesno" default="1"
+               label="COM_ALLEVENTS_CPSHOW_RESSOURCES_LABEL" description="COM_ALLEVENTS_CPSHOW_RESSOURCES_DESC">
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+        <field name="controlpanel_showsections" type="radio" class="btn-group btn-group-yesno" default="1"
+               label="COM_ALLEVENTS_CPSHOW_SECTIONS_LABEL" description="COM_ALLEVENTS_CPSHOW_SECTIONS_DESC">
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+        <!-- ##€ -->
+        <field name="controlpanel_showgcalendars" type="radio" class="btn-group btn-group-yesno" default="0"
+               label="COM_ALLEVENTS_CPSHOW_GCALENDARS_LABEL" description="COM_ALLEVENTS_CPSHOW_GCALENDARS_DESC"
+               premium="1">
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+        <field name="controlpanel_showcustomfields" type="radio" class="btn-group btn-group-yesno" default="0"
+               label="COM_ALLEVENTS_CPSHOW_CUSTOMFIELDS_LABEL" description="COM_ALLEVENTS_CPSHOW_CUSTOMFIELDS_DESC"
+               premium="1">
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+        <field name="controlpanel_showpayments" type="radio" class="btn-group btn-group-yesno" default="0"
+               label="COM_ALLEVENTS_CPSHOW_PAYMENTS_LABEL" description="COM_ALLEVENTS_CPSHOW_PAYMENTS_DESC" premium="1">
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+        <field name="controlpanel_showplanifications" type="radio" class="btn-group btn-group-yesno" default="0"
+               label="COM_ALLEVENTS_CPSHOW_PLANIFICATION_LABEL" description="COM_ALLEVENTS_CPSHOW_PLANIFICATION_DESC"
+               premium="1">
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+        <field name="controlpanel_showribbons" type="radio" class="btn-group btn-group-yesno" default="0"
+               label="COM_ALLEVENTS_CPSHOW_RIBBONS_LABEL" description="COM_ALLEVENTS_CPSHOW_RIBBONS_DESC" premium="1">
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+        <field type="AETitleImg" label="COM_ALLEVENTS_PARAM_CONTROLPANEL_OTHER_DESC" class="stylebox lead input-xxlarge"
+               aeicon="desktop"/>
+        <field name="controlpanel_showjusers" type="AEUseComponent" component="com_users" default="0"
+               class="btn-group btn-group-yesno" premium="1"
+               label="COM_ALLEVENTS_CPSHOW_JUSERS_LABEL" description="COM_ALLEVENTS_CPSHOW_JUSERS_DESC"/>
+        <field name="controlpanel_showjcontacts" type="AEUseComponent" component="com_contact" default="0"
+               class="btn-group btn-group-yesno" premium="1"
+               label="COM_ALLEVENTS_CPSHOW_JCONTACTS_LABEL" description="COM_ALLEVENTS_CPSHOW_JCONTACTS_DESC"/>
+        <field name="controlpanel_showcbusers" type="AEUseComponent" component="com_comprofiler" default="0"
+               class="btn-group btn-group-yesno" premium="1"
+               label="COM_ALLEVENTS_CPSHOW_CBUSERS_LABEL" description="COM_ALLEVENTS_CPSHOW_CBUSERS_DESC"/>
+        <!-- €## -->
+    </fieldset>
+    <fieldset name="display" label="COM_ALLEVENTS_PARAM_DISPLAY_LABEL" description="COM_ALLEVENTS_PARAM_DISPLAY_DESC"
+              addfieldpath="/administrator/components/com_allevents/models/fields">
+        <field type="AETitleImg" label="COM_ALLEVENTS_PARAM_EVENT_BUTTONS" class="stylebox lead input-xxlarge"
+               aeicon="toggle-on"/>
+        <field name="geventshow_closebutton" type="radio" class="btn-group btn-group-yesno" default="1"
+               label="COM_ALLEVENTS_SHOW_EVENTCLOSEBUTTON_LABEL" description="COM_ALLEVENTS_SHOW_EVENTCLOSEBUTTON_DESC">
+            <option value="0">JHIDE</option>
+            <option value="1">JSHOW</option>
+        </field>
+        <field name="geventshow_buttonics" type="radio" class="btn-group btn-group-yesno" default="1"
+               label="COM_ALLEVENTS_SHOW_BUTTONICS_LABEL" description="COM_ALLEVENTS_SHOW_BUTTONICS_DESC">
+            <option value="0">JHIDE</option>
+            <option value="1">JSHOW</option>
+        </field>
+        <field name="geventshow_buttongoogleevent" type="radio" class="btn-group btn-group-yesno" default="1"
+               label="COM_ALLEVENTS_SHOW_BUTTONGEVENT_LABEL" description="COM_ALLEVENTS_SHOW_BUTTONGEVENT_DESC">
+            <option value="0">JHIDE</option>
+            <option value="1">JSHOW</option>
+        </field>
+        <field name="geventshow_buttonprint" type="radio" class="btn-group btn-group-yesno" default="1"
+               label="COM_ALLEVENTS_SHOW_BUTTONPRINT_LABEL" description="COM_ALLEVENTS_SHOW_BUTTONPRINT_DESC">
+            <option value="0">JHIDE</option>
+            <option value="1">JSHOW</option>
+        </field>
+        <field name="geventshow_buttonmail" type="radio" class="btn-group btn-group-yesno" default="1"
+               label="COM_ALLEVENTS_SHOW_BUTTONMAIL_LABEL" description="COM_ALLEVENTS_SHOW_BUTTONMAIL_DESC">
+            <option value="0">JHIDE</option>
+            <option value="1">JSHOW</option>
+        </field>
+        <field type="AETitleImg" label="COM_ALLEVENTS_PARAM_EVENT_HEADER" class="stylebox lead input-xxlarge"
+               aeicon="header"/>
+        <field name="geventshow_map" type="list" default="1" label="COM_ALLEVENTS_SHOW_EVENTMAP_LABEL"
+               description="COM_ALLEVENTS_SHOW_EVENTMAP_DESC">
+            <option value="0">JHIDE</option>
+            <option value="1">COM_ALLEVENTS_SHOW_EVENTMAP_MAP</option>
+            <option value="2">COM_ALLEVENTS_SHOW_EVENTMAP_JPG</option>
+            <option value="3">COM_ALLEVENTS_SHOW_EVENTMAP_STR</option>
+        </field>
+        <field name="geventshow_ribbon" type="radio" class="btn-group btn-group-yesno" default="1"
+               label="COM_ALLEVENTS_SHOW_EVENTRIBBON_LABEL" description="COM_ALLEVENTS_SHOW_EVENTRIBBON_DESC">
+            <option value="0">JHIDE</option>
+            <option value="1">JSHOW</option>
+        </field>
+        <field showon="geventshow_ribbon:1" name="geventshow_stdribbon" type="radio" class="btn-group btn-group-yesno"
+               default="1"
+               label="COM_ALLEVENTS_SHOW_STDRIBBON_LABEL" description="COM_ALLEVENTS_SHOW_STDRIBBON_DESC">
+            <option value="0">JHIDE</option>
+            <option value="1">JSHOW</option>
+        </field>
+        <field showon="controlpanel_showagendas:1" name="geventshow_agenda" type="radio"
+               class="btn-group btn-group-yesno" default="1" label="COM_ALLEVENTS_SHOW_AGENDA_LABEL"
+               description="COM_ALLEVENTS_SHOW_AGENDA_DESC">
+            <option value="0">JHIDE</option>
+            <option value="1">JSHOW</option>
+        </field>
+        <field showon="controlpanel_showactivities:1" name="geventshow_activity" type="radio"
+               class="btn-group btn-group-yesno" default="1" label="COM_ALLEVENTS_SHOW_ACTIVITY_LABEL"
+               description="COM_ALLEVENTS_SHOW_ACTIVITY_DESC">
+            <option value="0">JHIDE</option>
+            <option value="1">JSHOW</option>
+        </field>
+        <field showon="controlpanel_showpublics:1" name="geventshow_public" type="radio"
+               class="btn-group btn-group-yesno" default="1" label="COM_ALLEVENTS_SHOW_PUBLIC_LABEL"
+               description="COM_ALLEVENTS_SHOW_PUBLIC_DESC">
+            <option value="0">JHIDE</option>
+            <option value="1">JSHOW</option>
+        </field>
+        <field showon="controlpanel_showsections:1" name="geventshow_section" type="radio"
+               class="btn-group btn-group-yesno" default="1" label="COM_ALLEVENTS_SHOW_SECTION_LABEL"
+               description="COM_ALLEVENTS_SHOW_SECTION_DESC">
+            <option value="0">JHIDE</option>
+            <option value="1">JSHOW</option>
+        </field>
+        <field showon="controlpanel_showcategories:1" name="geventshow_category" type="radio"
+               class="btn-group btn-group-yesno" default="1" label="COM_ALLEVENTS_SHOW_CATEGORY_LABEL"
+               description="COM_ALLEVENTS_SHOW_CATEGORY_DESC">
+            <option value="0">JHIDE</option>
+            <option value="1">JSHOW</option>
+        </field>
+        <field showon="controlpanel_showressources:1" name="geventshow_ressource" type="radio"
+               class="btn-group btn-group-yesno" default="1" label="COM_ALLEVENTS_SHOW_RESSOURCE_LABEL"
+               description="COM_ALLEVENTS_SHOW_RESSOURCE_DESC">
+            <option value="0">JHIDE</option>
+            <option value="1">JSHOW</option>
+        </field>
+        <field name="geventshow_author" type="radio" class="btn-group btn-group-yesno" default="1"
+               label="COM_ALLEVENTS_SHOW_AUTHOR_LABEL">
+            <option value="0">JHIDE</option>
+            <option value="1">JSHOW</option>
+        </field>
+        <field showon="controlpanel_showplaces:1" name="geventshow_place" type="radio" class="btn-group btn-group-yesno"
+               default="1" label="COM_ALLEVENTS_SHOW_PLACE_LABEL" description="COM_ALLEVENTS_SHOW_PLACE_DESC">
+            <option value="0">JHIDE</option>
+            <option value="1">JSHOW</option>
+        </field>
+        <field name="geventshow_enddate" type="radio" class="btn-group btn-group-yesno" default="1"
+               label="COM_ALLEVENTS_SHOW_ENDDATE_LABEL">
+            <option value="0">JHIDE</option>
+            <option value="1">JSHOW</option>
+        </field>
+        <field name="geventshow_vignette" type="radio" class="btn-group btn-group-yesno" default="1"
+               label="COM_ALLEVENTS_SHOW_VIGNETTE_LABEL">
+            <option value="0">JHIDE</option>
+            <option value="1">JSHOW</option>
+        </field>
+        <field name="geventshow_affiche" type="radio" class="btn-group btn-group-yesno" default="1"
+               label="COM_ALLEVENTS_SHOW_AFFICHE_LABEL">
+            <option value="0">JHIDE</option>
+            <option value="1">JSHOW</option>
+        </field>
+        <field type="AETitleImg" label="COM_ALLEVENTS_PARAM_EVENT_FULLMAP" class="stylebox lead input-xxlarge"
+               aeicon="map"/>
+        <field name="geventshow_fullmap" type="radio" class="btn-group btn-group-yesno" default="0"
+               label="COM_ALLEVENTS_SHOW_EVENTFULLMAP_LABEL" description="COM_ALLEVENTS_SHOW_EVENTFULLMAP_DESC">
+            <option value="0">JHIDE</option>
+            <option value="1">JSHOW</option>
+        </field>
+        <field name="geventshow_fullmapadress" type="radio" class="btn-group btn-group-yesno" default="0"
+               label="COM_ALLEVENTS_SHOW_EVENTFULLMAPADRESS_LABEL"
+               description="COM_ALLEVENTS_SHOW_EVENTFULLMAPADRESS_DESC">
+            <option value="0">JHIDE</option>
+            <option value="1">JSHOW</option>
+        </field>
+        <field name="geventshow_fullmapgps" type="radio" class="btn-group btn-group-yesno" default="0"
+               label="COM_ALLEVENTS_SHOW_EVENTFULLMAPGPS_LABEL" description="COM_ALLEVENTS_SHOW_EVENTFULLMAPGPS_DESC">
+            <option value="0">JHIDE</option>
+            <option value="1">JSHOW</option>
+        </field>
+        <field type="AETitleImg" label="COM_ALLEVENTS_PARAM_EVENT_CONTACTS" class="stylebox lead input-xxlarge"
+               aeicon="user"/>
+        <field name="geventshow_contactsbloc" type="radio" class="btn-group btn-group-yesno" default="1"
+               label="COM_ALLEVENTS_SHOW_CONTACTSBLOC">
+            <option value="0">JHIDE</option>
+            <option value="1">JSHOW</option>
+        </field>
+        <field type="AETitleImg" label="COM_ALLEVENTS_PARAM_EVENT_DESCRIPTION" class="stylebox lead input-xxlarge"
+               aeicon="file"/>
+        <field name="geventshow_description" type="radio" class="btn-group btn-group-yesno" default="1"
+               label="COM_ALLEVENTS_SHOW_DESC">
+            <option value="0">JHIDE</option>
+            <option value="1">JSHOW</option>
+        </field>
+        <field name="geventshow_additional_info" type="radio" class="btn-group btn-group-yesno" default="0"
+               label="COM_ALLEVENTS_SHOW_ADDITIONAL_INFO">
+            <option value="0">JHIDE</option>
+            <option value="1">JSHOW</option>
+        </field>
+        <field type="AETitleImg" label="COM_ALLEVENTS_PARAM_EVENT_COMMENTS" class="stylebox lead input-xxlarge"
+               aeicon="comments-o"/>
+        <field name="geventshow_comments" type="radio" class="btn-group btn-group-yesno" default="1"
+               label="COM_ALLEVENTS_SHOW_COMMENTS">
+            <option value="0">JHIDE</option>
+            <option value="1">JSHOW</option>
+        </field>
+        <field type="AETitleImg" label="COM_ALLEVENTS_PARAM_EVENT_ENROLMENTS" class="stylebox lead input-xxlarge"
+               aeicon="users"/>
+        <field name="geventshow_enrolmentbloc" type="radio" class="btn-group btn-group-yesno" default="1"
+               label="COM_ALLEVENTS_SHOW_ENROLMENTBLOC">
+            <option value="0">JHIDE</option>
+            <option value="1">JSHOW</option>
+        </field>
+        <field showon="geventshow_enrolmentbloc:1" name="geventshow_enrolments" type="list" default="1"
+               label="COM_ALLEVENTS_SHOW_ENROLMENTS">
+            <option value="0">COM_ALLEVENTS_SHOW_ENROLMENTSHIDE</option>
+            <option value="1">COM_ALLEVENTS_SHOW_ENROLMENTSSHOW</option>
+            <option value="2">COM_ALLEVENTS_SHOW_ENROLMENTSACL</option>
+        </field>
+        <field showon="geventshow_enrolmentbloc:1" name="geventshow_enrolmentdisplay" type="list" default="0"
+               label="COM_ALLEVENTS_SHOW_ENROLMENTSDISPLAY">
+            <option value="0">COM_ALLEVENTS_SHOW_ENROLMENTSDISPLAYNUMBER</option>
+            <option value="1">COM_ALLEVENTS_SHOW_ENROLMENTSDISPLAYLITERAL</option>
+        </field>
+        <field showon="geventshow_enrolmentbloc:1" name="geventshow_enrolperhaps" type="radio"
+               class="btn-group btn-group-yesno" default="0" label="COM_ALLEVENTS_SHOW_ENROLPERHAPS"
+               description="COM_ALLEVENTS_SHOW_ENROLPERHAPS_DESC">
+            <option value="0">JHIDE</option>
+            <option value="1">JSHOW</option>
+            <option value="2">AE_ALWAYS</option>
+        </field>
+        <field showon="geventshow_enrolmentbloc:1" name="geventshow_enrolno" type="radio"
+               class="btn-group btn-group-yesno" default="1" label="COM_ALLEVENTS_SHOW_ENROLNO"
+               description="COM_ALLEVENTS_SHOW_ENROLNO_DESC">
+            <option value="0">JHIDE</option>
+            <option value="1">JSHOW</option>
+        </field>
+        <field showon="geventshow_enrolmentbloc:1" name="gevent_companions" type="radio"
+               class="btn-group btn-group-yesno" default="0" label="COM_ALLEVENTS_COMPANION_AS_PARTICIPANT_LABEL"
+               description="COM_ALLEVENTS_COMPANION_AS_PARTICIPANT_DESC">
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+        <field type="AETitleImg" label="COM_ALLEVENTS_PARAM_EVENT_ADVANCED" class="stylebox lead input-xxlarge"
+               aeicon="cogs"/>
+        <field name="geventshow_defaultexpand" type="radio" class="btn-group btn-group-yesno" default="0"
+               label="COM_ALLEVENTS_SHOW_DEFAULTEXPAND" description="COM_ALLEVENTS_SHOW_DEFAULTEXPAND_DESC">
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+    </fieldset>
+    <fieldset name="param_display" label="COM_ALLEVENTS_PARAM_EVENTS_LABEL"
+              addfieldpath="/administrator/components/com_allevents/models/fields">
+        <field type="AETitleImg" label="COM_ALLEVENTS_PARAM_EVENTS_DESC" class="stylebox lead input-xxlarge"
+               aeicon="cogs"/>
+        <field name="gaebs_bullet" type="list" label="COM_ALLEVENTS_PARAM_AEBS_BULLET_LABEL"
+               description="COM_ALLEVENTS_PARAM_AEBS_BULLET_DESC" default="bullet">
+            <option value="bullet">COM_ALLEVENTS_IMAGE_BULLET</option>
+            <option value="color">COM_ALLEVENTS_COULEUR</option>
+        </field>
+        <field name="gdisplay_colors" type="list" default="0" label="COM_ALLEVENTS_DISPLAY_COLORS"
+               description="COM_ALLEVENTS_DISPLAY_COLORS_INFO">
+            <option value="0">AGENDA</option>
+            <option value="1">ACTIVITY</option>
+            <option value="2">CATEGORY</option>
+        </field>
+        <field name="gdisplay_colors_back" type="list" default="1" label="COM_ALLEVENTS_DISPLAY_COLORS_BACK"
+               description="COM_ALLEVENTS_DISPLAY_COLORS_BACK_INFO">
+            <option value="0">COM_ALLEVENTS_BACKCOLOR</option>
+            <option value="1">COM_ALLEVENTS_FORECOLOR</option>
+        </field>
+        <field name="gdisplay_colors_fore" type="list" default="1" label="COM_ALLEVENTS_DISPLAY_COLORS_FORE"
+               description="COM_ALLEVENTS_DISPLAY_COLORS_FORE_INFO">
+            <option value="0">COM_ALLEVENTS_BACKCOLOR</option>
+            <option value="1">COM_ALLEVENTS_FORECOLOR</option>
+        </field>
+        <field name="gshow_eventallday" type="radio" class="btn-group btn-group-yesno" default="1"
+               label="COM_ALLEVENTS_SHOW_EVENTALLDAY" description="COM_ALLEVENTS_SHOW_EVENTALLDAY_DESC">
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+        <field type="AETitleImg" label="COM_ALLEVENTS_PARAM_CALENDAR_DESC" class="stylebox lead input-xxlarge"
+               aeicon="clock-o"/>
+        <field name="gdate_format" type="list" default="Y-m-d" label="COM_ALLEVENTS_DATE_FORMAT_LABEL"
+               description="COM_ALLEVENTS_DATE_FORMAT_DESC">
+            <option value="d/m/Y">COM_ALLEVENTS_FRENCH_ENGLISH</option>
+            <option value="d.m.Y">COM_ALLEVENTS_CONTINENTAL</option>
+            <option value="m/d/Y">COM_ALLEVENTS_US</option>
+            <option value="Y-m-d">COM_ALLEVENTS_ISO</option>
+            <option value="CUSTOM">COM_ALLEVENTS_FROM_LANGUAGE_FILE</option>
+        </field>
+        <field name="gtime_format" type="list" default="H:i" label="COM_ALLEVENTS_TIME_FORMAT_LABEL"
+               description="COM_ALLEVENTS_TIME_FORMAT_DESC" class="btn-group">
+            <option value="H:i">COM_ALLEVENTS_24</option>
+            <option value="g:i A">COM_ALLEVENTS_12</option>
+        </field>
+        <field name="gtime_step" type="text" default="30" label="COM_ALLEVENTS_TIME_STEP_LABEL"
+               description="COM_ALLEVENTS_STEP_FORMAT_DESC"/>
+        <field name="gfirstday_week" type="list" label="COM_ALLEVENTS_FIRSTDAY_WEEK_LABEL"
+               description="COM_ALLEVENTS_FIRSTDAY_WEEK_DESC" default="1">
+            <option value="1">MONDAY</option>
+            <option value="0">SUNDAY</option>
+        </field>
+        <!--<field name="gcontrol_past" type="radio" class="btn-group btn-group-yesno" default="1" label="COM_ALLEVENTS_CONTROL_PAST_LABEL" description="COM_ALLEVENTS_CONTROL_PAST_DESC">
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>-->
+    </fieldset>
+    <fieldset name="contacts" label="COM_ALLEVENTS_PARAM_CONTACTS_LABEL" description="COM_ALLEVENTS_PARAM_CONTACTS_DESC"
+              addfieldpath="/administrator/components/com_allevents/models/fields"
+              addrulepath="/administrator/components/com_allevents/models/rules">
+        <field showon="controlpanel_showjusers:1" type="AETitleImg" label="COM_ALLEVENTS_PARAM_CONTACTS_JUSER"
+               class="stylebox lead input-xxlarge" aeicon="user"/>
+        <field showon="controlpanel_showjusers:1" name="geventshow_juserusername" type="radio"
+               class="btn-group btn-group-yesno" default="0" label="COM_ALLEVENTS_SHOW_JUSERUSERNAME">
+            <option value="0">JHIDE</option>
+            <option value="1">JSHOW</option>
+        </field>
+        <field showon="controlpanel_showjusers:1" name="geventshow_jusername" type="radio"
+               class="btn-group btn-group-yesno" default="1" label="COM_ALLEVENTS_SHOW_JUSERNAME">
+            <option value="0">JHIDE</option>
+            <option value="1">JSHOW</option>
+        </field>
+        <field showon="controlpanel_showjusers:1" name="geventshow_jusermail" type="list" default="2"
+               label="COM_ALLEVENTS_SHOW_JUSERMAIL">
+            <option value="0">COM_ALLEVENTS_EMAIL_HIDDEN</option>
+            <option value="1">COM_ALLEVENTS_EMAIL_NOT_CLICKABLE</option>
+            <option value="2">COM_ALLEVENTS_EMAIL_CLICKABLE</option>
+        </field>
+        <field showon="controlpanel_showjcontacts:1" type="AETitleImg" label="COM_ALLEVENTS_PARAM_CONTACTS_JCONTACT"
+               class="stylebox lead input-xxlarge" aeicon="user"/>
+        <field showon="controlpanel_showjcontacts:1" name="geventshow_jcontactname" type="radio"
+               class="btn-group btn-group-yesno" default="1" label="COM_ALLEVENTS_SHOW_JCONTACTNAME">
+            <option value="0">JHIDE</option>
+            <option value="1">JSHOW</option>
+        </field>
+        <field showon="controlpanel_showjcontacts:1" name="geventshow_jcontactlink" type="radio"
+               class="btn-group btn-group-yesno" default="1" label="COM_ALLEVENTS_SHOW_JCONTACTLINK"
+               description="COM_ALLEVENTS_SHOW_JCONTACTLINK_DESC">
+            <option value="0">JHIDE</option>
+            <option value="1">JSHOW</option>
+        </field>
+        <field showon="controlpanel_showjcontacts:1" name="geventshow_jcontactusername" type="radio"
+               class="btn-group btn-group-yesno" default="0" label="COM_ALLEVENTS_SHOW_JCONTACTUSERNAME"
+               description="COM_ALLEVENTS_SHOW_JCONTACTUSERNAME_DESC">
+            <option value="0">JHIDE</option>
+            <option value="1">JSHOW</option>
+        </field>
+        <field showon="controlpanel_showjcontacts:1" name="geventshow_jcontactmail" type="list" default="2"
+               label="COM_ALLEVENTS_SHOW_JCONTACTMAIL">
+            <option value="0">COM_ALLEVENTS_EMAIL_HIDDEN</option>
+            <option value="1">COM_ALLEVENTS_EMAIL_NOT_CLICKABLE</option>
+            <option value="2">COM_ALLEVENTS_EMAIL_CLICKABLE</option>
+        </field>
+        <field showon="controlpanel_showjcontacts:1" name="geventshow_jcontactposition" type="radio"
+               class="btn-group btn-group-yesno" default="0" label="COM_ALLEVENTS_SHOW_JCONTACTPOSITION">
+            <option value="0">JHIDE</option>
+            <option value="1">JSHOW</option>
+        </field>
+        <field showon="controlpanel_showjcontacts:1" name="geventshow_jcontactaddress" type="AEJContactAddressFormat"
+               rows="4"
+               label="COM_ALLEVENTS_SHOW_JCONTACTADDRESS"
+               maxlength="200" filter="raw" validate="AEJContactAddressFormat"/>
+        <field showon="controlpanel_showjcontacts:1" name="geventshow_jcontactphone" type="radio"
+               class="btn-group btn-group-yesno" default="0" label="COM_ALLEVENTS_SHOW_JCONTACTPHONE">
+            <option value="0">JHIDE</option>
+            <option value="1">JSHOW</option>
+        </field>
+        <field showon="controlpanel_showjcontacts:1" name="geventshow_jcontactmobile" type="radio"
+               class="btn-group btn-group-yesno" default="0" label="COM_ALLEVENTS_SHOW_JCONTACTMOBILE">
+            <option value="0">JHIDE</option>
+            <option value="1">JSHOW</option>
+        </field>
+        <field showon="controlpanel_showjcontacts:1" name="geventshow_jcontactfax" type="radio"
+               class="btn-group btn-group-yesno" default="0" label="COM_ALLEVENTS_SHOW_JCONTACTFAX">
+            <option value="0">JHIDE</option>
+            <option value="1">JSHOW</option>
+        </field>
+        <field showon="controlpanel_showjcontacts:1" name="geventshow_jcontactwebsite" type="radio"
+               class="btn-group btn-group-yesno" default="0" label="COM_ALLEVENTS_SHOW_JCONTACTWEBSITE">
+            <option value="0">JHIDE</option>
+            <option value="1">JSHOW</option>
+        </field>
+        <field showon="controlpanel_showjcontacts:1" name="geventshow_jcontactmisc" type="radio"
+               class="btn-group btn-group-yesno" default="0" label="COM_ALLEVENTS_SHOW_JCONTACTMISC">
+            <option value="0">JHIDE</option>
+            <option value="1">JSHOW</option>
+        </field>
+        <!-- €€€ -->
+        <field showon="controlpanel_showcbusers:1" type="AETitleImg" label="COM_ALLEVENTS_PARAM_CONTACTS_CBUSER"
+               class="stylebox lead input-xxlarge" premium="1" aeicon="user"/>
+        <field showon="controlpanel_showcbusers:1" name="geventshow_cbusername" type="radio"
+               class="btn-group btn-group-yesno" premium="1" default="1" label="COM_ALLEVENTS_SHOW_CBUSERNAME">
+            <option value="0">JHIDE</option>
+            <option value="1">JSHOW</option>
+        </field>
+        <field showon="controlpanel_showcbusers:1" name="geventshow_cbuserlink" type="radio"
+               class="btn-group btn-group-yesno" premium="1" default="1" label="COM_ALLEVENTS_SHOW_CBUSERLINK"
+               description="COM_ALLEVENTS_SHOW_CBUSERLINK_DESC">
+            <option value="0">JHIDE</option>
+            <option value="1">JSHOW</option>
+        </field>
+        <field showon="controlpanel_showcbusers:1" name="geventshow_cbuserusername" type="radio"
+               class="btn-group btn-group-yesno" premium="1" default="0" label="COM_ALLEVENTS_SHOW_CBUSERUSERNAME">
+            <option value="0">JHIDE</option>
+            <option value="1">JSHOW</option>
+        </field>
+        <field showon="controlpanel_showcbusers:1" name="geventshow_cbuseremail" type="AECBField"
+               cb_types="emailaddress,primaryemailaddress" premium="1"
+               default="0" label="COM_ALLEVENTS_SHOW_CBUSERMAIL">
+            <option value="0">COM_ALLEVENTS_CB_NOT_DISPLAYED</option>
+        </field>
+        <field showon="controlpanel_showcbusers:1" name="geventshow_cbusermaildisp" type="list" premium="1" default="2"
+               label="COM_ALLEVENTS_SHOW_CBUSERMAILDISP">
+            <option value="0">COM_ALLEVENTS_EMAIL_HIDDEN</option>
+            <option value="1">COM_ALLEVENTS_EMAIL_NOT_CLICKABLE</option>
+            <option value="2">COM_ALLEVENTS_EMAIL_CLICKABLE</option>
+        </field>
+        <field showon="controlpanel_showcbusers:1" name="geventshow_cbuserorganization" premium="1" type="AECBField"
+               cb_types="textarea,text"
+               default="0" label="COM_ALLEVENTS_SHOW_CBUSERORGANIZATION">
+            <option value="0">COM_ALLEVENTS_CB_NOT_DISPLAYED</option>
+        </field>
+        <field showon="controlpanel_showcbusers:1" name="geventshow_cbuserposition" premium="1" type="AECBField"
+               cb_types="textarea,text"
+               default="0" label="COM_ALLEVENTS_SHOW_CBUSERPOSITION">
+            <option value="0">COM_ALLEVENTS_CB_NOT_DISPLAYED</option>
+        </field>
+        <field showon="controlpanel_showcbusers:1" name="geventshow_cbuseraddress" premium="1"
+               type="AECBUserAddressFormat" rows="4"
+               label="COM_ALLEVENTS_SHOW_CBUSERADDRESS"
+               maxlength="200" filter="raw" validate="AECBUserAddressFormat"/>
+        <field showon="controlpanel_showcbusers:1" name="geventshow_cbuserphone" premium="1" type="AECBField"
+               cb_types="text"
+               default="0" label="COM_ALLEVENTS_SHOW_CBUSERPHONE">
+            <option value="0">COM_ALLEVENTS_CB_NOT_DISPLAYED</option>
+        </field>
+        <field showon="controlpanel_showcbusers:1" name="geventshow_cbusermobile" premium="1" type="AECBField"
+               cb_types="text"
+               default="0" label="COM_ALLEVENTS_SHOW_CBUSERMOBILE">
+            <option value="0">COM_ALLEVENTS_CB_NOT_DISPLAYED</option>
+        </field>
+        <field showon="controlpanel_showcbusers:1" name="geventshow_cbuserfax" premium="1" type="AECBField"
+               cb_types="text"
+               default="0" label="COM_ALLEVENTS_SHOW_CBUSERFAX">
+            <option value="0">COM_ALLEVENTS_CB_NOT_DISPLAYED</option>
+        </field>
+        <field showon="controlpanel_showcbusers:1" name="geventshow_cbuserwebsite" premium="1" type="AECBField"
+               cb_types="webaddress"
+               default="0" label="COM_ALLEVENTS_SHOW_CBUSERWEBSITE">
+            <option value="0">COM_ALLEVENTS_CB_NOT_DISPLAYED</option>
+        </field>
+        <field showon="controlpanel_showcbusers:1" name="geventshow_cbusermisc" premium="1" type="AECBField"
+               cb_types="editorta"
+               default="0" label="COM_ALLEVENTS_SHOW_CBUSERMISC">
+            <option value="0">COM_ALLEVENTS_CB_NOT_DISPLAYED</option>
+        </field>
+        <!-- €€€ -->
+    </fieldset>
+    <fieldset name="mails" label="COM_ALLEVENTS_PARAM_MAILS_LABEL"
+              addfieldpath="/administrator/components/com_allevents/models/fields">
+        <field type="AETitleImg" label="COM_ALLEVENTS_PARAM_MAILS_DESC" class="stylebox lead input-xxlarge"
+               aeicon="cogs"/>
+        <field name="gmail_on" type="radio" class="btn-group btn-group-yesno" default="1"
+               label="COM_ALLEVENTS_EMAIL_ON_LABEL" description="COM_ALLEVENTS_EMAIL_ON_DESC">
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+        <field name="gmail_by" type="radio" class="btn-group btn-group-yesno" default="1"
+               label="COM_ALLEVENTS_EMAIL_BY_LABEL" description="COM_ALLEVENTS_EMAIL_BY_DESC">
+            <option value="0">COM_ALLEVENTS_EMAIL_BY_GROUP</option>
+            <option value="1">COM_ALLEVENTS_EMAIL_BY_USER</option>
+        </field>
+        <field showon="gmail_by:0" type="spacer" name="myspacer1" label="COM_ALLEVENTS_MAIL_SPACER1" hr="true"/>
+        <field showon="gmail_by:0" name="gmail_usergroupnew" type="usergrouplist" default="0"
+               description="COM_ALLEVENTS_EMAIL_USERGROUPNEW_DESC" label="COM_ALLEVENTS_EMAIL_USERGROUPNEW_LABEL"
+               size="10" multiple="true">
+            <option value="0">COM_ALLEVENTS_MAIL_FIELD_VALUE_NO_USERS_GROUPS</option>
+        </field>
+        <field showon="gmail_by:0" name="gmail_usergroupupd" type="usergrouplist" default="0"
+               description="COM_ALLEVENTS_EMAIL_USERGROUPUPD_DESC" label="COM_ALLEVENTS_EMAIL_USERGROUPUPD_LABEL"
+               size="10" multiple="true">
+            <option value="0">COM_ALLEVENTS_MAIL_FIELD_VALUE_NO_USERS_GROUPS</option>
+        </field>
+        <field showon="gmail_by:0" name="gmail_recurse" type="radio" class="btn-group btn-group-yesno" default="1"
+               description="COM_ALLEVENTS_MAIL_FIELD_RECURSE_DESC" label="COM_ALLEVENTS_MAIL_FIELD_RECURSE_LABEL">
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+        <field showon="gmail_by:0" name="gmail_bcc" type="radio" class="btn-group btn-group-yesno" default="1"
+               description="COM_ALLEVENTS_MAIL_FIELD_SEND_AS_BLIND_CARBON_COPY_DESC"
+               label="COM_ALLEVENTS_MAIL_FIELD_SEND_AS_BLIND_CARBON_COPY_LABEL">
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+        <field showon="gmail_by:1" type="spacer" name="myspacer2" label="COM_ALLEVENTS_MAIL_SPACER2" hr="true"/>
+        <field showon="gmail_by:1" name="gmail_adminnew" type="radio" class="btn-group btn-group-yesno" default="1"
+               label="COM_ALLEVENTS_EMAIL_ADMINNEW_LABEL" description="COM_ALLEVENTS_EMAIL_ADMINNEW_DESC">
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+        <field showon="gmail_by:1" name="gmail_adminupd" type="radio" class="btn-group btn-group-yesno" default="1"
+               label="COM_ALLEVENTS_EMAIL_ADMINUPD_LABEL" description="COM_ALLEVENTS_EMAIL_ADMINUPD_DESC">
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+        <field showon="gmail_by:1" name="gmail_agendanew" type="radio" class="btn-group btn-group-yesno" default="1"
+               label="COM_ALLEVENTS_EMAIL_AGENDANEW_LABEL" description="COM_ALLEVENTS_EMAIL_AGENDANEW_DESC">
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+        <field showon="gmail_by:1" name="gmail_agendaupd" type="radio" class="btn-group btn-group-yesno" default="1"
+               label="COM_ALLEVENTS_EMAIL_AGENDAUPD_LABEL" description="COM_ALLEVENTS_EMAIL_AGENDAUPD_DESC">
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+        <field type="spacer" name="myspacer3" label="COM_ALLEVENTS_MAIL_SPACER3" hr="true"/>
+        <field name="gmail_authornew" type="radio" class="btn-group btn-group-yesno" default="1"
+               label="COM_ALLEVENTS_EMAIL_AUTHORNEW_LABEL" description="COM_ALLEVENTS_EMAIL_AUTHORNEW_DESC">
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+        <field name="gmail_authorupd" type="radio" class="btn-group btn-group-yesno" default="1"
+               label="COM_ALLEVENTS_EMAIL_AUTHORUPD_LABEL" description="COM_ALLEVENTS_EMAIL_AUTHORUPD_DESC">
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+        <field name="gmail_authorwait" type="radio" class="btn-group btn-group-yesno" default="1"
+               label="COM_ALLEVENTS_EMAIL_AUTHORWAIT_LABEL" description="COM_ALLEVENTS_EMAIL_AUTHORWAIT_DESC">
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+        <field name="gmail_authorvalid" type="radio" class="btn-group btn-group-yesno" default="1"
+               label="COM_ALLEVENTS_EMAIL_AUTHORVALID_LABEL" description="COM_ALLEVENTS_EMAIL_AUTHORVALID_DESC">
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+        <!--
+        <field name="gmail_authorendenrol" type="radio" class="btn-group btn-group-yesno" default="1" label="COM_ALLEVENTS_EMAIL_AUTHORENDENROL_LABEL" description="COM_ALLEVENTS_EMAIL_AUTHORENDENROL_DESC">
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>-->
+    </fieldset>
+    <fieldset name="editmails" label="COM_ALLEVENTS_PARAM_EDITMAILS_LABEL"
+              description="COM_ALLEVENTS_PARAM_EDITMAILS_DESC"
+              addfieldpath="/administrator/components/com_allevents/models/fields">
+        <field name="gmail_title" type="text" default="" size="60" label="COM_ALLEVENTS_TITRE"
+               description="COM_ALLEVENTS_EMAIL_TITLE_DESC"/>
+        <field name="gmail_enrolment_no" type="editor" description="COM_ALLEVENTS_EMAIL_ENROLMENT_NO_DESC"
+               label="COM_ALLEVENTS_EMAIL_ENROLMENT_NO_LABEL" height="200" filter="safehtml" buttons="true"/>
+        <field name="gmail_enrolment_ok" type="editor" description="COM_ALLEVENTS_EMAIL_ENROLMENT_OK_DESC"
+               label="COM_ALLEVENTS_EMAIL_ENROLMENT_OK_LABEL" height="200" filter="safehtml" buttons="true"/>
+        <field name="gmail_enrolment_pending" type="editor" description="COM_ALLEVENTS_EMAIL_ENROLMENT_PENDING_DESC"
+               label="COM_ALLEVENTS_EMAIL_ENROLMENT_PENDING_LABEL" height="200" filter="safehtml" buttons="true"/>
+        <field name="gmail_enrolment_perhaps" type="editor" description="COM_ALLEVENTS_EMAIL_ENROLMENT_PERHAPS_DESC"
+               label="COM_ALLEVENTS_EMAIL_ENROLMENT_PERHAPS_LABEL" height="200" filter="safehtml" buttons="true"/>
+        <field name="gmail_enrolment_waiting" type="editor" description="COM_ALLEVENTS_EMAIL_ENROLMENT_WAITING_DESC"
+               label="COM_ALLEVENTS_EMAIL_ENROLMENT_WAITING_LABEL" height="200" filter="safehtml" buttons="true"/>
+        <field name="gmail_enrolment_yes" type="editor" description="COM_ALLEVENTS_EMAIL_ENROLMENT_YES_DESC"
+               label="COM_ALLEVENTS_EMAIL_ENROLMENT_YES_LABEL" height="200" filter="safehtml" buttons="true"/>
+        <field name="gmail_event_updated" type="editor" description="COM_ALLEVENTS_EMAIL_EVENT_UPDATED_DESC"
+               label="COM_ALLEVENTS_EMAIL_EVENT_UPDATED_LABEL" height="200" filter="safehtml" buttons="true"/>
+        <field name="gmail_proposition" type="editor" description="COM_ALLEVENTS_EMAIL_PROPOSITION_DESC"
+               label="COM_ALLEVENTS_EMAIL_PROPOSITION_LABEL" height="200" filter="safehtml" buttons="true"/>
+        <field name="gmail_proposition_approved" type="editor"
+               description="COM_ALLEVENTS_EMAIL_PROPOSITION_APPROVED_DESC"
+               label="COM_ALLEVENTS_EMAIL_PROPOSITION_APPROVED_LABEL" height="200" filter="safehtml" buttons="true"/>
+        <field name="gmail_proposition_hasbeenapproved" type="editor"
+               description="COM_ALLEVENTS_EMAIL_PROPOSITION_HASBEENAPPROVED_DESC"
+               label="COM_ALLEVENTS_EMAIL_PROPOSITION_HASBEENAPPROVED_LABEL" height="200" filter="safehtml"
+               buttons="true"/>
+    </fieldset>
+    <!-- €#£ -->
+    <fieldset name="payment" label="COM_ALLEVENTS_PARAM_PAYMENT_LABEL"
+              addfieldpath="/administrator/components/com_allevents/models/fields">
+        <field type="AETitleImg" label="COM_ALLEVENTS_PARAM_PAYMENT_DESC" class="stylebox lead input-xxlarge"
+               premium="1" aeicon="cogs"/>
+        <field name="addcurrency" type="text" default="EUR" label="ALLEVENTS_ADDCURRENCY"
+               premium="1" description="ALLEVENTS_ADDCURRENCY_DESC"/>
+        <field name="gateways" type="gatewayplg" multiple="multiple" label="SELECT_GATEWAY"
+               premium="1" description="SELECT_GATEWAY_DESC"/>
+    </fieldset>
+    <!-- £#€ -->
+    <fieldset name="permissions" description="JCONFIG_PERMISSIONS_DESC" label="JCONFIG_PERMISSIONS_LABEL"
+              addfieldpath="/administrator/components/com_allevents/models/fields">
+        <field name="rules" type="rules" component="com_allevents" class="inputbox" filter="rules" validate="rules"
+               label="JCONFIG_PERMISSIONS_LABEL" section="component"/>
+    </fieldset>
+</config>

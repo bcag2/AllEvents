@@ -1,0 +1,427 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fieldset name="language" multilanguage="true" addfieldpath="/administrator/components/com_allevents/models/fields"
+              label="COM_ALLEVENTS_LANGUAGE">
+        <field name="titre" alias="titre" label="JGLOBAL_TITLE" filter="STRING" required="true"
+               class="validate[required] uk-form-width-large" type="text"/>
+        <field name="description" alias="description" label="JGLOBAL_DESC" description="AE_DESC_DESC" filter="RAW"
+               buttons="true" type="editor"/>
+        <field name="planification_description" alias="description" label="JGLOBAL_DESC" filter="RAW" buttons="true"
+               type="editor"/>
+        <field name="additional_info" alias="additional_info" label="COM_ALLEVENTS_ADDITIONAL_INFO" filter="RAW"
+               buttons="true" type="editor"/>
+        <field name="date_format" type="list" default="Y-m-d" label="COM_ALLEVENTS_DATE_FORMAT_LABEL"
+               description="COM_ALLEVENTS_DATE_FORMAT_DESC">
+            <option value="d/m/Y">COM_ALLEVENTS_FRENCH_ENGLISH</option>
+            <option value="d.m.Y">COM_ALLEVENTS_CONTINENTAL</option>
+            <option value="m/d/Y">COM_ALLEVENTS_US</option>
+            <option value="Y-m-d">COM_ALLEVENTS_ISO</option>
+            <option value="CUSTOM">COM_ALLEVENTS_FROM_LANGUAGE_FILE</option>
+        </field>
+        <field name="time_format" type="list" default="H:i" label="COM_ALLEVENTS_TIME_FORMAT_LABEL"
+               description="COM_ALLEVENTS_TIME_FORMAT_DESC" class="btn-group">
+            <option value="H:i">COM_ALLEVENTS_24</option>
+            <option value="g:i A">COM_ALLEVENTS_12</option>
+        </field>
+    </fieldset>
+    <fieldset name="event" addfieldpath="/administrator/components/com_allevents/models/fields">
+        <field name="id" type="text" default="0" label="JGLOBAL_FIELD_ID_LABEL" readonly="true" class="readonly"
+               description="JGLOBAL_FIELD_ID_DESC"/>
+        <field name="alias" type="text" label="JFIELD_ALIAS_LABEL" description="COM_ALLEVENTS_FIELD_ALIAS_DESC"
+               hint="JFIELD_ALIAS_PLACEHOLDER" class="inputbox" size="45"/>
+        <field name="date" type="calendar" class="inputbox" required="true" label="COM_ALLEVENTS_FORM_LBL_EVENT_DATE"
+               format="%Y-%m-%d %H:%M" filter="USER_UTC" showtime="true"
+               description="COM_ALLEVENTS_FORM_DESC_EVENT_DATE"/>
+        <field name="enddate" type="calendar" class="inputbox" label="ENDDATE" format="%Y-%m-%d %H:%M" filter="USER_UTC"
+               showtime="true"/>
+        <field name="publishingdate" type="calendar" class="inputbox"
+               label="COM_ALLEVENTS_FORM_LBL_EVENT_PUBLISHINGDATE" format="%Y-%m-%d %H:%M" filter="USER_UTC"
+               showtime="true"/>
+        <field name="closingdate" type="calendar" class="inputbox" label="COM_ALLEVENTS_FORM_LBL_EVENT_CLOSINGDATE"
+               format="%Y-%m-%d %H:%M" filter="USER_UTC" showtime="true"/>
+        <field name="openingdate" type="calendar" class="inputbox" label="COM_ALLEVENTS_FORM_LBL_EVENT_OPENINGDATE"
+               format="%Y-%m-%d %H:%M" filter="USER_UTC" showtime="true"
+               description="COM_ALLEVENTS_FORM_DESC_EVENT_OPENINGDATE"/>
+        <field name="intro" type="editor" label="COM_ALLEVENTS_FORM_LBL_EVENT_INTRO"/>
+        <field name="agenda_id" type="AEAgenda" label="AGENDA" description="COM_ALLEVENTS_FORM_DESC_EVENT_AGENDA_ID">
+            <option value="0" class="se_agenda_0_bullet se_agenda_0_color">COM_ALLEVENTS_NO_AGENDA</option>
+        </field>
+        <field name="activity_id" type="AEActivity" label="ACTIVITY"
+               description="COM_ALLEVENTS_FORM_DESC_EVENT_ACTIVITY_ID">
+            <option value="0" class="se_activity_0_bullet se_activity_0_color">COM_ALLEVENTS_NO_ACTIVITY</option>
+        </field>
+        <field name="public_id" type="AEPublic" label="PUBLIC" description="COM_ALLEVENTS_FORM_DESC_EVENT_PUBLIC_ID">
+            <option value="0" class="se_public_0_bullet se_public_0_color">COM_ALLEVENTS_NO_PUBLIC</option>
+        </field>
+        <field name="place_id" type="AEPlace" label="PLACE" description="COM_ALLEVENTS_FORM_DESC_EVENT_PLACE_ID">
+            <option value="0" class="se_place_0_bullet se_place_0_color">COM_ALLEVENTS_NO_PLACE</option>
+        </field>
+        <field name="ressource_id" type="AERessource" label="RESOURCE"
+               description="COM_ALLEVENTS_FORM_DESC_EVENT_RESSOURCE_ID">
+            <option value="0" class="se_ressource_0_bullet se_ressource_0_color">COM_ALLEVENTS_NO_RESSOURCE</option>
+        </field>
+        <field name="section_id" type="AESection" label="SECTION"
+               description="COM_ALLEVENTS_FORM_DESC_EVENT_SECTION_ID">
+            <option value="0" class="se_section_0_bullet se_section_0_color">COM_ALLEVENTS_NO_SECTION</option>
+        </field>
+        <field name="category_id" type="AECategory" label="CATEGORY"
+               description="COM_ALLEVENTS_FORM_DESC_EVENT_CATEGORY_ID">
+            <option value="0" class="se_category_0_bullet se_category_0_color">COM_ALLEVENTS_NO_CATEGORY</option>
+        </field>
+
+        <field name="vignette" type="media" directory="com_allevents/vignettes"
+               label="EVENT_VIGNETTE"/>
+        <field name="affiche" type="media" directory="com_allevents/affiches" label="EVENT_AFFICHE"/>
+        <field name="fichier_annexe" type="aefile" label="COM_ALLEVENTS_FORM_LBL_EVENT_FICHIER_ANNEXE"
+               description="COM_ALLEVENTS_FORM_DESC_EVENT_FICHIER_ANNEXE" size="300"/>
+        <field name="published" type="list" label="JSTATUS" description="JFIELD_PUBLISHED_DESC"
+               class="chzn-single chzn-color-state" default="1">
+            <option value="1">JPUBLISHED</option>
+            <option value="0">JUNPUBLISHED</option>
+            <option value="2">JARCHIVED</option>
+            <option value="-2">JTRASHED</option>
+        </field>
+        <field name="enrolment_enabled" type="radio" label="COM_ALLEVENTS_FORM_LBL_EVENT_ENROLMENT_ENABLED"
+               class="btn-group btn-group-yesno" default="0">
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+        <field name="allday" type="radio" label="COM_ALLEVENTS_FORM_LBL_EVENT_ALLDAY" class="btn-group btn-group-yesno"
+               default="0" description="COM_ALLEVENTS_FORM_LBL_EVENT_ALLDAY_DESC">
+            <option value="1">COM_ALLEVENTS_FORM_LBL_EVENT_ALLDAY_ALLDAY</option>
+            <option value="0">COM_ALLEVENTS_FORM_LBL_EVENT_ALLDAY_MEETING</option>
+        </field>
+        <field name="price" type="text" class="inputbox" label="AE_PRICE"/>
+        <field name="enrolment_max_participant" type="text" size="40" class="inputbox"
+               label="COM_ALLEVENTS_FORM_LBL_EVENT_ENROLMENT_MAX_PARTICIPANT"
+               description="COM_ALLEVENTS_FORM_DESC_EVENT_ENROLMENT_MAX_PARTICIPANT" filter="safehtml"/>
+        <field name="contact_libre_label" type="AETitleImg" label="COM_ALLEVENTS_CONTACT_LIBRE_LABEL"
+               class="stylebox lead input-xxlarge" aeicon="user"/>
+        <field name="contact_libre_access" type="accesslevel" label="COM_ALLEVENTS_CONTACT_ACCESS_LABEL"/>
+        <field name="contact_1_lbl" type="AETitleImg" label="COM_ALLEVENTS_CONTACT_LABEL_1"
+               class="stylebox lead input-xxlarge" aeicon="user"/>
+        <field name="contact_1_type" type="AEContactType" required="false" label="COM_ALLEVENTS_CONTACT_TYPE_LABEL"/>
+        <field name="contact_1_label" showon="contact_1_type:1,2,3" type="text" label="COM_ALLEVENTS_CONTACT_LABEL"
+               maxlength="40" filter="raw" default=""/>
+        <field name="contact_1_access" showon="contact_1_type:1,2,3" type="accesslevel"
+               label="COM_ALLEVENTS_CONTACT_ACCESS_LABEL"/>
+        <field name="contact_2_lbl" type="AETitleImg" label="COM_ALLEVENTS_CONTACT_LABEL_2"
+               class="stylebox lead input-xxlarge" aeicon="user"/>
+        <field name="contact_2_type" type="AEContactType" required="false" label="COM_ALLEVENTS_CONTACT_TYPE_LABEL"/>
+        <field name="contact_2_label" showon="contact_2_type:1,2,3" type="text" label="COM_ALLEVENTS_CONTACT_LABEL"
+               maxlength="40" filter="raw" default=""/>
+        <field name="contact_2_access" showon="contact_2_type:1,2,3" type="accesslevel"
+               label="COM_ALLEVENTS_CONTACT_ACCESS_LABEL"/>
+        <field name="contact_3_lbl" type="AETitleImg" label="COM_ALLEVENTS_CONTACT_LABEL_3"
+               class="stylebox lead input-xxlarge" aeicon="user"/>
+        <field name="contact_3_type" type="AEContactType" required="false" label="COM_ALLEVENTS_CONTACT_TYPE_LABEL"/>
+        <field name="contact_3_label" showon="contact_3_type:1,2,3" type="text" label="COM_ALLEVENTS_CONTACT_LABEL"
+               maxlength="40" filter="raw" default=""/>
+        <field name="contact_3_access" showon="contact_3_type:1,2,3" type="accesslevel"
+               label="COM_ALLEVENTS_CONTACT_ACCESS_LABEL"/>
+        <field name="contact_1_id" showon="contact_1_type:1" type="user" label=""/>
+        <field name="contact_1_details_id" showon="contact_1_type:2" type="AEContactDetailsBack" label=""/>
+        <field name="contact_1_comprofiler_id" showon="contact_1_type:3" type="AECBUserBack" label=""/>
+        <field name="contact_2_id" showon="contact_2_type:1" type="user" label=""/>
+        <field name="contact_2_details_id" showon="contact_2_type:2" type="AEContactDetailsBack" label=""/>
+        <field name="contact_2_comprofiler_id" showon="contact_2_type:3" type="AECBUserBack" label=""/>
+        <field name="contact_3_id" showon="contact_3_type:1" type="user" label=""/>
+        <field name="contact_3_details_id" showon="contact_3_type:2" type="AEContactDetailsBack" label=""/>
+        <field name="contact_3_comprofiler_id" showon="contact_3_type:3" type="AECBUserBack" label=""/>
+        <field name="contact_libre" type="textarea" label="COM_ALLEVENTS_FORM_LBL_EVENT_CONTACT_LIBRE"
+               description="COM_ALLEVENTS_FORM_DESC_EVENT_CONTACT_LIBRE" class="inputbox" rows="3" cols="30"/>
+        <field name="proposed_by" type="user" label="COM_ALLEVENTS_CREATED_BY"/>
+        <field name="lastmod_by" type="user" label="JGLOBAL_FIELD_MODIFIED_BY_LABEL" readonly="true"/>
+        <field name="proposal" type="list" label="COM_ALLEVENTS_FORM_LBL_EVENT_PROPOSAL" class="btn-group"
+               description="COM_ALLEVENTS_FORM_LBL_EVENT_PROPOSAL_DESC" default="0">
+            <option value="1">AE_NOT_APPROVED</option>
+            <option value="0">AE_APPROVED</option>
+        </field>
+        <field name="ribbon_id" type="AERibbon" label="COM_ALLEVENTS_FORM_LBL_EVENT_RIBBON">
+            <option value="0">JNO</option>
+        </field>
+        <field name="ribbon" type="text" size="40" class="inputbox" label="COM_ALLEVENTS_FORM_LBL_EVENT_RIBBON"
+               filter="safehtml"/>
+        <field name="lastmod" readonly="true" type="timeupdated" class="inputbox" label="JGLOBAL_FIELD_MODIFIED_LABEL"
+               default="CURRENT_TIMESTAMP" filter="USER_UTC"/>
+        <field name="access" type="accesslevel" label="JFIELD_ACCESS_LABEL" description="JFIELD_ACCESS_DESC"
+               class="span12 small"/>
+        <field name="hits" readonly="true" type="text" size="40" class="inputbox" label="JGLOBAL_HITS"
+               description="AE_HITS_DESC" default="0"/>
+        <field name="intern_album_id" type="sql" class="inputbox" label="COM_ALLEVENTS_FORM_LBL_EVENT_INTERN_ALBUM_ID"
+               query="SELECT 0 AS `id`, '- Select intern_album_id -' AS `titre` UNION SELECT `id`, `titre` FROM `#__allevents_albums`"
+               key_field="id" value_field="titre"/>
+        <field name="extern_album_id" type="text" size="40" class="inputbox"
+               label="COM_ALLEVENTS_FORM_LBL_EVENT_EXTERN_ALBUM_ID" filter="safehtml"/>
+        <field name="created_date" readonly="true" type="timecreated" class="inputbox"
+               label="JGLOBAL_FIELD_CREATED_LABEL" description="JGLOBAL_FIELD_CREATED_DESC"/>
+        <field name="version" readonly="true" type="text" size="40" class="inputbox"
+               label="COM_ALLEVENTS_FORM_LBL_VERSION" description="COM_ALLEVENTS_FORM_DESC_VERSION" default="0"
+               filter="safehtml"/>
+        <field name="allow_overbooking" type="radio" label="COM_ALLEVENTS_FORM_LBL_EVENT_ALLOW_OVERBOOKING"
+               class="btn-group btn-group-yesno" size="1" default="1">
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+        <field name="hot" type="radio" label="COM_ALLEVENTS_FORM_LBL_EVENT_HOT" class="btn-group btn-group-yesno"
+               default="0">
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+        <field name="form_id" type="sql" class="inputbox" label="COM_ALLEVENTS_FORM_LBL_EVENT_FORM_ID"
+               query="SELECT 0 AS `id`, '- Select form_id -' AS `titre` UNION SELECT `id`, `titre` FROM `#__allevents_forms`"
+               key_field="id" value_field="titre"/>
+        <field name="contiguous_date" type="radio" label="COM_ALLEVENTS_FORM_LBL_EVENT_CONTIGUOUS_DATE"
+               class="btn-group btn-group-yesno" default="0">
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+        <field name="expirationdate" type="calendar" class="inputbox"
+               label="COM_ALLEVENTS_FORM_LBL_EVENT_EXPIRATIONDATE" format="%Y-%m-%d %H:%M" filter="USER_UTC"/>
+        <field name="showincalendar" type="radio" label="COM_ALLEVENTS_FORM_LBL_EVENT_SHOWINCALENDAR"
+               class="btn-group btn-group-yesno" size="1" default="1">
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+        <field name="created_by" readonly="true" type="createdby" default="" label="COM_ALLEVENTS_CREATED_BY"/>
+        <field name="enrolment_info" type="editor" width="70%" buttons="true" class="inputbox" filter="safehtml"
+               label="COM_ALLEVENTS_FORM_LBL_EVENT_ENROLMENT_INFO"/>
+        <field name="metakey" type="textarea" label="JFIELD_META_KEYWORDS_LABEL" description="JFIELD_META_KEYWORDS_DESC"
+               class="inputbox" rows="3" cols="30"/>
+        <field name="metadesc" type="textarea" label="JFIELD_META_DESCRIPTION_LABEL"
+               description="JFIELD_META_DESCRIPTION_DESC" class="inputbox" rows="3" cols="30"/>
+        <field name="metarobots" type="list" label="JFIELD_METADATA_ROBOTS_LABEL"
+               description="JFIELD_METADATA_ROBOTS_DESC" default="index, follow">
+            <option value="">JGLOBAL_USE_GLOBAL</option>
+            <option value="index, follow">JGLOBAL_INDEX_FOLLOW</option>
+            <option value="noindex, follow">JGLOBAL_NOINDEX_FOLLOW</option>
+            <option value="index, nofollow">JGLOBAL_INDEX_NOFOLLOW</option>
+            <option value="noindex, nofollow">JGLOBAL_NOINDEX_NOFOLLOW</option>
+        </field>
+        <field name="cancelled" type="list" label="COM_ALLEVENTS_FORM_LBL_EVENT_CANCELLED" class="btn-group" size="1"
+               default="0">
+            <option value="1">AE_CANCELLED</option>
+            <option value="0">AE_CONFIRMED</option>
+        </field>
+        <field name="weight" type="list" label="COM_ALLEVENTS_FORM_LBL_EVENT_WEIGHT" class="btn-group" size="1"
+               default="1">
+            <option value="2">EVENT_WEIGHT_HIGH</option>
+            <option value="1">EVENT_WEIGHT_NORMAL</option>
+            <option value="0">EVENT_WEIGHT_LOW</option>
+        </field>
+        <field name="checked_out" type="hidden" filter="unset"/>
+        <field name="checked_out_time" type="hidden" filter="unset"/>
+        <field name="language" type="contentlanguage" label="JFIELD_LANGUAGE_LABEL"
+               description="COM_ALLEVENTS_FORM_DESC_LANGUAGE" class="span12 small">
+            <option value="*">JALL</option>
+        </field>
+        <field name="rrule" type="text" class="input-xlarge" default="" size="70"
+               label="COM_ALLEVENTS_FIELD_SCHEDULING_RRULE_LABEL"
+               description="COM_ALLEVENTS_FIELD_SCHEDULING_RRULE_DESC"/>
+        <field name="rruletotext" type="text" class="input-xlarge" default="" size="70"
+               label="COM_ALLEVENTS_FIELD_SCHEDULING_RRULETOTEXT_LABEL"
+               description="COM_ALLEVENTS_FIELD_SCHEDULING_RRULETOTEXT_DESC"/>
+        <field name="rruledates" type="text" class="input-xlarge" default="" size="70"
+               label="COM_ALLEVENTS_FIELD_SCHEDULING_RRULEDATES_LABEL"
+               description="COM_ALLEVENTS_FIELD_SCHEDULING_RRULEDATES_DESC"/>
+        <field id="scheduling" name="scheduling" type="radio" default="0" class="btn-group"
+               label="COM_ALLEVENTS_FIELD_SCHEDULING_LABEL" description="COM_ALLEVENTS_FIELD_SCHEDULING_DESC">
+            <option value="0">JNO</option>
+            <option value="DAILY">COM_ALLEVENTS_DAILY</option>
+            <option value="WEEKLY">COM_ALLEVENTS_WEEKLY</option>
+            <option value="MONTHLY">COM_ALLEVENTS_MONTHLY</option>
+            <option value="YEARLY">COM_ALLEVENTS_YEARLY</option>
+        </field>
+        <field name="scheduling_end_date" type="text" label="COM_ALLEVENTS_FIELD_SCHEDULING_END_DATE_LABEL"
+               description="COM_ALLEVENTS_FIELD_SCHEDULING_END_DATE_DESC" class="inputbox validate-date"/>
+        <field name="scheduling_interval" type="text" class="inputbox" size="10" default="1"
+               label="COM_ALLEVENTS_FIELD_SCHEDULING_INTERVAL_LABEL"
+               description="COM_ALLEVENTS_FIELD_SCHEDULING_INTERVAL_DESC"/>
+        <field name="scheduling_repeat_count" type="text" class="inputbox" size="10" default=""
+               label="COM_ALLEVENTS_FIELD_SCHEDULING_REPEAT_COUNT_LABEL"
+               description="COM_ALLEVENTS_FIELD_SCHEDULING_REPEAT_COUNT_DESC"/>
+        <field id="scheduling_daily_weekdays" name="scheduling_daily_weekdays" type="radio" default="0"
+               class="btn-group" label="COM_ALLEVENTS_FIELD_SCHEDULING_DAILY_WEEK_DAYS_LABEL"
+               description="COM_ALLEVENTS_FIELD_SCHEDULING_DAILY_WEEK_DAYS_DESC">
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+        <field id="scheduling_weekly_days" name="scheduling_weekly_days" type="checkboxes" default=""
+               label="COM_ALLEVENTS_FIELD_SCHEDULING_WEEKLY_DAYS_LABEL"
+               description="COM_ALLEVENTS_FIELD_SCHEDULING_WEEKLY_DAYS_DESC">
+            <option value="MO">MONDAY</option>
+            <option value="TU">TUESDAY</option>
+            <option value="WE">WEDNESDAY</option>
+            <option value="TH">THURSDAY</option>
+            <option value="FR">FRIDAY</option>
+            <option value="SA">SATURDAY</option>
+            <option value="SU">SUNDAY</option>
+        </field>
+        <field id="scheduling_monthly_options" name="scheduling_monthly_options" type="radio" default="by_week"
+               class="btn-group" label="" description="">
+            <option value="by_day">COM_ALLEVENTS_FIELD_SCHEDULING_MONTHLY_OPTIONS_DAY</option>
+            <option value="by_week">COM_ALLEVENTS_FIELD_SCHEDULING_MONTHLY_OPTIONS_WEEK</option>
+        </field>
+        <field id="scheduling_monthly_week" name="scheduling_monthly_week" type="checkboxes" default="" label="WEEK"
+               description="COM_ALLEVENTS_FIELD_SCHEDULING_MONTHLY_WEEK_DESC">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="last">COM_ALLEVENTS_LAST</option>
+        </field>
+        <field id="scheduling_monthly_week_days" name="scheduling_monthly_week_days" type="checkboxes" default=""
+               label="COM_ALLEVENTS_FIELD_SCHEDULING_WEEKLY_DAYS_LABEL"
+               description="COM_ALLEVENTS_FIELD_SCHEDULING_WEEKLY_DAYS_DESC">
+            <option value="MO">MONDAY</option>
+            <option value="TU">TUESDAY</option>
+            <option value="WE">WEDNESDAY</option>
+            <option value="TH">THURSDAY</option>
+            <option value="FR">FRIDAY</option>
+            <option value="SA">SATURDAY</option>
+            <option value="SU">SUNDAY</option>
+        </field>
+        <field id="scheduling_monthly_days" name="scheduling_monthly_days" type="checkboxes" default=""
+               label="COM_ALLEVENTS_FIELD_SCHEDULING_MONTHLY_DAYS_LABEL"
+               description="COM_ALLEVENTS_FIELD_SCHEDULING_MONTHLY_DAYS_DESC">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+            <option value="13">13</option>
+            <option value="14">14</option>
+            <option value="15">15</option>
+            <option value="16">16</option>
+            <option value="17">17</option>
+            <option value="18">18</option>
+            <option value="19">19</option>
+            <option value="20">20</option>
+            <option value="21">21</option>
+            <option value="22">22</option>
+            <option value="23">23</option>
+            <option value="24">24</option>
+            <option value="25">25</option>
+            <option value="26">26</option>
+            <option value="27">27</option>
+            <option value="28">28</option>
+            <option value="29">29</option>
+            <option value="30">30</option>
+            <option value="31">31</option>
+        </field>
+        <field name="custom_fields" type="hidden" class="inputbox" default=""/>
+        <field name="lid" type="location" label="AE_SELECT_LOCATION" description="AE_LOCATION_DESC" class="inputbox"
+               size="40"/>
+    </fieldset>
+    <fieldset>
+        <field name="start_date" type="calendar" class="inputbox" required="true"
+               label="COM_ALLEVENTS_FORM_LBL_EVENT_DATE"/>
+        <field name="end_date" type="calendar" class="inputbox" label="ENDDATE"/>
+        <field name="start_time" type="text" class="inputbox timepicker" required="true" label=""/>
+        <field name="end_time" type="text" class="inputbox timepicker" label=""/>
+        <field name="conveyance" type="list" class="btn-group btn-group-yesno" default="0"
+               label="COM_ALLEVENTS_PLANIFICATION_CONVEYANCE">
+            <option value="0">COM_ALLEVENTS_PLANIFICATION_CONVEYANCE_OPTION_0</option>
+            <option value="1">COM_ALLEVENTS_PLANIFICATION_CONVEYANCE_OPTION_1</option>
+            <option value="2">COM_ALLEVENTS_PLANIFICATION_CONVEYANCE_OPTION_2</option>
+        </field>
+        <field name="location" type="list" class="btn-group btn-group-yesno" default="0"
+               label="COM_ALLEVENTS_PLANIFICATION_LOCATION">
+            <option value="0">COM_ALLEVENTS_PLANIFICATION_LOCATION_OPTION_0</option>
+            <option value="1">COM_ALLEVENTS_PLANIFICATION_LOCATION_OPTION_1</option>
+            <option value="2">COM_ALLEVENTS_PLANIFICATION_LOCATION_OPTION_2</option>
+        </field>
+        <field name="gathering_place_id" type="AEPlace" label="COM_ALLEVENTS_PLANIFICATION_GATHERING_PLACE_ID">
+            <option value="0" class="se_place_0_bullet se_place_0_color">COM_ALLEVENTS_NO_PLACE</option>
+        </field>
+        <field name="money" type="AETitleImg" label="COM_ALLEVENTS_PLANIFICATION_MONEY"
+               class="stylebox lead input-xxlarge" aeicon="money"/>
+        <field name="service_price" class="money" label="COM_ALLEVENTS_PLANIFICATION_PRICE"/>
+        <field name="travel_expenses" class="money" label="COM_ALLEVENTS_PLANIFICATION_TRAVEL_EXPENSES"/>
+        <field name="launch_expenses" class="money" label="COM_ALLEVENTS_PLANIFICATION_LAUNCH_EXPENSES"/>
+        <field name="accommodation_expenses" class="money" label="COM_ALLEVENTS_PLANIFICATION_ACCOMMODATION_EXPENSES"/>
+        <field name="service_cachet" class="money" label="COM_ALLEVENTS_PLANIFICATION_CACHET"/>
+        <field name="service_profit" class="money" label="COM_ALLEVENTS_PLANIFICATION_PROFIT"/>
+        <field name="contacts" type="AETitleImg" label="COM_ALLEVENTS_PLANIFICATION_CONTACTS"
+               class="stylebox lead input-xxlarge" aeicon="link"/>
+        <field name="organizer_contact_id" type="AEContactDetailsBack" condensed="true"
+               label="COM_ALLEVENTS_PLANIFICATION_ORGANIZER_CONTACT_ID"/>
+        <field name="producer_contact_id" type="AEContactDetailsBack" condensed="true"
+               label="COM_ALLEVENTS_PLANIFICATION_PRODUCER_CONTACT_ID"/>
+        <field name="soundman_contact_id" type="AEContactDetailsBack" condensed="true"
+               label="COM_ALLEVENTS_PLANIFICATION_SOUNDMAN_CONTACT_ID"/>
+        <field name="steward_contact_id" type="AEContactDetailsBack" condensed="true"
+               label="COM_ALLEVENTS_PLANIFICATION_STEWARD_CONTACT_ID"/>
+        <field name="speaker_contact_id" type="AEContactDetailsBack" condensed="true"
+               label="COM_ALLEVENTS_PLANIFICATION_SPEAKER_CONTACT_ID"/>
+        <field name="representative_contact_id" type="AEContactDetailsBack" condensed="true"
+               label="COM_ALLEVENTS_PLANIFICATION_REPRESENTATIVE_CONTACT_ID"/>
+        <field name="photographer_contact_id" type="AEContactDetailsBack" condensed="true"
+               label="COM_ALLEVENTS_PLANIFICATION_PHOTOGRAPHER_CONTACT_ID"/>
+        <field name="technicians" type="AETitleImg" label="COM_ALLEVENTS_PLANIFICATION_TECHNICIANS"
+               class="stylebox lead input-xxlarge" aeicon="headphones"/>
+        <field name="technicians_going_time" default="00:00" class="time"
+               label="COM_ALLEVENTS_PLANIFICATION_TECHNICIANS_GOING_TIME"/>
+        <field name="technicians_arrival_time" default="00:00" class="time"
+               label="COM_ALLEVENTS_PLANIFICATION_TECHNICIANS_ARRIVAL_TIME"/>
+        <field name="technicians_return_time" default="00:00" class="time"
+               label="COM_ALLEVENTS_PLANIFICATION_TECHNICIANS_RETURN_TIME"/>
+        <field name="musicians" type="AETitleImg" label="COM_ALLEVENTS_PLANIFICATION_MUSICIANS"
+               class="stylebox lead input-xxlarge" aeicon="music"/>
+        <field name="musicians_going_time" default="00:00" class="time"
+               label="COM_ALLEVENTS_PLANIFICATION_MUSICIANS_GOING_TIME"/>
+        <field name="musicians_arrival_time" default="00:00" class="time"
+               label="COM_ALLEVENTS_PLANIFICATION_MUSICIANS_ARRIVAL_TIME"/>
+        <field name="musicians_return_time" default="00:00" class="time"
+               label="COM_ALLEVENTS_PLANIFICATION_MUSICIANS_RETURN_TIME"/>
+        <field name="forall" type="AETitleImg" label="COM_ALLEVENTS_PLANIFICATION_FORALL"
+               class="stylebox lead input-xxlarge" aeicon="globe"/>
+        <field name="stage_available_time" default="00:00" class="time"
+               label="COM_ALLEVENTS_PLANIFICATION_STAGE_AVAILABLE_TIME"/>
+        <field name="install_time" default="00:00" class="time" label="COM_ALLEVENTS_PLANIFICATION_INSTALL_TIME"/>
+        <field name="sound_balance_time" default="00:00" class="time"
+               label="COM_ALLEVENTS_PLANIFICATION_SOUND_BALANCE_TIME"/>
+        <field name="artetvie" type="radio" label="COM_ALLEVENTS_PLANIFICATION_ARTETVIE"
+               class="btn-group btn-group-yesno" default="0">
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+        <field name="ordering"/>
+        <field name="state" default="1" type="list" label="JSTATUS" description="JFIELD_PUBLISHED_DESC" class="inputbox"
+               size="1">
+            <option value="1">JPUBLISHED</option>
+            <option value="0">JUNPUBLISHED</option>
+            <option value="2">JARCHIVED</option>
+            <option value="-2">JTRASHED</option>
+        </field>
+        <field name="proposed_by" readonly="true" type="createdby" label="COM_ALLEVENTS_CREATED_BY"/>
+        <field name="modified_by" type="updatedby" readonly="true" size="40" class="inputbox"
+               label="JGLOBAL_FIELD_MODIFIED_BY_LABEL" filter="safehtml"/>
+        <field name="created_by" type="createdby" default="" label="COM_ALLEVENTS_CREATED_BY"/>
+        <field name="checked_out" type="hidden" filter="unset"/>
+        <field name="checked_out_time" type="hidden" filter="unset"/>
+        <field name="version_note" type="text" label="JGLOBAL_FIELD_VERSION_NOTE_LABEL"
+               description="JGLOBAL_FIELD_VERSION_NOTE_DESC" class="inputbox" size="45" labelclass="control-label"/>
+        <field name="use_menuitem" type="radio" label="COM_ALLEVENTS_EVENT_USE_MENU_LABEL"
+               class="btn-group btn-group-yesno"
+               default="0">
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+        <field name="menuitem" showon="use_menuitem:1" type="menuitem" label="COM_ALLEVENTS_EVENT_MENU_LABEL"
+               description="COM_ALLEVENTS_EVENT_MENU_DESC"/>
+    </fieldset>
+    <fieldset name="accesscontrol">
+        <field name="asset_id" type="hidden" filter="unset"/>
+        <field name="rules" type="rules" label="JFIELD_RULES_LABEL" translate_label="false" filter="rules"
+               validate="rules" class="inputbox" component="com_allevents" section="event"/>
+    </fieldset>
+</form>

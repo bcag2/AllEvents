@@ -1,0 +1,134 @@
+﻿.se_img48_container {
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+.se_img48 {
+    display: block;
+    height: 48px;
+    width: 48px;
+}
+
+.se_img48_sprite {
+    background: url(images/img48.png) no-repeat;
+}
+
+.se_img48_activity {
+    background-position: -0px -0px;
+}
+
+.se_img48_affichageannee {
+    background-position: -48px -0px;
+}
+
+.se_img48_affichagejour {
+    background-position: -96px -0px;
+}
+
+.se_img48_affichagelieux {
+    background-position: -144px -0px;
+}
+
+.se_img48_affichageliste {
+    background-position: -192px -0px;
+}
+
+.se_img48_affichagemois {
+    background-position: -0px -48px;
+}
+
+.se_img48_affichageressources {
+    background-position: -48px -48px;
+}
+
+.se_img48_affichagesemaine {
+    background-position: -96px -48px;
+}
+
+.se_img48_affichagesemaineactive {
+    background-position: -144px -48px;
+}
+
+.se_img48_affichagetimeline {
+    background-position: -192px -48px;
+}
+
+.se_img48_agenda {
+    background-position: -0px -96px;
+}
+
+.se_img48_category {
+    background-position: -48px -96px;
+}
+
+.se_img48_control-panel {
+    background-position: -96px -96px;
+}
+
+.se_img48_customfield {
+    background-position: -144px -96px;
+}
+
+.se_img48_enrolments {
+    background-position: -192px -96px;
+}
+
+.se_img48_evenements {
+    background-position: -0px -144px;
+}
+
+.se_img48_event-add {
+    background-position: -48px -144px;
+}
+
+.se_img48_event-approve {
+    background-position: -96px -144px;
+}
+
+.se_img48_events {
+    background-position: -144px -144px;
+}
+
+.se_img48_gcalendar {
+    background-position: -192px -144px;
+}
+
+.se_img48_import {
+    background-position: -0px -192px;
+}
+
+.se_img48_info {
+    background-position: -48px -192px;
+}
+
+.se_img48_map {
+    background-position: -96px -192px;
+}
+
+.se_img48_payment {
+    background-position: -144px -192px;
+}
+
+.se_img48_plugin {
+    background-position: -192px -192px;
+}
+
+.se_img48_public {
+    background-position: -0px -240px;
+}
+
+.se_img48_ressource {
+    background-position: -48px -240px;
+}
+
+.se_img48_ribbon {
+    background-position: -96px -240px;
+}
+
+.se_img48_section {
+    background-position: -144px -240px;
+}
+
+.se_img48_settings {
+    background-position: -192px -240px;
+}

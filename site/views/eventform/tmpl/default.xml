@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+    <layout title="COM_ALLEVENTS_TITLE_ITEM_CREATE_EVENT" option="View">
+        <message><![CDATA[COM_ALLEVENTS_TITLE_ITEM_CREATE_EVENT_DESC]]></message>
+    </layout>
+    <fields name="params">
+        <fieldset name="instructions" label="COM_ALLEVENTS_INSTRUCTIONS"
+                  addfieldpath="/administrator/components/com_allevents/models/fields">
+            <field name="evt_creation_instructions" type="editor" filter="JComponentHelper::filterText" cols="40"
+                   rows="10" label="COM_ALLEVENTS_EVENTFORM_INSTRUCTIONS_BACK"
+                   description="COM_ALLEVENTS_EVENTFORM_INSTRUCTIONS_BACK_DESC"/>
+        </fieldset>
+        <fieldset name="details" label="COM_ALLEVENTS_DETAILS"
+                  addfieldpath="/administrator/components/com_allevents/models/fields"
+                  addrulepath="/administrator/components/com_allevents/models/rules">
+            <field name="use_template" type="AEEval" expr="return $params['controlpanel_showagendas'];"/>
+            <field name="force_template" type="radio" class="btn-group btn-group-yesno" default="0"
+                   label="COM_ALLEVENTS_FORCELAYOUT" description="COM_ALLEVENTS_FORCELAYOUT_DESC">
+                <option value="0">JNO</option>
+                <option value="1">JYES</option>
+            </field>
+            <field name="templateeventform" type="AELayoutEventForm" showon="force_template:1" default="default"
+                   label="COM_ALLEVENTS_TEMPLATE_EVENTFORM" description="COM_ALLEVENTS_TEMPLATE_EVENTFORM_DESC"/>
+            <field name="use_agendas" type="AEEval" expr="return $params['controlpanel_showagendas'];"/>
+            <field name="use_activities" type="AEEval" expr="return $params['controlpanel_showactivities'];"/>
+            <field name="use_publics" type="AEEval" expr="return $params['controlpanel_showpublics'];"/>
+            <field name="use_places" type="AEEval" expr="return $params['controlpanel_showplaces'];"/>
+            <field name="use_ressources" type="AEEval" expr="return $params['controlpanel_showressources'];"/>
+            <field name="use_sections" type="AEEval" expr="return $params['controlpanel_showsections'];"/>
+            <field name="use_categories" type="AEEval" expr="return $params['controlpanel_showcategories'];"/>
+            <field name="menuiteminit" type="AEMenuItemEventformInit" validate="AEMenuItemEventform"/>
+            <field name="agenda_id" showon="use_agendas:1" type="AEAgenda" label="AGENDA"
+                   description="COM_ALLEVENTS_FORM_DESC_EVENT_AGENDA_ID">
+                <option value="-1" class="se_agenda_0_bullet se_agenda_0_color">COM_ALLEVENTS_USER_CHOSEN</option>
+                <option value="0" class="se_agenda_0_bullet se_agenda_0_color">COM_ALLEVENTS_NO_AGENDA</option>
+            </field>
+            <field name="activity_id" showon="use_activities:1" type="AEActivity" label="ACTIVITY"
+                   description="COM_ALLEVENTS_FORM_DESC_EVENT_ACTIVITY_ID">
+                <option value="-1" class="se_activity_0_bullet se_activity_0_color">COM_ALLEVENTS_USER_CHOSEN</option>
+                <option value="0" class="se_activity_0_bullet se_activity_0_color">COM_ALLEVENTS_NO_ACTIVITY</option>
+            </field>
+            <field name="public_id" showon="use_publics:1" type="AEPublic" label="PUBLIC"
+                   description="COM_ALLEVENTS_FORM_DESC_EVENT_PUBLIC_ID">
+                <option value="-1" class="se_public_0_bullet se_public_0_color">COM_ALLEVENTS_USER_CHOSEN</option>
+                <option value="0" class="se_public_0_bullet se_public_0_color">COM_ALLEVENTS_NO_PUBLIC</option>
+            </field>
+            <field name="place_id" showon="use_places:1" type="AEPlace" label="PLACE"
+                   description="COM_ALLEVENTS_FORM_DESC_EVENT_PLACE_ID">
+                <option value="-1" class="se_place_0_bullet se_place_0_color">COM_ALLEVENTS_USER_CHOSEN</option>
+                <option value="0" class="se_place_0_bullet se_place_0_color">COM_ALLEVENTS_NO_PLACE</option>
+            </field>
+            <field name="ressource_id" showon="use_ressources:1" type="AERessource" label="RESOURCE"
+                   description="COM_ALLEVENTS_FORM_DESC_EVENT_RESSOURCE_ID">
+                <option value="-1" class="se_ressource_0_bullet se_ressource_0_color">COM_ALLEVENTS_USER_CHOSEN</option>
+                <option value="0" class="se_ressource_0_bullet se_ressource_0_color">COM_ALLEVENTS_NO_RESSOURCE</option>
+            </field>
+            <field name="section_id" showon="use_sections:1" type="AESection" label="SECTION"
+                   description="COM_ALLEVENTS_FORM_DESC_EVENT_SECTION_ID">
+                <option value="-1" class="se_section_0_bullet se_section_0_color">COM_ALLEVENTS_USER_CHOSEN</option>
+                <option value="0" class="se_section_0_bullet se_section_0_color">COM_ALLEVENTS_NO_SECTION</option>
+            </field>
+            <field name="category_id" showon="use_categories:1" type="AECategory" label="CATEGORY"
+                   description="COM_ALLEVENTS_FORM_DESC_EVENT_CATEGORY_ID">
+                <option value="-1" class="se_category_0_bullet se_category_0_color">COM_ALLEVENTS_USER_CHOSEN</option>
+                <option value="0" class="se_category_0_bullet se_category_0_color">COM_ALLEVENTS_NO_CATEGORY</option>
+            </field>
+        </fieldset>
+        <fieldset name="contacts" label="COM_ALLEVENTS_CONTACTS_PARAMS"
+                  addfieldpath="/administrator/components/com_allevents/models/fields">
+            <field name="contact_libre_lbl" type="AETitleImg"
+                   label="COM_ALLEVENTS_CONTACT_LIBRE_LABEL" class="stylebox lead input-xxlarge" aeicon="user"/>
+            <field name="contact_libre_access" type="accesslevel"
+                   label="COM_ALLEVENTS_CONTACT_ACCESS_LABEL"/>
+            <field name="contact_1_lbl" type="AETitleImg"
+                   label="COM_ALLEVENTS_CONTACT_LABEL_1" class="stylebox lead input-xxlarge" aeicon="user"/>
+            <field name="contact_1_type" type="AEContactType"
+                   label="COM_ALLEVENTS_CONTACT_TYPE_LABEL"/>
+            <field name="contact_1_label" showon="contact_1_type:1,2,3" type="text" maxlength="40"
+                   label="COM_ALLEVENTS_CONTACT_LABEL"/>
+            <field name="contact_1_access" showon="contact_1_type:1,2,3" type="accesslevel"
+                   label="COM_ALLEVENTS_CONTACT_ACCESS_LABEL"/>
+            <field name="contact_1_details_category" showon="contact_1_type:2" type="category"
+                   label="COM_ALLEVENTS_JCONTACT_CATEGORY_LABEL" description="COM_ALLEVENTS_JCONTACT_CATEGORY_DESC"
+                   extension="com_contact"/>
+            <field name="contact_1_comprofiler_list" showon="contact_1_type:3" default="0" type="AECBlist"
+                   label="COM_ALLEVENTS_CB_LIST_LABEL" description="COM_ALLEVENTS_CB_LIST_DESC"/>
+            <field name="contact_2_lbl" type="AETitleImg"
+                   label="COM_ALLEVENTS_CONTACT_LABEL_2" class="stylebox lead input-xxlarge" aeicon="user"/>
+            <field name="contact_2_type" type="AEContactType"
+                   label="COM_ALLEVENTS_CONTACT_TYPE_LABEL"/>
+            <field name="contact_2_label" showon="contact_2_type:1,2,3" type="text" maxlength="40"
+                   label="COM_ALLEVENTS_CONTACT_LABEL"/>
+            <field name="contact_2_access" showon="contact_2_type:1,2,3" type="accesslevel"
+                   label="COM_ALLEVENTS_CONTACT_ACCESS_LABEL"/>
+            <field name="contact_2_details_category" showon="contact_2_type:2" type="category"
+                   label="COM_ALLEVENTS_JCONTACT_CATEGORY_LABEL" description="COM_ALLEVENTS_JCONTACT_CATEGORY_DESC"
+                   extension="com_contact"/>
+            <field name="contact_2_comprofiler_list" showon="contact_2_type:3" default="0" type="AECBlist"
+                   label="COM_ALLEVENTS_CB_LIST_LABEL" description="COM_ALLEVENTS_CB_LIST_DESC"/>
+            <field name="contact_3_lbl" type="AETitleImg"
+                   label="COM_ALLEVENTS_CONTACT_LABEL_3" class="stylebox lead input-xxlarge" aeicon="user"/>
+            <field name="contact_3_type" type="AEContactType"
+                   label="COM_ALLEVENTS_CONTACT_TYPE_LABEL"/>
+            <field name="contact_3_label" showon="contact_3_type:1,2,3" type="text" maxlength="40"
+                   label="COM_ALLEVENTS_CONTACT_LABEL"/>
+            <field name="contact_3_access" showon="contact_3_type:1,2,3" type="accesslevel"
+                   label="COM_ALLEVENTS_CONTACT_ACCESS_LABEL"/>
+            <field name="contact_3_details_category" showon="contact_3_type:2" type="category"
+                   label="COM_ALLEVENTS_JCONTACT_CATEGORY_LABEL" description="COM_ALLEVENTS_JCONTACT_CATEGORY_DESC"
+                   extension="com_contact"/>
+            <field name="contact_3_comprofiler_list" showon="contact_3_type:3" default="0" type="AECBlist"
+                   label="COM_ALLEVENTS_CB_LIST_LABEL" description="COM_ALLEVENTS_CB_LIST_DESC"/>
+        </fieldset>
+    </fields>
+</metadata>

@@ -1,0 +1,53 @@
+#mod_aefullcalendar {
+    font-size: 10px;
+    margin: 0 auto;
+}
+
+#mod_aefullcalendar .fc-header-title h2 {
+    font-size: 1.3em;
+}
+
+#mod_aefullcalendar .fc-view-month .fc-event, #mod_aefullcalendar .fc-view-agendaWeek .fc-event {
+    font-size: 0;
+    height: 2px;
+    overflow: hidden;
+}
+
+#mod_aefullcalendar .fc-view-agendaWeek .fc-event-vert {
+    font-size: 0;
+    overflow: hidden;
+    width: 2px !important;
+}
+
+#mod_aefullcalendar .fc-agenda-axis {
+    font-size: .7em;
+    width: 20px !important;
+}
+
+#mod_aefullcalendar .fc-button-content {
+    padding: 0;
+}
+
+#mod_aefullcalendar .fc-header-right {
+    text-align: center;
+}
+
+#mod_aefullcalendar .fc td, #mod_aefullcalendar .fc th {
+    vertical-align: bottom;
+}
+
+.modaefc_loading {
+    background: url(images/loading.gif) no-repeat scroll 50% 50% #FFF;
+    height: 100%;
+    left: 0;
+    opacity: .8;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 2147483647;
+}
+
+.fc-day-grid-container.fc-scroller {
+    height: auto !important;
+    overflow-y: auto;
+}

@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.0" type="plugin" group="allevents">
+    <name>AllEvents - AllEventsVote</name>
+    <creationDate>%%build.date%%</creationDate>
+    <author>Emmanuel Lecoester</author>
+    <authorEmail>%%ae3.authoremail%%</authorEmail>
+    <authorUrl>%%ae3.authorurl%%</authorUrl>
+    <copyright>%%ae3.copyright%%</copyright>
+    <license>%%ae3.license%%</license>
+    <version>%%ae3.version%%</version>
+    <description>PLG_ALLEVENTS_ALLEVENTSVOTE_XML_DESCRIPTION</description>
+
+    <scriptfile>alleventsvote.scriptfile.php</scriptfile>
+
+    <install>
+        <sql>
+            <file driver="mysql" charset="utf8">sql/install.sql</file>
+        </sql>
+    </install>
+    <uninstall>
+        <sql>
+            <file driver="mysql" charset="utf8">sql/uninstall.sql</file>
+        </sql>
+    </uninstall>
+    <update></update>
+    <files>
+        <filename plugin="alleventsvote">alleventsvote.php</filename>
+        <filename>index.html</filename>
+        <folder>assets</folder>
+        <folder>language</folder>
+        <folder>sql</folder>
+        <folder>fields</folder>
+        <folder>forms</folder>
+    </files>
+    <config>
+        <fields name="params">
+
+            <fieldset name="basic">
+
+                <!--<field name="display" type="list"
+                    default="0"
+                    label="PLG_ALLEVENTS_ALLEVENTSVOTE_FIELD_DISPLAY_MAIN_LABEL"
+                    description="PLG_ALLEVENTS_ALLEVENTSVOTE_FIELD_DISPLAY_MAIN_DESC">
+                    <option value="0">PLG_ALLEVENTS_ALLEVENTSVOTE_OPTION_AFTER_TITLE</option>
+                    <option value="1">PLG_ALLEVENTS_ALLEVENTSVOTE_OPTION_AFTER_EVENT</option>
+                      <option value="2">JHIDE</option>
+                </field>-->
+
+                <field name="extra" type="list"
+                       default="1"
+                       label="PLG_ALLEVENTS_ALLEVENTSVOTE_FIELD_USE_CODE_LABEL"
+                       description="PLG_ALLEVENTS_ALLEVENTSVOTE_FIELD_USE_CODE_DESC">
+                    <option value="0">PLG_ALLEVENTS_ALLEVENTSVOTE_OPTION_USE_CODE_NEVER</option>
+                    <option value="1">PLG_ALLEVENTS_ALLEVENTSVOTE_OPTION_USE_CODE_ALWAYS</option>
+                    <option value="2">PLG_ALLEVENTS_ALLEVENTSVOTE_OPTION_USE_CODE_HIDE</option>
+                </field>
+
+                <field name="main" type="list"
+                       default="1"
+                       label="PLG_ALLEVENTS_ALLEVENTSVOTE_FIELD_USE_CODE2_LABEL"
+                       description="PLG_ALLEVENTS_ALLEVENTSVOTE_FIELD_USE_CODE2_DESC">
+                    <option value="0">PLG_ALLEVENTS_ALLEVENTSVOTE_OPTION_USE_CODE2_NEVER</option>
+                    <option value="1">PLG_ALLEVENTS_ALLEVENTSVOTE_OPTION_USE_CODE2_ALWAYS</option>
+                    <option value="2">PLG_ALLEVENTS_ALLEVENTSVOTE_OPTION_USE_CODE2_HIDE</option>
+                </field>
+
+                <field name="snippets" type="radio"
+                       class="btn-group"
+                       default="0"
+                       label="PLG_ALLEVENTS_ALLEVENTSVOTE_FIELD_RICH_SNIPPETS_LABEL"
+                       description="PLG_ALLEVENTS_ALLEVENTSVOTE_FIELD_RICH_SNIPPETS_DESC">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+
+                <field name="show_rating" type="list"
+                       default="1"
+                       label="PLG_ALLEVENTS_ALLEVENTSVOTE_FIELD_SHOW_AVERAGE_LABEL"
+                       description="PLG_ALLEVENTS_ALLEVENTSVOTE_FIELD_SHOW_AVERAGE_DESC">
+                    <option value="0">JHIDE</option>
+                    <option value="1">JSHOW</option>
+                    <option value="2">PLG_ALLEVENTS_ALLEVENTSVOTE_OPTION_SHOW_AVERAGE_MAIN</option>
+                    <option value="3">PLG_ALLEVENTS_ALLEVENTSVOTE_OPTION_SHOW_AVERAGE_EXTRA</option>
+                </field>
+
+                <field name="rating_mode" type="radio"
+                       class="btn-group"
+                       default="1"
+                       label="PLG_ALLEVENTS_ALLEVENTSVOTE_FIELD_AVERAGE_MODE_LABEL"
+                       description="PLG_ALLEVENTS_ALLEVENTSVOTE_FIELD_AVERAGE_MODE_DESC">
+                    <option value="0">PLG_ALLEVENTS_ALLEVENTSVOTE_OPTION_AVERAGE_MODE_PERCENT</option>
+                    <option value="1">PLG_ALLEVENTS_ALLEVENTSVOTE_OPTION_AVERAGE_MODE_FIVE</option>
+                </field>
+
+                <field name="show_counter" type="list"
+                       default="1"
+                       label="PLG_ALLEVENTS_ALLEVENTSVOTE_FIELD_SHOW_COUNTER_LABEL"
+                       description="PLG_ALLEVENTS_ALLEVENTSVOTE_FIELD_SHOW_COUNTER_DESC">
+                    <option value="0">JHIDE</option>
+                    <option value="1">JSHOW</option>
+                    <option value="2">PLG_ALLEVENTS_ALLEVENTSVOTE_OPTION_SHOW_COUNTER_MAIN</option>
+                    <option value="3">PLG_ALLEVENTS_ALLEVENTSVOTE_OPTION_SHOW_COUNTER_EXTRA</option>
+                </field>
+
+                <field name="show_unrated" type="radio"
+                       class="btn-group"
+                       default="1"
+                       label="PLG_ALLEVENTS_ALLEVENTSVOTE_FIELD_SHOW_UNRATED_LABEL"
+                       description="PLG_ALLEVENTS_ALLEVENTSVOTE_FIELD_SHOW_UNRATED_DESC">
+                    <option value="1">JSHOW</option>
+                    <option value="0">JHIDE</option>
+                </field>
+
+                <field name="initial_hide" type="radio"
+                       class="btn-group"
+                       default="0"
+                       label="PLG_ALLEVENTS_ALLEVENTSVOTE_FIELD_INITIAL_HIDE_LABEL"
+                       description="PLG_ALLEVENTS_ALLEVENTSVOTE_FIELD_INITIAL_HIDE_DESC">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+
+                <field name="stars" type="radio"
+                       class="btn-group"
+                       default="10"
+                       label="PLG_ALLEVENTS_ALLEVENTSVOTE_FIELD_HALF_STARS_LABEL"
+                       description="PLG_ALLEVENTS_ALLEVENTSVOTE_FIELD_HALF_STARS_DESC">
+                    <option value="10">JYES</option>
+                    <option value="5">JNO</option>
+                </field>
+
+                <field name="access" type="radio"
+                       class="btn-group"
+                       default="1"
+                       label="PLG_ALLEVENTS_ALLEVENTSVOTE_FIELD_ACCESS_LABEL"
+                       description="PLG_ALLEVENTS_ALLEVENTSVOTE_FIELD_ACCESS_DESC">
+                    <option value="1">PLG_ALLEVENTS_ALLEVENTSVOTE_OPTION_ACCESS_PUBLIC</option>
+                    <option value="2">PLG_ALLEVENTS_ALLEVENTSVOTE_OPTION_ACCESS_REGISTERED</option>
+                </field>
+
+                <field name="css" type="radio"
+                       class="btn-group"
+                       default="1"
+                       label="PLG_ALLEVENTS_ALLEVENTSVOTE_FIELD_LOAD_STYLESHEET_LABEL"
+                       description="PLG_ALLEVENTS_ALLEVENTSVOTE_FIELD_LOAD_STYLESHEET_DESC">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+
+                <field name="size" type="list"
+                       default="1"
+                       label="PLG_ALLEVENTS_ALLEVENTSVOTE_FIELD_SIZE_LABEL"
+                       description="PLG_ALLEVENTS_ALLEVENTSVOTE_FIELD_SIZE_DESC">
+                    <option value="1">PLG_ALLEVENTS_ALLEVENTSVOTE_OPTION_SIZE_1</option>
+                    <option value="2">PLG_ALLEVENTS_ALLEVENTSVOTE_OPTION_SIZE_2</option>
+                    <option value="3">PLG_ALLEVENTS_ALLEVENTSVOTE_OPTION_SIZE_3</option>
+                </field>
+            </fieldset>
+        </fields>
+    </config>
+</extension>

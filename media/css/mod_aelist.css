@@ -1,0 +1,1293 @@
+.mod_aelist ul > li:before {
+    content: "" !important;
+}
+
+ul.se_mod_allevents li.item {
+    background-position: left center !important;
+    list-style: none !important;
+}
+
+ul.se_mod_allevents span.mod_ae_links:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.mod_aelist, .mod_aelist5, .mod_aelist6 {
+    text-align: left;
+    border: 3px solid #DDD;
+    border-radius: 10px 10px 10px 10px;
+    font-size: 12px;
+    margin: 5px 0;
+    padding: 5px;
+    vertical-align: middle;
+}
+
+.mod_aelist h1, .mod_aelist h2, .mod_aelist h3, .mod_aelist h4, .mod_aelist h5 {
+    border-bottom: 1px solid #DCDCDC;
+    font-size: 16px !important;
+    line-height: 20px;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+}
+
+.mod_aelist ul {
+    margin: 0;
+}
+
+.mod_aelist ul li {
+    background: url(images/pix-greenSquare.png) repeat-x scroll 0 bottom transparent;
+    border-radius: 6px;
+    margin: 0 0 5px;
+    overflow: hidden;
+    padding-bottom: 5px;
+}
+
+.mod_aelist ul li:hover {
+    background: #999;
+    color: #FFF;
+}
+
+.mod_aelist ul li a::before {
+    content: "" !important;
+    margin-right: 0 !important;
+}
+
+.mod_aelist ul li a:link {
+    text-decoration: none;
+}
+
+.mod_aelist ul li a .date {
+    color: #000;
+    display: block;
+    float: left;
+    font-size: 12px;
+    text-transform: uppercase;
+    width: 90px;
+}
+
+.mod_aelist ul li a .date .date1 {
+    display: block;
+    line-height: 15px;
+    overflow: hidden;
+}
+
+.mod_aelist ul li a .date .date1 em {
+    color: #ED7601;
+    float: left;
+    font-size: 33px;
+    font-style: normal;
+    line-height: 30px;
+    width: 50%;
+}
+
+.mod_aelist ul li a .date .date1 span {
+    float: right;
+    width: 50%;
+}
+
+.mod_aelist ul li a .date .date2 {
+    font-size: 10px;
+}
+
+.mod_aelist ul li a .date .date2 em {
+    color: #ED7601;
+    font-style: normal;
+}
+
+.mod_aelist ul li a .infos {
+    width: 195px;
+}
+
+.mod_aelist ul li a .topic {
+    color: #000;
+    display: block;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.mod_aelist ul li a .title {
+    box-shadow: 0 1px 0 #FFF;
+    color: #000;
+    font-size: 10px;
+    font-weight: 700;
+    margin-top: -2px;
+    text-shadow: 1px 1px 0 #FFF;
+}
+
+.mod_aelist ul li a .title:hover {
+    color: #00758B;
+}
+
+.mod_aelist ul li a .location {
+    color: #000;
+    display: block;
+    font-size: 12px;
+}
+
+.button9 {
+    white-space: nowrap;
+}
+
+.mod_aelist a.arrow, .mod_aelist li.button9 a, .mod_aelist .button9 a, .mod_aelist .button9 a.back, .mod_aelist .button9 span.navigation a {
+    background: url(images/arrow.png) no-repeat scroll 5px 9px #E6F2F4 !important;
+    border: 0 none;
+    border-radius: 3px 3px 3px 3px;
+    box-shadow: 0 0 0 #FFF;
+    color: #00758B;
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    height: 21px;
+    line-height: 22px;
+    padding-left: 15px;
+    padding-right: 10px;
+    white-space: nowrap;
+}
+
+.mod_aelist a.arrow:hover, .mod_aelist li.button9 a:hover, .mod_aelist .button9 a:hover, .mod_aelist .button9 a.back:hover, .mod_aelist .button9 span.navigation a:hover {
+    background: url(images/arrow2.png) no-repeat scroll 5px 9px #118094 !important;
+    color: #FFF !important;
+    text-decoration: none;
+}
+
+.mod_aelist .aebutton {
+    background-color: #FAFAFA;
+    border-radius: 10px;
+    box-shadow: 0 4px #E7E7E7, 0 6px 1px #D0D0D2;
+    color: #131313;
+    display: block;
+    height: 70px;
+    margin: 0 auto 15px;
+    position: relative;
+    text-decoration: none;
+}
+
+.mod_aelist .aebutton * {
+    transition: all .15s linear;
+}
+
+.mod_aelist .aebutton .title {
+    display: block;
+    padding: 5px 30px 1px 10px;
+}
+
+.mod_aelist .aebutton .details {
+    clear: both;
+    color: #9A9CA2;
+    display: block;
+    font-size: .85em;
+}
+
+.mod_aelist .aebutton .price {
+    color: #9A9CA2;
+    font-family: 'Quattrocento Sans', sans-serif;
+    font-size: 2.5em;
+    font-weight: 700;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.mod_aelist .aebutton .price strong {
+    background-color: #EEE;
+    border-radius: 0 10px 10px 0;
+    box-shadow: 0 4px #D7D4D4;
+    color: #DDD;
+    display: inline-block;
+    font-size: 1.25em;
+    height: 100%;
+    line-height: 70px;
+    text-align: center;
+    text-shadow: 0 -1px #8D8F96;
+    width: 20px;
+}
+
+.mod_aelist .aebutton:before {
+    border-radius: 10px 0 0 10px;
+    content: "";
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .075s linear;
+    width: 6px;
+}
+
+.mod_aelist .aebutton:hover {
+    box-shadow: 0 4px #E2E2E2, 0 6px 1px #CBCBCD;
+}
+
+.mod_aelist .aebutton:hover .price strong {
+    background-color: #E9E9E9;
+    box-shadow: 0 4px #D2CFCF;
+}
+
+.mod_aelist .aebutton:active {
+    box-shadow: 0 2px #E2E2E2, 0 4px 1px #CBCBCD;
+    top: 1px;
+}
+
+.mod_aelist .aebutton:active .price strong {
+    background-color: #E9E9E9;
+    box-shadow: 0 2px #D2CFCF;
+}
+
+.mod_aelist .mod_aelist_time {
+    margin-left: 10px;
+}
+
+.mod_aelist .mod_aelist_date {
+    margin-left: 10px;
+}
+
+.mod_aelist-event {
+    font-size: 10pt;
+    margin: 0 -2px 0 0 !important;
+    padding: 0 !important;
+    position: relative;
+    height: 100px;
+}
+
+.mod_aelist-date-block-wrap {
+    color: #fff !important;
+}
+
+.mod_aelist-clearfix:before, .mod_aelist-clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.mod_aelist-event-title a {
+    font-weight: 700 !important;
+}
+
+.mod_aelist-event-time {
+    font-weight: 700;
+    line-height: 1.42857;
+    margin-top: 6px;
+}
+
+.mod_aelist-date-block-wrap {
+    background: none repeat scroll 0 0 #2d6ba9;
+    color: #fff;
+    float: right;
+    line-height: 18px;
+    margin: 0 0 0 7px;
+    min-width: 50px;
+    opacity: .75;
+    position: relative;
+    text-align: center;
+    text-shadow: 0 -1px 1px #000000;
+    transition: opacity .1s ease;
+    z-index: 2;
+}
+
+.mod_aelist-month {
+    background: none repeat scroll 0 0 #ffffff;
+    font-size: .8em;
+    letter-spacing: .2em;
+    padding: 0 .4em;
+    text-transform: uppercase;
+}
+
+.mod_aelist-day {
+    font-size: 2.2em;
+    font-weight: 700;
+    padding: .3em .2em .2em;
+}
+
+.mod_aelist-year {
+    background: none repeat scroll 0 0 #ffffff;
+    font-size: .7em;
+    letter-spacing: .2em;
+    line-height: 1.8em;
+}
+
+.mod_aelist-event-title-wrap {
+    margin-bottom: .3em;
+}
+
+.mod_aelist4-widget {
+    font-size: 14px;
+}
+
+.mod_aelist4-widget li {
+    overflow: hidden;
+    line-height: 18px;
+    margin-bottom: 12px;
+}
+
+.mod_aelist4-widget .mod_aelist4-date-container {
+    float: left;
+    color: #fff;
+    line-height: 1.3;
+    margin: 0 5px;
+    text-align: center;
+    width: 35px;
+    background: none repeat scroll 0 0 #2d6ba9;
+}
+
+.mod_aelist4-widget .mod_aelist4-date-month {
+    display: block;
+    font-size: 14px;
+    font-variant: small-caps;
+    letter-spacing: 3px;
+    margin: 0;
+    background: none repeat scroll 0 0 #ffffff;
+    text-align: center;
+}
+
+.mod_aelist4-widget .mod_aelist4-date-day {
+    border: medium none;
+    display: block;
+    font-size: 20px;
+    margin: 0;
+}
+
+.mod_aelist4-widget .mod_aelist4-datetime {
+    font-size: 10px;
+}
+
+.mod_aelist5 ul > li:before {
+    content: "" !important;
+}
+
+.mod_aelist5 h2 {
+    border-bottom: 1px solid #DCDCDC;
+    font-size: 16px !important;
+    line-height: 20px;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+}
+
+.mod_aelist5 ul {
+    margin: 0;
+}
+
+.mod_aelist5 ul li {
+    background: url(images/pix-greenSquare.png) repeat-x scroll 0 bottom transparent;
+    border-radius: 6px;
+    margin: 0 0 5px;
+    overflow: hidden;
+    padding-bottom: 5px;
+}
+
+.mod_aelist5 ul li:hover {
+    background: #999;
+    color: #FFF;
+}
+
+.mod_aelist5 ul li:first-child {
+    margin-top: 0 !important;
+}
+
+.program ul li {
+    margin-top: 9px !important;
+    padding-bottom: 12px;
+    list-style: outside none none;
+}
+
+.mod_aelist5 ul li {
+    background: url(images/pix-greenSquare.png) repeat-x scroll left bottom #000000;
+    font-size: 14px;
+    font-weight: 700;
+    margin-top: 10px;
+    padding-bottom: 10px;
+    position: relative;
+    width: 100%;
+    list-style: outside none none;
+}
+
+.mod_aelist5 ul li ul {
+    display: inline-block;
+    float: left;
+    margin-top: 6px;
+}
+
+.mod_aelist5 ul li ul li {
+    background: none repeat scroll 0 0 #000000 !important;
+    margin: 0;
+    padding: 0;
+}
+
+.program span.time {
+    background: none repeat scroll 0 0 #1e9fbf;
+    border-radius: 6px;
+    color: #fff;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 2px 5px 1px;
+    text-align: center;
+    width: 105px;
+}
+
+.program span {
+    float: left;
+    line-height: 1.6em;
+}
+
+.program span.event {
+    color: #888;
+    font: italic 12px/1.6em Georgia;
+    padding: 0 0 0 15px;
+    width: 170px;
+}
+
+.mod_aelist6 ul {
+    list-style-type: none;
+    margin: 0;
+}
+
+.mod_aelist6 ul li {
+    list-style: outside none none;
+    margin: 0 0 5px;
+    background: url(images/pix-greenSquare.png) repeat-x scroll left bottom #000000;
+    min-height: 55px;
+    text-align: left;
+}
+
+.mod_aelist6 ul li ul li {
+    background: none repeat scroll 0 0 #000000 !important;
+    min-height: 0 !important;
+    margin: 0;
+}
+
+.mod_aelist6 a {
+    color: #757575;
+}
+
+.mod_aelist6 img.wp-post-image {
+    border-radius: 3px;
+    box-shadow: 0 1px 4px #000000;
+}
+
+.mod_aelist5 a.arrow, .mod_aelist5 li.button9 a, .mod_aelist5 .button9 a, .mod_aelist5 .button9 a.back, .mod_aelist5 .button9 span.navigation a {
+    background: url(images/arrow.png) no-repeat scroll 5px 9px #E6F2F4 !important;
+    border: 0 none;
+    border-radius: 3px 3px 3px 3px;
+    box-shadow: 0 0 0 #FFF;
+    color: #00758B;
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    height: 21px;
+    line-height: 22px;
+    padding-left: 15px;
+    padding-right: 10px;
+    white-space: nowrap;
+}
+
+.mod_aelist5 a.arrow:hover, .mod_aelist5 li.button9 a:hover, .mod_aelist5 .button9 a:hover, .mod_aelist5 .button9 a.back:hover, .mod_aelist5 .button9 span.navigation a:hover {
+    background: url(images/arrow2.png) no-repeat scroll 5px 9px #118094 !important;
+    color: #FFF !important;
+    text-decoration: none;
+}
+
+#mod_aelist7 .addthisevent-drop {
+    background: none repeat scroll 0 0 #f7f7f7;
+    border: 1px solid #cfcfcf;
+    border-radius: 2px;
+    box-shadow: 1px 1px 3px #000000;
+    color: #333 !important;
+    cursor: pointer;
+    display: inline-block;
+    font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
+    font-size: 15px;
+    position: relative;
+    width: 280px;
+    z-index: 999998;
+}
+
+#mod_aelist7 .addthisevent-drop .date {
+    float: left;
+    height: 60px;
+    position: relative;
+    width: 50px;
+}
+
+#mod_aelist7 .addthisevent-drop .date .mon {
+    color: #bf5549;
+    display: block;
+    font-size: 11px;
+    font-weight: 700;
+    line-height: 110%;
+    padding: 9px 0 0;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+#mod_aelist7 .addthisevent-drop .date .day {
+    color: #333;
+    display: block;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 100%;
+    padding: 0 0 8px;
+    text-align: center;
+}
+
+#mod_aelist7 .addthisevent-drop .desc {
+    float: left;
+    height: 60px;
+    position: relative;
+    width: 210px;
+}
+
+#mod_aelist7 .addthisevent-drop .desc p {
+    color: #666;
+    display: block;
+    font-size: 12px;
+    line-height: 110%;
+    margin: 0;
+    padding: 7px 0 0;
+    text-align: left;
+}
+
+#mod_aelist7 .addthisevent-drop .desc .hed {
+    color: #333;
+    display: block;
+    font-size: 14px;
+    height: 15px;
+    line-height: 110%;
+    margin-bottom: 3px;
+    overflow: hidden;
+    text-transform: uppercase;
+}
+
+#mod_aelist7 .addthisevent-drop .desc .des {
+    display: block;
+    height: 28px;
+    overflow: hidden;
+}
+
+.aelist .addthisevent-drop {
+    background: none repeat scroll 0 0 #f7f7f7;
+    border: 1px solid #cfcfcf;
+    border-radius: 2px;
+    box-shadow: 1px 1px 3px #000000;
+    color: #333 !important;
+    cursor: pointer;
+    display: inline-block;
+    font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
+    font-size: 15px;
+    position: relative;
+    width: 280px;
+    z-index: 999998;
+}
+
+.aelist .addthisevent-drop .date {
+    float: left;
+    height: 60px;
+    position: relative;
+    width: 50px;
+}
+
+.aelist .addthisevent-drop .date .mon {
+    color: #bf5549;
+    display: block;
+    font-size: 11px;
+    font-weight: 700;
+    line-height: 110%;
+    padding: 9px 0 0;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.aelist .addthisevent-drop .date .day {
+    color: #333;
+    display: block;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 100%;
+    padding: 0 0 8px;
+    text-align: center;
+}
+
+.aelist .addthisevent-drop .desc {
+    float: left;
+    height: 60px;
+    position: relative;
+    width: 210px;
+}
+
+.aelist .addthisevent-drop .desc p {
+    color: #666;
+    display: block;
+    font-size: 12px;
+    line-height: 110%;
+    margin: 0;
+    padding: 7px 0 0;
+    text-align: left;
+}
+
+.aelist .addthisevent-drop .desc .hed {
+    color: #333;
+    display: block;
+    font-size: 14px;
+    height: 15px;
+    line-height: 110%;
+    margin-bottom: 3px;
+    overflow: hidden;
+    text-transform: uppercase;
+}
+
+.aelist .addthisevent-drop .desc .des {
+    display: block;
+    height: 28px;
+    overflow: hidden;
+}
+
+.button9 a, .button9 a.back, .button9 span.navigation a {
+    background: url(images/arrow.png) no-repeat scroll 5px 9px #E6F2F4 !important;
+    border: 0 none;
+    border-radius: 3px 3px 3px 3px;
+    box-shadow: 0 0 0 #FFF;
+    color: #00758B;
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    height: 21px;
+    line-height: 22px;
+    padding-left: 15px;
+    padding-right: 10px;
+    white-space: nowrap;
+}
+
+.button9 a:hover, .button9 a.back:hover, .button9 span.navigation a:hover {
+    background: url(images/arrow2.png) no-repeat scroll 5px 9px #118094 !important;
+    color: #FFF !important;
+    text-decoration: none;
+}
+
+.mod_aelist8-items::after {
+    clear: both;
+    content: "";
+    display: table;
+}
+
+.mod_aelist8-items {
+    flex-wrap: wrap;
+    list-style: outside none none !important;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+    position: relative;
+}
+
+.mod_aelist8-items li {
+    box-sizing: border-box;
+    background: #f5f5f5 none repeat scroll 0 0;
+    border: 1px solid #e3e3e3;
+    -moz-box-flex: 1;
+    border-radius: 4px;
+    flex: 1 1 0;
+    margin: 10px;
+    min-height: 105px;
+    padding: 10px;
+}
+
+.mod_aelist8-badge {
+    box-sizing: border-box;
+    background: #3487cc none repeat scroll 0 0;
+    color: #fff;
+    border-radius: 4px;
+    float: left;
+    line-height: 1.3em;
+    margin-bottom: 15px;
+    margin-right: 15px;
+    padding: 10px;
+    text-align: center;
+    width: 65px;
+}
+
+.mod_aelist8-day {
+    font-size: 2em;
+    line-height: 1em;
+}
+
+.mod_aelist8-month {
+    text-transform: uppercase;
+}
+
+.mod_aelist8-title {
+    display: block;
+    font-size: 1.2em;
+    font-weight: 700;
+    color: #2698de;
+}
+
+.mod_aelist8-date, .mod_aelist8-time {
+    display: block;
+    font-size: .9em;
+}
+
+.mod_aelist8-details {
+    margin: 15px 0 0;
+}
+
+.mod_aelist9-items::after {
+    clear: both;
+    content: "";
+    display: table;
+}
+
+.mod_aelist9-items {
+    flex-wrap: wrap;
+    list-style: outside none none !important;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+    position: relative;
+}
+
+.mod_aelist9-items li {
+    box-sizing: border-box;
+    background: #f5f5f5 none repeat scroll 0 0;
+    border: 1px solid #e3e3e3;
+    -moz-box-flex: 1;
+    border-radius: 4px;
+    flex: 1 1 0;
+    margin: 10px;
+    min-height: 105px;
+    padding: 10px;
+}
+
+.mod_aelist9-badge {
+    box-sizing: border-box;
+    background: #3487cc none repeat scroll 0 0;
+    color: #fff;
+    border-radius: 4px;
+    float: left;
+    line-height: 1.3em;
+    margin-bottom: 15px;
+    margin-right: 15px;
+    padding: 10px;
+    text-align: center;
+    width: 65px;
+}
+
+.mod_aelist9-day {
+    font-size: 2em;
+    line-height: 1em;
+}
+
+.mod_aelist9-month {
+    text-transform: uppercase;
+}
+
+.mod_aelist9-title {
+    display: block;
+    font-size: 1.2em;
+    font-weight: 700;
+    color: #2698de;
+}
+
+.mod_aelist9-date, .mod_aelist6-time {
+    display: block;
+    font-size: .9em;
+}
+
+.mod_aelist9-details {
+    margin: 15px 0 0;
+}
+
+div#mod_aelist10 div.dropdown div a.title-event {
+    font-size: 110%;
+}
+
+.mod_aelist11 {
+    margin: 10px 0 0;
+}
+
+.mod_aelist11 .mod_aelist11evli {
+    border-bottom: 1px dotted #efefef;
+    list-style-type: none;
+    margin: 10px 0 0;
+    padding: 0 15px 10px 60px;
+    position: relative;
+}
+
+.mod_aelist11 .mod_aelist11evli:first-child {
+    margin: 0;
+}
+
+.mod_aelist11 .mod_aelist11evli:last-child {
+    border: 0 none;
+}
+
+.mod_aelist11 .mod_aelist11evli .mod_aelist11divitem h4 a {
+    color: #0085b2;
+    font-size: 16px;
+    padding: 0 0 5px;
+}
+
+.mod_aelist11data {
+    color: #333;
+    display: block;
+    font-size: 14px;
+    margin: 3px 0 0;
+}
+
+.mod_aelist11location {
+    color: #777;
+    display: block;
+    font-size: 11px;
+    text-transform: uppercase;
+}
+
+.mod_aelist11datebox {
+    background: #666 none repeat scroll 0 0;
+    color: #fff;
+    left: 0;
+    padding: 10px 0;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    width: 50px;
+}
+
+.mod_aelist11dateboxmonth {
+    display: block;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+.mod_aelist11dateboxday {
+    display: block;
+    font-size: 22px;
+}
+
+.mod_aelist11evp {
+    color: #000;
+    margin: 3px 0 0;
+    padding: 0;
+}
+
+.mod_aelist14 .mod_aelist14-date {
+    width: 170px;
+}
+
+.mod_aelist14 .mod_aelist14-date .dayofmonth {
+    width: 40px;
+    font-size: 36px;
+    line-height: 36px;
+    float: left;
+    text-align: right;
+    margin-right: 10px;
+}
+
+.mod_aelist14 .mod_aelist14-date .shortdate {
+    font-size: .75em;
+}
+
+.mod_aelist14 .mod_aelist14-time {
+    width: 140px;
+}
+
+.mod_aelist14 .mod_aelist14-events {
+}
+
+.mod_aelist14 .mod_aelist14-events .mod_aelist14-event {
+}
+
+.mod_aelist13 {
+    margin-bottom: 0;
+    margin-left: 0 !important;
+}
+
+.mod_aelist13 li {
+    border-bottom: 1px dotted #ddd;
+    list-style: outside none none !important;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    min-height: 50px;
+}
+
+.mod_aelist13 li:last-child {
+    border-bottom: medium none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.mod_aelist13 .small-event-data {
+    background: #000000 url(images/small-date-bg.png) no-repeat scroll left center;
+    display: block;
+    float: left;
+    height: 55px;
+    margin-right: 12px;
+    position: relative;
+    width: 46px;
+}
+
+.mod_aelist13 .small-event-data strong {
+    display: block;
+    font-size: 21px;
+    font-weight: 700;
+    padding: 15px 0 0;
+    text-align: center;
+}
+
+.mod_aelist13 .small-event-data a {
+    background: #000000 url(images/small-date-bg-light.png) no-repeat scroll left center;
+    display: block;
+    height: 34px;
+    left: 2px;
+    position: absolute;
+    top: 0;
+    width: 46px;
+}
+
+.mod_aelist13 .small-event-data span {
+    display: block;
+    font-size: 10px;
+    margin-top: 12px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.mod_aelist13 span {
+    display: block;
+}
+
+.mod_aelist13 .event-title {
+    font-size: 13px;
+}
+
+.mod_aelist13 span {
+    color: #a5a5a5;
+    font-size: 11px;
+}
+
+.mod_aelist15_container {
+    height: 65px;
+}
+
+.clear {
+    clear: both;
+}
+
+.mod_aelist15_container .block-number {
+    min-height: 60px !important;
+    min-width: 50px !important;
+    text-align: center;
+    clear: both;
+    display: block;
+    float: left;
+    height: auto;
+    margin: 0 15px 5px 0;
+}
+
+.mod_aelist15_container .block-number .digit {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #277ac1;
+    border-image: none;
+    border-radius: 4px 4px 0 0;
+    border: 1px solid #000000;
+    box-shadow: 0 -10px 25px #000000 inset, 0 10px 15px #ffffff inset, 0 1px 0 #ffffff inset;
+    color: white;
+    display: block;
+    font-size: 24px;
+    line-height: 0;
+    min-height: 20px;
+    padding: 20px 10px 0;
+}
+
+.mod_aelist15_container .block-number .bottom {
+    border-radius: 0 0 4px 4px;
+    box-shadow: 0 5px 10px #000000 inset, 0 -1px 0 #ffffff inset, 0 1px 0 #ffffff inset;
+    color: #fff;
+    display: block;
+    font-size: 13px;
+    text-align: center;
+    text-transform: uppercase;
+    height: 6px;
+    background-color: #b3b2b2 !important;
+}
+
+.mod_aelist15_container .mod_aelist15_title {
+    display: block;
+}
+
+.mod_aelist15_container .event_date {
+    font-weight: bold;
+}
+
+.mod_aelist16 {
+    list-style: none;
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.mod_aelist16 > li {
+    background-color: #ffffff;
+    box-shadow: 0 0 5px #333333;
+    padding: 0;
+    margin: 0 0 20px;
+}
+
+.mod_aelist16 > li > time {
+    display: inline-block;
+    width: 100%;
+    color: #ffffff;
+    background-color: #c52c66;
+    padding: 5px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.mod_aelist16 > li:nth-child(even) > time {
+    background-color: #a552a7;
+}
+
+.mod_aelist16 > li > time > span {
+    display: none;
+}
+
+.mod_aelist16 > li > time > .day {
+    display: block;
+    font-size: 56pt;
+    font-weight: 100;
+    line-height: 1;
+}
+
+.mod_aelist16 > li time > .month {
+    display: block;
+    font-size: 24pt;
+    font-weight: 900;
+    line-height: 1;
+}
+
+.mod_aelist16 > li > img {
+    width: 100%;
+}
+
+.mod_aelist16 > li > .info {
+    padding-top: 5px;
+    text-align: center;
+}
+
+.mod_aelist16 > li > .info > .title {
+    font-size: 17pt;
+    font-weight: 700;
+    margin: 0;
+}
+
+.mod_aelist16 > li > .info > .desc {
+    font-size: 13pt;
+    font-weight: 300;
+    margin: 0;
+}
+
+.mod_aelist16 > li > .info > ul,
+.mod_aelist16 > li > .social > ul {
+    display: table;
+    list-style: none;
+    margin: 10px 0 0;
+    padding: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.mod_aelist16 > li > .social > ul {
+    margin: 0;
+}
+
+.mod_aelist16 > li > .info > ul > li,
+.mod_aelist16 > li > .social > ul > li {
+    display: table-cell;
+    cursor: pointer;
+    color: #1e1e1e;
+    font-size: 11pt;
+    font-weight: 300;
+    padding: 3px 0;
+}
+
+.mod_aelist16 > li > .info > ul > li > a {
+    display: block;
+    width: 100%;
+    color: #1e1e1e;
+    text-decoration: none;
+}
+
+.mod_aelist16 > li > .social > ul > li {
+    padding: 0;
+}
+
+.mod_aelist16 > li > .social > ul > li > a {
+    padding: 3px 0;
+}
+
+.mod_aelist16 > li > .info > ul > li:hover,
+.mod_aelist16 > li > .social > ul > li:hover {
+    color: #1e1e1e;
+    background-color: #c8c8c8;
+}
+
+.facebook a,
+.twitter a,
+.google-plus a {
+    display: block;
+    width: 100%;
+    color: #4b6ea8 !important;
+}
+
+.twitter a {
+    color: #4fd5f8 !important;
+}
+
+.google-plus a {
+    color: #dd4b39 !important;
+}
+
+.facebook:hover a {
+    color: #ffffff !important;
+    background-color: #4b6ea8 !important;
+}
+
+.twitter:hover a {
+    color: #ffffff !important;
+    background-color: #4fd5f8 !important;
+}
+
+.google-plus:hover a {
+    color: #ffffff !important;
+    background-color: #dd4b39 !important;
+}
+
+@media (min-width: 768px) {
+    .mod_aelist16 > li {
+        position: relative;
+        display: block;
+        width: 100%;
+        height: 120px;
+        padding: 0;
+    }
+
+    .mod_aelist16 > li > time,
+    .mod_aelist16 > li > img {
+        display: inline-block;
+    }
+
+    .mod_aelist16 > li > time,
+    .mod_aelist16 > li > img {
+        width: 120px;
+        float: left;
+    }
+
+    .mod_aelist16 > li > .info {
+        background-color: #f5f5f5;
+        overflow: hidden;
+    }
+
+    .mod_aelist16 > li > time,
+    .mod_aelist16 > li > img {
+        width: 120px;
+        height: 120px;
+        padding: 0;
+        margin: 0;
+    }
+
+    .mod_aelist16 > li > .info {
+        position: relative;
+        height: 120px;
+        text-align: left;
+        padding-right: 40px;
+    }
+
+    .mod_aelist16 > li > .info > .title,
+    .mod_aelist16 > li > .info > .desc {
+        padding: 0 10px;
+    }
+
+    .mod_aelist16 > li > .info > ul {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+    }
+
+    .mod_aelist16 > li > .social {
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: block;
+        width: 40px;
+    }
+
+    .mod_aelist16 > li > .social > ul {
+        border-left: 1px solid #e6e6e6;
+    }
+
+    .mod_aelist16 > li > .social > ul > li {
+        display: block;
+        padding: 0;
+    }
+
+    .mod_aelist16 > li > .social > ul > li > a {
+        display: block;
+        width: 40px;
+        padding: 10px 0 9px;
+    }
+}
+
+.mod_aelist17 .event-grid {
+    border-bottom: 1px solid #dadada;
+    padding: 15px 0;
+}
+
+.mod_aelist17 .event_img {
+    border: 3px solid #fff;
+    float: left;
+    margin-top: 8px;
+    width: 38%;
+}
+
+.mod_aelist17 .event_img img {
+    display: block;
+    max-width: 100%;
+}
+
+.mod_aelist17 .event_desc h4 {
+    /* color: #fff; */
+    font-size: 1em;
+    text-transform: uppercase;
+}
+
+.mod_aelist17 .event_desc h4 span {
+    color: #ff54c8;
+    font-size: 1.5em;
+}
+
+.mod_aelist17 > .event_desc {
+    float: right;
+    width: 55%;
+}
+
+.mod_aelist17 .event_desc p {
+    color: #f39eff;
+    font-size: 0.8em;
+    line-height: 1.6em;
+}
+
+.mod_aelist17 > .event_desc p a {
+    color: #ff54c8;
+    line-height: 1.5em;
+}
+
+.mod_aelist17 .event_desc p a:hover {
+    /* color: #fff; */
+}
+
+.mod_aelist17 .view-all a {
+    /* color: #fff; */
+    float: right;
+    font-size: 1.2em;
+    margin-top: 5px;
+    transition: all 0.5s ease 0s;
+}
+
+.mod_aelist17 .view-all a:hover {
+    color: #ff54c8;
+}

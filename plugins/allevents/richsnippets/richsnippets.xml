@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="plugin" group="allevents" version="3.1" method="upgrade">
+    <name>AllEvents - Rich Snippets</name>
+    <creationDate>%%build.date%%</creationDate>
+    <author>Emmanuel Lecoester</author>
+    <authorEmail>%%ae3.authoremail%%</authorEmail>
+    <authorUrl>%%ae3.authorurl%%</authorUrl>
+    <copyright>%%ae3.copyright%%</copyright>
+    <license>%%ae3.license%%</license>
+    <version>%%ae3.version%%</version>
+    <description>PLG_ALLEVENTS_RICHSNIPPETS_XML_DESC</description>
+    <files>
+        <filename plugin="richsnippets">richsnippets.php</filename>
+        <filename>index.html</filename>
+    </files>
+    <languages folder="language">
+        <language tag="fr-FR">fr-FR/fr-FR.plg_allevents_richsnippets.ini</language>
+        <language tag="fr-FR">fr-FR/fr-FR.plg_allevents_richsnippets.sys.ini</language>
+        <language tag="en-GB">en-GB/en-GB.plg_allevents_richsnippets.ini</language>
+        <language tag="en-GB">en-GB/en-GB.plg_allevents_richsnippets.sys.ini</language>
+        <language tag="es-ES">es-ES/es-ES.plg_allevents_richsnippets.ini</language>
+        <language tag="es-ES">es-ES/es-ES.plg_allevents_richsnippets.sys.ini</language>
+    </languages>
+    <aepremiumonly>true</aepremiumonly>
+    <aedisplayevents>false</aedisplayevents>
+</extension>

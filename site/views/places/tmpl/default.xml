@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+    <layout title="COM_ALLEVENTS_TITLE_LIST_VIEW_PLACES">
+        <message><![CDATA[COM_ALLEVENTS_TITLE_LIST_VIEW_PLACES_DESC]]></message>
+    </layout>
+    <name>COM_ALLEVENTS_TITLE</name>
+    <description><![CDATA[VIEW_LIST_VIEW_INFO_LONG]]></description>
+    <fields name="params">
+        <fieldset name="ALLEVENTS" label="COM_ALLEVENTS_MENU_OPTIONS"
+                  addfieldpath="/administrator/components/com_allevents/models/fields">
+            <field type="AETitleImg" class="input-xxlarge" aeimage="../css/images/allevents.png"/>
+            <field name="task" type="hidden" default="display"/>
+            <field name="layout" type="list" default="default" label="LAYOUT" description="PLACES_LAYOUT_DESC">
+                <option value="default">PLACES_LAYOUT_MAPS</option>
+                <option value="table">LAYOUT_TABLE</option>
+                <option value="map">PLACES_LAYOUT_MAP_EVENTS</option>
+            </field>
+            <!-- FILTERS -->
+            <field type="AETitleImg" label="COM_ALLEVENTS_FILTERS_COMPONENT_DESC"
+                   class="stylebox lead input-xxlarge" aeicon="filter"/>
+            <field name="e" type="radio" label="FILTER_EVENTS_ONLY" class="btn-group btn-group-yesno"
+                   default="0">
+                <option value="1">JYES</option>
+                <option value="0">JNO</option>
+            </field>
+            <field showon="e:1" name="period" type="list" label="FILTER_PERIOD"
+                   description="FILTER_PERIOD_DESC" default="0">
+                <option value="0">ALL</option>
+                <option value="1">CURRENT</option>
+                <option value="2">NEXT</option>
+                <option value="3">NEXTANDCURRENT</option>
+                <option value="4">PAST</option>
+                <option value="5">PASTANDCURRENT</option>
+            </field>
+
+            <field name="geolocated" type="radio" label="FILTER_GEOLOCATED_ONLY" class="btn-group btn-group-yesno"
+                   default="0">
+                <option value="1">JYES</option>
+                <option value="0">JNO</option>
+            </field>
+            <field name="sort_by" type="list" default="0" label="PLACES_SORT_BY"
+                   description="PLACES_SORT_BY_DESC">
+                <option value="0">PLACES_SORT_BY_TITLE_ASC</option>
+                <option value="1">PLACES_SORT_BY_TITLE_DESC</option>
+                <option value="2">PLACES_SORT_BY_EVENTS_ASC</option>
+                <option value="3">PLACES_SORT_BY_EVENTS_DESC</option>
+                <option value="4">PLACES_SORT_BY_ID_ASC</option>
+                <option value="5">PLACES_SORT_BY_ID_DESC</option>
+            </field>
+        </fieldset>
+    </fields>
+</metadata>

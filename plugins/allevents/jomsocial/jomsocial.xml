@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<extension type="plugin" group="allevents" version="3.1" method="upgrade">
+    <name>AllEvents - Jomsocial Event Notifier</name>
+    <creationDate>%%build.date%%</creationDate>
+    <author>Emmanuel Lecoester</author>
+    <authorEmail>%%ae3.authoremail%%</authorEmail>
+    <authorUrl>%%ae3.authorurl%%</authorUrl>
+    <copyright>%%ae3.copyright%%</copyright>
+    <license>%%ae3.license%%</license>
+    <version>%%ae3.version%%</version>
+    <description>Jomsocial Event Notifier will notify social networking site about your new events (Currently Supported:
+        JomSocial on local website)
+    </description>
+    <files>
+        <filename plugin="jomsocial">jomsocial.php</filename>
+        <filename>index.html</filename>
+    </files>
+    <languages folder="language">
+        <language tag="en-GB">en-GB/en-GB.plg_allevents_jomsocial.ini</language>
+    </languages>
+    <config>
+        <fields name="params">
+            <fieldset name="basic">
+                <field name="notifier_oncreate" type="list" default="1" label="Notify when Creating New Events"
+                       description="Send notification to timeline when a user creating now events">
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                </field>
+                <field name="notifier_onaccept" type="list" default="1" label="Notify when Registering to Events"
+                       description="Send notification to timeline when a user registering to an event">
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                </field>
+                <field name="notifier_jomsoc" type="list" default="1" label="Post to Jomsocial"
+                       description="Post to JomSocial ActivityStream">
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                </field>
+            </fieldset>
+        </fields>
+    </config>
+</extension>

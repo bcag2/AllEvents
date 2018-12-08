@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension type="package" version="1.6" method="upgrade">
+    <name>AllEvents</name>
+    <author>Emmanuel Lecoester</author>
+    <creationDate>%%build.date%%</creationDate>
+    <packagename>packmodule</packagename>
+    <version>%%ae3.version%%</version>
+    <url>https://www.allevents3.com</url>
+    <packager>Emmanuel Lecoester</packager>
+    <packagerurl>https://www.allevents3.com</packagerurl>
+    <description>Pack Module (Banner, Custom, Deck, Slider)</description>
+    <files folder="">
+        <file type="module" id="mod_aecalendar" client="site">mod_aecalendar.zip</file>
+        <file type="module" id="mod_aelist" client="site">mod_aelist.zip</file>
+        <file type="module" id="mod_aebanner" client="site">mod_aebanner.zip</file>
+        <file type="module" id="mod_aecustom" client="site">mod_aecustom.zip</file>
+        <file type="module" id="mod_aedeck" client="site">mod_aedeck.zip</file>
+        <file type="module" id="mod_aeslider" client="site">mod_aeslider.zip</file>
+    </files>
+</extension>

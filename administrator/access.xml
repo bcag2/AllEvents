@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<access component="com_allevents">
+    <section name="component">
+        <action name="core.admin" title="JACTION_ADMIN" description="JACTION_ADMIN_COMPONENT_DESC"/>
+        <action name="core.manage" title="JACTION_MANAGE" description="JACTION_MANAGE_COMPONENT_DESC"/>
+        <action name="core.orders" title="COM_ALLEVENTS_MANAGE_ORDERS" description="COM_ALLEVENTS_MANAGE_ORDERS_DESC"/>
+        <action name="core.satellites" title="COM_ALLEVENTS_CREATE_SATELLITES"
+                description="COM_ALLEVENTS_CREATE_SATELLITES_DESC"/>
+        <action name="core.create" title="COM_ALLEVENTS_CREATE" description="COM_ALLEVENTS_CREATE_DESC"/>
+        <action name="core.edit" title="COM_ALLEVENTS_EDIT" description="COM_ALLEVENTS_EDIT_DESC"/>
+        <action name="core.edit.own" title="COM_ALLEVENTS_EDITOWN" description="COM_ALLEVENTS_EDITOWN_DESC"/>
+        <action name="core.approve" title="COM_ALLEVENTS_APPROVE" description="COM_ALLEVENTS_APPROVE_DESC"/>
+        <action name="core.delete" title="COM_ALLEVENTS_DELETE" description="COM_ALLEVENTS_DELETE_DESC"/>
+        <action name="core.enrolment" title="COM_ALLEVENTS_ACCESS_ENROLMENT"
+                description="COM_ALLEVENTS_ACCESS_ENROLMENT_DESC"/>
+        <action name="core.enrolhimself" title="COM_ALLEVENTS_ACCESS_ENROLHIMSELF"
+                description="COM_ALLEVENTS_ACCESS_ENROLHIMSELF_DESC"/>
+        <action name="core.listenrolments" title="COM_ALLEVENTS_ACCESS_LISTENROLMENTS"
+                description="COM_ALLEVENTS_ACCESS_LISTENROLMENTS_DESC"/>
+        <action name="core.newsletter" title="COM_ALLEVENTS_ACCESS_NEWSLETTER"
+                description="COM_ALLEVENTS_ACCESS_NEWSLETTER_DESC"/>
+        <action name="core.forms" title="COM_ALLEVENTS_ACCESS_FORMS"
+                description="COM_ALLEVENTS_ACCESS_FORMS_DESC"/>
+        <action name="core.planifmusicians" title="COM_ALLEVENTS_ACCESS_PLANIFMUSICIANS"
+                description="COM_ALLEVENTS_ACCESS_PLANIFMUSICIANS_DESC"/>
+        <action name="core.planifadmin" title="COM_ALLEVENTS_ACCESS_PLANIFADMIN"
+                description="COM_ALLEVENTS_ACCESS_PLANIFADMIN_DESC"/>
+        <action name="core.enrolformyevent" title="COM_ALLEVENTS_ACCESS_ENROLFORMYEVENT"
+                description="COM_ALLEVENTS_ACCESS_ENROLFORMYEVENT_DESC"/>
+    </section>
+</access>

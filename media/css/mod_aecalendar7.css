@@ -1,0 +1,393 @@
+#mod_aecalendar7 {
+    background-color: #fff;
+    color: #555;
+    font-family: Arial, "Lucida Grande", sans-serif;
+    font-size: 13px;
+    line-height: 18px;
+}
+
+#mod_aecalendar7 .eventCalendar-multi {
+    background: url(../css/images/plus.png) no-repeat right top !important;
+}
+
+#mod_aecalendar7 .hidden {
+    display: none;
+}
+
+.eventCalendar-wrap {
+    overflow: hidden;
+    position: relative;
+    background-color: #fff;
+    border: 1px solid #d3d3d3;
+    border-radius: 5px;
+    box-shadow: 0 0 15px #999;
+    color: #807e7e;
+    margin-bottom: 20px;
+}
+
+.eventCalendar-wrap .arrow {
+    position: absolute;
+    z-index: 5;
+    color: #fff;
+    line-height: 28px;
+    text-decoration: none;
+    top: 9px;
+    padding: 8px 10px;
+}
+
+.eventCalendar-wrap .prev {
+    left: 3px;
+}
+
+.eventCalendar-wrap .next {
+    right: 3px;
+}
+
+.eventsCalendar-currentTitle .monthTitle {
+    display: block;
+    text-align: center;
+    color: #fff;
+    font-size: 110%;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.eventsCalendar-monthWrap {
+    position: absolute;
+    z-index: 2;
+    border-radius: 5px;
+    left: 0;
+    top: 10px;
+}
+
+.eventsCalendar-monthWrap.currentMonth {
+    z-index: 1;
+}
+
+.eventsCalendar-daysList {
+    display: table;
+    width: 100%;
+    padding: 0;
+}
+
+.eventsCalendar-daysList.showAsWeek {
+    display: block;
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background: #ccc 0;
+    border-image: none;
+    border-radius: 0;
+    border: 1px solid #bcbcbc;
+    border-bottom-width: 0;
+    width: auto;
+    margin: 10px 5px;
+}
+
+.eventsCalendar-daysList li {
+    display: table-cell;
+}
+
+.eventsCalendar-daysList li.dayWithEvents {
+    background: #000000 none repeat scroll 0 0;
+}
+
+.eventsCalendar-daysList li.current {
+    background: #000000 none repeat scroll 0 0;
+}
+
+.eventsCalendar-daysList.showAsWeek li {
+    display: block;
+    float: left;
+    width: 14.28%;
+    height: auto;
+    margin: 0;
+}
+
+.eventsCalendar-daysList li a::before {
+    content: "" !important;
+    margin-right: 0 !important;
+}
+
+.eventsCalendar-daysList li a {
+    display: block !important;
+    font-size: 8px;
+    min-width: 7px !important;
+    text-align: center !important;
+    padding: 0 !important;
+}
+
+.eventsCalendar-loading {
+    display: block;
+    height: 40px;
+    line-height: 40px;
+    min-width: 100px;
+    background-color: #ccc;
+    border-radius: 4px;
+    box-shadow: 0 0 10px #ccc;
+    color: #fff;
+    font-weight: 700;
+    left: 5px;
+    position: absolute;
+    text-align: center;
+    text-shadow: 0 0 3px #aaa;
+    top: 25px;
+    z-index: 4;
+    margin: 5px auto;
+    padding: 0 10px;
+}
+
+.eventsCalendar-list {
+    position: relative;
+    z-index: 1;
+    list-style-type: none;
+    margin: 0 !important;
+    padding: 0;
+}
+
+.eventsCalendar-list.oldEventList {
+    z-index: 2;
+}
+
+.eventsCalendar-subtitle {
+    font-size: 120%;
+    font-weight: 700;
+    padding-left: 5px;
+    padding-top: 10px;
+}
+
+.eventCalendar-wrap .arrow:hover {
+    opacity: .7;
+}
+
+.eventCalendar-wrap .arrow span {
+    border-bottom: 6px solid transparent;
+    border-left: 6px solid #fff;
+    border-top: 6px solid transparent;
+    float: left;
+    font-size: 0;
+    height: 0;
+    line-height: 0;
+    text-indent: -5000px;
+    width: 0;
+}
+
+.eventCalendar-wrap .arrow.prev span {
+    border-left-width: 0;
+    border-right: 6px solid #fff;
+}
+
+.eventsCalendar-slider {
+    height: 80px;
+}
+
+.eventsCalendar-currentTitle {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #138da5;
+    border-image: none;
+    line-height: 25px;
+    outline: 1px solid #138da5;
+    border-color: #e3e3e3;
+    border-style: solid;
+    border-width: 1px 0;
+}
+
+.eventsCalendar-daysList.showDayNames.showAsWeek {
+    border-radius: 5px 5px 0 0;
+}
+
+.eventsCalendar-daysList::before, .eventsCalendar-daysList::after {
+    content: "";
+    display: table;
+}
+
+.eventsCalendar-daysList::after {
+    clear: both;
+}
+
+.eventsCalendar-day-header {
+    border-bottom: 1px solid #bcbcbc;
+    font-size: 10px;
+    text-align: center;
+    text-transform: lowercase;
+}
+
+.eventsCalendar-daysList.showAsWeek li.empty {
+    background-color: #ccc;
+    border-top: 1px solid #ccc;
+    min-height: 27px;
+}
+
+.eventsCalendar-day a {
+    color: #424242;
+    font-size: 10px;
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-image: none;
+    border-color: #bcbcbc;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+}
+
+.eventsCalendar-day {
+    border-left: 1px solid #bcbcbc;
+}
+
+.showAsWeek .eventsCalendar-day {
+    border-left-width: 0;
+}
+
+.showAsWeek .eventsCalendar-day a {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-image: none;
+    font-size: 11px;
+    line-height: 27px;
+    border-color: #fff #bcbcbc #bcbcbc #eee;
+    border-style: solid;
+    border-width: 1px;
+}
+
+.eventsCalendar-day a:hover {
+    background-color: #e4e4e4;
+}
+
+.eventsCalendar-daysList li.today a {
+    background: #aaa none repeat scroll 0 0;
+    color: #fff;
+}
+
+li.eventsCalendar-day.today a:hover {
+    background-color: #ccc;
+}
+
+li.eventsCalendar-day.dayWithEvents a:hover {
+    background-color: #c2d374;
+}
+
+.eventsCalendar-daysList li.current a {
+    background: #449fb2 none repeat scroll 0 0;
+    box-shadow: 5px 5px 10px #216b7a inset;
+    color: #fff;
+    text-shadow: 2px 2px 2px #216b7a;
+}
+
+li.eventsCalendar-day.current a:hover {
+    background-color: #79bdcc;
+    box-shadow: 5px 5px 10px #449fb2 inset;
+    text-shadow: 2px 2px 2px #449fb2;
+}
+
+.eventsCalendar-loading.error {
+    background-color: red;
+}
+
+.eventsCalendar-list-wrap {
+    min-height: 100px;
+    position: relative;
+}
+
+.eventsCalendar-list-content.scrollable {
+    height: 100px;
+    overflow-y: auto;
+    margin: 0 5px 5px 0;
+}
+
+.eventsCalendar-list li {
+    clear: both;
+    margin: 0;
+    padding: 0 5px 15px;
+}
+
+.eventsCalendar-list li time {
+    font-size: 10px;
+    color: #807e7e;
+    line-height: 13px;
+}
+
+.eventsCalendar-list li time em {
+    float: left;
+    font-style: normal;
+}
+
+.eventsCalendar-list li time small {
+    background-color: #807e7e;
+    color: #fff;
+    float: left;
+    font-size: 10px;
+    margin: 0 0 0 3px;
+    padding: 0 5px 0 4px;
+}
+
+.eventsCalendar-list li .eventTitle {
+    clear: both;
+    display: block;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.eventsCalendar-list li a.eventTitle {
+    color: #0e8eab;
+}
+
+.eventsCalendar-list li a.eventTitle:hover {
+    text-decoration: underline;
+}
+
+.eventsCalendar-list li .eventDesc {
+    clear: both;
+    font-size: 80%;
+    line-height: 1.2em;
+    margin: 0 0 5px;
+}
+
+.eventsCalendar-list .eventsCalendar-noEvents {
+    background-color: #ccc;
+    border-radius: 4px;
+    box-shadow: 0 0 10px #ccc;
+    color: #fff;
+    font-size: 120%;
+    font-weight: 700;
+    text-align: center;
+    text-shadow: 0 0 3px #aaa;
+    margin: 5px;
+    padding: 5px;
+}
+
+#mod_aecalendar7 .bt {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background: #698b10 0 repeat-x;
+    border-image: none;
+    border-radius: 4px;
+    border: 1px solid #698b10;
+    border-bottom-color: #465f05;
+    box-shadow: 0 1px 0 #ffffff inset, 0 1px 2px #000000;
+    clear: both;
+    color: #fff;
+    display: block;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1;
+    margin-top: 10px;
+    text-align: center;
+    text-decoration: none;
+    text-shadow: 0 -1px 0 #000000;
+    transition: all .1s linear;
+    padding: 9px 34px 11px;
+}
+
+#mod_aecalendar7 .bt:hover {
+    background-position: 0 -15px;
+    text-decoration: none;
+}

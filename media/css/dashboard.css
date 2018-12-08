@@ -1,0 +1,475 @@
+/*------------------------------------------------------------------
+Bootstrap Admin Template by EGrappler.com
+------------------------------------------------------------------*/
+
+/*------------------------------------------------------------------
+[1. Shortcuts / .shortcuts]
+*/
+#cogs {
+    float: right;
+}
+
+.shortcuts {
+    text-align: center;
+}
+
+.shortcuts .shortcut {
+    background: #ececec -moz-linear-gradient(center top, #fafafa, #ececec) repeat scroll 0 0 / 100% auto;
+    box-shadow: 0 0 0 1px #fafafa inset, 0 1px 1px 0 #dddddd;
+    box-sizing: border-box;
+    color: #626262;
+    position: relative;
+    font-weight: 600;
+    width: 45%;
+    display: inline-block;
+    padding: 12px 0;
+    margin: 0 .9% 1em;
+    vertical-align: top;
+    text-decoration: none;
+    border-radius: 3px;
+    border: 1px solid #f9f6f1;
+}
+
+.shortcuts .shortcut .shortcut-icon {
+    margin-top: .25em;
+    margin-bottom: .25em;
+    font-size: 32px;
+    color: #545454;
+}
+
+.shortcuts .shortcut:hover {
+    background: #f2f2f2 -moz-linear-gradient(center top, #f7f7f7, #f2f2f2) repeat scroll 0 0 / 100% auto;
+}
+
+.shortcuts .shortcut:active {
+    background: #f7f7f7 -moz-linear-gradient(center top, #f4f4f4, #f7f7f7) repeat scroll 0 0 / 100% auto;
+    box-shadow: none;
+}
+
+.shortcuts .shortcut-label {
+    color: #7d7d7d;
+    display: block;
+    font-weight: 600;
+    padding-top: 4px;
+}
+
+/*------------------------------------------------------------------
+[2. Stats / .stats]
+*/
+
+.stats {
+    width: 100%;
+    display: table;
+    padding: 0 0 0 10px;
+    margin-top: .5em;
+    margin-bottom: 1.9em;
+}
+
+.stats .stat {
+    display: table-cell;
+    width: 40%;
+    vertical-align: top;
+    font-size: 11px;
+    font-weight: bold;
+    color: #999;
+}
+
+.stat-value {
+    display: block;
+    margin-bottom: .55em;
+    font-size: 30px;
+    font-weight: bold;
+    letter-spacing: -2px;
+    color: #444;
+}
+
+.stat-time {
+    text-align: center;
+    padding-top: 1.5em;
+}
+
+.stat-time .stat-value {
+    color: #19bc9c;
+    font-size: 40px;
+}
+
+.stats #donut-chart {
+    height: 100px;
+    margin-left: -20px;
+}
+
+/*------------------------------------------------------------------
+[4. Action Table / .action-table]
+*/
+
+.action-table .btn-small {
+    padding: 4px 5px 5px;
+    font-size: 10px;
+}
+
+.action-table .td-actions {
+    text-align: center;
+}
+
+.action-table .td-actions .btn {
+    margin-right: .5em;
+}
+
+.action-table .td-actions .btn:last-child {
+    margin-right: 0;
+}
+
+/*------------------------------------------------------------------
+[6. Widget / .widget]
+*/
+
+.widget {
+    position: relative;
+    clear: both;
+    width: auto;
+    margin-bottom: 2em;
+    overflow: hidden;
+}
+
+.widget-header {
+    position: relative;
+    height: 40px;
+    line-height: 40px;
+    background-color: #428bca;
+    border: 1px solid #428bca;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.widget-header h3 {
+    position: relative;
+    top: 2px;
+    left: 10px;
+    display: inline-block;
+    margin-right: 3em;
+    font-size: 14px;
+    font-weight: 800;
+    color: #ffffff;
+    line-height: 18px;
+}
+
+.widget-header i {
+    display: inline-block;
+    margin-left: 13px;
+    margin-right: -2px;
+    font-size: 16px;
+    color: #ffffff;
+    vertical-align: middle;
+}
+
+.widget-content {
+    padding: 20px 15px 15px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background: #FFF;
+    border: 1px solid #428bca;
+}
+
+.widget-nopad .widget-content {
+    padding: 0;
+}
+
+/* Widget Content Clearfix */
+.widget-content:before,
+.widget-content:after {
+    content: "";
+    display: table;
+}
+
+.widget-content:after {
+    clear: both;
+}
+
+/* Widget Table */
+.widget-table .widget-content {
+    padding: 0;
+}
+
+.widget-table .table {
+    margin-bottom: 0;
+
+    border: none;
+}
+
+.widget-table .table tr td:first-child {
+    border-left: none;
+}
+
+.widget-table .table tr th:first-child {
+    border-left: none;
+}
+
+/* Widget Plain */
+.widget-plain {
+    background: transparent;
+    border: none;
+}
+
+.widget-plain .widget-content {
+    padding: 0;
+    background: transparent;
+    border: none;
+}
+
+.widget-box .widget-content {
+    background: #E3E3E3;
+}
+
+.cactionss button, .cactionss div, .cactionss a {
+    border-radius: 3px;
+    margin-right: 3px;
+}
+
+.public {
+    color: #ffffff;
+    cursor: pointer;
+    float: right;
+    text-align: center;
+    width: 100px;
+}
+
+.editCal {
+    color: #ffffff;
+    cursor: pointer;
+    float: right;
+    text-align: center;
+}
+
+.deleteCal {
+    color: #ffffff;
+    cursor: pointer;
+    float: right;
+    text-align: center;
+}
+
+.exportCal {
+    color: #ffffff;
+    cursor: pointer;
+    float: right;
+    text-align: center;
+}
+
+.fc-toolbar {
+    margin-top: 1em;
+}
+
+#calendar .fc-button, #btn-addagenda {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #f0f0f0;
+    border-image: none;
+    border-radius: 7px;
+    border: 1px solid #000000;
+    color: #666666;
+    font-size: 13px;
+    height: auto;
+    line-height: 1;
+    padding: 6px 9px;
+    text-align: center;
+    width: auto;
+    box-shadow: 0 1px 3px 0 #000000;
+    margin: 0 0 0 7px;
+}
+
+#calendar .fc-button:hover {
+    background-color: #eaeaea;
+    color: #666666;
+}
+
+#calendar .fc-button-next {
+    margin-right: 7px;
+}
+
+#calendar .fc-button-today {
+    margin-top: 0 !important;
+}
+
+.subhead {
+    display: none;
+}
+
+.subhead-collapse {
+    height: 0 !important;
+}
+
+.calendar_loading {
+    background: url(images/loading.gif) no-repeat scroll 50% 50% #FFF;
+    height: 100%;
+    left: 0;
+    opacity: .8;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 2147483647;
+}
+
+.triangle-button {
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    height: 32px;
+    line-height: 16px;
+    overflow: hidden;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    text-shadow: none;
+    top: 0;
+    width: 32px;
+}
+
+.triangle-button i, .triangle-button .inner {
+    position: absolute;
+    right: 3px;
+    top: 2px;
+    z-index: 1;
+}
+
+.triangle-button {
+    border-top-right-radius: 3px;
+    pointer-events: none;
+}
+
+.triangle-button i {
+    right: 4px;
+    top: 3px;
+}
+
+.triangle-button::before {
+    border-bottom: 32px solid transparent;
+    border-right: 32px solid;
+    content: "";
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.triangle-button:hover, .triangle-button:active {
+    color: #fff;
+}
+
+.triangle-button.red::before {
+    border-right-color: #aa433a;
+}
+
+.triangle-button.red:hover::before {
+    border-right-color: #b5473e;
+}
+
+.triangle-button.red:active::before {
+    border-right-color: #9f3f36;
+}
+
+.triangle-button.green::before {
+    border-right-color: #8fae53;
+}
+
+.triangle-button.green:hover::before {
+    border-right-color: #96b35d;
+}
+
+.triangle-button.green:active::before {
+    border-right-color: #87a44d;
+}
+
+.triangle-button.blue::before {
+    border-right-color: #7fb3d4;
+}
+
+.triangle-button.blue:hover::before {
+    border-right-color: #8abad8;
+}
+
+.triangle-button.blue:active::before {
+    border-right-color: #74acd0;
+}
+
+.triangle-button.orange::before {
+    border-right-color: #cf6e20;
+}
+
+.triangle-button.orange:hover::before {
+    border-right-color: #dc7522;
+}
+
+.triangle-button.orange:active::before {
+    border-right-color: #c2671e;
+}
+
+.shortcuts .shortcut .label {
+    box-shadow: none;
+    display: block;
+    padding: 3px 5px;
+    position: absolute;
+    right: 3px;
+    top: 3px;
+}
+
+.label {
+    font-weight: 600;
+}
+
+.badge {
+    box-shadow: none;
+    background-color: #00b0ff;
+    border-radius: 10px;
+    color: #ffffff;
+    display: inline-block;
+    font-size: 10px !important;
+    font-weight: 400 !important;
+    line-height: 1 !important;
+    min-width: 10px;
+    /*margin-left:10px ; */
+    padding: 2px 5px !important;
+    text-align: center;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+
+.label-blue {
+    background: #599cc7 -moz-linear-gradient(center top, #7fb3d4, #599cc7) repeat scroll 0 0 / 100% auto;
+    box-shadow: 0 1px 0 #f7f7f7, 0 1px 1px #70aacf inset;
+}
+
+.label-gray {
+    background: #5d5d5d -moz-linear-gradient(center top, #767676, #5d5d5d) repeat scroll 0 0 / 100% auto;
+    box-shadow: 0 1px 0 #f7f7f7, 0 1px 1px #6c6c6c inset;
+}
+
+.label-green {
+    background: #6eb056 -moz-linear-gradient(center top, #8cc079, #6eb056) repeat scroll 0 0 / 100% auto;
+    box-shadow: 0 1px 0 #f7f7f7, 0 1px 1px #80b96b inset;
+}
+
+.label-red {
+    background: #964747 -moz-linear-gradient(center top, #b35d5d, #964747) repeat scroll 0 0 / 100% auto;
+    box-shadow: 0 1px 0 #f7f7f7, 0 1px 1px #ab5050 inset;
+}
+
+.label-dark-red {
+    background: #8f3831 -moz-linear-gradient(center top, #b5473e, #8f3831) repeat scroll 0 0 / 100% auto;
+    box-shadow: 0 1px 0 #f7f7f7, 0 1px 1px #a64139 inset;
+}
+
+.label-black {
+    background: #4d4d4d -moz-linear-gradient(center top, #666666, #4d4d4d) repeat scroll 0 0 / 100% auto;
+    box-shadow: 0 1px 0 #f7f7f7, 0 1px 1px #5c5c5c inset;
+}
+
+.label-cyan {
+    background: #60a8ab -moz-linear-gradient(center top, #81babd, #60a8ab) repeat scroll 0 0 / 100% auto;
+    box-shadow: 0 1px 0 #f7f7f7, 0 1px 1px #74b3b6 inset;
+}
+
+.label-purple {
+    background: #9086bd -moz-linear-gradient(center top, #aea7cf, #9086bd) repeat scroll 0 0 / 100% auto;
+    box-shadow: 0 1px 0 #f7f7f7, 0 1px 1px #a29ac8 inset;
+}

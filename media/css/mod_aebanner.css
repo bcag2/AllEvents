@@ -1,0 +1,653 @@
+.gr::after, .gr::before {
+    content: "";
+    display: table;
+}
+
+.gr {
+    background: #e0e2e4 none repeat scroll 0 0;
+}
+
+.visit_card_h {
+    margin-left: 1%;
+    margin-right: 1%;
+    width: 31%;
+}
+
+.visit_card_h.card__last {
+    margin-right: 0 !important;
+}
+
+.visit_card_h.card__first {
+    margin-left: 1.5% !important;
+}
+
+@media screen and (max-width: 420px) {
+    .visit_card_h {
+        margin-left: 1%;
+        margin-right: 1%;
+        width: 100%;
+    }
+}
+
+.visit_card_h {
+    background-color: #fff;
+    float: left;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    margin-top: 10px;
+    padding-bottom: 1.5em;
+    position: relative;
+    border: #e0e2e4 1px;
+}
+
+.img-right {
+    float: right;
+}
+
+.tar {
+    text-align: right;
+}
+
+.prl {
+    padding-right: 20px !important;
+}
+
+.btn-secondary {
+    background: #f07355 none repeat scroll 0 0;
+    border: 1px solid #f07355;
+    color: #fff;
+}
+
+.visit-card__block {
+    height: 330px;
+}
+
+.visit-card__header {
+    background-color: #e0e2e4;
+    height: 2.75em;
+}
+
+.visit-card__blur {
+    background-color: #c5c3c7;
+    height: 80px;
+    opacity: 0.65;
+    overflow: hidden;
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+}
+
+.visit-card__blur-container {
+    height: 80px;
+    transform: scale(1.1, 1.1);
+    width: 100%;
+}
+
+@media not all {
+    .visit-card__blur-container {
+        visibility: hidden;
+    }
+}
+
+.visit-card__blur-background {
+    filter: blur(15px);
+    height: 332px;
+    margin-top: -166px;
+    width: 332px;
+}
+
+.visit-card__blur-background.recruiter {
+}
+
+.dispib {
+    display: inline-block;
+}
+
+.mhxs, .mlxs {
+    margin-left: 5px !important;
+}
+
+.mbn, .mvn {
+    margin-bottom: 0 !important;
+}
+
+.phl, .pll {
+    padding-left: 20px !important;
+}
+
+.mts, .mvs {
+    margin-top: 10px !important;
+}
+
+.phxs, .plxs {
+    padding-left: 5px !important;
+}
+
+.mhl, .mll {
+    margin-left: 20px !important;
+}
+
+.mhl, .mrl {
+    margin-right: 20px !important;
+}
+
+.mts, .mvs {
+    margin-top: 10px !important;
+}
+
+.phxs, .prxs {
+    padding-right: 5px !important;
+}
+
+.visit-card__picture {
+    background-color: #fff;
+    border: 3px solid #fff;
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+}
+
+.visit-card__visitor-picture-star {
+    background-image: url("//static7.viadeo-static.com/images/me_visibility/picture-premium.af17de02.png");
+    background-size: 22px 22px;
+    height: 22px;
+    width: 22px;
+}
+
+.visit-card__visitor-picture-letsmeet {
+    background-image: url("//static7.viadeo-static.com/images/me_visibility/picture-letsmeet.d48d1819.png");
+    background-size: 22px 22px;
+    height: 22px;
+    width: 22px;
+}
+
+.visit-card__visitor-picture {
+    margin-top: -60px;
+    min-height: 100px;
+    position: relative;
+}
+
+.visit-card__visitor-picture .visit-card__visitor-flags {
+    height: 24px;
+    margin-top: -1.5em;
+    text-align: center;
+    width: 100px;
+}
+
+.visit-card__visitor-picture-subcontainer {
+    width: 100%;
+}
+
+.visit-card__visitor-picture-mini .visit-card__visitor-flags {
+    margin-top: -1.5em;
+    min-height: 2em;
+}
+
+.visit-card__freemium-body {
+    color: #2a2a2a;
+    height: 139px;
+    overflow: hidden;
+    padding-bottom: 3px;
+}
+
+.visit-card__location-town {
+    margin-left: -2px;
+}
+
+.visit-card__fullname-container {
+    min-height: 19px;
+    padding-right: 10px;
+    width: 100%;
+}
+
+.visit-card__fullname {
+    color: #42a2d6;
+    font-size: 16px;
+    line-height: 1.286em;
+}
+
+.visit-card__fullname.recruiter {
+    color: #87868c;
+}
+
+.visit-card__visitor-name-free-fullinfos {
+    color: #42a2d6;
+}
+
+.visit-card__headline {
+    font-size: 12px;
+    line-height: 1.2em;
+    overflow: hidden;
+    padding-right: 15px;
+}
+
+.visit-card__contacts {
+    font-size: 11px;
+    width: 100%;
+}
+
+.visit-card__footer-mini {
+    display: inline-block;
+    height: 35px;
+    width: 100%;
+}
+
+.visit-card__footer-mini .visit-card__footer-common {
+    color: #87868c;
+    display: inline-block;
+    width: 260px;
+}
+
+.visit-card__footer-mini .visit-card__footer-contact-un {
+    color: #87868c;
+    display: inline-block;
+    width: 50%;
+}
+
+.visit-card__footer-mini .visit-card__footer-lock {
+    display: inline-block;
+    height: 16px;
+    opacity: 0.5;
+    position: relative;
+    width: 19px;
+}
+
+.visit-card__footer-mini .visit-card__footer-tooltip-lock {
+    color: #f78d2d;
+    display: none;
+    font-size: 11px;
+    position: absolute;
+    right: 30px;
+    top: 4px;
+    white-space: nowrap;
+}
+
+.rtl .visit-card__footer-mini .visit-card__footer-tooltip-lock {
+    left: 30px;
+    right: auto !important;
+}
+
+.visit-card__footer-mini .visit-card__footer-lock:hover .visit-card__footer-tooltip-lock {
+    display: block;
+}
+
+.visit-card__tagline-container {
+    background-color: #f4f5f6;
+    color: #000;
+    height: 30px;
+    text-align: left;
+}
+
+.visit-card__tagline {
+    font-family: Merriweather;
+    font-size: 12px;
+    font-style: italic;
+    line-height: 30px;
+    margin: auto;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 100%;
+}
+
+.visit-card__footer {
+    bottom: 0;
+    color: #c5c3c7;
+    height: 40px;
+    position: absolute;
+    width: 100%;
+}
+
+.visit-card__footer .visit-card__footer-cta-container {
+    margin: auto;
+}
+
+.visit-card__footer-group {
+    color: #d9d8dd;
+    font-size: 8px;
+    padding-top: 2px;
+}
+
+.visit-card__footer-common {
+    font-size: 11px;
+    overflow: hidden;
+}
+
+.visit-card__write-a-message {
+    background-color: #f5f7f9;
+    border-color: #c5c3c7;
+    border-radius: 50% !important;
+    height: 26px;
+    line-height: 15px;
+    margin: 0;
+    padding: 0;
+    width: 26px;
+}
+
+.visit-card__write-a-message .vicon {
+    color: #87868c !important;
+    left: 0;
+    line-height: inherit;
+    position: relative;
+    text-align: center;
+    top: -2px;
+}
+
+.visit-card__write-a-message .vicon::before {
+    font-size: 6px;
+    line-height: inherit;
+}
+
+.visit-card__write-a-message span {
+    color: #c5c3c7;
+}
+
+.visit-card__write-a-message:hover .vicon {
+    color: #fff !important;
+}
+
+.visit-card__write-a-message-actif {
+    background-color: #87868c;
+    border: medium none;
+}
+
+.visit-card__write-a-message-actif .vicon {
+    color: #fff;
+    font-size: 6px;
+}
+
+.visit-card__write-a-message-actif span {
+    color: #fff;
+}
+
+.visit-card__recruiter-anonymous {
+    color: #87868c;
+    display: inline-block;
+    line-height: 18px;
+    padding-right: 55px;
+    width: 210px;
+}
+
+.visit-card__recruiter-anonymous p {
+    line-height: 18px;
+}
+
+.visit-card__current-position {
+    height: 4.16667em;
+    margin: auto;
+    overflow: hidden;
+    width: 80%;
+}
+
+.visit-card__current-position-img-container {
+    border: 1px solid #d9d8dd;
+    border-radius: 2px;
+    float: left;
+    height: 3.16667em;
+    line-height: 3em;
+    padding: 2px;
+    position: relative;
+    top: 1px;
+    width: 3.16667em;
+}
+
+.visit-card__current-position-img-container {
+    float: right;
+}
+
+.visit-card__current-position-img-container img {
+    max-height: 3.16667em;
+    max-width: 3.16667em;
+}
+
+.visit-card__current-position-logo-container {
+    border: 1px solid #d9d8dd;
+    border-radius: 2px;
+    float: left;
+    height: 3.33333em;
+    width: 3.33333em;
+}
+
+.visit-card__current-position-logo-container span {
+    line-height: 3.33333em;
+}
+
+.visit-card__current-position-logo-container .vicon-experience {
+    color: #c5c3c7;
+    font-size: 1em;
+}
+
+.visit-card__current-position-description {
+    display: table-cell;
+    height: 3.5em;
+    vertical-align: middle;
+}
+
+.visit-card__location {
+    color: #87868c;
+    font-size: 1em;
+    line-height: 1.2em;
+    min-height: 16px;
+    width: 100%;
+}
+
+.visit-card__location-mini {
+    color: #87868c;
+    font-size: 1em;
+    margin-left: -5px;
+    min-height: 16px;
+}
+
+.visit-card__location-mini .vicon {
+    color: #d9d8dd;
+    font-size: 6px;
+}
+
+.visit-card__company {
+    width: 100%;
+}
+
+.visit-card__company-name {
+    color: #4a494d;
+}
+
+.visit-card__company-name-link:hover {
+    color: #000;
+}
+
+.visit-card__opportunity {
+    background-color: #dcf3f4;
+    bottom: 0;
+    border-radius: 0 0 10px 10px;
+    color: #4db5b2;
+    height: 50px;
+    left: 0;
+    padding-top: 3px;
+    position: absolute;
+    right: 0;
+    text-align: center;
+}
+
+.visit-card__opportunity-button {
+    color: #dcf3f4;
+}
+
+.visit-card__opportunity-text {
+    padding-top: 7px;
+}
+
+.card__first {
+    margin-left: 0 !important;
+}
+
+.ngm-thumb {
+    border: 1px solid #ebebeb;
+    border-radius: 0;
+    box-shadow: 0 3px 3px #cccccc;
+    float: left;
+    height: 261px;
+    margin-bottom: 50px;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+.ngm-thumb .mask {
+    height: 261px;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.ngm-thumb a > img {
+    border-bottom: 1px solid #ebebeb;
+    display: block;
+    position: relative;
+    width: 100%;
+}
+
+.ngm-thumb .main {
+    border-bottom: 1px solid #ebebeb;
+    height: 55px;
+}
+
+.ngm-thumb .main h5 {
+    display: inline-block;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 8px 0 0 5px;
+    width: 157px;
+    position: relative;
+}
+
+.ngm-thumb .main .price {
+    background-color: #5abac6;
+    border: 1px solid #ebebeb;
+    border-top: medium none -moz-use-text-color;
+    color: #75c5cf;
+    display: inline;
+    float: right;
+    font-size: 18px;
+    font-weight: bold;
+    height: 43px;
+    line-height: 43px;
+    padding: 6px;
+}
+
+.ngm-thumb .main .price span {
+    color: #979797;
+    display: block;
+    font-size: 11px;
+    font-weight: normal;
+    text-align: center;
+}
+
+.ngm-thumb .content {
+    padding: 20px;
+    position: relative;
+    text-align: left;
+}
+
+.ngm-thumb .content button {
+    margin-top: 5px;
+}
+
+.ngm-thumb .content p span {
+    display: block;
+    font-weight: bold;
+}
+
+.ngm-thumb .content i {
+    padding-right: 5px;
+}
+
+.ngm-thumb img {
+    transition: all 0.3s ease-in-out 0s;
+}
+
+.ngm-thumb .mask {
+    background-color: #fff;
+    opacity: 1;
+    transform: translateY(206px);
+    transition: all 0.3s ease-in-out 0s;
+}
+
+.ngm-thumb:hover .mask {
+    transform: translateY(0px);
+}
+
+.ngm-thumb:hover a > img {
+    transform: translateY(-206px);
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .ngm-thumb {
+        font-size: 12px;
+    }
+
+    .ngm-thumb, .ngm-thumb .mask {
+        height: 261px;
+        width: 100%;
+    }
+
+    .ngm-thumb .main .price {
+        border-right: medium none;
+        font-size: 12px;
+        padding: 10px;
+    }
+
+    .ngm-thumb .main, .ngm-thumb .main .price {
+        height: 55px;
+    }
+
+    .ngm-thumb .mask {
+        background-color: #fff;
+        transform: translateY(206px);
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .ngm-thumb, .ngm-thumb .mask {
+        height: 262px;
+        width: 100%;
+    }
+
+    .ngm-thumb .main, .ngm-thumb .main .price {
+        height: 55px;
+    }
+
+    .ngm-thumb .mask {
+        background-color: #fff;
+        transform: translateY(206px);
+    }
+}
+
+@media (max-width: 767px) {
+    .ngm-thumb {
+        margin-bottom: 50px;
+    }
+
+    .ngm-thumb, .ngm-thumb .mask {
+        height: auto;
+        width: 100%;
+    }
+
+    .ngm-thumb .mask {
+        background-color: #fff;
+        position: relative;
+        transform: translateY(0%);
+    }
+
+    .ngm-thumb:hover .mask {
+        transform: none;
+    }
+
+    .ngm-thumb:hover a > img {
+        transform: none;
+    }
+
+    .ngm-thumb .main .price {
+        border-right: medium none;
+    }
+}

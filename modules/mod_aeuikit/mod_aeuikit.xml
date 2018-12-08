@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<extension type="module" version="3.3" client="site" method="upgrade">
+    <name>AllEvents - Module Based on uikit</name>
+    <creationDate>%%build.date%%</creationDate>
+    <copyright>%%ae3.copyright%%</copyright>
+    <license>%%ae3.license%%</license>
+    <author>Emmanuel Lecoester</author>
+    <authorEmail>%%ae3.authoremail%%</authorEmail>
+    <authorUrl>%%ae3.authorurl%%</authorUrl>
+    <version>%%ae3.version%%</version>
+    <description>MOD_AEUIKIT_DESC</description>
+    <files>
+        <filename>mod_aeuikit.xml</filename>
+        <filename module="mod_aeuikit">mod_aeuikit.php</filename>
+        <filename>index.html</filename>
+        <filename>helper.php</filename>
+        <folder>tmpl</folder>
+        <folder>language</folder>
+    </files>
+    <languages folder="site">
+        <language tag="fr-FR">language/fr-FR/fr-FR.mod_aeuikit.ini</language>
+        <language tag="en-GB">language/en-GB/en-GB.mod_aeuikit.ini</language>
+    </languages>
+    <config>
+        <fields id="params" name="params" type="fields" label="params" addfieldpath="">
+            <fieldset name="basic" addfieldpath="/administrator/components/com_allevents/models/fields">
+                <field name="layoutChoice" type="list" default="switcher" label="JFIELD_ALT_LAYOUT_LABEL"
+                       description="JFIELD_ALT_MODULE_LAYOUT_DESC">
+                    <option value="switcher">MOD_AEUIKIT_LAYOUT_CHOICE_SWITCHER</option>
+                    <option value="slider1">MOD_AEUIKIT_LAYOUT_CHOICE_SLIDER</option>
+                    <option value="grid2">MOD_AEUIKIT_LAYOUT_CHOICE_GRID2</option>
+                    <option value="grid3">MOD_AEUIKIT_LAYOUT_CHOICE_GRID3</option>
+                    <option value="grid4">MOD_AEUIKIT_LAYOUT_CHOICE_GRID4</option>
+                </field>
+                <field name="nb" type="list" default="5" label="MOD_AEUIKIT_LBL_NB" description="MOD_AEUIKIT_DESC_NB">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                    <option value="13">13</option>
+                    <option value="14">14</option>
+                    <option value="15">15</option>
+                    <option value="16">16</option>
+                    <option value="17">17</option>
+                    <option value="18">18</option>
+                    <option value="19">19</option>
+                    <option value="20">20</option>
+                </field>
+                <!-- FILTERS -->
+                <field type="AETitleImg" label="COM_ALLEVENTS_FILTERS_COMPONENT_DESC"
+                       class="stylebox lead input-xxlarge" aeicon="filter"/>
+
+                <field name="pt" type="aetoggleactivity" multiple="true" label="ACTIVITY" description="ACTIVITY_DESC"/>
+                <field name="at" type="aetoggleagenda" multiple="true" label="AGENDA" description="AGENDA_DESC"/>
+                <field name="ct" type="aetogglecategory" multiple="true" label="CATEGORY" description="CATEGORY_DESC"/>
+                <field name="lt" type="aetoggleplace" multiple="true" label="PLACE" description="PLACE_DESC"/>
+                <field name="dt" type="aetogglepublic" multiple="true" label="PUBLIC" description="PUBLIC_DESC"/>
+                <field name="st" type="aetogglesection" multiple="true" label="SECTION" description="SECTION_DESC"/>
+                <field name="et" type="aetoggleressource" multiple="true" label="RESSOURCE"
+                       description="RESSOURCE_DESC"/>
+                <field name="h" type="radio" label="MOD_AEUIKIT_FEATURED_LABEL"
+                       description="MOD_AEUIKIT_FEATURED_DESC" class="btn-group btn-group-yesno" default="0">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field name="r" type="radio" label="MOD_AEUIKIT_REGISTRATION_ONLY"
+                       description="MOD_AEUIKIT_REGISTRATION_ONLY_DESC" class="btn-group btn-group-yesno"
+                       default="0">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>                <!-- <field showon="r:1" name="rp" type="radio" label="FILTER_REGISTRATION_POSSIBLE" class="btn-group btn-group-yesno" default="0">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field> -->
+                <field name="from_days" type="list" label="FILTER_FROM_DAYS" class="btn-group btn-group-yesno"
+                       default="0">
+                    <option value="-3600">ALL</option>
+                    <option value="-30">ONE_MONTH</option>
+                    <option value="-7">ONE_WEEK</option>
+                    <option value="1">SPECIFIC_DAYS</option>
+                    <option value="2">SPECIFIC_DATE</option>
+                </field>
+                <field showon="from_days:2" name="tableperiod" type="list" label="FILTER_PERIOD"
+                       description="FILTER_PERIOD_DESC"
+                       default="1">
+                    <option value="-3600">ALL</option>
+                    <option value="1">NEXTANDCURRENT</option>
+                    <option value="2">PASTANDCURRENT</option>
+                    <option value="3">TODAY</option>
+                </field>
+                <field showon="from_days:2" name="specific_date" type="calendar" label="SPECIFIC_DATE"
+                       format="%Y-%m-%d">
+                </field>
+                <field showon="from_days:1" name="specific_days" type="list" label="SPECIFIC_DAYS">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                    <option value="13">13</option>
+                    <option value="14">14</option>
+                    <option value="15">15</option>
+                    <option value="16">16</option>
+                    <option value="17">17</option>
+                    <option value="18">18</option>
+                    <option value="19">19</option>
+                    <option value="20">20</option>
+                    <option value="21">21</option>
+                    <option value="22">22</option>
+                    <option value="23">23</option>
+                    <option value="24">24</option>
+                    <option value="25">25</option>
+                    <option value="26">26</option>
+                    <option value="27">27</option>
+                    <option value="28">28</option>
+                    <option value="29">29</option>
+                    <option value="30">30</option>
+                </field>
+                <!-- DESKTOP -->
+                <field type="AETitleImg" label="COM_ALLEVENTS_PARAM_DISPLAY_LABEL" class="stylebox lead input-xxlarge"
+                       aeicon="desktop"/>
+                <field name="showtitle" type="radio" label="MOD_AEUIKIT_SHOWTITLE"
+                       description="MOD_AEUIKIT_SHOWTITLE_DESC" class="btn-group btn-group-yesno"
+                       default="1">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field name="display_colors" type="list" default="" label="MOD_AEUIKIT_DISPLAY_COLORS"
+                       description="MOD_AEUIKIT_DISPLAY_COLORS_INFO">
+                    <option value="">JGLOBAL_USE_GLOBAL</option>
+                    <option value="0">AGENDA</option>
+                    <option value="1">ACTIVITY</option>
+                    <option value="2">CATEGORY</option>
+                </field>
+                <field name="display_colors_back" type="list" default="" label="MOD_AEUIKIT_DISPLAY_COLORS_BACK"
+                       description="MOD_AEUIKIT_DISPLAY_COLORS_BACK_INFO">
+                    <option value="">JGLOBAL_USE_GLOBAL</option>
+                    <option value="0">COM_ALLEVENTS_BACKCOLOR</option>
+                    <option value="1">COM_ALLEVENTS_FORECOLOR</option>
+                </field>
+
+                <field name="tablesort_by" type="list" default="0" label="EVENTS_SORT_BY"
+                       description="EVENTS_SORT_BY_DESC">
+                    <option value="0">EVENTS_SORT_BY_DATE_ASC</option>
+                    <option value="1">EVENTS_SORT_BY_DATE_DESC</option>
+                    <option value="2">EVENTS_SORT_BY_ENDDATE_ASC</option>
+                    <option value="3">EVENTS_SORT_BY_ENDDATE_DESC</option>
+                    <option value="4">EVENTS_SORT_BY_MOST_VIEWED</option>
+                </field>
+                <!-- <field name="showurl" type="radio" label="MOD_AEUIKIT_SHOWURL" class="btn-group btn-group-yesno"
+                        default="1">
+                     <option value="1">JYES</option>
+                     <option value="0">JNO</option>
+                 </field>
+                 <field name="url" showon="showurl:1" type="text" default="" label="MOD_AEUIKIT_LBL_URL"
+                        description="MOD_AEUIKIT_DESC_URL"/>-->
+                <field name="target_itemid" type="menuitem" default="" label="MOD_AEUIKIT_LBL_ITEMID"
+                       description="MOD_AEUIKIT_DESC_ITEMID"/>
+                <field name="shownoevent" type="radio" label="MOD_AEUIKIT_SHOWNOEVENT"
+                       description="MOD_AEUIKIT_NO_EVENT_DESC" class="btn-group btn-group-yesno"
+                       default="1">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field name="maxLength" type="text" default="100" label="MOD_AEUIKIT_LBL_LENGTH"
+                       description="MOD_AEUIKIT_DESC_LENGTH"/>
+            </fieldset>
+            <fieldset name="advanced">
+                <field name="moduleclass_sfx" type="textarea" label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+                       description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC"/>
+                <field name="cache" type="list" default="1" label="COM_MODULES_FIELD_CACHING_LABEL"
+                       description="COM_MODULES_FIELD_CACHING_DESC">
+                    <option value="1">JGLOBAL_USE_GLOBAL</option>
+                    <option value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+                </field>
+                <field name="cache_time" type="text" default="900" label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+                       description="COM_MODULES_FIELD_CACHE_TIME_DESC"/>
+                <field
+                        name="cachemode"
+                        type="hidden"
+                        default="static"
+                >
+                    <option value="static"/>
+                </field>
+            </fieldset>
+        </fields>
+    </config>
+    <aepremiumonly>true</aepremiumonly>
+    <aedisplayevents>true</aedisplayevents>
+</extension>

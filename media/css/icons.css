@@ -1,0 +1,135 @@
+﻿.icon-enrol_yes {
+    background: url(images/img16.png) no-repeat -136px -170px !important;
+    height: 16px !important;
+    width: 16px !important;
+    display: block !important;
+}
+
+.icon-enrol_unpublished {
+    background: url(images/img16.png) no-repeat -119px -170px !important;
+    height: 16px !important;
+    width: 16px !important;
+    display: block !important;
+}
+
+.icon-enrol_no {
+    background: url(images/img16.png) no-repeat -51px -170px !important;
+    height: 16px !important;
+    width: 16px !important;
+    display: block !important;
+}
+
+.icon-enrol_pending {
+    background: url(images/img16.png) no-repeat -68px -170px !important;
+    height: 16px !important;
+    width: 16px !important;
+    display: block !important;
+}
+
+.icon-enrol_perhaps {
+    background: url(images/img16.png) no-repeat -85px -170px !important;
+    height: 16px !important;
+    width: 16px !important;
+    display: block !important;
+}
+
+.icon-enrol_total {
+    background: url(images/img16.png) no-repeat -102px -170px !important;
+    height: 16px !important;
+    width: 16px !important;
+    display: block !important;
+}
+
+.icon-16-hot {
+    background: url(images/img16.png) no-repeat -85px -68px !important;
+    height: 16px !important;
+    width: 16px !important;
+    display: block !important;
+}
+
+.icon-16-cold {
+    background: url(images/img16.png) no-repeat -34px -153px !important;
+    height: 16px !important;
+    width: 16px !important;
+    display: block !important;
+}
+
+.icon-16-enrolment {
+    background: url(images/img16.png) no-repeat -119px -34px !important;
+    height: 16px !important;
+    width: 16px !important;
+    display: block !important;
+}
+
+.icon-16-no_enrolment {
+    background: url(images/img16.png) no-repeat -153px -102px !important;
+    height: 16px !important;
+    width: 16px !important;
+    display: block !important;
+}
+
+.icon-16-no_pending {
+    background: url(images/img16.png) no-repeat -0 -119px !important;
+    height: 16px !important;
+    width: 16px !important;
+    display: block !important;
+}
+
+.icon-16-pending {
+    background: url(images/img16.png) no-repeat -85px -119px !important;
+    height: 16px !important;
+    width: 16px !important;
+    display: block !important;
+}
+
+.icon-approved::before {
+    color: #51a351;
+    content: "[";
+    display: inline-block;
+    height: 14px;
+    line-height: 14px;
+    width: 14px;
+}
+
+.icon-unapproved::before {
+    color: #bd362f;
+    content: "\\";;;;;;;
+    display: inline-block;
+    height: 14px;
+    line-height: 14px;
+    width: 14px;
+}
+
+.icon-enrol_red {
+    width: 100% !important;
+    background: url(images/cercle-rouge.png) no-repeat !important;
+    padding-left: 16px;
+    display: block !important;
+}
+
+.icon-enrol_yellow {
+    width: 100% !important;
+    background: url(images/cercle-orange.png) no-repeat !important;
+    padding-left: 16px;
+    display: block !important;
+}
+
+.icon-enrol_green {
+    width: 100% !important;
+    background: url(images/cercle-vert.png) no-repeat !important;
+    padding-left: 16px;
+    display: block !important;
+}
+
+/* pour la partie icones dans boutons*/
+button .icon-enrol_yes {
+    display: inline-block !important;
+}
+
+button .icon-enrol_no {
+    display: inline-block !important;
+}
+
+button .icon-enrol_perhaps {
+    display: inline-block !important;
+}

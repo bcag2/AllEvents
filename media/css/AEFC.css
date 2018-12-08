@@ -1,0 +1,430 @@
+
+#placeToAdd fieldset {
+    border: 1px #ccc solid;
+    padding: 5px;
+    text-align: left;
+}
+
+#placeToAdd legend {
+    color: #146295;
+    font-size: 1.182em;
+    font-weight: 700;
+}
+
+#placeToAdd .frm_title {
+    display: inline-block;
+    width: 100px;
+}
+
+#placeToAdd .frm_value {
+    display: inline-block;
+    width: 400px;
+}
+
+.fc-event-vert .fc-event-time {
+    font-weight: 700;
+    text-align: center;
+}
+
+.cb-table {
+    width: 100%;
+}
+
+.cb-key {
+    font-weight: 400;
+    padding: .4em 1em .4em 0;
+    text-align: left;
+    vertical-align: top;
+    white-space: nowrap;
+}
+
+.cb-value {
+    padding: .4em 0;
+    width: 95%;
+}
+
+.textbox-fill-wrapper {
+    overflow: hidden;
+    width: 100%;
+}
+
+.textbox-fill-mid {
+    margin: 0 6px 0 0;
+}
+
+.textbox-fill-input {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-image: none;
+    border: 1px solid #D9D9D9;
+    border-top-color: silver;
+    padding: 2px;
+    width: 100%;
+}
+
+.cb-example {
+    font-size: 85%;
+    padding-top: 2px;
+}
+
+.loading {
+    background: url(images/loading.gif) no-repeat scroll 50% 50% #FFF;
+    height: 100%;
+    left: 0;
+    opacity: .8;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 2147483647;
+}
+
+.qtip .se_agenda_1_vignette, .qtip .se_agenda_2_vignette, .qtip .se_agenda_3_vignette, .qtip .se_agenda_4_vignette, .qtip .se_agenda_5_vignette, .qtip .se_agenda_6_vignette, .qtip .se_agenda_7_vignette, .qtip .se_agenda_8_vignette, .qtip .se_agenda_9_vignette, .qtip .se_agenda_10_vignette {
+    display: none;
+}
+
+#AEFC-search {
+    font-family: Verdana, sans-serif;
+    margin: 10px 0;
+}
+
+#AEFC-search fieldset {
+    border: 0;
+}
+
+#AEFC-search label, select, .ui-select-menu {
+    float: left;
+    margin-right: 10px;
+}
+
+#AEFC-search .ui-selectmenu-menu li a, #AE-calendar-search .ui-selectmenu-status {
+    padding: .3em 2em;
+}
+
+#AEFC-search .avatar-big .ui-selectmenu-item-icon, #AE-calendar-search .css-avatar .ui-selectmenu-item-icon, #AE-calendar-search .avatar .ui-selectmenu-item-icon {
+    background-position: 0 0;
+}
+
+#AEFC-search option.css-avatar {
+    background-repeat: no-repeat !important;
+    padding-left: 20px;
+}
+
+.se_opacity {
+    opacity: 1;
+}
+
+#AEFC-gear {
+    display: inline-block;
+    height: 1.9em;
+}
+
+.ui-menu {
+    margin-top: 3px !important;
+    position: absolute;
+    width: 100px !important;
+    z-index: 9000;
+}
+
+.ui-datepicker {
+    z-index: 9000;
+}
+
+#ui-datepicker-div {
+    z-index: 9999999 !important;
+}
+
+.etabs {
+    margin: 0;
+    padding: 0;
+}
+
+.tab {
+    -moz-border-radius: 4px 4px 0 0;
+    -webkit-border-radius: 4px 4px 0 0;
+    background: #eee;
+    border: solid 1px #999;
+    border-bottom: none;
+    display: inline;
+    zoom: 1;
+}
+
+.tab a {
+    display: block;
+    font-size: 14px;
+    line-height: 2em;
+    outline: none;
+    padding: 0 10px;
+}
+
+.tab a:hover {
+    text-decoration: underline;
+}
+
+.tab.active {
+    background: #fff;
+    border-color: #666;
+    padding-top: 6px;
+    position: relative;
+    top: 1px;
+}
+
+.tab a.active {
+    font-weight: 700;
+}
+
+.tab-container .panel-container {
+    -moz-border-radius: 0 4px 4px;
+    -webkit-border-radius: 0 4px 4px 4px;
+    background: #fff;
+    border: solid #666 1px;
+    padding: 10px;
+}
+
+.panel-container {
+    margin-bottom: 10px;
+}
+
+#qtip-growl-container {
+    position: fixed;
+    right: 10px;
+    top: 10px;
+}
+
+#qtip-growl-container .qtip {
+    margin: 0 0 5px;
+    min-height: 0;
+    overflow: hidden;
+    position: static;
+}
+
+#AEFC-eventToUpdate-description {
+    border: 1px solid #CCC;
+    margin: 30px auto 0;
+    padding: 10px;
+}
+
+.date-input {
+    width: 77px !important;
+}
+
+#events-layer {
+    background: #000000;
+    height: 100%;
+    position: absolute;
+    text-align: right;
+    top: -1px;
+    width: 100%;
+    z-index: 9999;
+}
+
+#events-layer .events-layer-but {
+    border: 0;
+    cursor: pointer;
+    padding-right: 1px;
+    padding-top: 2px;
+    width: 14px;
+}
+
+.ui-dialog .ui-dialog-title .ui-icon {
+    float: left;
+    margin-right: 4px;
+}
+
+.ui-timepicker-wrapper {
+    -moz-box-shadow: 0 5px 10px #000000;
+    -webkit-box-shadow: 0 5px 10px #000000;
+    background: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 5px 10px #000000;
+    height: 150px;
+    margin: 0;
+    outline: none;
+    overflow-y: auto;
+    width: 6.5em;
+    z-index: 10001;
+}
+
+.ui-timepicker-wrapper.ui-timepicker-with-duration {
+    width: 11em;
+}
+
+.ui-timepicker-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.ui-timepicker-duration {
+    color: #888;
+    margin-left: 5px;
+}
+
+.ui-timepicker-list:hover .ui-timepicker-duration {
+    color: #888;
+}
+
+.ui-timepicker-list li {
+    color: #000;
+    cursor: pointer;
+    list-style: none;
+    margin: 0;
+    padding: 3px 0 3px 5px;
+    white-space: nowrap;
+}
+
+.ui-timepicker-list:hover .ui-timepicker-selected {
+    background: #fff;
+    color: #000;
+}
+
+li.ui-timepicker-selected, .ui-timepicker-list li:hover, .ui-timepicker-list .ui-timepicker-selected:hover {
+    background: #1980EC;
+    color: #fff;
+}
+
+li.ui-timepicker-selected .ui-timepicker-duration, .ui-timepicker-list li:hover .ui-timepicker-duration {
+    color: #ccc;
+}
+
+.ui-timepicker-list li.ui-timepicker-disabled, .ui-timepicker-list li.ui-timepicker-disabled:hover, .ui-timepicker-list li.ui-timepicker-selected.ui-timepicker-disabled {
+    color: #888;
+    cursor: default;
+}
+
+.ui-timepicker-list li.ui-timepicker-disabled:hover, .ui-timepicker-list li.ui-timepicker-selected.ui-timepicker-disabled {
+    background: #f2f2f2;
+}
+
+.calendar-trash {
+    background: url(images/AEFC.png) no-repeat 0 -84px;
+    cursor: pointer;
+    display: inline-block;
+    height: 46px;
+    margin-right: 5px;
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-top: 3px;
+    width: 48px;
+}
+
+.to-trash {
+    -webkit-border-radius: 5em;
+    background-color: #EAEAEA;
+    border-radius: 5em;
+}
+
+.fc-content {
+    list-style-type: none;
+}
+
+.ui-button .ui-icon.ui-icon-mypdf {
+    background: url(images/export_pdf.png) no-repeat top left !important;
+    height: 16px;
+    width: 16px;
+}
+
+.ui-button .ui-icon.ui-icon-mydatepicker {
+    background: url(images/calendar.png) no-repeat top left !important;
+    height: 16px;
+    width: 16px;
+}
+
+.ui-button .ui-icon.ui-icon-mynewevent {
+    background: url(images/add_event.png) no-repeat top left !important;
+    height: 16px;
+    width: 16px;
+}
+
+.ui-button .ui-icon.ui-icon-place_add {
+    background: url(images/add_place.png) no-repeat top left !important;
+    height: 16px;
+    width: 16px;
+}
+
+.wCheck-theme-square-inset-yellow {
+    background: url(images/AEFC.png) no-repeat 0 -51px;
+    height: 16px;
+    width: 16px;
+}
+
+.wCheck-selector-square-dot-yellow {
+    background: url(images/AEFC.png) no-repeat 0 -34px;
+    height: 16px;
+    width: 16px;
+}
+
+.sprite-delete {
+    background-position: 0 0;
+    height: 16px;
+    width: 16px;
+}
+
+.sprite-editbt {
+    background-position: 0 -17px;
+    height: 16px;
+    width: 16px;
+}
+
+.sprite-visu {
+    background-position: 0 -201px;
+    height: 16px;
+    width: 16px;
+}
+
+.title-newevent {
+    background: url(images/add_event.png) no-repeat top left;
+    height: 16px;
+    padding-left: 20px;
+    width: 16px;
+}
+
+.title-newplace {
+    background: url(images/add_place.png) no-repeat top left;
+    height: 16px;
+    padding-left: 20px;
+    width: 16px;
+}
+
+#AE-bandeau {
+    display: block;
+}
+
+#AEViewDropdown {
+    display: inline-block;
+    padding: 0 10px;
+    text-align: left;
+    height: 60px;
+}
+
+#AEViewDropdown ul li {
+    margin: 0;
+}
+
+.fc-year-monthly-td {
+    border-width: 0 !important;
+}
+
+.cb-event-title-input, .cb-calendar {
+    width: 99%;
+}
+
+#AEFC-search-activities-button, #AEFC-search-agendas-button, #AEFC-search-places-button {
+    margin-right: 10px;
+}
+
+.time-input, #AEFC-eventToUpdate-enrolment_max_participant, #AEFC-eventToAdd-enrolment_max_participant {
+    width: 60px !important;
+}
+
+#AEFC, #AEFC .fc-content {
+    background-color: #FFF;
+}
+
+.fc-header-title {
+    display: block !important;
+    vertical-align: top;
+}
+
+/*div#AEViewDropdown.dd-container div.dd-select a.dd-selected {height:60px}*/

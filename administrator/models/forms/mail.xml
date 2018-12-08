@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<form>
+    <fieldset name="batch" addfieldpath="/administrator/components/com_allevents/models/fields">
+        <field name="mode" type="checkbox" label="COM_ALLEVENTS_MAIL_FIELD_SEND_IN_HTML_MODE_LABEL" value="1"/>
+        <field name="bcc" type="checkbox" default="1" label="COM_ALLEVENTS_MAIL_FIELD_SEND_AS_BLIND_CARBON_COPY_LABEL"
+               value="1"/>
+        <field name="subject" type="text" required="true" class="span8" label="COM_ALLEVENTS_MAIL_FIELD_SUBJECT_LABEL"
+               description="COM_ALLEVENTS_MAIL_FIELD_SUBJECT_DESC" maxlength="150" size="30"/>
+        <field name="message" type="editor" required="true" label="COM_ALLEVENTS_MAIL_FIELD_MESSAGE_LABEL"/>
+        <field name="event_id" type="aeevent" class="inputbox" label="EVENT" required="true"/>
+        <field name="enroltypes" type="aetoggleenroltype" multiple="true" size="10" extension="com_allevents"
+               label="ENROLTYPE"/>
+    </fieldset>
+    <fieldset name="Merge data">
+        <field label="[ACTIVITY]" type="text" description="ACTIVITY keyword of language file" default="ACTIVITY"/>
+        <field label="[AGENDA]" type="text" description="AGENDA keyword of language file" default="AGENDA"/>
+        <field label="[CATEGORY]" type="text" description="CATEGORY keyword of language file" default="CATEGORY"/>
+        <field label="[CONTACT_PERSON]" type="text" description="CONTACT_PERSON keyword of language file"/>
+        <field label="[DATE]" type="text" description="DATE keyword of language file" default="DATE"/>
+        <field label="[DESCRIPTION]" type="text" description="DESCRIPTION keyword of language file"
+               default="DESCRIPTION"/>
+        <field label="[ENDDATE]" type="text" description="ENDDATE keyword of language file" default="ENDDATE"/>
+        <field label="[ENROL_USERALIAS]" type="text" description="User alias of the enrolment"/>
+        <field label="[ENROL_USERNAME]" type="text" description="User Name of the enrolment"/>
+        <field label="[EVENT_ACTIVITY]" type="text" description="Activity of the event"/>
+        <field label="[EVENT_AGENDA]" type="text" description="Calendar of the event"/>
+        <field label="[EVENT_CATEGORY]" type="text" description="Category of the event"/>
+        <field label="[EVENT_CONTACT]" type="text" description="Contact name of the event"/>
+        <field label="[EVENT_DATE]" type="text" description="Start Date of the event"/>
+        <field label="[EVENT_DESC]" type="text" description="Description of the event"/>
+        <field label="[EVENT_ENDDATE]" type="text" description="End Date of the event"/>
+        <field label="[EVENT_ID]" type="text" description="Event ID"/>
+        <field label="[EVENT_INFO]" type="text" description="keyword EVENT_INFO in language file" default="EVENT_INFO"/>
+        <field label="[EVENT_LINK]" type="text" description="Event Link"/>
+        <field label="[EVENT_PLACE]" type="text" description="Venue of the event"/>
+        <field label="[EVENT_PUBLIC]" type="text" description="Public"/>
+        <field label="[EVENT_RESSOURCE]" type="text" description="Resource of the event"/>
+        <field label="[EVENT_SECTION]" type="text" description="Section of the event"/>
+        <field label="[EVENT_TITLE]" type="text" description="Title of the event"/>
+        <field label="[EVENT_URL]" type="text" description="LINK_URL keyword of language file" default="LINK_URL"/>
+        <field label="[EVENT_LINK]" type="text" description="LINK_URL keyword of language file" default="LINK_URL"/>
+        <field label="[LINK_URL]" type="text" description="LINK_URL keyword of language file" default="LINK_URL"/>
+        <field label="[PARTICIPANT]" type="text" description="PARTICIPANT keyword of language file"
+               default="PARTICIPANT"/>
+        <field label="[PLACE]" type="text" description="PLACE keyword of language file" default="PLACE"/>
+        <field label="[POWERED_BY]" type="text" description="Power by AllEvents"/>
+        <field label="[PUBLIC]" type="text" description="PUBLIC keyword of language file" default="PUBLIC"/>
+        <field label="[RESSOURCE]" type="text" description="RESSOURCE keyword of language file" default="RESSOURCE"/>
+        <field label="[SECTION]" type="text" description="SECTION keyword of language file" default="SECTION"/>
+        <field label="[SITE_NAME]" type="text" description="Site Name"/>
+        <field label="[SITE_URL]" type="text" description="Site URL"/>
+        <field label="[SITE_WEBMASTER]" type="text" description="webmaster e-mail"/>
+        <field label="[TITLE]" type="text" description="TITLE keyword of language file" default="TITLE"/>
+    </fieldset>
+</form>

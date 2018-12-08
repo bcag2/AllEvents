@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<extension type="module" version="3.3" client="site" method="upgrade">
+    <name>AllEvents - Module AllEvents Agendas</name>
+    <creationDate>%%build.date%%</creationDate>
+    <copyright>%%ae3.copyright%%</copyright>
+    <license>%%ae3.license%%</license>
+    <author>Emmanuel Lecoester</author>
+    <authorEmail>%%ae3.authoremail%%</authorEmail>
+    <authorUrl>%%ae3.authorurl%%</authorUrl>
+    <version>%%ae3.version%%</version>
+    <description>MOD_AEAGENDAS_DESC</description>
+    <files>
+        <filename>mod_aeagendas.xml</filename>
+        <filename module="mod_aeagendas">mod_aeagendas.php</filename>
+        <filename>index.html</filename>
+        <filename>helper.php</filename>
+        <folder>tmpl</folder>
+        <folder>language</folder>
+    </files>
+    <languages folder="site">
+        <language tag="en-GB">language/en-GB/en-GB.mod_aeagendas.ini</language>
+    </languages>
+    <config>
+        <fields id="params" name="params" type="fields" label="params" addfieldpath="">
+            <fieldset name="basic" addfieldpath="/administrator/components/com_allevents/models/fields">
+                <field name="layoutChoice" type="list" default="default" label="JFIELD_ALT_LAYOUT_LABEL"
+                       description="JFIELD_ALT_MODULE_LAYOUT_DESC">
+                    <option value="default">MOD_AEAGENDAS_LAYOUT_DEFAULT</option>
+                </field>
+                <field name="events" type="radio" label="MOD_AEAGENDAS_WITH_EVENTS_LABEL"
+                       description="MOD_AEAGENDAS_WITH_EVENTS_DESC" class="btn-group btn-group-yesno" default="0">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field
+                        name="numitems"
+                        type="radio"
+                        label="MOD_AEAGENDAS_FIELD_NUMITEMS_LABEL"
+                        description="MOD_AEAGENDAS_FIELD_NUMITEMS_DESC"
+                        class="btn-group btn-group-yesno"
+                        default="0"
+                >
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field
+                        name="show_description"
+                        type="radio"
+                        label="MOD_AEAGENDAS_FIELD_SHOW_DESCRIPTION_LABEL"
+                        description="MOD_AEAGENDAS_FIELD_SHOW_DESCRIPTION_DESC"
+                        class="btn-group btn-group-yesno"
+                        default="0"
+                >
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+            </fieldset>
+            <fieldset name="advanced">
+                <field
+                        name="item_heading"
+                        type="list"
+                        label="MOD_AEAGENDAS_TITLE_HEADING_LABEL"
+                        description="MOD_AEAGENDAS_TITLE_HEADING_DESC"
+                        default="4"
+                >
+                    <option value="H1">JH1</option>
+                    <option value="H2">JH2</option>
+                    <option value="H3">JH3</option>
+                    <option value="H4">JH4</option>
+                    <option value="H5">JH5</option>
+                </field>
+
+                <field name="moduleclass_sfx" type="textarea" label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+                       description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC"/>
+                <field name="cache" type="list" default="1" label="COM_MODULES_FIELD_CACHING_LABEL"
+                       description="COM_MODULES_FIELD_CACHING_DESC">
+                    <option value="1">JGLOBAL_USE_GLOBAL</option>
+                    <option value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+                </field>
+                <field name="cache_time" type="text" default="900" label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+                       description="COM_MODULES_FIELD_CACHE_TIME_DESC"/>
+                <field name="cachemode" type="hidden" default="static">
+                    <option value="static"/>
+                </field>
+            </fieldset>
+        </fields>
+    </config>
+    <aepremiumonly>false</aepremiumonly>
+    <aedisplayevents>false</aedisplayevents>
+</extension>

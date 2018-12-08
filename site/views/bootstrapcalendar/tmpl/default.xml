@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+    <layout title="COM_ALLEVENTS_BOOTSTRAPCALENDAR_VIEW_DEFAULT_TITLE">
+        <message><![CDATA[COM_ALLEVENTS_BOOTSTRAPCALENDAR_VIEW_DEFAULT_DESC]]></message>
+    </layout>
+    <name>COM_ALLEVENTS_TITLE</name>
+    <description><![CDATA[VIEW_BOOTSTRAPCALENDAR_INFO_LONG]]></description>
+    <fields name="params">
+        <fieldset name="ALLEVENTS" label="COM_ALLEVENTS_MENU_OPTIONS"
+                  addfieldpath="/administrator/components/com_allevents/models/fields">
+            <field type="AETitleImg" class="input-xxlarge" aeimage="../css/images/allevents.png"/>
+            <field name="task" type="hidden" default="display"/>
+            <field name="layout" type="hidden" default="default"/>
+            <field type="AETitleImg" label="COM_ALLEVENTS_PARAM_DISPLAY_LABEL" class="stylebox lead input-xxlarge"
+                   aeicon="desktop"/>
+            <field name="display_defaultview" type="list" default="month" label="COM_ALLEVENTS_DISPLAY_DEFAULTVIEW"
+                   description="COM_ALLEVENTS_DEFAULTVIEW_INFO">
+                <option value="month">MONTH</option>
+                <option value="week">WEEK</option>
+                <option value="day">DAY</option>
+                <option value="year">YEAR</option>
+            </field>
+            <field name="display_template" type="list" default="default" label="COM_ALLEVENTS_TEMPLATE_EVENTFORM"
+                   description="COM_ALLEVENTS_TEMPLATE_EVENTFORM_DESC">
+                <option value="default">COM_ALLEVENTS_DEFAULT</option>
+                <option value="bs3">Bootstrap 3</option>
+            </field>
+            <field name="display_allowviewmonth" type="radio" class="btn-group btn-group-yesno" default="1"
+                   label="COM_ALLEVENTS_ALLOWVIEWMONTH" description="COM_ALLEVENTS_ALLOWVIEWMONTH_DESC">
+                <option value="0">JHIDE</option>
+                <option value="1">JSHOW</option>
+            </field>
+            <field name="display_allowviewmonth" type="radio" class="btn-group btn-group-yesno" default="1"
+                   label="COM_ALLEVENTS_ALLOWVIEWMONTH" description="COM_ALLEVENTS_ALLOWVIEWMONTH_DESC">
+                <option value="0">JHIDE</option>
+                <option value="1">JSHOW</option>
+            </field>
+            <field name="display_allowviewweek" type="radio" class="btn-group btn-group-yesno" default="1"
+                   label="COM_ALLEVENTS_ALLOWVIEWWEEK" description="COM_ALLEVENTS_ALLOWVIEWWEEK_DESC">
+                <option value="0">JHIDE</option>
+                <option value="1">JSHOW</option>
+            </field>
+            <field name="display_allowviewday" type="radio" class="btn-group btn-group-yesno" default="1"
+                   label="COM_ALLEVENTS_ALLOWVIEWDAY" description="COM_ALLEVENTS_ALLOWVIEWDAY_DESC">
+                <option value="0">JHIDE</option>
+                <option value="1">JSHOW</option>
+            </field>
+            <field name="display_allowviewyear" type="radio" class="btn-group btn-group-yesno" default="1"
+                   label="COM_ALLEVENTS_ALLOWVIEWYEAR" description="COM_ALLEVENTS_ALLOWVIEWYEAR_DESC">
+                <option value="0">JHIDE</option>
+                <option value="1">JSHOW</option>
+            </field>
+            <field name="navigation_previousmonth" type="radio" class="btn-group btn-group-yesno" default="1"
+                   label="COM_ALLEVENTS_NAVIGATION_PREVIOUSMONTH"
+                   description="COM_ALLEVENTS_NAVIGATION_PREVIOUSMONTH_INFO">
+                <option value="0">JHIDE</option>
+                <option value="1">JSHOW</option>
+            </field>
+            <field name="navigation_nextmonth" type="radio" class="btn-group btn-group-yesno" default="1"
+                   label="COM_ALLEVENTS_NAVIGATION_NEXTMONTH" description="COM_ALLEVENTS_NAVIGATION_NEXTMONTH_INFO">
+                <option value="0">JHIDE</option>
+                <option value="1">JSHOW</option>
+            </field>
+            <field type="AETitleImg" label="COM_ALLEVENTS_FILTERS_COMPONENT_DESC"
+                   class="stylebox lead input-xxlarge" aeicon="filter"/>
+            <field name="pt" type="aetoggleactivity" multiple="true" size="10" extension="com_allevents"
+                   label="ACTIVITY" description="ACTIVITY_DESC" required="false"/>
+            <field name="at" type="aetoggleagenda" multiple="true" size="10" extension="com_allevents"
+                   label="AGENDA" description="AGENDA_DESC" required="false"/>
+            <field name="ct" type="aetogglecategory" multiple="true" size="10" extension="com_allevents"
+                   label="CATEGORY" description="CATEGORY_DESC" required="false"/>
+            <field name="lt" type="aetoggleplace" multiple="true" size="10" extension="com_allevents" label="PLACE"
+                   description="PLACE_DESC"
+                   required="false"/>
+            <field name="dt" type="aetogglepublic" multiple="true" size="10" extension="com_allevents"
+                   label="PUBLIC" description="PUBLIC_DESC" required="false"/>
+            <field name="et" type="aetoggleressource" multiple="true" size="10" extension="com_allevents"
+                   label="RESSOURCE" description="RESSOURCE_DESC" required="false"/>
+            <field name="st" type="aetogglesection" multiple="true" size="10" extension="com_allevents"
+                   label="SECTION" description="SECTION_DESC" required="false"/>
+            <field name="h" type="radio" label="COM_ALLEVENTS_FEATURED_LABEL"
+                   description="COM_ALLEVENTS_FEATURED_DESC" class="btn-group btn-group-yesno" default="0">
+                <option value="1">JYES</option>
+                <option value="0">JNO</option>
+            </field>
+        </fieldset>
+    </fields>
+</metadata>

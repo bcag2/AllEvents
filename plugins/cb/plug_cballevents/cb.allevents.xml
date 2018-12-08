@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<cbinstall version="1.0" type="plugin" group="user">
+    <name>CB AllEvents</name>
+    <author>Emmanuel Lecoester</author>
+    <creationDate>%%build.date%%</creationDate>
+    <copyright>%%ae3.copyright%%</copyright>
+    <license>%%ae3.license%%</license>
+    <authorEmail>%%ae3.authoremail%%</authorEmail>
+    <authorUrl>%%ae3.authorurl%%</authorUrl>
+    <version>2.0</version>
+    <description>Plugin for the AllEvents component to show the list of enrolments of the user / the list of events
+        proposed by the user in his user profile
+    </description>
+    <files>
+        <filename plugin="cb.allevents">cb.allevents.php</filename>
+        <filename>index.html</filename>
+        <filename>install.php</filename>
+        <filename>language/en-GB.plug_cballevents.ini</filename>
+        <filename>language/es-ES.plug_cballevents.ini</filename>
+        <filename>language/fr-FR.plug_cballevents.ini</filename>
+        <filename>language/index.html</filename>
+    </files>
+    <params>
+        <param name="hwPlugEnabled" type="radio" label="AllEvents Plugin Enabled" default="1"
+               description="Specify Yes to enable AllEvents plugin.">
+            <option value="0">No</option>
+            <option value="1">Yes</option>
+        </param>
+        <param name="@spacer" type="spacer" label="Credits:" default="This plugin was created by Emmanuel Lecoester"
+               description=""/>
+        <param name="@spacer" type="spacer" label="License:"
+               default="This plugin is distributed under a limited GNU/GPL license and cannot be modified to work with anything else outside of the Community Builder suite supported by the Joomlapolis.com site"
+               description=""/>
+        <param name="@spacer" type="spacer" label="Parameters:"
+               default="Please look at the relevant tab for additional parameters" description=""/>
+    </params>
+    <tabs>
+        <tab name="My events" description="List of events that I've proposed" class="getAllEventsEvents" fields="0"
+             position="cb_tabmain" displaytype="tab">
+            <params>
+                <param name="ae_ShowAgenda" type="radio" default="1" label="Show the agenda"
+                       description="Show the agenda">
+                    <option value="0">No</option>
+                    <option value="1">Yes</option>
+                </param>
+                <param name="ae_ShowActivity" type="radio" default="1" label="Show the activity"
+                       description="Show the activity">
+                    <option value="0">No</option>
+                    <option value="1">Yes</option>
+                </param>
+                <param name="ae_ShowPublic" type="radio" default="1" label="Show the target population"
+                       description="Show the target population">
+                    <option value="0">No</option>
+                    <option value="1">Yes</option>
+                </param>
+                <param name="ae_ShowPlace" type="radio" default="0" label="Show the place" description="Show the place">
+                    <option value="0">No</option>
+                    <option value="1">Yes</option>
+                </param>
+                <param name="ae_ShowSection" type="radio" default="0" label="Show the section"
+                       description="Show the section">
+                    <option value="0">No</option>
+                    <option value="1">Yes</option>
+                </param>
+                <param name="ae_ShowCategory" type="radio" default="0" label="Show the category"
+                       description="Show the category">
+                    <option value="0">No</option>
+                    <option value="1">Yes</option>
+                </param>
+            </params>
+            <fields/>
+        </tab>
+        <tab name="My enrolments" description="List of enrolments" class="getAllEventsEnrolments" fields="0"
+             position="cb_tabmain" displaytype="tab">
+            <params>
+                <param name="ae_ShowAgenda" type="radio" default="1" label="Show the agenda"
+                       description="Show the agenda">
+                    <option value="0">No</option>
+                    <option value="1">Yes</option>
+                </param>
+                <param name="ae_ShowActivity" type="radio" default="1" label="Show the activity"
+                       description="Show the activity">
+                    <option value="0">No</option>
+                    <option value="1">Yes</option>
+                </param>
+                <param name="ae_ShowPublic" type="radio" default="1" label="Show the target public"
+                       description="Show the target public">
+                    <option value="0">No</option>
+                    <option value="1">Yes</option>
+                </param>
+                <param name="ae_ShowSection" type="radio" default="0" label="Show the section"
+                       description="Show the section">
+                    <option value="0">No</option>
+                    <option value="1">Yes</option>
+                </param>
+                <param name="ae_ShowPlace" type="radio" default="0" label="Show the place" description="Show the place">
+                    <option value="0">No</option>
+                    <option value="1">Yes</option>
+                </param>
+                <param name="ae_ShowCategory" type="radio" default="0" label="Show the category"
+                       description="Show the category">
+                    <option value="0">No</option>
+                    <option value="1">Yes</option>
+                </param>
+                <param name="ae_ShowEnrolDate" type="radio" default="0" label="Show the enrolment's date"
+                       description="Show the enrolment's date">
+                    <option value="0">No</option>
+                    <option value="1">Yes</option>
+                </param>
+                <param name="ae_ShowEnrolType" type="radio" default="0" label="Show the type of enrolment"
+                       description="Show the type of enrolment (I'll come / I won't come / I might come)">
+                    <option value="0">No</option>
+                    <option value="1">Yes</option>
+                </param>
+            </params>
+            <fields/>
+        </tab>
+        <tab name="Not yet enrolled" description="List of events for which I've not yet made an enrolment"
+             class="getAllEventsUnenrolledEvents" fields="0" position="cb_tabmain" displaytype="tab">
+            <params>
+                <param name="ae_ShowAgenda" type="radio" default="1" label="Show the agenda"
+                       description="Show the agenda">
+                    <option value="0">No</option>
+                    <option value="1">Yes</option>
+                </param>
+                <param name="ae_ShowActivity" type="radio" default="1" label="Show the activity"
+                       description="Show the activity">
+                    <option value="0">No</option>
+                    <option value="1">Yes</option>
+                </param>
+                <param name="ae_ShowPublic" type="radio" default="1" label="Show the target population"
+                       description="Show the target population">
+                    <option value="0">No</option>
+                    <option value="1">Yes</option>
+                </param>
+                <param name="ae_ShowPlace" type="radio" default="0" label="Show the place" description="Show the place">
+                    <option value="0">No</option>
+                    <option value="1">Yes</option>
+                </param>
+                <param name="ae_ShowSection" type="radio" default="0" label="Show the section"
+                       description="Show the section">
+                    <option value="0">No</option>
+                    <option value="1">Yes</option>
+                </param>
+                <param name="ae_ShowCategory" type="radio" default="0" label="Show the category"
+                       description="Show the category">
+                    <option value="0">No</option>
+                    <option value="1">Yes</option>
+                </param>
+            </params>
+            <fields/>
+        </tab>
+    </tabs>
+    <installfile>install.php</installfile>
+</cbinstall>

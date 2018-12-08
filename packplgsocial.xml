@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension type="package" version="1.6" method="upgrade">
+    <name>AllEvents</name>
+    <author>Emmanuel Lecoester</author>
+    <creationDate>%%build.date%%</creationDate>
+    <packagename>packplgsocial</packagename>
+    <version>%%ae3.version%%</version>
+    <url>https://www.allevents3.com</url>
+    <packager>Emmanuel Lecoester</packager>
+    <packagerurl>https://www.allevents3.com</packagerurl>
+    <description>Pack Plugin Social (G+, Twitter, social, FB)</description>
+    <files folder="">
+        <file type="plugin" id="richsnippets" group="allevents">plg_richsnippets.zip</file>
+        <file type="plugin" id="aesocial" group="allevents">plg_aesocial.zip</file>
+        <file type="plugin" id="opengraph" group="allevents">plg_opengraph.zip</file>
+        <file type="plugin" id="twittercard" group="allevents">plg_twittercard.zip</file>
+    </files>
+</extension>

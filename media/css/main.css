@@ -1,0 +1,79 @@
+.application {
+    width: 100%;
+    vertical-align: top;
+    display: inline-block;
+}
+
+.subtitle {
+    color: #fff;
+}
+
+.little-block {
+    display: inline-block;
+    width: 27%;
+    min-width: 220px;
+    height: 230px;
+    vertical-align: top;
+    padding: 15px;
+    margin: 10px 5px;
+    *overflow: hidden;
+}
+
+.little-block h3 {
+    color: #fff;
+    font-size: 24px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.little-block ul, .little-block li, .little-block a {
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.little-block a {
+    color: #ffffff;
+}
+
+.little-block ul {
+    list-style: none;
+    margin: 0;
+}
+
+.little-block a:hover {
+    color: #fff;
+    transition: color .5s;
+    text-decoration: none;
+}
+
+.howto {
+    background-color: #2170a8;
+}
+
+.agendas {
+    background-color: #4f8bb3;
+}
+
+.events {
+    background-color: #959594;
+}
+
+.addcat {
+    display: inline-block;
+    visibility: visible;
+    width: 20px;
+}
+
+.add {
+    display: inline-block;
+    float: right;
+    padding: 10px 0 0;
+    width: 24px;
+    visibility: visible;
+}
+
+.list-container-agendas, .list-container-categories, .list-container-events {
+    overflow: hidden;
+    height: 150px;
+}

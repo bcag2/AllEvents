@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<extension version="3.1" type="plugin" group="editors-xtd" method="upgrade">
+    <name>COM_ALLEVENTS_PLG_EDITORS_XTD</name>
+    <creationDate>%%build.date%%</creationDate>
+    <author>Emmanuel Lecoester</author>
+    <authorEmail>%%ae3.authoremail%%</authorEmail>
+    <authorUrl>%%ae3.authorurl%%</authorUrl>
+    <copyright>%%ae3.copyright%%</copyright>
+    <license>%%ae3.license%%</license>
+    <version>%%ae3.version%%</version>
+    <description>COM_ALLEVENTS_PLG_EDITORS_XTD_DESC</description>
+    <files>
+        <filename plugin="allevents">allevents.php</filename>
+        <filename>index.html</filename>
+        <folder>language</folder>
+    </files>
+    <languages>
+        <language tag="fr-FR">language/fr-FR/fr-FR.plg_editors-xtd_allevents.ini</language>
+        <language tag="fr-FR">language/fr-FR/fr-FR.plg_editors-xtd_allevents.sys.ini</language>
+        <language tag="en-GB">language/en-GB/en-GB.plg_editors-xtd_allevents.ini</language>
+        <language tag="en-GB">language/en-GB/en-GB.plg_editors-xtd_allevents.sys.ini</language>
+    </languages>
+</extension>

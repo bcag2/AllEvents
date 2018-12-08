@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.1" type="plugin" group="finder" method="upgrade">
+    <name>COM_ALLEVENTS_PLG_FINDER</name>
+    <creationDate>%%build.date%%</creationDate>
+    <author>Emmanuel Lecoester</author>
+    <authorEmail>%%ae3.authoremail%%</authorEmail>
+    <authorUrl>%%ae3.authorurl%%</authorUrl>
+    <copyright>%%ae3.copyright%%</copyright>
+    <license>%%ae3.license%%</license>
+    <version>%%ae3.version%%</version>
+    <description>COM_ALLEVENTS_PLG_FINDER_XML_DESC</description>
+    <files>
+        <file plugin="allevents">allevents.php</file>
+        <filename>index.html</filename>
+        <folder>language</folder>
+    </files>
+</extension>

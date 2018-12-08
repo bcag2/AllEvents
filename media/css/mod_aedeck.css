@@ -1,0 +1,129 @@
+#mod_aedeck {
+    padding: 10px;
+}
+
+ul.baraja-container {
+    width: 200px;
+    height: 310px;
+    margin: 0 auto 15px;
+    position: relative;
+    padding: 0;
+    list-style-type: none;
+}
+
+ul.baraja-container li {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+    background: #fff;
+    pointer-events: auto;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.no-js ul.baraja-container {
+    width: auto;
+    height: auto;
+    text-align: center;
+}
+
+.no-js ul.baraja-container li {
+    position: relative;
+    display: inline-block;
+    width: 200px;
+    height: 310px;
+    margin: 10px;
+}
+
+.mod_aedeck_baraja {
+    width: 200px;
+    color: #aaa;
+    margin: auto;
+}
+
+.mod_aedeck_baraja h4 {
+    color: #666;
+    font-size: 14px;
+    padding: 8px 10px 5px;
+    margin: 0 3px 5px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.mod_aedeck_baraja p {
+    font-size: 12px;
+    font-weight: 700;
+    padding: 0 10px;
+    margin: 10px 3px 0;
+}
+
+.mod_aedeck_baraja ul.baraja-container li {
+    border-radius: 10px;
+    padding: 5px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.mod_aedeck_baraja li img {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+}
+
+.actions {
+    text-align: center;
+}
+
+.actions span {
+    font-weight: 700;
+    font-size: 1.2rem;
+    text-align: center;
+    display: inline-block;
+    cursor: pointer;
+    padding: 5px 10px;
+    text-transform: uppercase;
+    margin: 3px;
+    border-radius: 3px;
+    background: #aaa;
+    color: #fff;
+    text-shadow: 0 1px 1px #000000;
+    box-shadow: inset 0 1px 1px #000000, 0 1px 1px #ffffff;
+}
+
+.actions span:active {
+    background: #aaa;
+    color: #fff;
+    box-shadow: 0 1px 1px #ffffff;
+}
+
+.actions span.disabled {
+    opacity: .8;
+    color: #ddd;
+}
+
+.actions span:hover {
+    background: #444;
+}
+
+#nav-prev, #nav-next {
+    width: 30px;
+    height: 30px;
+    font-size: 18px;
+    line-height: 20px;
+    box-sizing: border-box;
+}
+
+#close {
+    height: 30px;
+    font-size: 18px;
+    line-height: 20px;
+    float: right;
+    box-sizing: border-box;
+}

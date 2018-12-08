@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.1" type="plugin" group="search" method="upgrade">
+    <name>COM_ALLEVENTS_PLG_SEARCH</name>
+    <creationDate>%%build.date%%</creationDate>
+    <author>Emmanuel Lecoester</author>
+    <authorEmail>%%ae3.authoremail%%</authorEmail>
+    <authorUrl>%%ae3.authorurl%%</authorUrl>
+    <copyright>%%ae3.copyright%%</copyright>
+    <license>%%ae3.license%%</license>
+    <version>%%ae3.version%%</version>
+    <description>COM_ALLEVENTS_PLG_SEARCH_XML_DESC</description>
+    <files>
+        <filename plugin="allevents">allevents.php</filename>
+        <filename>index.html</filename>
+        <folder>language</folder>
+    </files>
+    <languages folder="language">
+        <language tag="fr-FR">fr-FR/fr-FR.plg_search_allevents.ini</language>
+        <language tag="fr-FR">fr-FR/fr-FR.plg_search_allevents.sys.ini</language>
+        <language tag="en-GB">en-GB/en-GB.plg_search_allevents.ini</language>
+        <language tag="en-GB">en-GB/en-GB.plg_search_allevents.sys.ini</language>
+    </languages>
+    <config>
+        <fields name="params">
+            <fieldset name="basic" addfieldpath="/administrator/components/com_allevents/models/fields">
+                <field name="search_name" type="text" default="" label="COM_ALLEVENTS_PLG_SEARCH_NAME_LABEL"
+                       description="COM_ALLEVENTS_PLG_SEARCH_NAME_DESC"/>
+                <field name="search_limit" type="text" default="50" label="JFIELD_PLG_SEARCH_SEARCHLIMIT_LABEL"
+                       description="JFIELD_PLG_SEARCH_SEARCHLIMIT_DESC" size="5"/>
+                <field name="search_target" type="list" default="0" label="COM_ALLEVENTS_PLG_SEARCH_TARGET_LABEL"
+                       description="COM_ALLEVENTS_PLG_SEARCH_TARGET_DESC">
+                    <option value="0">JBROWSERTARGET_PARENT</option>
+                    <option value="1">JBROWSERTARGET_NEW</option>
+                </field>
+                <field name="search_content" type="radio" label="COM_ALLEVENTS_PLG_SEARCH_ALL_LABEL"
+                       description="COM_ALLEVENTS_PLG_SEARCH_ALL_DESC" class="btn-group btn-group-yesno" default="1">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field name="search_archived" type="radio" label="COM_ALLEVENTS_PLG_SEARCH_ARCHIVED_LABEL"
+                       description="COM_ALLEVENTS_PLG_SEARCH_ARCHIVED_DESC" class="btn-group btn-group-yesno"
+                       default="0">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field name="search_pasted" type="radio" label="COM_ALLEVENTS_PLG_SEARCH_PASTED_LABEL"
+                       description="COM_ALLEVENTS_PLG_SEARCH_PASTED_DESC" class="btn-group btn-group-yesno"
+                       default="1">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+            </fieldset>
+        </fields>
+    </config>
+</extension>

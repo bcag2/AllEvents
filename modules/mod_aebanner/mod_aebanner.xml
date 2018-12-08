@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.3" client="site" method="upgrade">
+    <name>AllEvents - Module Banner</name>
+    <creationDate>%%build.date%%</creationDate>
+    <copyright>%%ae3.copyright%%</copyright>
+    <license>%%ae3.license%%</license>
+    <author>Emmanuel Lecoester</author>
+    <authorEmail>%%ae3.authoremail%%</authorEmail>
+    <authorUrl>%%ae3.authorurl%%</authorUrl>
+    <version>%%ae3.version%%</version>
+    <description>MOD_AEBANNER_DESC</description>
+    <files>
+        <filename module="mod_aebanner">mod_aebanner.php</filename>
+        <folder>tmpl</folder>
+        <filename>helper.php</filename>
+        <filename>index.html</filename>
+        <filename>mod_aebanner.xml</filename>
+        <folder>language</folder>
+    </files>
+    <languages folder="site">
+        <language tag="en-GB">language/en-GB/en-GB.mod_aebanner.ini</language>
+        <language tag="fr-FR">language/fr-FR/fr-FR.mod_aebanner.ini</language>
+    </languages>
+    <config>
+        <fields name="params">
+            <fieldset name="basic" addfieldpath="/administrator/components/com_allevents/models/fields">
+                <field name="layout" type="list" default="default" label="JFIELD_ALT_LAYOUT_LABEL"
+                       description="JFIELD_ALT_MODULE_LAYOUT_DESC">
+                    <option value="default">MOD_AEBANNER_LAYOUT_CHOICE_CAL1</option>
+                    <option value="flip">MOD_AEBANNER_LAYOUT_CHOICE_CAL2</option>
+                    <option value="autrique">MOD_AEBANNER_LAYOUT_CHOICE_CAL3</option>
+                    <option value="autrique2">MOD_AEBANNER_LAYOUT_CHOICE_CAL4</option>
+                </field>
+                <field name="orientation" type="list" default="h" label="ORIENTATION" description="ORIENTATION_DESC">
+                    <option value="h">HORIZONTAL</option>
+                    <option value="v">VERTICAL</option>
+                </field>
+                <field name="nb" type="list" default="3" label="AE_LBL_NB" description="AE_DESC_NB">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                </field>
+                <!-- FILTERS -->
+                <field type="AETitleImg" label="COM_ALLEVENTS_FILTERS_COMPONENT_DESC"
+                       class="stylebox lead input-xxlarge" aeicon="filter"/>
+                <field name="pt" type="aetoggleactivity" multiple="true" label="ACTIVITY" description="ACTIVITY_DESC"/>
+                <field name="at" type="aetoggleagenda" multiple="true" label="AGENDA" description="AGENDA_DESC"/>
+                <field name="ct" type="aetogglecategory" multiple="true" label="CATEGORY" description="CATEGORY_DESC"/>
+                <field name="lt" type="aetoggleplace" multiple="true" label="PLACE" description="PLACE_DESC"/>
+                <field name="dt" type="aetogglepublic" multiple="true" label="PUBLIC" description="PUBLIC_DESC"/>
+                <field name="st" type="aetogglesection" multiple="true" label="SECTION" description="SECTION_DESC"/>
+                <field name="et" type="aetoggleressource" multiple="true" label="RESSOURCE"
+                       description="RESSOURCE_DESC"/>
+                <field name="h" type="radio" label="MOD_AEBANNER_FEATURED_LABEL"
+                       description="MOD_AEBANNER_FEATURED_DESC" class="btn-group btn-group-yesno" default="0">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field name="r" type="radio" label="MOD_AEBANNER_REGISTRATION_ONLY"
+                       description="MOD_AEBANNER_REGISTRATION_ONLY_DESC" class="btn-group btn-group-yesno"
+                       default="0">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+
+                <!-- <field showon="r:1" name="rp" type="radio" label="FILTER_REGISTRATION_POSSIBLE" class="btn-group btn-group-yesno" default="0">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field> -->
+                <!-- €#€ -->
+                <!-- MA RELATION A L EVENEENT  -->
+                <field type="AETitleImg" label="COM_ALLEVENTS_PARAM_USER_LABEL" class="stylebox lead input-xxlarge"
+                       aeicon="user"/>
+                <field name="myevents" type="radio" label="MOD_AEBANNER_MYEVENTS"
+                       description="MOD_AEBANNER_MYEVENTS_DESC" class="btn-group btn-group-yesno"
+                       default="0">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field name="myenrolments" type="list" label="MOD_AEBANNER_MYENROLMENTS"
+                       description="MOD_AEBANNER_MYENROLMENTS_DESC" default="-1">
+                    <option value="-1">JALL</option>
+                    <option value="0">COM_ALLEVENTS_EVENT_ENROL_YES</option>
+                    <option value="1">COM_ALLEVENTS_EVENT_ENROL_NO</option>
+                    <option value="2">COM_ALLEVENTS_EVENT_ENROL_PERHAPS</option>
+                </field>
+                <!-- €#€ -->
+            </fieldset>
+            <fieldset name="advanced">
+                <field name="itemIntroTextWordLimit" type="text" size="4" default="100"
+                       label="AE_INTROTEXT_WORD_LIMIT" description="AE_INTROTEXT_WORD_LIMIT_DESC"/>
+                <field name="showReadmore" type="radio" default="1" label="SHOW_READMORE"
+                       description="SHOW_READMORE_DESC" class="btn-group">
+                    <option value="0">JHIDE</option>
+                    <option value="1">JSHOW</option>
+                </field>
+                <field name="readmoreText" showon="showReadmore:1" type="text" default="Read More"
+                       label="READMORE_TEXT"/>
+                <field name="moduleclass_sfx" type="textarea" rows="3" label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+                       description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC"/>
+                <field name="cache" type="list" default="1" label="COM_MODULES_FIELD_CACHING_LABEL"
+                       description="COM_MODULES_FIELD_CACHING_DESC">
+                    <option value="1">JGLOBAL_USE_GLOBAL</option>
+                    <option value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+                </field>
+                <field name="cache_time" type="text" default="900" label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+                       description="COM_MODULES_FIELD_CACHE_TIME_DESC"/>
+                <field
+                        name="cachemode"
+                        type="hidden"
+                        default="static"
+                >
+                    <option value="static"/>
+                </field>
+            </fieldset>
+        </fields>
+    </config>
+    <aepremiumonly>true</aepremiumonly>
+    <aedisplayevents>true</aedisplayevents>
+</extension>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+    <fields name="attribs">
+        <fieldset name="rating" addfieldpath="/plugins/allevents/alleventsvote/fields">
+            <field name="show_overall" type="radio" class="btn-group btn-group-yesno" default="1"
+                   label="PLG_ALLEVENTS_ALLEVENTSVOTE_OVERALL_RATING"
+                   description="PLG_ALLEVENTS_ALLEVENTSVOTE_OVERALL_RATING_DESC">
+                <option value="1">JSHOW</option>
+                <option value="0">JHIDE</option>
+            </field>
+            <field name="rates" type="ratingmanager" label="PLG_ALLEVENTS_ALLEVENTSVOTE_PARAMS"/>
+        </fieldset>
+    </fields>
+</form>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fields name="list">
+        <field name="limit" type="limitbox" class="input-mini" default="25" label="COM_ALLEVENTS_LIST_LIMIT"
+               description="COM_ALLEVENTS_LIST_LIMIT_DESC" onchange="this.form.submit();"/>
+    </fields>
+    <fields name="filter" addfieldpath="/administrator/components/com_allevents/models/fields">
+        <field name="search" type="text" hint="search" label="Search" class="em-events-search-text em-search-text" />
+        <field name="agenda_id" type="AEAgenda" label="AGENDA" description="COM_ALLEVENTS_FORM_DESC_EVENT_AGENDA_ID" onchange="this.form.submit();">
+            <option value="0" class="se_agenda_0_bullet se_agenda_0_color">COM_ALLEVENTS_NO_AGENDA</option>
+        </field>		
+        <field name="date" type="calendar" class="inputbox" label="COM_ALLEVENTS_FORM_LBL_EVENT_DATE" format="%Y-%m-%d %H:%M" filter="USER_UTC" showtime="true" description="COM_ALLEVENTS_FORM_DESC_EVENT_DATE"/>
+        <field name="enddate" type="calendar" class="inputbox" label="ENDDATE" format="%Y-%m-%d %H:%M" filter="USER_UTC" showtime="true" />
+   </fields>	
+</form>

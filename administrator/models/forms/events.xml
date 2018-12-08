@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fieldset addfieldpath="/administrator/components/com_allevents/models/fields">
+        <field name="id" type="text" default="0" label="JGLOBAL_FIELD_ID_LABEL" readonly="true" class="readonly"/>
+        <field name="titre" type="text" label="JGLOBAL_TITLE" description="AE_TITLE_DESC"
+               class="input-xxlarge input-large-text" required="true"
+               menu_published="0" filter="raw"/>
+        <field name="alias" type="text" label="JFIELD_ALIAS_LABEL" description="COM_ALLEVENTS_FIELD_ALIAS_DESC"
+               hint="JFIELD_ALIAS_PLACEHOLDER" class="inputbox" size="45"/>
+        <field name="description" type="editor" label="JGLOBAL_DESC" description="AE_DESC_DESC" height="200"
+               filter="safehtml" buttons="true"/>
+        <field name="intro" type="editor" label="COM_ALLEVENTS_FORM_LBL_EVENT_INTRO"/>
+        <field name="public_id" type="sql" class="inputbox" label="PUBLIC"
+               query="SELECT 0 AS `id`, '- Select public_id -' AS `titre` UNION SELECT `id`, `titre` FROM `#__allevents_public`"
+               key_field="id" value_field="titre"/>
+        <field name="activity_id" type="sql" class="inputbox" label="ACTIVITY"
+               query="SELECT 0 AS `id`, '- Select activity_id -' AS `titre` UNION SELECT `id`, `titre` FROM `#__allevents_activities`"
+               key_field="id" value_field="titre"/>
+        <field name="date" type="calendar" class="inputbox" required="true" label="COM_ALLEVENTS_FORM_LBL_EVENT_DATE"
+               format="%Y-%m-%d %H:%M" filter="SERVER_UTC" showtime="true"
+               description="COM_ALLEVENTS_FORM_DESC_EVENT_DATE"/>
+        <field name="enddate" type="calendar" class="inputbox" label="ENDDATE" format="%Y-%m-%d %H:%M"
+               filter="SERVER_UTC" showtime="true"/>
+        <field name="publishingdate" type="calendar" class="inputbox"
+               label="COM_ALLEVENTS_FORM_LBL_EVENT_PUBLISHINGDATE" format="%Y-%m-%d %H:%M" filter="SERVER_UTC"
+               showtime="true"/>
+        <field name="closingdate" type="calendar" class="inputbox" label="COM_ALLEVENTS_FORM_LBL_EVENT_CLOSINGDATE"
+               format="%Y-%m-%d %H:%M" filter="SERVER_UTC" showtime="true"/>
+        <field name="openingdate" type="calendar" class="inputbox" label="COM_ALLEVENTS_FORM_LBL_EVENT_OPENINGDATE"
+               format="%Y-%m-%d %H:%M" filter="SERVER_UTC" showtime="true"
+               description="COM_ALLEVENTS_FORM_DESC_EVENT_OPENINGDATE"/>
+        <field name="vignette" type="media" directory="com_allevents/vignettes"
+               label="EVENT_VIGNETTE"/>
+        <field name="affiche" type="media" directory="com_allevents/affiches" label="EVENT_AFFICHE"/>
+        <field name="banniere" type="media" directory="com_allevents/bannieres" label="EVENT_BANNIERE"/>
+        <field name="published" type="list" label="JSTATUS" class="chzn-single chzn-color-state" size="1" default="1">
+            <option value="1">JPUBLISHED</option>
+            <option value="0">JUNPUBLISHED</option>
+            <option value="2">JARCHIVED</option>
+            <option value="-2">JTRASHED</option>
+        </field>
+        <field name="language" type="contentlanguage" label="JFIELD_LANGUAGE_LABEL"
+               description="COM_ALLEVENTS_FORM_DESC_LANGUAGE" class="span12 small">
+            <option value="*">JALL</option>
+        </field>
+        <field name="enrolment_enabled" type="radio" label="COM_ALLEVENTS_FORM_LBL_EVENT_ENROLMENT_ENABLED"
+               class="btn-group btn-group-yesno" default="0">
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+        <field name="enrolment_max_participant" type="text" size="40" class="inputbox"
+               label="COM_ALLEVENTS_FORM_LBL_EVENT_ENROLMENT_MAX_PARTICIPANT" filter="safehtml"/>
+        <field name="proposal" type="radio" label="COM_ALLEVENTS_FORM_LBL_EVENT_PROPOSAL"
+               class="btn-group btn-group-yesno" default="0">
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+        <field name="proposed_by" readonly="true" type="createdby" label="COM_ALLEVENTS_CREATED_BY"/>
+        <field name="lastmod" readonly="true" type="timeupdated" class="inputbox" label="JGLOBAL_FIELD_MODIFIED_LABEL"
+               default="CURRENT_TIMESTAMP" filter="safehtml"/>
+        <field name="access" type="accesslevel" label="JFIELD_ACCESS_LABEL" description="AE_ACCESS_DESC"
+               class="span12 small"/>
+        <field name="hits" readonly="true" type="text" size="40" class="inputbox" label="JGLOBAL_HITS"
+               description="AE_HITS_DESC" default="0"/>
+        <field name="intern_album_id" type="sql" class="inputbox" label="COM_ALLEVENTS_FORM_LBL_EVENT_INTERN_ALBUM_ID"
+               query="SELECT 0 AS `id`, '- Select intern_album_id -' AS `titre` UNION SELECT `id`, `titre` FROM `#__allevents_albums`"
+               key_field="id" value_field="titre"/>
+        <field name="extern_album_id" type="text" size="40" class="inputbox"
+               label="COM_ALLEVENTS_FORM_LBL_EVENT_EXTERN_ALBUM_ID" filter="safehtml"/>
+        <field name="lastmod_by" type="updatedby" readonly="true" label="JGLOBAL_FIELD_MODIFIED_BY_LABEL"/>
+        <field name="created_date" type="timecreated" readonly="true" class="inputbox"
+               label="JGLOBAL_FIELD_CREATED_LABEL" format="%Y-%m-%d %H:%M" filter="safehtml"/>
+        <field name="version" type="text" size="40" class="inputbox" label="COM_ALLEVENTS_FORM_LBL_VERSION"
+               description="COM_ALLEVENTS_FORM_DESC_VERSION" default="0" filter="safehtml"/>
+        <field name="section_id" type="sql" class="inputbox" label="SECTION"
+               query="SELECT 0 AS `id`, '- Select section_id -' AS `titre` UNION SELECT `id`, `titre` FROM `#__allevents_sections`"
+               key_field="id" value_field="titre"/>
+        <field name="category_id" type="sql" class="inputbox" label="CATEGORY"
+               query="SELECT 0 AS `id`, '- Select category_id -' AS `id` UNION SELECT `id`, `id` FROM `#__allevents_categories`"
+               key_field="id" value_field="id"/>
+        <field name="ressource_id" type="sql" class="inputbox" label="RESOURCE"
+               query="SELECT 0 AS `id`, '- Select ressource_id -' AS `titre` UNION SELECT `id`, `titre` FROM `#__allevents_ressources`"
+               key_field="id" value_field="titre"/>
+        <field name="place_id" type="sql" class="inputbox" label="PLACE"
+               query="SELECT 0 AS `id`, '- Select place_id -' AS `titre` UNION SELECT `id`, `titre` FROM `#__allevents_places`"
+               key_field="id" value_field="titre"/>
+        <field name="allow_overbooking" type="radio" label="COM_ALLEVENTS_FORM_LBL_EVENT_ALLOW_OVERBOOKING"
+               class="btn-group btn-group-yesno" size="1" default="1">
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+        <field name="hot" type="radio" label="COM_ALLEVENTS_FORM_LBL_EVENT_HOT" class="btn-group btn-group-yesno"
+               default="0">
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+        <field name="form_id" type="sql" class="inputbox" label="COM_ALLEVENTS_FORM_LBL_EVENT_FORM_ID"
+               query="SELECT 0 AS `id`, '- Select form_id -' AS `titre` UNION SELECT `id`, `titre` FROM `#__allevents_forms`"
+               key_field="id" value_field="titre"/>
+        <field name="contiguous_date" type="radio" label="COM_ALLEVENTS_FORM_LBL_EVENT_CONTIGUOUS_DATE"
+               class="btn-group btn-group-yesno" default="0">
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+        <field name="expirationdate" type="calendar" filter="USER_UTC" class="inputbox"
+               label="COM_ALLEVENTS_FORM_LBL_EVENT_EXPIRATIONDATE" format="%Y-%m-%d %H:%M"/>
+        <field name="showincalendar" type="radio" label="COM_ALLEVENTS_FORM_LBL_EVENT_SHOWINCALENDAR"
+               class="btn-group btn-group-yesno" size="1" default="1">
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+        <field name="created_by" type="createdby" default="" label="COM_ALLEVENTS_CREATED_BY"/>
+        <field name="additional_info" type="editor" buttons="true" class="inputbox" filter="safehtml"
+               label="COM_ALLEVENTS_ADDITIONAL_INFO"/>
+        <field name="enrolment_info" type="editor" buttons="true" class="inputbox" filter="safehtml"
+               label="COM_ALLEVENTS_FORM_LBL_EVENT_ENROLMENT_INFO"/>
+        <field name="metakey" type="textarea" label="JFIELD_META_KEYWORDS_LABEL" description="JFIELD_META_KEYWORDS_DESC"
+               class="inputbox" rows="3" cols="30"/>
+        <field name="metadesc" type="textarea" label="JFIELD_META_DESCRIPTION_LABEL"
+               description="JFIELD_META_DESCRIPTION_DESC" class="inputbox" rows="3" cols="30"/>
+        <field name="metarobots" type="list" label="JFIELD_METADATA_ROBOTS_LABEL"
+               description="JFIELD_METADATA_ROBOTS_DESC" default="index, follow">
+            <option value="">JGLOBAL_USE_GLOBAL</option>
+            <option value="index, follow">JGLOBAL_INDEX_FOLLOW</option>
+            <option value="noindex, follow">JGLOBAL_NOINDEX_FOLLOW</option>
+            <option value="index, nofollow">JGLOBAL_INDEX_NOFOLLOW</option>
+            <option value="noindex, nofollow">JGLOBAL_NOINDEX_NOFOLLOW</option>
+        </field>
+        <field name="cancelled" type="radio" label="COM_ALLEVENTS_FORM_LBL_EVENT_CANCELLED"
+               class="btn-group btn-group-yesno" size="1" default="1">
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+        <field name="checked_out" label="AE_CHECKED_OUT_LBL" description="AE_CHECKED_OUT_DESC" type="hidden"
+               filter="unset"/>
+        <field name="checked_out_time" label="AE_CHECKED_OUT_TIME_LBL" description="AE_CHECKED_OUT_TIME_DESC"
+               type="hidden" filter="unset"/>
+    </fieldset>
+    <fieldset name="accesscontrol">
+        <field name="asset_id" type="hidden" filter="unset"/>
+        <field name="rules" type="rules" label="JFIELD_RULES_LABEL" translate_label="false" filter="rules"
+               validate="rules" class="inputbox" component="com_allevents" section="event"/>
+    </fieldset>
+</form>

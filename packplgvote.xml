@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension type="package" version="1.6" method="upgrade">
+    <name>AllEvents</name>
+    <author>Emmanuel Lecoester</author>
+    <creationDate>%%build.date%%</creationDate>
+    <packagename>packplgvote</packagename>
+    <version>%%ae3.version%%</version>
+    <url>https://www.allevents3.com</url>
+    <packager>Emmanuel Lecoester</packager>
+    <packagerurl>https://www.allevents3.com</packagerurl>
+    <description>Pack Plugin Vote (Vote, Rating)</description>
+    <files folder="">
+        <file type="plugin" id="alleventsvote" group="allevents">plg_allevents_alleventsvote.zip</file>
+        <file type="plugin" id="aerating" group="allevents">plg_aerating.zip</file>
+        <file type="plugin" id="alleventsvote" group="ajax">plg_ajax_alleventsvote.zip</file>
+    </files>
+</extension>

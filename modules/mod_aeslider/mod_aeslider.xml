@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<extension type="module" version="3.3" client="site" method="upgrade">
+    <name>AllEvents - Module Slider Featured</name>
+    <creationDate>%%build.date%%</creationDate>
+    <copyright>%%ae3.copyright%%</copyright>
+    <license>%%ae3.license%%</license>
+    <author>Emmanuel Lecoester</author>
+    <authorEmail>%%ae3.authoremail%%</authorEmail>
+    <authorUrl>%%ae3.authorurl%%</authorUrl>
+    <version>%%ae3.version%%</version>
+    <description>MOD_AESLIDE_DESC</description>
+    <files>
+        <filename module="mod_aeslider">mod_aeslider.php</filename>
+        <folder>tmpl</folder>
+        <filename>helper.php</filename>
+        <filename>index.html</filename>
+        <filename>mod_aeslider.xml</filename>
+        <folder>language</folder>
+    </files>
+    <languages folder="site">
+        <language tag="en-GB">language/en-GB/en-GB.mod_aeslider.ini</language>
+        <language tag="fr-FR">language/fr-FR/fr-FR.mod_aeslider.ini</language>
+    </languages>
+    <config>
+        <fields name="params">
+            <fieldset name="basic" addfieldpath="/administrator/components/com_allevents/models/fields">
+                <field name="itemCount" type="list" default="5" label="AE_ITEM_COUNT" description="AE_ITEM_COUNT_DESC">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                    <option value="13">13</option>
+                    <option value="14">14</option>
+                    <option value="15">15</option>
+                    <option value="16">16</option>
+                    <option value="17">17</option>
+                    <option value="18">18</option>
+                    <option value="19">19</option>
+                    <option value="20">20</option>
+                </field>
+                <!-- FILTERS -->
+                <field type="AETitleImg" label="COM_ALLEVENTS_FILTERS_COMPONENT_DESC"
+                       class="stylebox lead input-xxlarge" aeicon="filter"/>
+                <field name="catfilter" type="radio" default="0" label="AE_AGENDA_FILTER"
+                       description="AE_AGENDA_FILTER_DESC">
+                    <option value="0">JALL</option>
+                    <option value="1">AE_SELECT</option>
+                </field>
+                <field name="category_id" showon="catfilter:1" type="aetoggleagenda" multiple="true"
+                       label="AE_SELECT_ONE_OR_MORE_AGENDAS" description="AE_SELECT_ONE_OR_MORE_AGENDAS_DESC"/>
+                <field name="h" type="radio" label="FILTER_HOT_ONLY" description="FILTER_HOT_ONLY_DESC"
+                       class="btn-group btn-group-yesno" default="1">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field name="r" type="radio" label="FILTER_REGISTRATION_ONLY"
+                       description="FILTER_REGISTRATION_ONLY_DESC" class="btn-group btn-group-yesno"
+                       default="0">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <!-- <field showon="r:1" name="rp" type="radio" label="FILTER_REGISTRATION_POSSIBLE" class="btn-group btn-group-yesno" default="0">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field> -->
+                <!-- DESKTOP -->
+                <field type="AETitleImg" label="COM_ALLEVENTS_PARAM_DISPLAY_LABEL" class="stylebox lead input-xxlarge"
+                       aeicon="desktop"/>
+                <field name="itemIntroText" type="radio" default="1" label="AE_INTROTEXT"
+                       description="AE_INTROTEXT_DESC" class="btn-group">
+                    <option value="0">JHIDE</option>
+                    <option value="1">JSHOW</option>
+                </field>
+                <field name="itemIntroTextWordLimit" showon="itemIntroText:1" type="text" size="4" default=""
+                       label="AE_INTROTEXT_WORD_LIMIT" description="AE_INTROTEXT_WORD_LIMIT_DESC"/>
+                <field name="itemCategory" type="radio" default="1" label="AE_AGENDA" description="AE_AGENDA_DESC"
+                       class="btn-group">
+                    <option value="0">JHIDE</option>
+                    <option value="1">JSHOW</option>
+                </field>
+                <field name="itemImgSize" type="list" default="XLarge" label="AE_IMAGE_SIZE"
+                       description="AE_IMAGE_SIZE_DESC">
+                    <option value="Small">AE_SMALL</option>
+                    <option value="XLarge">AE_XLARGE</option>
+                </field>
+                <field name="showReadmore" type="radio" default="1" label="SHOW_READMORE"
+                       description="SHOW_READMORE_DESC"
+                       class="btn-group">
+                    <option value="0">JHIDE</option>
+                    <option value="1">JSHOW</option>
+                </field>
+                <field name="readmoreText" showon="showReadmore:1" type="text" default="Read More"
+                       label="READMORE_TEXT" description="READMORE_TEXT_DESC"/>
+                <field name="showFeatured" type="radio" default="1" label="AE_SHOW_FEATURED" class="btn-group">
+                    <option value="0">JHIDE</option>
+                    <option value="1">JSHOW</option>
+                </field>
+                <field name="featuredText" showon="showFeatured:1" type="text" default="Featured"
+                       description="AE_FEATURED_TEXT_DESC"
+                       label="AE_FEATURED_TEXT"/>
+                <field name="highilightedColor" showon="showFeatured:1" type="color" default="#d91e18"
+                       label="HIGHLIGHTED_COLOR" description="HIGHLIGHTED_COLOR_DESC"/>
+            </fieldset>
+            <fieldset name="animation">
+                <field name="autoPlay" type="radio" default="1" label="AUTO_PLAY" description="AUTO_PLAY_DESC"
+                       class="btn-group">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+                <field name="speed" type="text" default="300" label="SLIDE_SPEED" description="SLIDE_SPEED_DESC"/>
+                <field name="autoPlaySpeed" type="text" default="5000" label="SLIDE_INTERVAL"
+                       description="SLIDE_INTERVAL_DESC"/>
+                <field name="transitionStyle" type="list" default="0" label="TRANSITION" description="TRANSITION_DESC">
+                    <option value="0">TRANSITION_DEFAULT</option>
+                    <option value="fade">TRANSITION_FADE</option>
+                    <option value="backSlide">TRANSITION_BACKSLIDE</option>
+                    <option value="goDown">TRANSITION_GODOWN</option>
+                    <option value="fadeUp">TRANSITION_FADEUP</option>
+                </field>
+                <field name="showNavigation" type="radio" default="1" label="SHOW_NAVIGATION"
+                       description="SHOW_NAVIGATION_DESC" class="btn-group">
+                    <option value="0">JHIDE</option>
+                    <option value="1">JSHOW</option>
+                </field>
+            </fieldset>
+            <fieldset name="advanced">
+                <field name="layout" type="modulelayout" label="JFIELD_ALT_LAYOUT_LABEL"
+                       description="JFIELD_ALT_MODULE_LAYOUT_DESC"/>
+                <field name="moduleclass_sfx" type="textarea" rows="3" label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+                       description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC"/>
+                <field name="cache" type="list" default="1" label="COM_MODULES_FIELD_CACHING_LABEL"
+                       description="COM_MODULES_FIELD_CACHING_DESC">
+                    <option value="1">JGLOBAL_USE_GLOBAL</option>
+                    <option value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+                </field>
+                <field name="cache_time" type="text" default="900" label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+                       description="COM_MODULES_FIELD_CACHE_TIME_DESC"/>
+                <field
+                        name="cachemode"
+                        type="hidden"
+                        default="static"
+                >
+                    <option value="static"/>
+                </field>
+            </fieldset>
+        </fields>
+    </config>
+    <aepremiumonly>true</aepremiumonly>
+    <aedisplayevents>true</aedisplayevents>
+</extension>

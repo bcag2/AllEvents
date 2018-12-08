@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fieldset>
+        <field name="id" type="text" default="0" label="JGLOBAL_FIELD_ID_LABEL" readonly="true" class="readonly"
+               description="JGLOBAL_FIELD_ID_DESC"/>
+        <field name="titre" type="text" label="JGLOBAL_TITLE" description="AE_TITLE_DESC"
+               class="input-xxlarge input-large-text" required="true"
+               menu_published="0" filter="raw"/>
+        <field name="couleur" type="list" label="COM_ALLEVENTS_COULEUR" description="COM_ALLEVENTS_COULEUR_DESC"
+               class="chzn-single" size="1" default="green">
+            <option value="green"/>
+            <option value="blue"/>
+            <option value="blue-mms"/>
+            <option value="blue-light"/>
+            <option value="yellow"/>
+            <option value="orange"/>
+            <option value="red"/>
+            <option value="purple"/>
+            <option value="pink"/>
+            <option value="black"/>
+            <option value="gold"/>
+        </field>
+        <field name="description" type="text" size="1000" class="inputbox" label="JGLOBAL_DESC"
+               description="AE_DESC_DESC" default=""/>
+        <field name="adminlock" type="radio" label="COM_ALLEVENTS_FORM_LBL_ADMINLOCK" class="btn-group btn-group-yesno"
+               default="0">
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+        <field name="ordering"/>
+        <field name="published" type="list" label="JSTATUS" description="JFIELD_PUBLISHED_DESC"
+               class="chzn-single chzn-color-state" size="1" default="1">
+            <option value="1">JPUBLISHED</option>
+            <option value="0">JUNPUBLISHED</option>
+            <option value="2">JARCHIVED</option>
+            <option value="-2">JTRASHED</option>
+        </field>
+        <field name="checked_out" label="AE_CHECKED_OUT_LBL" description="AE_CHECKED_OUT_DESC" type="hidden"
+               filter="unset"/>
+        <field name="checked_out_time" label="AE_CHECKED_OUT_TIME_LBL" description="AE_CHECKED_OUT_TIME_DESC"
+               type="hidden" filter="unset"/>
+        <field name="created_by" readonly="true" type="createdby" size="40" class="inputbox"
+               label="COM_ALLEVENTS_CREATED_BY" default="0" filter="safehtml"/>
+        <field name="lastmod_by" type="updatedby" readonly="true" label="JGLOBAL_FIELD_MODIFIED_BY_LABEL"/>
+        <field name="version_note" type="text" label="JGLOBAL_FIELD_VERSION_NOTE_LABEL"
+               description="JGLOBAL_FIELD_VERSION_NOTE_DESC" class="inputbox" size="45" labelclass="control-label"/>
+    </fieldset>
+</form>

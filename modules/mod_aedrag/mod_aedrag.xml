@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<extension type="module" client="site" method="upgrade">
+    <name>AllEvents - Module Drag Fullcalendar</name>
+    <creationDate>%%build.date%%</creationDate>
+    <copyright>%%ae3.copyright%%</copyright>
+    <license>%%ae3.license%%</license>
+    <author>Emmanuel Lecoester</author>
+    <authorEmail>%%ae3.authoremail%%</authorEmail>
+    <authorUrl>%%ae3.authorurl%%</authorUrl>
+    <version>%%ae3.version%%</version>
+    <description>MOD_AEDRAG_DESC</description>
+    <files>
+        <filename>mod_aedrag.xml</filename>
+        <filename module="mod_aedrag">mod_aedrag.php</filename>
+        <filename>index.html</filename>
+        <filename>helper.php</filename>
+        <folder>tmpl</folder>
+        <folder>language</folder>
+    </files>
+    <languages folder="site">
+        <language tag="fr-FR">language/fr-FR/fr-FR.mod_aedrag.ini</language>
+        <language tag="en-GB">language/en-GB/en-GB.mod_aedrag.ini</language>
+        <language tag="es-ES">language/es-ES/es-ES.mod_aedrag.ini</language>
+    </languages>
+    <config>
+        <fields id="params" name="params" type="fields" label="params" addfieldpath="">
+            <fieldset name="basic" addfieldpath="/administrator/components/com_allevents/models/fields">
+                <!-- FILTERS -->
+                <field type="AETitleImg" label="COM_ALLEVENTS_FILTERS_COMPONENT_DESC"
+                       class="stylebox lead input-xxlarge" aeicon="filter"/>
+                <field name="events" type="text" default="" label="MOD_AEDRAG_LBL_EVENTS"
+                       description="MOD_AEDRAG_DESC_EVENTS"/>
+            </fieldset>
+        </fields>
+    </config>
+    <aepremiumonly>true</aepremiumonly>
+    <aedisplayevents>false</aedisplayevents>
+</extension>

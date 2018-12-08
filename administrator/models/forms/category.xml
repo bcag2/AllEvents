@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fieldset addfieldpath="/administrator/components/com_allevents/models/fields">
+        <field name="id" type="text" default="0" label="JGLOBAL_FIELD_ID_LABEL" readonly="true" class="readonly"
+               description="JGLOBAL_FIELD_ID_DESC"/>
+        <field name="titre" type="text" label="JGLOBAL_TITLE" description="AE_TITLE_DESC"
+               class="input-xxlarge input-large-text" required="true"
+               menu_published="0" filter="raw"/>
+        <field name="section_id" type="AESection" label="SECTION">
+            <option value="0" class="se_section_0_bullet se_section_0_color">COM_ALLEVENTS_NO_SECTION</option>
+        </field>
+        <field name="alias" type="text" label="JFIELD_ALIAS_LABEL" description="COM_ALLEVENTS_FIELD_ALIAS_DESC"
+               hint="JFIELD_ALIAS_PLACEHOLDER" class="inputbox" size="45"/>
+        <field name="couleur" type="color" size="40" class="inputbox" label="COM_ALLEVENTS_COULEUR"
+               description="COM_ALLEVENTS_COULEUR_DESC" default="#bdbdbd"/>
+        <field name="couleur_texte" type="color" size="40" class="inputbox" label="COM_ALLEVENTS_FORM_LBL_COULEUR_TEXTE"
+               description="COM_ALLEVENTS_FORM_DESC_COULEUR_TEXTE"
+               default="#fcf7f7"/>
+        <field name="access" type="accesslevel" label="JFIELD_ACCESS_LABEL" description="AE_ACCESS_DESC"
+               class="span12 small"/>
+        <field name="description" type="editor" label="JGLOBAL_DESC" description="AE_DESC_DESC" height="200"
+               filter="safehtml" buttons="true"/>
+        <field name="intro" type="editor" label="COM_ALLEVENTS_INTRO" description="COM_ALLEVENTS_INTRO_DESC"/>
+        <field name="language" type="contentlanguage" label="JFIELD_LANGUAGE_LABEL"
+               description="COM_ALLEVENTS_FORM_DESC_LANGUAGE" class="span12 small">
+            <option value="*">JALL</option>
+        </field>
+        <field name="published" type="list" label="JSTATUS" class="chzn-single chzn-color-state" size="1" default="1">
+            <option value="1">JPUBLISHED</option>
+            <option value="0">JUNPUBLISHED</option>
+            <option value="2">JARCHIVED</option>
+            <option value="-2">JTRASHED</option>
+        </field>
+        <field name="created_date" type="timecreated" readonly="true" class="inputbox"
+               label="JGLOBAL_FIELD_CREATED_LABEL" format="%Y-%m-%d %H:%M" filter="safehtml"/>
+        <field name="proposed_by" readonly="true" type="createdby" label="COM_ALLEVENTS_CREATED_BY"/>
+        <field name="lastmod" readonly="true" type="timeupdated" size="40" class="inputbox"
+               label="JGLOBAL_FIELD_MODIFIED_LABEL" default="CURRENT_TIMESTAMP" filter="safehtml"/>
+        <field name="lastmod_by" type="updatedby" readonly="true" label="JGLOBAL_FIELD_MODIFIED_BY_LABEL"/>
+        <field name="vignette" type="media" directory="com_allevents/vignettes"
+               label="EVENT_VIGNETTE"/>
+        <field name="image_bullet" type="media" directory="com_allevents/bullets"
+               default="images/com_allevents/bullets/category.png" label="COM_ALLEVENTS_IMAGE_BULLET"/>
+        <field name="version" readonly="true" type="text" size="40" class="readonly"
+               label="COM_ALLEVENTS_FORM_LBL_VERSION"
+               description="COM_ALLEVENTS_FORM_DESC_VERSION" default="0"/>
+        <field name="hits" readonly="true" type="text" size="40" class="inputbox" label="JGLOBAL_HITS"
+               description="AE_HITS_DESC" default="0"/>
+        <field name="created_by" type="createdby" default="" label="COM_ALLEVENTS_CREATED_BY"/>
+        <field name="default" type="radio" label="COM_ALLEVENTS_FORM_LBL_DEFAULT" class="btn-group btn-group-yesno"
+               default="0">
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+        <field name="metakey" type="textarea" label="JFIELD_META_KEYWORDS_LABEL" description="JFIELD_META_KEYWORDS_DESC"
+               class="inputbox" rows="3" cols="30"/>
+        <field name="metadesc" type="textarea" label="JFIELD_META_DESCRIPTION_LABEL"
+               description="JFIELD_META_DESCRIPTION_DESC" class="inputbox" rows="3" cols="30"/>
+        <field name="metarobots" type="list" label="JFIELD_METADATA_ROBOTS_LABEL"
+               description="JFIELD_METADATA_ROBOTS_DESC" default="index, follow">
+            <option value="">JGLOBAL_USE_GLOBAL</option>
+            <option value="index, follow">JGLOBAL_INDEX_FOLLOW</option>
+            <option value="noindex, follow">JGLOBAL_NOINDEX_FOLLOW</option>
+            <option value="index, nofollow">JGLOBAL_INDEX_NOFOLLOW</option>
+            <option value="noindex, nofollow">JGLOBAL_NOINDEX_NOFOLLOW</option>
+        </field>
+        <field name="checked_out" label="AE_CHECKED_OUT_LBL" description="AE_CHECKED_OUT_DESC" type="hidden"
+               filter="unset"/>
+        <field name="checked_out_time" label="AE_CHECKED_OUT_TIME_LBL" description="AE_CHECKED_OUT_TIME_DESC"
+               type="hidden" filter="unset"/>
+    </fieldset>
+    <fieldset name="accesscontrol">
+        <field name="asset_id" type="hidden" filter="unset"/>
+        <field name="rules" type="rules" label="JFIELD_RULES_LABEL" translate_label="false" filter="rules"
+               validate="rules" class="inputbox" component="com_allevents" section="category"/>
+    </fieldset>
+</form>

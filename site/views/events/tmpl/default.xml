@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+    <layout title="COM_ALLEVENTS_TITLE_LIST_VIEW_EVENTS">
+        <message><![CDATA[COM_ALLEVENTS_TITLE_LIST_VIEW_EVENTS_DESC]]></message>
+    </layout>
+    <name>COM_ALLEVENTS_TITLE</name>
+    <description><![CDATA[VIEW_LIST_VIEW_INFO_LONG]]></description>
+    <fields name="params">
+        <fieldset name="ALLEVENTS" label="COM_ALLEVENTS_MENU_OPTIONS"
+                  addfieldpath="/administrator/components/com_allevents/models/fields">
+            <field type="AETitleImg" class="input-xxlarge" aeimage="../css/images/allevents.png"/>
+            <field name="layout" type="AELayoutEvents" default="default" label="LAYOUT"
+                   description="EVENTS_LAYOUT_DESC"/>
+            <field type="AETitleImg" label="COM_ALLEVENTS_FILTERS_COMPONENT_DESC"
+                   class="stylebox lead input-xxlarge" aeicon="filter"/>
+            <field type="AETitleImg" label="COM_ALLEVENTS_FILTERS_NOTE1"
+                   class="stylenote alert alert-info input-xxlarge" aeicon="info-circle"/>
+            <!-- €€€ -->
+            <field name="banniere" type="media" directory="com_allevents/bannieres" label="EVENT_BANNIERE"
+                   description="EVENT_BANNIERE_DESC"/>
+            <field name="nb_top" type="text" default="0" label="COM_ALLEVENTS_EVENTS_TOP"
+                   description="COM_ALLEVENTS_EVENTS_TOP_DESC"/>
+            <!-- €€€ -->
+            <field showon="nb_top:0" name="pivot" type="list" label="FILTER_PIVOT" description="FILTER_PIVOT_DESC"
+                   default="1">
+                <option value="1">DAY</option>
+                <option value="2">WEEK</option>
+                <option value="3">MONTH</option>
+                <option value="4">YEAR</option>
+            </field>
+            <field showon="nb_top:0" name="period" type="list" label="FILTER_PERIOD"
+                   description="FILTER_PERIOD_DESC" default="0">
+                <option value="0">ALL</option>
+                <option value="1">CURRENT</option>
+                <option value="2">NEXT</option>
+                <option value="3">NEXTANDCURRENT</option>
+                <option value="4">PAST</option>
+                <option value="5">PASTANDCURRENT</option>
+            </field>
+            <field showon="nb_top:0" name="sort_by" type="list" default="0" label="EVENTS_SORT_BY"
+                   description="EVENTS_SORT_BY_DESC">
+                <option value="0">EVENTS_SORT_BY_DATE_ASC</option>
+                <option value="1">EVENTS_SORT_BY_DATE_DESC</option>
+                <option value="2">EVENTS_SORT_BY_ENDDATE_ASC</option>
+                <option value="3">EVENTS_SORT_BY_ENDDATE_DESC</option>
+                <option value="4">EVENTS_SORT_BY_ID_ASC</option>
+                <option value="5">EVENTS_SORT_BY_ID_DESC</option>
+            </field>
+            <field showon="nb_top:0" name="fromdate" type="calendar" class="inputbox" label="EVENTS_FROM_DATE"
+                   format="%Y-%m-%d" filter="USER_UTC"/>
+            <field showon="nb_top:0" name="todate" type="calendar" class="inputbox" label="EVENTS_TO_DATE"
+                   format="%Y-%m-%d" filter="USER_UTC"/>
+            <field type="AETitleImg" label="COM_ALLEVENTS_FILTERS_NOTE2"
+                   class="stylenote alert alert-info input-xxlarge" aeicon="info-circle"/>
+            <field name="pt" type="aetoggleactivity" multiple="true" size="10" extension="com_allevents"
+                   label="ACTIVITY" description="ACTIVITY_DESC" required="false"/>
+            <field name="at" type="aetoggleagenda" multiple="true" size="10" extension="com_allevents"
+                   label="AGENDA" description="AGENDA_DESC" required="false"/>
+            <field name="ct" type="aetogglecategory" multiple="true" size="10" extension="com_allevents"
+                   label="CATEGORY" description="CATEGORY_DESC" required="false"/>
+            <field name="lt" type="aetoggleplace" multiple="true" size="10" extension="com_allevents" label="PLACE"
+                   description="PLACE_DESC"
+                   required="false"/>
+            <field name="dt" type="aetogglepublic" multiple="true" size="10" extension="com_allevents"
+                   label="PUBLIC" description="PUBLIC_DESC" required="false"/>
+            <field name="et" type="aetoggleressource" multiple="true" size="10" extension="com_allevents"
+                   label="RESSOURCE" description="RESSOURCE_DESC" required="false"/>
+            <field name="st" type="aetogglesection" multiple="true" size="10" extension="com_allevents"
+                   label="SECTION" description="SECTION_DESC" required="false"/>
+            <field name="h" type="radio" label="COM_ALLEVENTS_FEATURED_LABEL"
+                   description="COM_ALLEVENTS_FEATURED_DESC" class="btn-group btn-group-yesno" default="0">
+                <option value="1">JYES</option>
+                <option value="0">JNO</option>
+            </field>
+            <field type="AETitleImg" label="COM_ALLEVENTS_PARAM_DISPLAY_LABEL" class="stylebox lead input-xxlarge"
+                   aeicon="desktop"/>
+            <field showon="layout:table" name="evts_table_height" type="text" default="500"
+                   label="COM_ALLEVENTS_TABLE_HEIGHT_LABEL" description="COM_ALLEVENTS_TABLE_HEIGHT_DESC"/>
+            <field name="show_rss" type="radio" class="btn-group btn-group-yesno" default="1"
+                   label="COM_ALLEVENTS_SHOW_RSS_LABEL">
+                <option value="0">JHIDE</option>
+                <option value="1">JSHOW</option>
+            </field>
+            <field name="show_activity" type="radio" class="btn-group btn-group-yesno" default="1"
+                   label="COM_ALLEVENTS_SHOW_ACTIVITY_LABEL">
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="0">JHIDE</option>
+                <option value="1">JSHOW</option>
+            </field>
+            <field name="show_agenda" type="radio" class="btn-group btn-group-yesno" default=""
+                   label="COM_ALLEVENTS_SHOW_AGENDA_LABEL">
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="0">JHIDE</option>
+                <option value="1">JSHOW</option>
+            </field>
+            <field name="show_category" type="radio" class="btn-group btn-group-yesno" default="1"
+                   label="COM_ALLEVENTS_SHOW_CATEGORY_LABEL">
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="0">JHIDE</option>
+                <option value="1">JSHOW</option>
+            </field>
+            <field name="show_place" type="radio" class="btn-group btn-group-yesno" default="1"
+                   label="COM_ALLEVENTS_SHOW_PLACE_LABEL">
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="0">JHIDE</option>
+                <option value="1">JSHOW</option>
+            </field>
+            <field name="show_public" type="radio" class="btn-group btn-group-yesno" default="1"
+                   label="COM_ALLEVENTS_SHOW_PUBLIC_LABEL">
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="0">JHIDE</option>
+                <option value="1">JSHOW</option>
+            </field>
+            <field name="show_ressource" type="radio" class="btn-group btn-group-yesno" default="1"
+                   label="COM_ALLEVENTS_SHOW_RESSOURCE_LABEL">
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="0">JHIDE</option>
+                <option value="1">JSHOW</option>
+            </field>
+            <field name="show_section" type="radio" class="btn-group btn-group-yesno" default="1"
+                   label="COM_ALLEVENTS_SHOW_SECTION_LABEL">
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="0">JHIDE</option>
+                <option value="1">JSHOW</option>
+            </field>
+            <field name="show_date" type="radio" class="btn-group btn-group-yesno" default="1"
+                   label="COM_ALLEVENTS_SHOW_DATE_LABEL">
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="0">JHIDE</option>
+                <option value="1">JSHOW</option>
+            </field>
+            <field name="show_enddate" type="radio" class="btn-group btn-group-yesno" default="1"
+                   label="COM_ALLEVENTS_SHOW_ENDDATE_LABEL">
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="0">JHIDE</option>
+                <option value="1">JSHOW</option>
+            </field>
+            <!-- ##€ -->
+            <field name="banner" type="radio" class="btn-group btn-group-yesno" default="0"
+                   label="COM_ALLEVENTS_BANNER_LABEL" desc="COM_ALLEVENTS_BANNER_DESC">
+                <option value="0">JNO</option>
+                <option value="1">JYES</option>
+            </field>
+            <field showon="layout:uikitdynamicgrid" name="grid_sort_agenda" type="radio"
+                   class="btn-group btn-group-yesno" default="0"
+                   label="COM_ALLEVENTS_GRID_SORT_AGENDA_LABEL" desc="COM_ALLEVENTS_GRID_SORT_AGENDA_DESC">
+                <option value="0">JGRID_HEADING_ID</option>
+                <option value="1">COM_ALLEVENTS_TITRE</option>
+            </field>
+            <field name="infinite_scroll" type="radio" class="btn-group btn-group-yesno" default="0"
+                   label="COM_ALLEVENTS_INFINITE_LABEL" desc="COM_ALLEVENTS_INFINITE_DESC">
+                <option value="0">JNO</option>
+                <option value="1">JYES</option>
+            </field>
+            <field name="display_openlinkself" type="radio" class="btn-group btn-group-yesno" default=""
+                   label="COM_ALLEVENTS_FULLCALENDAR_DISPLAY_OPENLINKSELF"
+                   description="COM_ALLEVENTS_FULLCALENDAR_DISPLAY_OPENLINKSELF_INFO">
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="_blank">JNO</option>
+                <option value="_self">JYES</option>
+            </field>
+            <!-- €## -->
+            <field name="task" type="hidden" default="display"/>
+        </fieldset>
+    </fields>
+</metadata>

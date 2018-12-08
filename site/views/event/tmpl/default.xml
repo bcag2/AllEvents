@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+    <layout title="COM_ALLEVENTS_TITLE_ITEM_VIEW_EVENT" option="View">
+        <message><![CDATA[COM_ALLEVENTS_TITLE_ITEM_VIEW_EVENT_DESC]]></message>
+    </layout>
+    <fields name="params">
+        <fieldset name="ALLEVENTS" label="COM_ALLEVENTS_MENU_OPTIONS"
+                  addfieldpath="/administrator/components/com_allevents/models/fields">
+            <field type="AETitleImg" class="input-xxlarge" aeimage="../css/images/allevents.png"/>
+            <field name="item_id" type="modal_event" label="COM_ALLEVENTS_FIELD_SELECT_EVENT_LABEL" required="true"
+                   select="true" clear="true" new="true" edit="true"
+                   description="COM_ALLEVENTS_FIELD_SELECT_EVENT_DESC"/>
+        </fieldset>
+    </fields>
+</metadata>
